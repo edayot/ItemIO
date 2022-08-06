@@ -1,0 +1,2 @@
+setblock ~ ~ ~ barrel
+summon marker ~ ~ ~ {data:{itemio:{ioconfig:[{Slot:0b,mode:"input",allowed_side:["north","south","east","west","top","bottom"]},{Slot:0b,mode:"output",allowed_side:["north","south","east","west","top","bottom"]}]}}}
