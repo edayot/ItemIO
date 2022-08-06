@@ -11,37 +11,37 @@ def change_version(version):
     major=v[0]
     minor=v[1]
     patch=v[2]
-    with open("__name__ DataPack/data/__namespace__/functions/print_version.mcfunction","w") as f:
-        f.write('tellraw @s [{"translate":"__namespace__.load","color":"green"},{"text":"'+version+']","color":"green"}]')
+    with open("ItemIO DataPack/data/itemio/functions/print_version.mcfunction","w") as f:
+        f.write('tellraw @s [{"translate":"itemio.load","color":"green"},{"text":"'+version+']","color":"green"}]')
     
-    with open("__name__ DataPack/data/__namespace__/functions/set_version.mcfunction","w") as f:
-        f.write("""scoreboard players set #__namespace__.major load.status {}
-scoreboard players set #__namespace__.minor load.status {}
-scoreboard players set #__namespace__.patch load.status {}
+    with open("ItemIO DataPack/data/itemio/functions/set_version.mcfunction","w") as f:
+        f.write("""scoreboard players set #itemio.major load.status {}
+scoreboard players set #itemio.minor load.status {}
+scoreboard players set #itemio.patch load.status {}
             """.format(major,minor,patch))
         
 
-    with open("__name__ DataPack/pack.mcmeta","w") as f:
+    with open("ItemIO DataPack/pack.mcmeta","w") as f:
         pack={
             "pack":{
                 "pack_format":10,
-                "description":"§a__name__ DataPack "+version
+                "description":"§aItemIO DataPack "+version
             }
         }
         json.dump(pack,f, indent = 4)
-    with open("__name__ ResourcePack/pack.mcmeta","w") as f:
+    with open("ItemIO ResourcePack/pack.mcmeta","w") as f:
         pack={
             "pack":{
                 "pack_format":9,
-                "description":"§a__name__ ResourcePack "+version
+                "description":"§aItemIO ResourcePack "+version
             }
         }
         json.dump(pack,f, indent = 4)
     
-    with open("__name__ DataPack/data/global/advancements/airdox_/__namespace__.json","w") as f:
+    with open("ItemIO DataPack/data/global/advancements/airdox_/itemio.json","w") as f:
         pack={
         "display": {
-            "title": "__name__",
+            "title": "ItemIO",
             "description": version,
             "icon": {
                 "item": "minecraft:beehive",
@@ -61,8 +61,8 @@ scoreboard players set #__namespace__.patch load.status {}
 
 def create_zip(version):     
     #create zip file
-    shutil.make_archive("release/__name___DataPack_"+version, "zip", "__name__ DataPack")
-    shutil.make_archive("release/__name___ResourcePack_"+version, "zip", "__name__ ResourcePack")
+    shutil.make_archive("release/ItemIO_DataPack_"+version, "zip", "ItemIO DataPack")
+    shutil.make_archive("release/ItemIO_ResourcePack_"+version, "zip", "ItemIO ResourcePack")
 
     
     
@@ -74,11 +74,11 @@ def create_zip(version):
 
 def git_push(version):
     r = git.Repo.init("")
-    r.index.add("__name__ DataPack/pack.mcmeta")
-    r.index.add("__name__ ResourcePack/pack.mcmeta")
-    r.index.add("__name__ DataPack/data/__namespace__/functions/print_version.mcfunction")
-    r.index.add("__name__ DataPack/data/__namespace__/functions/set_version.mcfunction")
-    r.index.add("__name__ DataPack/data/global/advancements/airdox_/__namespace__.json")
+    r.index.add("ItemIO DataPack/pack.mcmeta")
+    r.index.add("ItemIO ResourcePack/pack.mcmeta")
+    r.index.add("ItemIO DataPack/data/itemio/functions/print_version.mcfunction")
+    r.index.add("ItemIO DataPack/data/itemio/functions/set_version.mcfunction")
+    r.index.add("ItemIO DataPack/data/global/advancements/airdox_/itemio.json")
 
     r.index.commit("[AUTO] updated to "+version)
     r.remote("origin").push()
