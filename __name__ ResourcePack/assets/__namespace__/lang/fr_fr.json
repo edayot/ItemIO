@@ -1,0 +1,5 @@
+{
+    "__namespace__.name":"__name__",
+    "__namespace__.load":"[Chargé __name__ ",
+    "__namespace__.tellraw_prefix":"[__name__] "
+}

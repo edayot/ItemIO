@@ -1,0 +1,18 @@
+{
+    "display": {
+        "title": "__name__",
+        "description": "v0.0.1",
+        "icon": {
+            "item": "minecraft:beehive",
+            "nbt": "{CustomModelData:1430000}"
+        },
+        "announce_to_chat": false,
+        "show_toast": false
+    },
+    "parent": "global:airdox_/root",
+    "criteria": {
+        "trigger": {
+            "trigger": "minecraft:tick"
+        }
+    }
+}
