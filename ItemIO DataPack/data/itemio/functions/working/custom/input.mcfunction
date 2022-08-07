@@ -11,8 +11,8 @@ scoreboard players set #full_input itemio.math 0
 #loading block data
 data remove storage itemio:main Items
 data modify storage itemio:main Items set from block ~ ~ ~ Items
+data modify storage itemio:main input set from storage itemio:io input
 
 execute if data storage itemio:io ioconfig[0] run function itemio:working/custom/try_input
-
 
 
