@@ -1,4 +1,4 @@
-execute store result score #count_container itemio.math run data get storage itemio:main Items[{Slot:0b}].Count
+execute store result score #count_container itemio.math run data get storage itemio:main Items[{Slot:1b}].Count
 execute store result score #count_input itemio.math run data get storage itemio:main input.Count
 
 
@@ -12,5 +12,5 @@ scoreboard players set #new_count_container itemio.math 0
 scoreboard players operation #new_count_container itemio.math = #count_container itemio.math
 scoreboard players operation #new_count_container itemio.math += #count_input itemio.math
 
-execute if score #new_count_container itemio.math <= #full_stack itemio.math run function itemio:working/custom/try_input/0/if_item/inf/test_nbt
-execute if score #new_count_container itemio.math > #full_stack itemio.math if score #count_container itemio.math < #full_stack itemio.math run function itemio:working/custom/try_input/0/if_item/sup/test_nbt
+execute if score #new_count_container itemio.math <= #full_stack itemio.math run function itemio:working/custom/try_input/1/if_item/inf/test_nbt
+execute if score #new_count_container itemio.math > #full_stack itemio.math if score #count_container itemio.math < #full_stack itemio.math run function itemio:working/custom/try_input/1/if_item/sup/test_nbt
