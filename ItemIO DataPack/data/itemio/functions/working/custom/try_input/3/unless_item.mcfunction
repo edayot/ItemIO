@@ -14,10 +14,13 @@ data modify storage itemio:main input.Slot set value 3b
 execute store result score #count_input itemio.math run data get storage itemio:main input.Count
 
 scoreboard players set #new_count_input itemio.math 0
+execute if score #count_input itemio.math <= #full_stack itemio.math run data modify block ~ ~ ~ Items append from storage itemio:main input
 execute if score #count_input itemio.math <= #full_stack itemio.math run scoreboard players set #full_input itemio.math 1
+execute if score #count_input itemio.math <= #full_stack itemio.math run data modify storage itemio:main input.Count set value 0b
 execute if score #count_input itemio.math > #full_stack itemio.math run scoreboard players set #full_input itemio.math 0
 execute if score #count_input itemio.math > #full_stack itemio.math run scoreboard players operation #new_count_input itemio.math = #count_input itemio.math
 execute if score #count_input itemio.math > #full_stack itemio.math run scoreboard players operation #new_count_input itemio.math -= #full_stack itemio.math
 execute if score #count_input itemio.math > #full_stack itemio.math store result storage itemio:main input.Count int 1 run scoreboard players get #new_count_input itemio.math
+execute if score #count_input itemio.math > #full_stack itemio.math run data modify block ~ ~ ~ Items append from storage itemio:main input
 
-data modify block ~ ~ ~ Items append from storage itemio:main input
+

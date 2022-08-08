@@ -42,13 +42,16 @@ data modify storage itemio:main input.Slot set value XXXb
 execute store result score #count_input itemio.math run data get storage itemio:main input.Count
 
 scoreboard players set #new_count_input itemio.math 0
+execute if score #count_input itemio.math <= #full_stack itemio.math run data modify block ~ ~ ~ Items append from storage itemio:main input
 execute if score #count_input itemio.math <= #full_stack itemio.math run scoreboard players set #full_input itemio.math 1
+execute if score #count_input itemio.math <= #full_stack itemio.math run data modify storage itemio:main input.Count set value 0b
 execute if score #count_input itemio.math > #full_stack itemio.math run scoreboard players set #full_input itemio.math 0
 execute if score #count_input itemio.math > #full_stack itemio.math run scoreboard players operation #new_count_input itemio.math = #count_input itemio.math
 execute if score #count_input itemio.math > #full_stack itemio.math run scoreboard players operation #new_count_input itemio.math -= #full_stack itemio.math
 execute if score #count_input itemio.math > #full_stack itemio.math store result storage itemio:main input.Count int 1 run scoreboard players get #new_count_input itemio.math
+execute if score #count_input itemio.math > #full_stack itemio.math run data modify block ~ ~ ~ Items append from storage itemio:main input
 
-data modify block ~ ~ ~ Items append from storage itemio:main input
+
 """.replace("XXX",str(i))
 	with open(str(i)+"/unless_item.mcfunction","w") as f:
 		f.write(unless_item)
@@ -90,6 +93,7 @@ execute if score #!same_item itemio.math matches 0 run function itemio:working/c
 	if_item_inf_fill="""item modify block ~ ~ ~ container.XXX itemio:add_count_input
 scoreboard players set #success_input itemio.math 1
 scoreboard players set #full_input itemio.math 1
+data modify storage itemio:main input.Count set value 0b
 """.replace("XXX",str(i))
 	with open(str(i)+"/if_item/inf/fill.mcfunction","w") as f:
 		f.write(if_item_inf_fill)
@@ -112,8 +116,8 @@ execute if score #!same_item itemio.math matches 0 run function itemio:working/c
 execute store result block ~ ~ ~ Items[{Slot:XXXb}].Count byte 1 run scoreboard players get #full_stack itemio.math
 
 scoreboard players set #new_count_input itemio.math 0
-scoreboard players operation #new_count_input itemio.math = #full_stack itemio.math
-scoreboard players operation #new_count_input itemio.math -= #count_input itemio.math
+scoreboard players operation #new_count_input itemio.math = #new_count_container itemio.math
+scoreboard players operation #new_count_input itemio.math -= #full_stack itemio.math
 execute store result storage itemio:main input.Count int 1 run scoreboard players get #new_count_input itemio.math
 
 scoreboard players set #success_input itemio.math 1

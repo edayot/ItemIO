@@ -21,4 +21,8 @@ execute if data storage itemio:io {input_side:"east"} run function itemio:workin
 execute if data storage itemio:io {input_side:"west"} run function itemio:working/custom/try_input/west
 execute if data storage itemio:io {input_side:"wireless"} run function itemio:working/custom/try_input
 
+data remove storage itemio:io output
+data modify storage itemio:io output set from storage itemio:io input
+data modify storage itemio:io output.Count set from storage itemio:main input.Count
+
 
