@@ -1,7 +1,7 @@
 import os
 
-for i in range(2):
-	print(i)
+for i in range(3*9):
+	print("""execute if score #full_input itemio.math matches 0 if score #slot itemio.math matches XXX run function itemio:working/custom/try_input/XXX/repart""".replace("XXX",str(i)))
 	try:
 		os.mkdir(str(i))
 	except:
