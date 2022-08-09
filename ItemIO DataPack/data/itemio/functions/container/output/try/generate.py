@@ -1,6 +1,10 @@
+import os
 
+
+for i in range(0,3*9):
+    main="""
 scoreboard players set #success_input itemio.math 0
-data modify storage itemio:io input set from storage itemio:main Items[{Slot:0b}]
+data modify storage itemio:io input set from storage itemio:main Items[{Slot:XXXb}]
 
 #Check max_count
 execute store result score #count_input itemio.math run data get storage itemio:io input.Count
@@ -15,5 +19,9 @@ execute if score #success_input itemio.math matches 0 if data storage itemio:mai
 execute if score #success_input itemio.math matches 0 if data storage itemio:main ioconfig[0].allowed_side{top:1b} positioned ~ ~1 ~ run function itemio:container/output/try/side/bottom
 execute if score #success_input itemio.math matches 0 if data storage itemio:main ioconfig[0].allowed_side{bottom:1b} positioned ~ ~-1 ~ run function itemio:container/output/try/side/top
 
-execute if score #success_input itemio.math matches 1 run item modify block ~ ~ ~ container.0 itemio:remove_count_output
+execute if score #success_input itemio.math matches 1 run item modify block ~ ~ ~ container.XXX itemio:remove_count_output
 
+""".replace("XXX",str(i))
+    with open(str(i)+".mcfunction","w") as f:
+        f.write(main)
+    print("execute if score #slot itemio.math matches XXX if data storage itemio:main Items[{Slot:XXXb}] run function itemio:container/output/try/XXX".replace("XXX",str(i)))
