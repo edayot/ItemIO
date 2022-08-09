@@ -4,5 +4,5 @@ data modify storage itemio:io filter set from storage itemio:main ioconfig[0].fi
 function #itemio:event/filter
 
 execute if score #valid_item itemio.math matches 1 if data storage itemio:main ioconfig[0].allowed_side{north:1b} run function itemio:container/working/custom/repart
-#data remove storage itemio:main ioconfig[0]
-#execute if data storage itemio:main ioconfig[0] run function itemio:container/working/custom/try_input/north
+data remove storage itemio:main ioconfig[0]
+execute if data storage itemio:main ioconfig[0] run function itemio:container/working/custom/try_input/north
