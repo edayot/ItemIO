@@ -23,3 +23,9 @@ data remove storage itemio:io output
 data modify storage itemio:io output set from storage itemio:io input
 data modify storage itemio:io output.Count set from storage itemio:main input.Count
 
+execute store result score #count_input itemio.math run data get storage itemio:io input.Count
+execute store result score #count_output itemio.math run data get storage itemio:io output.Count
+
+scoreboard players set #count_to_remove itemio.math 0
+scoreboard players operation #count_to_remove itemio.math = #count_input itemio.math
+scoreboard players operation #count_to_remove itemio.math -= #count_output itemio.math

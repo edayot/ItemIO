@@ -98,7 +98,7 @@ data modify storage itemio:main input.Count set value 0b
 	with open(str(i)+"/if_item/inf/fill.mcfunction","w") as f:
 		f.write(if_item_inf_fill)
 
-	if_item_sup_test_nbt="""data modify storage itemio:main temp.Item1 set from storage itemio:io input
+	if_item_sup_test_nbt="""data modify storage itemio:main temp.Item1 set from storage itemio:main input
 data modify storage itemio:main temp.Item2 set from storage itemio:main Items[{Slot:XXXb}]
 
 data remove storage itemio:main temp.Item1.Slot

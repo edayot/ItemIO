@@ -1,4 +1,4 @@
-data modify storage itemio:main temp.Item1 set from storage itemio:io input
+data modify storage itemio:main temp.Item1 set from storage itemio:main input
 data modify storage itemio:main temp.Item2 set from storage itemio:main Items[{Slot:19b}]
 
 data remove storage itemio:main temp.Item1.Slot
