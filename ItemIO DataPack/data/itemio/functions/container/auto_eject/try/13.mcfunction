@@ -15,5 +15,5 @@ execute if score #success_input itemio.math matches 0 if data storage itemio:mai
 execute if score #success_input itemio.math matches 0 if data storage itemio:main ioconfig2[0].allowed_side{top:1b} positioned ~ ~1 ~ run function itemio:container/auto_eject/try/side/bottom
 execute if score #success_input itemio.math matches 0 if data storage itemio:main ioconfig2[0].allowed_side{bottom:1b} positioned ~ ~-1 ~ run function itemio:container/auto_eject/try/side/top
 
-execute if score #success_input itemio.math matches 1 run item modify block ~ ~ ~ container.13 itemio:remove_count_output
+execute if score #success_input itemio.math matches 1 run item modify block ~ ~ ~ container.13 itemio:input/remove_count_origin
 

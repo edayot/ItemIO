@@ -1,6 +1,10 @@
-#Take the storage itemio:io input and if nbt match then output
-#The nbt match is overide if no input (do /data remove storage itemio:io input)
-#the output max count as to be declare in /scoreboard players set #max_output_count itemio.math
+#Try to output a item from a container
+# Inputs :
+#       storage itemio:io filter : work the same way as filter (custom one can be declared in function tag #itemio:event/filter)
+#       storage itemio:io input : if declared the output as to match NBT with this item
+#       score #max_output_count itemio.math : for unstackable or if the container that the item is going is full
+# Outputs : 
+#       storage itemio:io output : the output item
 #define storage itemio:io
 
 execute align xyz positioned ~.5 ~.5 ~.5 run tag @e[type=marker,tag=itemio.container,distance=..0.5,limit=1,sort=nearest] add itemio.selected

@@ -10,6 +10,8 @@ data modify storage itemio:main input set from storage itemio:io input
 data remove storage itemio:io output
 
 execute store result score #if_ioconfig itemio.math if data storage itemio:main ioconfig[0] 
+execute store result score #if_filter_define itemio.math if data storage itemio:io filter 
+
 
 execute if data storage itemio:io {output_side:"top"} if score #if_ioconfig itemio.math matches 1 run function itemio:container/output/custom/repart_output/top
 execute if data storage itemio:io {output_side:"bottom"} if score #if_ioconfig itemio.math matches 1 run function itemio:container/output/custom/repart_output/bottom

@@ -40,6 +40,19 @@ item modify block ~ ~ ~ container.XXX itemio:output/remove_count
     with open(str(i)+"/output.mcfunction","w") as f:
         f.write(output)
 
+    test_filter="""scoreboard players set #valid_item itemio.math 0
+data modify storage itemio:io item set from storage itemio:main Items[{Slot:XXXb}]
+function #itemio:event/filter
+execute if score #valid_item itemio.math matches 1 run function itemio:container/output/custom/try_output/XXX/output
+
+
+
+
+
+""".replace("XXX",str(i))
+    with open(str(i)+"/test_filter.mcfunction","w") as f:
+        f.write(test_filter)
+
     print("execute if score #slot_output itemio.math matches XXX if data storage itemio:main Items[{Slot:XXXb}] run function itemio:container/output/custom/try_output/XXX/test_nbt".replace("XXX",str(i)))
 
 
