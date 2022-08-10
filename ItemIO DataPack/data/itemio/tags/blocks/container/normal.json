@@ -1,0 +1,9 @@
+{
+    "__comment":"All 27 stack container of minecraft",
+    "values": [
+        "#itemio:container/27",
+        "#itemio:container/9",
+        "hopper"
+
+    ]
+}
