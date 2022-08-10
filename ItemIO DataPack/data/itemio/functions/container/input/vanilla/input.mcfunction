@@ -1,4 +1,5 @@
 #init
+data remove storage itemio:main input
 data modify storage itemio:main input set from storage itemio:io input
 scoreboard players set #success_input itemio.math 0
 scoreboard players set #full_input itemio.math 0
