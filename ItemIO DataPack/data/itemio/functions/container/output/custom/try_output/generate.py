@@ -12,6 +12,10 @@ data remove storage itemio:main Item2
 
 data modify storage itemio:main Item1 set from storage itemio:main input
 data modify storage itemio:main Item2 set from storage itemio:main Items[{Slot:XXXb}]
+data remove storage itemio:main Item1.Count
+data remove storage itemio:main Item1.Slot
+data remove storage itemio:main Item2.Count
+data remove storage itemio:main Item2.Slot
 
 execute store result score #!same_item itemio.math run data modify storage itemio:main Item1 set from storage itemio:main Item2
 execute if score #!same_item itemio.math matches 0 run function itemio:container/output/custom/try_output/XXX/output
@@ -30,7 +34,7 @@ data modify storage itemio:io output set from storage itemio:main Items[{Slot:XX
 execute store result score #test_count_output itemio.math run data get storage itemio:io output.Count
 execute if score #test_count_output itemio.math > #max_output_count itemio.math store result storage itemio:io output.Count int 1 run scoreboard players get #max_output_count itemio.math
 
-item modify block ~ ~ ~ container.XXX itemio:internal/output_remove
+item modify block ~ ~ ~ container.XXX itemio:output/remove_count
 
 """.replace("XXX",str(i))
     with open(str(i)+"/output.mcfunction","w") as f:

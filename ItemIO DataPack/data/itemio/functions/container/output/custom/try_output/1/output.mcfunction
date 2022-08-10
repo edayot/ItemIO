@@ -7,5 +7,5 @@ data modify storage itemio:io output set from storage itemio:main Items[{Slot:1b
 execute store result score #test_count_output itemio.math run data get storage itemio:io output.Count
 execute if score #test_count_output itemio.math > #max_output_count itemio.math store result storage itemio:io output.Count int 1 run scoreboard players get #max_output_count itemio.math
 
-item modify block ~ ~ ~ container.1 itemio:internal/output_remove
+item modify block ~ ~ ~ container.1 itemio:output/remove_count
 
