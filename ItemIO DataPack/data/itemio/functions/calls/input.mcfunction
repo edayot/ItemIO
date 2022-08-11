@@ -1,7 +1,7 @@
 #Try to input a item in a container
 # Inputs :
 #   A item in storage itemio:io input
-#   A input side in storage item:io input_side
+#   A input side in storage itemio:io input_side
 #       - Can be "north","south","east","west","top","bottom"
 # Outputs
 #   A item NBT of what's left that can"t be in the container

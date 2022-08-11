@@ -1,0 +1,1 @@
+execute positioned ~ ~1 ~ if block ~ ~ ~ hopper[facing=down] run function itemio:container/hopper/try_extract
