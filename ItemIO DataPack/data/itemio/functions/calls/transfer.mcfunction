@@ -11,8 +11,7 @@
 
 
 
-data remove storage itemio:io filter
-data remove storage itemio:io input
+
 scoreboard players set #success_transfer itemio.math 0
 
 scoreboard players set #try_input_after itemio.math.output 1
