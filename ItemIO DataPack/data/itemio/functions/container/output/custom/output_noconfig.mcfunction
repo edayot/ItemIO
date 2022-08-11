@@ -1,5 +1,5 @@
 
-scoreboard players set #success_output itemio.math 0
+scoreboard players set #success_output itemio.math.output 0
 
 
 #loading block data
@@ -9,15 +9,15 @@ data remove storage itemio:main.output input
 data modify storage itemio:main.output input set from storage itemio:io input
 data remove storage itemio:io output
 
-execute store result score #if_ioconfig itemio.math if data storage itemio:main.output ioconfig[0] 
-execute store result score #if_filter_define itemio.math if data storage itemio:io filter 
+execute store result score #if_ioconfig itemio.math.output if data storage itemio:main.output ioconfig[0] 
+execute store result score #if_filter_define itemio.math.output if data storage itemio:io filter 
 
 
-execute if data storage itemio:io {output_side:"top"} if score #if_ioconfig itemio.math matches 1 run function itemio:container/output/custom/repart_output/top
-execute if data storage itemio:io {output_side:"bottom"} if score #if_ioconfig itemio.math matches 1 run function itemio:container/output/custom/repart_output/bottom
-execute if data storage itemio:io {output_side:"north"} if score #if_ioconfig itemio.math matches 1 run function itemio:container/output/custom/repart_output/north
-execute if data storage itemio:io {output_side:"south"} if score #if_ioconfig itemio.math matches 1 run function itemio:container/output/custom/repart_output/south
-execute if data storage itemio:io {output_side:"east"} if score #if_ioconfig itemio.math matches 1 run function itemio:container/output/custom/repart_output/east
-execute if data storage itemio:io {output_side:"west"} if score #if_ioconfig itemio.math matches 1 run function itemio:container/output/custom/repart_output/west
-execute if data storage itemio:io {output_side:"wireless"} if score #if_ioconfig itemio.math matches 1 run function itemio:container/output/custom/repart_output
+execute if data storage itemio:io {output_side:"top"} if score #if_ioconfig itemio.math.output matches 1 run function itemio:container/output/custom/repart_output/top
+execute if data storage itemio:io {output_side:"bottom"} if score #if_ioconfig itemio.math.output matches 1 run function itemio:container/output/custom/repart_output/bottom
+execute if data storage itemio:io {output_side:"north"} if score #if_ioconfig itemio.math.output matches 1 run function itemio:container/output/custom/repart_output/north
+execute if data storage itemio:io {output_side:"south"} if score #if_ioconfig itemio.math.output matches 1 run function itemio:container/output/custom/repart_output/south
+execute if data storage itemio:io {output_side:"east"} if score #if_ioconfig itemio.math.output matches 1 run function itemio:container/output/custom/repart_output/east
+execute if data storage itemio:io {output_side:"west"} if score #if_ioconfig itemio.math.output matches 1 run function itemio:container/output/custom/repart_output/west
+execute if data storage itemio:io {output_side:"wireless"} if score #if_ioconfig itemio.math.output matches 1 run function itemio:container/output/custom/repart_output
 
