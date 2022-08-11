@@ -1,16 +1,16 @@
 
-data remove storage itemio:main Item1
-data remove storage itemio:main Item2
+data remove storage itemio:main.output Item1
+data remove storage itemio:main.output Item2
 
 
-data modify storage itemio:main Item1 set from storage itemio:main input
-data modify storage itemio:main Item2 set from storage itemio:main Items[0]
-data remove storage itemio:main Item1.Count
-data remove storage itemio:main Item1.Slot
-data remove storage itemio:main Item2.Count
-data remove storage itemio:main Item2.Slot
+data modify storage itemio:main.output Item1 set from storage itemio:main.output input
+data modify storage itemio:main.output Item2 set from storage itemio:main.output Items[0]
+data remove storage itemio:main.output Item1.Count
+data remove storage itemio:main.output Item1.Slot
+data remove storage itemio:main.output Item2.Count
+data remove storage itemio:main.output Item2.Slot
 
-execute store result score #!same_item itemio.math run data modify storage itemio:main Item1 set from storage itemio:main Item2
+execute store result score #!same_item itemio.math run data modify storage itemio:main.output Item1 set from storage itemio:main.output Item2
 execute if score #!same_item itemio.math matches 0 run function itemio:container/output/vanilla/normal/output
-execute if score #!same_item itemio.math matches 1 run data remove storage itemio:main Items[0]
-execute if score #!same_item itemio.math matches 1 if data storage itemio:main Items[0] run function itemio:container/output/vanilla/normal/test_nbt
+execute if score #!same_item itemio.math matches 1 run data remove storage itemio:main.output Items[0]
+execute if score #!same_item itemio.math matches 1 if data storage itemio:main.output Items[0] run function itemio:container/output/vanilla/normal/test_nbt

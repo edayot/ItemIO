@@ -1,13 +1,13 @@
 
 scoreboard players set #success_output itemio.math 1
 
-data modify storage itemio:io output set from storage itemio:main Items[0]
+data modify storage itemio:io output set from storage itemio:main.output Items[0]
 
 #check maxcount
 execute store result score #test_count_output itemio.math run data get storage itemio:io output.Count
 execute if score #test_count_output itemio.math > #max_output_count itemio.math store result storage itemio:io output.Count int 1 run scoreboard players get #max_output_count itemio.math
 
-execute store result score #slot_container itemio.math run data get storage itemio:main Items[0].Slot
+execute store result score #slot_container itemio.math run data get storage itemio:main.output Items[0].Slot
 execute if score #slot_container itemio.math matches 0 run item modify block ~ ~ ~ container.0 itemio:output/remove_count
 execute if score #slot_container itemio.math matches 1 run item modify block ~ ~ ~ container.1 itemio:output/remove_count
 execute if score #slot_container itemio.math matches 2 run item modify block ~ ~ ~ container.2 itemio:output/remove_count

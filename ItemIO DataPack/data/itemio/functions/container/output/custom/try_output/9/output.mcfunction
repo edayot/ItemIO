@@ -1,7 +1,7 @@
 
 scoreboard players set #success_output itemio.math 1
 
-data modify storage itemio:io output set from storage itemio:main Items[{Slot:9b}]
+data modify storage itemio:io output set from storage itemio:main.output Items[{Slot:9b}]
 
 #check maxcount
 execute store result score #test_count_output itemio.math run data get storage itemio:io output.Count

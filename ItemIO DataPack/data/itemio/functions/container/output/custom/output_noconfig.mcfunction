@@ -3,13 +3,13 @@ scoreboard players set #success_output itemio.math 0
 
 
 #loading block data
-data remove storage itemio:main Items
-data modify storage itemio:main Items set from block ~ ~ ~ Items
-data remove storage itemio:main input
-data modify storage itemio:main input set from storage itemio:io input
+data remove storage itemio:main.output Items
+data modify storage itemio:main.output Items set from block ~ ~ ~ Items
+data remove storage itemio:main.output input
+data modify storage itemio:main.output input set from storage itemio:io input
 data remove storage itemio:io output
 
-execute store result score #if_ioconfig itemio.math if data storage itemio:main ioconfig[0] 
+execute store result score #if_ioconfig itemio.math if data storage itemio:main.output ioconfig[0] 
 execute store result score #if_filter_define itemio.math if data storage itemio:io filter 
 
 

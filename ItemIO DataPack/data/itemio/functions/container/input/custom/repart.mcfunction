@@ -1,4 +1,4 @@
-execute store result score #slot itemio.math run data get storage itemio:main ioconfig[0].Slot
+execute store result score #slot itemio.math run data get storage itemio:main.input ioconfig[0].Slot
 
 
 execute if score #slot itemio.math matches 0 run function itemio:container/input/custom/try_input/0/repart

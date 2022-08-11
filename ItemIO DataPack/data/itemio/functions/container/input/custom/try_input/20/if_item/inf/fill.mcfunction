@@ -1,4 +1,4 @@
 item modify block ~ ~ ~ container.20 itemio:internal/input/add_count
 scoreboard players set #success_input itemio.math 1
 scoreboard players set #full_input itemio.math 1
-data modify storage itemio:main input.Count set value 0b
+data modify storage itemio:main.input input.Count set value 0b
