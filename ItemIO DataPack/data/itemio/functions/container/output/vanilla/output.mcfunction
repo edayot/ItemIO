@@ -20,3 +20,6 @@ execute store result score #if_item_input itemio.math.output if data storage ite
 execute store result score #if_filter_define itemio.math.output if data storage itemio:io filter 
 
 execute if block ~ ~ ~ #itemio:container/normal run function itemio:container/output/vanilla/normal/repart
+execute if block ~ ~ ~ #itemio:container/3 run function itemio:container/output/vanilla/3/repart
+
+
