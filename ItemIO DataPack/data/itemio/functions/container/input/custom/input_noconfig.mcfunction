@@ -1,5 +1,5 @@
 
-scoreboard players set #success_input itemio.math.input 0
+
 scoreboard players set #full_input itemio.math.input 0
 
 

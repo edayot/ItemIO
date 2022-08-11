@@ -1,5 +1,5 @@
 
-scoreboard players set #success_output itemio.math.output 0
+
 
 
 #loading block data

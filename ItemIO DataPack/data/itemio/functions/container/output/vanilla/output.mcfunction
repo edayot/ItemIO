@@ -3,7 +3,7 @@ data remove storage itemio:main.output input
 data modify storage itemio:main.output input set from storage itemio:io input
 
 
-scoreboard players set #success_output itemio.math.output 0
+
 
 
 #loading block data

@@ -18,8 +18,4 @@ execute as @a[tag=convention.debug] run function itemio:print_version
 
 schedule function itemio:tick 1t replace
 schedule function itemio:8tick 8t replace
-#TODO LIST : 
-# - Compatibility with hoppers
-# - Compatibility with minecart_hoppers
-# - The auto output functionnality
-## - with support for 1 by 1 or stack by stack auto output
+
