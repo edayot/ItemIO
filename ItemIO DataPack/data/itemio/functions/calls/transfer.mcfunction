@@ -7,12 +7,17 @@
 #       - Can be "north","south","east","west","top","bottom"
 #   A output side in storage itemio:io output_side
 #       - Can be "north","south","east","west","top","bottom"
+#   score #max_output_count itemio.math.output : for unstackable or if the container that the item is going is full
 
 
 
-scoreboard players set #try_input_after itemio.math 1
+data remove storage itemio:io filter
+data remove storage itemio:io input
+scoreboard players set #success_transfer itemio.math 0
+
+scoreboard players set #try_input_after itemio.math.output 1
 execute at 00000000-67bb-40a6-91e0-0dd512d13b21 run function #itemio:calls/output
 
-
-kill 00000000-67bb-40a6-91e0-0dd512d13b21
-kill 00000001-792c-4877-9654-b8805ab5f8d7
+scoreboard players set #try_input_after itemio.math.output 0
+#kill 00000000-67bb-40a6-91e0-0dd512d13b21
+#kill 00000001-792c-4877-9654-b8805ab5f8d7
