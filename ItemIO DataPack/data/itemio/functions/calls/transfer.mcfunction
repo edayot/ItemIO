@@ -14,7 +14,7 @@
 
 scoreboard players set #success_transfer itemio.math 0
 
-execute if entity 00000000-792c-4877-9654-b8805ab5f8d7 if entity 00000001-792c-4877-9654-b8805ab5f8d7 run function itemio:container/transfer
+execute at 00000000-792c-4877-9654-b8805ab5f8d7 if entity 00000001-792c-4877-9654-b8805ab5f8d7 run function itemio:container/transfer
 
 
 
