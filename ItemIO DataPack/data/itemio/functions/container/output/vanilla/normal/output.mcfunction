@@ -10,7 +10,7 @@ execute if score #test_count_output itemio.math.output > #max_output_count itemi
 scoreboard players set #remove_count itemio.math.output 0
 scoreboard players operation #remove_count itemio.math.output = #max_output_count itemio.math.output
 
-execute if score #try_input_after itemio.math.output matches 1 run function itemio:container/output/try_input_after
+execute if score #try_input_after itemio.math.output matches 1 run function #itemio:calls/try_input_after
 execute if score #remove_count itemio.math.output matches 1.. run function itemio:container/output/vanilla/normal/output_slot
 
 #Retry in not success input

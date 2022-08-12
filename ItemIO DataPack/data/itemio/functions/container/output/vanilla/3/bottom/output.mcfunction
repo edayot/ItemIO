@@ -9,5 +9,5 @@ execute if score #test_count_output itemio.math.output > #max_output_count itemi
 
 
 
-execute if score #try_input_after itemio.math.output matches 1 run function itemio:container/output/try_input_after
+execute if score #try_input_after itemio.math.output matches 1 run function #itemio:calls/try_input_after
 execute if score #remove_count itemio.math.output matches 1.. run item modify block ~ ~ ~ container.2 itemio:output/remove_count
