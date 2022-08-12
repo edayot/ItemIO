@@ -5,7 +5,7 @@
             "type": "minecraft:score",
             "target": {
                 "type": "minecraft:fixed",
-                "name": "#max_output_count"
+                "name": "#remove_count"
             },
             "score": "itemio.math.output",
             "scale": -1
