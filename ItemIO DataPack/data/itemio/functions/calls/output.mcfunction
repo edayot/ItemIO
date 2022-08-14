@@ -13,8 +13,8 @@
 scoreboard players set #success_output itemio.math.output 0
 
 
-execute align xyz positioned ~.5 ~.5 ~.5 run tag @e[type=marker,tag=itemio.container,distance=..0.5,limit=1,sort=nearest] add itemio.selected
-execute as @e[tag=itemio.selected] run function itemio:container/output/custom/output
-execute unless entity @e[tag=itemio.selected] if block ~ ~ ~ #itemio:container run function itemio:container/output/vanilla/output
+execute align xyz positioned ~.5 ~.5 ~.5 run tag @e[type=#itemio:container,tag=itemio.container,distance=..0.5,limit=1,sort=nearest] add itemio.selected
+execute as @e[tag=itemio.selected,tag=!itemio.container.nope] run function itemio:container/output/custom/output
+execute unless entity @e[tag=itemio.selected,tag=!itemio.container.nope] if block ~ ~ ~ #itemio:container run function itemio:container/output/vanilla/output
 tag @e[tag=itemio.selected] remove itemio.selected
 
