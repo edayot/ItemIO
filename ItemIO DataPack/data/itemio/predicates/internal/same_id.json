@@ -1,0 +1,54 @@
+[
+    {
+        "condition": "minecraft:value_check",
+        "value": {
+            "type": "minecraft:score",
+            "target": "this",
+            "score": "itemio.network_id.high"
+        },
+        "range": {
+            "min": {
+                "type": "minecraft:score",
+                "target": {
+                    "type": "minecraft:fixed",
+                    "name": "#own_network.high"
+                },
+                "score": "itemio.math"
+            },
+            "max": {
+                "type": "minecraft:score",
+                "target": {
+                    "type": "minecraft:fixed",
+                    "name": "#own_network.high"
+                },
+                "score": "itemio.math"
+            }
+        }
+    },
+    {
+        "condition": "minecraft:value_check",
+        "value": {
+            "type": "minecraft:score",
+            "target": "this",
+            "score": "itemio.network_id.low"
+        },
+        "range": {
+            "min": {
+                "type": "minecraft:score",
+                "target": {
+                    "type": "minecraft:fixed",
+                    "name": "#own_network.low"
+                },
+                "score": "itemio.math"
+            },
+            "max": {
+                "type": "minecraft:score",
+                "target": {
+                    "type": "minecraft:fixed",
+                    "name": "#own_network.low"
+                },
+                "score": "itemio.math"
+            }
+        }
+    }
+]
