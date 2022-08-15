@@ -1,9 +1,9 @@
 {
     "display": {
         "title": "ItemIO",
-        "description": "v0.0.1",
+        "description": "v0.0.1\n A library to transfer items between vanilla and custom containers",
         "icon": {
-            "item": "minecraft:beehive",
+            "item": "minecraft:hopper",
             "nbt": "{CustomModelData:1430000}"
         },
         "announce_to_chat": false,
