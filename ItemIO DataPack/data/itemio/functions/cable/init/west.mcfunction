@@ -2,9 +2,6 @@ scoreboard players add #model_final itemio.math 16
 scoreboard players add @s itemio.math 32
 
 
-scoreboard players operation #own_network.low itemio.math = @s itemio.network_id.low
-scoreboard players operation #own_network.high itemio.math = @s itemio.network_id.high
-
-execute as @e[tag=itemio.network,predicate=itemio:internal/same_id] run function itemio:cable/init_3
-
+execute if score @e[tag=itemio.cable.me,limit=1] itemio.network_id.low matches 1.. run function itemio:cable/init/regen
+execute if score @e[tag=itemio.cable.me,limit=1] itemio.network_id.low matches 0 run function itemio:cable/init/copy
 
