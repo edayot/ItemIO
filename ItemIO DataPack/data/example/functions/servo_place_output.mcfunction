@@ -1,4 +1,4 @@
-tag @s remove example.summoned
+tag @s remove example.summoned.output
 tag @s add itemio.network
 tag @s add itemio.servo
 tag @s add itemio.servo.output

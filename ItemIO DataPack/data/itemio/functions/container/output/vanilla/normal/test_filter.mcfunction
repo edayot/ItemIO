@@ -1,4 +1,4 @@
-scoreboard players set #valid_item itemio.math 0
+scoreboard players set #valid_item itemio.math 1
 data modify storage itemio:io item set from storage itemio:main.output Items[0]
 function #itemio:event/filter
 execute if score #valid_item itemio.math matches 0 run data remove storage itemio:main.output Items[0]

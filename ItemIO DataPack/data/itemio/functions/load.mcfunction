@@ -20,4 +20,5 @@ execute as @a[tag=convention.debug] run function itemio:print_version
 
 schedule function itemio:tick 1t replace
 schedule function itemio:8tick 8t replace
+schedule function itemio:20tick 20t replace
 

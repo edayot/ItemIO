@@ -42,7 +42,7 @@ execute if score #remove_count itemio.math.output matches 1.. run item modify bl
     with open(str(i)+"/output.mcfunction","w") as f:
         f.write(output)
 
-    test_filter="""scoreboard players set #valid_item itemio.math 0
+    test_filter="""scoreboard players set #valid_item itemio.math 1
 data modify storage itemio:io item set from storage itemio:main.output Items[{Slot:XXXb}]
 function #itemio:event/filter
 execute if score #valid_item itemio.math matches 1 run function itemio:container/output/custom/try_output/XXX/output
