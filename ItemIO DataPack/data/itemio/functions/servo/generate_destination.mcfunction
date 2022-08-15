@@ -17,5 +17,7 @@ execute if data entity @s Item.tag.itemio.ioconfig.item run data modify storage 
 
 data modify entity @e[tag=itemio.summoned,limit=1] data.itemio.ioconfig set from storage itemio:main entity
 
+scoreboard players operation @e[tag=itemio.summoned,limit=1] itemio.servo.stack_limit = @s itemio.servo.stack_limit
+
 
 tag @e[tag=itemio.summoned] remove itemio.summoned
