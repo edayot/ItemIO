@@ -1,7 +1,8 @@
 {
     "values": [
         "marker",
-        "#itemio:item_frames"
+        "#itemio:item_frames",
+        "armor_stand"
         
     ]
 }
