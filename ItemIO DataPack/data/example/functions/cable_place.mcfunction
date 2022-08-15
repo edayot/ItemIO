@@ -1,5 +1,5 @@
-summon marker ~ ~ ~ {Tags:["itemio.cable","itemio.cable.summoned","itemio.network"]}
+summon marker ~ ~ ~ {Tags:["itemio.cable","example.summoned","itemio.network","example.cable"]}
 setblock ~ ~ ~ conduit[waterlogged=false]
-execute as @e[type=marker,tag=itemio.cable.summoned] run function itemio:cable/init
+execute as @e[type=marker,tag=example.summoned] run function itemio:cable/init
 
-tag @e[type=marker,tag=itemio.cable.summoned] remove itemio.cable.summoned
+tag @e[type=marker,tag=example.summoned] remove example.summoned

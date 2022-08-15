@@ -27,7 +27,10 @@ execute if score #success_connected itemio.math matches 0 run function itemio:ca
 #handeling custom model data
 scoreboard players set @s itemio.math 0
 scoreboard players operation @s itemio.math = #model_final itemio.math
+function #itemio:event/cable_update
+
 
 #Update others network parts like servo
 execute align xyz positioned ~.5 ~.5 ~.5 as @e[type=#itemio:cables,tag=itemio.network,distance=..0.5] run function itemio:cable/init/gen
 tag @s remove itemio.cable.me
+
