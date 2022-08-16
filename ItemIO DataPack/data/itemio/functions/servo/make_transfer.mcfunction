@@ -18,4 +18,4 @@ execute if data entity @s Item.tag.itemio.ioconfig.item run data modify storage 
 
 scoreboard players operation #max_output_count itemio.math.output = @s itemio.servo.stack_limit
 
-execute positioned ^ ^ ^-1 align xyz positioned ~.5 ~.5 ~.5 run function itemio:calls/transfer
+execute positioned ^ ^ ^-1 align xyz positioned ~.5 ~.5 ~.5 run function #itemio:calls/transfer

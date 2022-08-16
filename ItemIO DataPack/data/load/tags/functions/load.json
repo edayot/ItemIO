@@ -1,6 +1,5 @@
 {
     "values": [
-        "#itemio:load",
-        "example:tick"
+        "#itemio:load"
     ]
 }
