@@ -31,6 +31,6 @@ function #itemio:event/cable_update
 
 
 #Update others network parts like servo
-execute align xyz positioned ~.5 ~.5 ~.5 as @e[type=#itemio:item_frames,tag=itemio.network,tag=!itemio.cable,distance=..0.5] run function itemio:cable/init/gen
+execute align xyz positioned ~.5 ~.5 ~.5 as @e[type=#itemio:item_frames,tag=itemio.network,tag=!itemio.cable,distance=..0.5] run function itemio:cable/init/gen_network
 tag @s remove itemio.cable.me
 
