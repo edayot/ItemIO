@@ -1,0 +1,1 @@
+execute if data storage itemio:io input run function itemio:container/input/vanilla/input

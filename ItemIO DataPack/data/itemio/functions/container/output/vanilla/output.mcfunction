@@ -7,8 +7,6 @@ data modify storage itemio:main.output input set from storage itemio:io input
 
 
 #loading block data
-data remove storage itemio:main.output Items
-data modify storage itemio:main.output Items set from block ~ ~ ~ Items
 data remove storage itemio:main.output input
 data modify storage itemio:main.output input set from storage itemio:io input
 data remove storage itemio:io output
