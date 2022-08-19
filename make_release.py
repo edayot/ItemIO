@@ -29,40 +29,31 @@ scoreboard players set #itemio.patch load.status {}
             }
         }
         json.dump(pack,f, indent = 4)
-    with open("ItemIO ResourcePack/pack.mcmeta","w") as f:
-        pack={
-            "pack":{
-                "pack_format":9,
-                "description":"§aItemIO ResourcePack "+version
-            }
-        }
-        json.dump(pack,f, indent = 4)
     
     with open("ItemIO DataPack/data/global/advancements/airdox_/itemio.json","w") as f:
         pack={
-        "display": {
-            "title": "ItemIO",
-            "description": version,
-            "icon": {
-                "item": "minecraft:beehive",
-                "nbt": "{CustomModelData:1430000}"
-            },
-            "announce_to_chat": False,
-            "show_toast": False
+    "display": {
+        "title": "ItemIO",
+        "description": version+"\n A library to transfer items between vanilla and custom containers",
+        "icon": {
+            "item": "minecraft:hopper",
+            "nbt": "{CustomModelData:1430000}"
         },
-        "parent": "global:airdox_/root",
-        "criteria": {
-            "trigger": {
-                "trigger": "minecraft:tick"
-            }
+        "announce_to_chat": False,
+        "show_toast": False
+    },
+    "parent": "global:airdox_/root",
+    "criteria": {
+        "trigger": {
+            "trigger": "minecraft:tick"
         }
     }
+}
         json.dump(pack,f, indent = 4)
 
 def create_zip(version):     
     #create zip file
     shutil.make_archive("release/ItemIO_DataPack_"+version, "zip", "ItemIO DataPack")
-    shutil.make_archive("release/ItemIO_ResourcePack_"+version, "zip", "ItemIO ResourcePack")
 
     
     
@@ -83,10 +74,7 @@ def git_push(version):
     r.index.commit("[AUTO] updated to "+version)
     r.remote("origin").push()
 
-
-
-
-if __name__=="__main__" and False:
+def start():
     version=input("Please select a version tag : ")
     if len(version)>0:
         check=input("The version tag is "+version+" confirm [y/n]")
@@ -94,3 +82,7 @@ if __name__=="__main__" and False:
             change_version(version)
             git_push(version)
             create_zip(version)
+
+
+if __name__=="__main__" and False:
+    start()
