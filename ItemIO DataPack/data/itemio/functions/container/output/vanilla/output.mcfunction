@@ -1,9 +1,3 @@
-#init
-data remove storage itemio:main.output input
-data modify storage itemio:main.output input set from storage itemio:io input
-
-
-
 
 
 #loading block data
