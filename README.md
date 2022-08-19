@@ -10,9 +10,10 @@ They are integrated feature like servo management and cable management.
 All item frames, marker and armor_stand can be declared as custom container with the tag ``itemio.container``
 
 You can configure the input/output feature in there entity data the path is :
-For makers : data.itemio.ioconfig
-For item_frames : Item.tag.itemio.ioconfig
-For armor_stands : ArmorItems[3].tag.itemio.ioconfig
+
+- For makers : ``data.itemio.ioconfig``
+- For item_frames : ``Item.tag.itemio.ioconfig``
+- For armor_stands : ``ArmorItems[3].tag.itemio.ioconfig``
 
 The ioconfig data are the same for all entities and they look like : 
 ```
