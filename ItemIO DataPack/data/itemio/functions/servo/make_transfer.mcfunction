@@ -9,13 +9,17 @@ execute if score #facing itemio.math matches 3 run data modify storage itemio:io
 execute if score #facing itemio.math matches 4 run data modify storage itemio:io output_side set value "west"
 execute if score #facing itemio.math matches 5 run data modify storage itemio:io output_side set value "east"
 
-data remove storage itemio:io filter
-data remove storage itemio:io input
+data remove storage itemio:main servo_filters
+data remove storage itemio:main servo_items
 
 
-execute if data entity @s Item.tag.itemio.ioconfig.filter run data modify storage itemio:io filter set from entity @s Item.tag.itemio.ioconfig.filter
-execute if data entity @s Item.tag.itemio.ioconfig.item run data modify storage itemio:io item set from entity @s Item.tag.itemio.ioconfig.item
+data modify storage itemio:main servo_filters set from entity @s Item.tag.itemio.ioconfig.filters
+data modify storage itemio:main servo_items set from entity @s Item.tag.itemio.ioconfig.filters
 
-scoreboard players operation #max_output_count itemio.math.output = @s itemio.servo.stack_limit
+execute store result score #if_filters_defined itemio.math if data storage itemio:main servo_filters[0] 
+execute store result score #if_items_defined itemio.math if data storage itemio:main servo_items[0] 
 
-execute positioned ^ ^ ^-1 align xyz positioned ~.5 ~.5 ~.5 run function #itemio:calls/transfer
+
+execute if score #if_filters_defined itemio.math matches 1 run function itemio:servo/make_transfer_filters
+execute if score #if_filters_defined itemio.math matches 0 if score #if_items_defined itemio.math matches 1 run function itemio:servo/make_transfer_items
+execute if score #if_filters_defined itemio.math matches 0 if score #if_items_defined itemio.math matches 0 run function itemio:servo/make_transfer_normal

@@ -1,14 +1,16 @@
+data remove storage itemio:main servo_filters
+data remove storage itemio:main servo_items
 
 
-scoreboard players set #valid_item itemio.math 1
-execute if data entity @s data.itemio.ioconfig.filter run function itemio:container/output/try_input_after/filter
+data modify storage itemio:main servo_filters set from entity @s data.itemio.ioconfig.filters
+data modify storage itemio:main servo_items set from entity @s data.itemio.ioconfig.items
 
-execute if data entity @s data.itemio.ioconfig.item run function itemio:container/output/try_input_after/nbt_check
+execute store result score #if_filters_defined2 itemio.math if data storage itemio:main servo_filters[0] 
+execute store result score #if_items_defined2 itemio.math if data storage itemio:main servo_items[0] 
+
+execute if score #if_filters_defined2 itemio.math matches 1 run function itemio:container/output/try_input_after/loop_filters
+execute if score #if_filters_defined2 itemio.math matches 0 if score #if_items_defined2 itemio.math matches 1 run function itemio:container/output/try_input_after/loop_items
+execute if score #if_filters_defined2 itemio.math matches 0 if score #if_items_defined2 itemio.math matches 0 run function itemio:container/output/try_input_after/loop_normal
 
 
-scoreboard players set #success_input itemio.math.input 0
-execute if score #valid_item itemio.math matches 1 run function itemio:container/output/try_input_after/input
 
-
-execute if score #success_input itemio.math.input matches 0 run tag @s add itemio.transfer.destination.already
-execute if score #success_input itemio.math.input matches 0 as @e[tag=itemio.transfer.destination,tag=!itemio.transfer.destination.already,limit=1,sort=nearest] at @s run function itemio:container/output/try_input_after/loop

@@ -12,8 +12,9 @@ execute if score #facing itemio.math matches 3 run data modify storage itemio:ma
 execute if score #facing itemio.math matches 4 run data modify storage itemio:main entity.input_side set value "west"
 execute if score #facing itemio.math matches 5 run data modify storage itemio:main entity.input_side set value "east"
 
-execute if data entity @s Item.tag.itemio.ioconfig.filter run data modify storage itemio:main entity.filter set from entity @s Item.tag.itemio.ioconfig.filter
-execute if data entity @s Item.tag.itemio.ioconfig.item run data modify storage itemio:main entity.item set from entity @s Item.tag.itemio.ioconfig.item
+
+execute if data entity @s Item.tag.itemio.ioconfig.filters run data modify storage itemio:main entity.filters set from entity @s Item.tag.itemio.ioconfig.filters
+execute if data entity @s Item.tag.itemio.ioconfig.items run data modify storage itemio:main entity.items set from entity @s Item.tag.itemio.ioconfig.items
 
 data modify entity @e[tag=itemio.summoned,limit=1] data.itemio.ioconfig set from storage itemio:main entity
 
