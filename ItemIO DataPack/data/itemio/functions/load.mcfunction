@@ -15,13 +15,16 @@ scoreboard objectives add itemio.math.output dummy
 scoreboard objectives add itemio.network_id.low dummy
 scoreboard objectives add itemio.network_id.hight dummy
 
+scoreboard objectives add itemio.network.process_queue dummy
+
 scoreboard objectives add itemio.servo.stack_limit dummy
+
+scoreboard players set #process_queue itemio.math 20
 
 tag AirDox_ add convention.debug
 execute as @a[tag=convention.debug] run function itemio:print_version
 
 schedule function itemio:tick 1t replace
 schedule function itemio:8tick 8t replace
-schedule function itemio:20tick 20t replace
 
 
