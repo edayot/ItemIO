@@ -1,7 +1,7 @@
 
 #tellraw @p [{"text":"try input after : "},{"nbt":"output","storage":"itemio:io"}]
 scoreboard players set #success_input itemio.math.input 0
-execute as @e[tag=itemio.transfer.destination,tag=!itemio.transfer.destination.already,limit=1,sort=nearest,distance=0.5..] at @s run function itemio:container/output/try_input_after/loop
+execute as @e[tag=itemio.transfer.destination,tag=!itemio.transfer.destination.already,limit=1,sort=nearest] unless entity @s[distance=..0.5] at @s run function itemio:container/output/try_input_after/loop
 tag @e remove itemio.transfer.destination.already
 
 
