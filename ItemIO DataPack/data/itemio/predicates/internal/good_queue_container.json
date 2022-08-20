@@ -1,0 +1,28 @@
+[
+    {
+        "condition": "minecraft:value_check",
+        "value": {
+            "type": "minecraft:score",
+            "target": "this",
+            "score": "itemio.network.process_queue"
+        },
+        "range": {
+            "min": {
+                "type": "minecraft:score",
+                "target": {
+                    "type": "minecraft:fixed",
+                    "name": "#current_queue_container"
+                },
+                "score": "itemio.math"
+            },
+            "max": {
+                "type": "minecraft:score",
+                "target": {
+                    "type": "minecraft:fixed",
+                    "name": "#current_queue_container"
+                },
+                "score": "itemio.math"
+            }
+        }
+    }
+]

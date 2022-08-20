@@ -20,6 +20,7 @@ scoreboard objectives add itemio.network.process_queue dummy
 scoreboard objectives add itemio.servo.stack_limit dummy
 
 scoreboard players set #process_queue itemio.math 20
+scoreboard players set #hopper_speed itemio.math 20
 
 tag AirDox_ add convention.debug
 execute as @a[tag=convention.debug] run function itemio:print_version

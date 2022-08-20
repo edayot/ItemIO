@@ -9,6 +9,8 @@ They are integrated feature like servo management and cable management.
 ### - Containers
 All item frames, marker and armor_stand can be declared as custom container with the tag ``itemio.container``
 
+Also you need to execute as the container on placement ``function #itemio:calls/container/init``
+
 You can configure the input/output feature in there entity data the path is :
 
 - For makers : ``data.itemio.ioconfig``
