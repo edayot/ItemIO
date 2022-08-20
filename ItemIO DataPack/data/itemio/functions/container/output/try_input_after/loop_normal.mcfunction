@@ -1,5 +1,5 @@
 scoreboard players set #success_input itemio.math.input 0
-execute if score #valid_item itemio.math matches 1 run function itemio:container/output/try_input_after/input
+function itemio:container/output/try_input_after/input
 
 
 execute if score #success_input itemio.math.input matches 0 run tag @s add itemio.transfer.destination.already
