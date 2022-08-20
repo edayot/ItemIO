@@ -13,7 +13,7 @@ data modify storage itemio:main.input Items set from block ~ ~ ~ Items
 
 execute store result score #input_size itemio.math.input if data storage itemio:main.input Items[]
 
-scoreboard players set #max_iteration itemio.math.input 16
+scoreboard players set #max_iteration itemio.math.input 128
 scoreboard players set #no_space itemio.math.input 0
 execute if block ~ ~ ~ #itemio:container/27 run function itemio:container/input/vanilla/27/try_input
 execute if block ~ ~ ~ #itemio:container/9 run function itemio:container/input/vanilla/9/try_input

@@ -7,12 +7,8 @@ execute as 93682a08-d099-4e8f-a4a6-1e33a3692301 if predicate itemio:stack1 run s
 
 execute if score #count_input itemio.math.input > #full_stack itemio.math.input store result storage itemio:main.input input.Count int 1 run scoreboard players get #full_stack itemio.math.input
 
-setblock -30000000 22 1610 yellow_shulker_box
-data modify block -30000000 22 1610 Items append from storage itemio:main.input input
-
-scoreboard players set #valid_item itemio.math.input 0
-execute store success score #valid_item itemio.math.input run loot replace block ~ ~ ~ container.1 mine -30000000 22 1610 air{drop_contents:1b}
-
+execute in minecraft:overworld run function itemio:container/input/vanilla/3/try_input/side/unless_item_dimension
+data modify block ~ ~ ~ Items set from storage itemio:main.input Items
 
 execute if score #valid_item itemio.math.input matches 1 run scoreboard players set #success_input itemio.math.input 1
 execute if score #valid_item itemio.math.input matches 1 if score #count_input itemio.math.input > #full_stack itemio.math.input run scoreboard players operation #count_input itemio.math.input -= #full_stack itemio.math.input
