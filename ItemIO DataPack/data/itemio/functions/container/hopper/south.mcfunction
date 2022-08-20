@@ -9,3 +9,5 @@ data modify storage itemio:io output_side set value "north"
 function #itemio:calls/transfer
 
 kill @e[tag=itemio.transfer.destination.temp]
+
+function itemio:container/hopper/vanilla_input
