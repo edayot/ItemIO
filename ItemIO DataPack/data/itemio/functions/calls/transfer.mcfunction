@@ -13,9 +13,9 @@
 
 
 
-scoreboard players set #success_transfer itemio.math 0
 
-execute if entity @e[tag=itemio.transfer.destination] run function itemio:container/transfer
+
+execute if score itemio.major load.status matches 0 if score itemio.minor load.status matches 0 if score itemio.patch load.status matches 1.. run function itemio:container/transfer
 
 
 

@@ -10,5 +10,5 @@ data remove storage itemio:main.output Item2.Count
 data remove storage itemio:main.output Item2.Slot
 
 execute store result score #!same_item itemio.math.output run data modify storage itemio:main.output Item1 set from storage itemio:main.output Item2
-execute if score #!same_item itemio.math.output matches 0 run function itemio:calls/auto_handled_output/output
+execute if score #!same_item itemio.math.output matches 0 run function itemio:container/auto_handled_output/output
 

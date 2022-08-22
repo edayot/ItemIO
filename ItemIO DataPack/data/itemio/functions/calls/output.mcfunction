@@ -7,15 +7,8 @@
 #       - Can be "north","south","east","west","top","bottom"
 # Outputs : 
 #       storage itemio:io output : the output item
-#define storage itemio:io
-#define storage itemio:main.output
-
-scoreboard players set #success_output itemio.math.output 0
 
 
-execute align xyz positioned ~.5 ~.5 ~.5 run tag @e[type=#itemio:container,tag=itemio.container,distance=..0.5,limit=1,sort=nearest] add itemio.selected.output
-execute as @e[tag=itemio.selected.output,tag=!itemio.container.nope,tag=!itemio.auto_handled_io] run function itemio:container/output/custom/output
-execute unless entity @e[tag=itemio.selected.output,tag=!itemio.container.nope,tag=!itemio.auto_handled_io] if block ~ ~ ~ #itemio:container run function itemio:container/output/vanilla/test_output
-execute as @e[tag=itemio.selected.output,tag=itemio.container.auto_handled_io,tag=!itemio.container.nope] run function #itemio:event/auto_handled_output
-tag @e[tag=itemio.selected.output] remove itemio.selected.output
+execute if score itemio.major load.status matches 0 if score itemio.minor load.status matches 0 if score itemio.patch load.status matches 1.. run function itemio:container/output/repart
+
 
