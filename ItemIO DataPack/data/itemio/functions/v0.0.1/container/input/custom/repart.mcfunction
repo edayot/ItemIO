@@ -29,3 +29,4 @@ execute if score #full_input itemio.math.input matches 0 if score #slot itemio.m
 execute if score #full_input itemio.math.input matches 0 if score #slot itemio.math.input matches 24 run function itemio:v0.0.1/container/input/custom/try_input/24/repart
 execute if score #full_input itemio.math.input matches 0 if score #slot itemio.math.input matches 25 run function itemio:v0.0.1/container/input/custom/try_input/25/repart
 execute if score #full_input itemio.math.input matches 0 if score #slot itemio.math.input matches 26 run function itemio:v0.0.1/container/input/custom/try_input/26/repart
+execute if score #servos_transfer itemio.math matches 1 if score #full_input itemio.math.input matches 0 if score #if_item itemio.math.input matches 1 unless data storage itemio:main.input ioconfig[1] run function #itemio:calls/disable_servo

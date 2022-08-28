@@ -9,6 +9,9 @@ scoreboard players operation @s itemio.network.process_queue %= #process_queue i
 
 execute unless entity @e[tag=itemio.cable.me,limit=1] run scoreboard players set @s itemio.network.process_queue -1
 
+scoreboard players set @s itemio.servo.cooldown 0
+
+
 scoreboard players set @s itemio.math 0
 execute unless score @s itemio.network_id.low matches 0 run scoreboard players set @s itemio.math 1
 function #itemio:event/network_update
