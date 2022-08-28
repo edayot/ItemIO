@@ -8,4 +8,4 @@
 #   A score #count_to_remove itemio.math.input to know how many items as to be remove from the origin
 #       The item modifier itemio:input/remove_count_origin can be use to remove the good amont of item
 
-execute if score itemio.major load.status matches 0 if score itemio.minor load.status matches 0 if score itemio.patch load.status matches 1.. run function itemio:v0.0.1/container/input/repart
+execute if score itemio.major load.status matches 0 if score itemio.minor load.status matches 0 if score itemio.patch load.status matches 1 run function itemio:v0.0.1/container/input/repart
