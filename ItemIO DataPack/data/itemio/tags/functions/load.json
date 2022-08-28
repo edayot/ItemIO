@@ -1,5 +1,6 @@
 {
     "values": [
-        "itemio:v0.0.1/load"
+        "#itemio:enumerate",
+        "#itemio:resolve"
     ]
 }

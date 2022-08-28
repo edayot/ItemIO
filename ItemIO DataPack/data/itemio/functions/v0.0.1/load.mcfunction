@@ -1,8 +1,6 @@
 #define storage itemio:main
 
 
-scoreboard players set itemio load.status 1
-function itemio:v0.0.1/set_version
 forceload add -30000000 1600
 
 schedule function itemio:v0.0.1/load_2 2s
