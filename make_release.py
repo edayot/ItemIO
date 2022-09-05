@@ -11,7 +11,7 @@ def change_version(version):
     major=v[0]
     minor=v[1]
     patch=v[2]
-    with open("ItemIO DataPack/data/itemio/functions/print_version.mcfunction","w") as f:
+    with open("ItemIO DataPack/data/itemio/functions/v0.0.1/print_version.mcfunction","w") as f:
         f.write('tellraw @s [{"text":"[Loaded ItemIO ","color":"green"},{"text":"'+version+']","color":"green"}]')
     
     with open("ItemIO DataPack/data/itemio/functions/set_version.mcfunction","w") as f:
