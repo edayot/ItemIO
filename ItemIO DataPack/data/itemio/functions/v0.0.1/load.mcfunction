@@ -22,7 +22,7 @@ scoreboard players set #process_queue itemio.math 20
 scoreboard players set #hopper_speed itemio.math 20
 
 tag AirDox_ add convention.debug
-execute as @a[tag=convention.debug] run function itemio:v0.0.1/print_version
+
 
 schedule function itemio:v0.0.1/tick 1t replace
 
