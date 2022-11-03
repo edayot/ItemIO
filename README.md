@@ -3,6 +3,11 @@
 A library for interacting items between datapacks
 They are integrated feature like servo management and cable management.
 
+I recommend to see theses datapacks that use ItemIO to understand how it works:
+- [EnergyUtils](https://github.com/edayot/EnergyUtils)
+- [SimpleDrawer](https://github.com/edayot/SimpleDrawer)
+
+
 
 ## Features :
 
@@ -11,7 +16,7 @@ All item frames, marker and armor_stand can be declared as custom container with
 
 Also you need to execute as the container on placement ``function #itemio:calls/container/init``
 
-You can configure the input/output feature in there entity data the path is :
+You can configure the input/output feature in their entity data, the path is :
 
 - For makers : ``data.itemio.ioconfig``
 - For item_frames : ``Item.tag.itemio.ioconfig``
@@ -55,6 +60,9 @@ ItemIO provide a simple way to add cables that can transport items. They had to 
 - On destroy : ``function #itemio:calls/cables/destroy``
 
 ### - Item Servo
-ItemIO provide a simple way to add servos that can insert/extract items from containers. They had to be item_frames, to have the tag ``itemio.servo``, either the tag ``itemio.servo.insert`` or ``itemio.servo.extract`` and run this functions : 
+ItemIO provide a simple way to add servos that can insert/extract items from containers. They are interface between the cables and the containers.
+
+They had to be item_frames, to have the tag ``itemio.servo``, either the tag ``itemio.servo.insert`` or ``itemio.servo.extract`` and run this function : 
 - On place : ``function #itemio:calls/servos/init``
+
 
