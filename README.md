@@ -41,8 +41,12 @@ The ioconfig data are the same for all entities and they look like :
 Notes : 
 - Only Slot and allowed_side are required
 - You can declare multiple times the same slot
-- If your are using a container as a custom block but without the posibility of input/output items you can add the tag ``itemio.container.nope``
-- To make the container compatible with hoppers just add the tag ``itemio.container.hopper``
+
+Some tags are very useful like :
+- ``itemio.container.nope`` : If your are using a container as a custom block but without the posibility of input/output items you can add the tag.
+- ``itemio.container.hopper`` : To make the container compatible with hoppers just add the tag.
+- ``itemio.container.not_vanilla_container`` : if the custom container does not use a vanilla container (used in SimpleDrawer with beehives)
+- ``itemio.container.auto_handled_io`` : if you want all the control on input/output (advanced use, see [SimpleDrawer](https://github.com/edayot/SimpleDrawer/tree/master/SimpleDrawer%20DataPack/data/itemio/tags/functions/event))
 
 
 ### - Item cables
