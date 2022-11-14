@@ -16,7 +16,17 @@ execute store result score #input_size itemio.math.input if data storage itemio:
 
 scoreboard players set #max_iteration itemio.math.input 128
 scoreboard players set #no_space itemio.math.input 0
-execute if block ~ ~ ~ #itemio:container/27 run function itemio:v0.0.1/container/input/vanilla/27/try_input
+execute if block ~ ~ ~ #itemio:container/27_chest run function itemio:v0.0.1/container/input/vanilla/27/try_input
+
+execute if block ~ ~ ~ chest[type=right] run function itemio:v0.0.1/container/input/vanilla/27/try_input
+execute if block ~ ~ ~ trapped_chest[type=right] run function itemio:v0.0.1/container/input/vanilla/27/try_input
+
+execute if block ~ ~ ~ chest[type=single] run function itemio:v0.0.1/container/input/vanilla/27/try_input
+execute if block ~ ~ ~ trapped_chest[type=single] run function itemio:v0.0.1/container/input/vanilla/27/try_input
+
+execute if block ~ ~ ~ chest[type=left] run function itemio:v0.0.1/container/input/vanilla/double_chest
+execute if block ~ ~ ~ trapped_chest[type=left] run function itemio:v0.0.1/container/input/vanilla/double_chest
+
 execute if block ~ ~ ~ #itemio:container/9 run function itemio:v0.0.1/container/input/vanilla/9/try_input
 execute if block ~ ~ ~ #itemio:container/3 run function itemio:v0.0.1/container/input/vanilla/3/try_input
 execute if block ~ ~ ~ minecraft:hopper[enabled=true] run function itemio:v0.0.1/container/input/vanilla/hopper/try_input
