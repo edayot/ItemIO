@@ -18,14 +18,15 @@ scoreboard players set #max_iteration itemio.math.input 128
 scoreboard players set #no_space itemio.math.input 0
 execute if block ~ ~ ~ #itemio:container/27_chest run function itemio:v0.0.1/container/input/vanilla/27/try_input
 
-execute if block ~ ~ ~ chest[type=right] run function itemio:v0.0.1/container/input/vanilla/27/try_input
-execute if block ~ ~ ~ trapped_chest[type=right] run function itemio:v0.0.1/container/input/vanilla/27/try_input
-
 execute if block ~ ~ ~ chest[type=single] run function itemio:v0.0.1/container/input/vanilla/27/try_input
 execute if block ~ ~ ~ trapped_chest[type=single] run function itemio:v0.0.1/container/input/vanilla/27/try_input
 
-execute if block ~ ~ ~ chest[type=left] run function itemio:v0.0.1/container/input/vanilla/double_chest
-execute if block ~ ~ ~ trapped_chest[type=left] run function itemio:v0.0.1/container/input/vanilla/double_chest
+execute if block ~ ~ ~ chest[type=right] run function itemio:v0.0.1/container/input/vanilla/double_chest_right
+execute if block ~ ~ ~ trapped_chest[type=right] run function itemio:v0.0.1/container/inpu/vanilla/double_chest_right
+
+
+execute if block ~ ~ ~ chest[type=left] run function itemio:v0.0.1/container/input/vanilla/double_chest_left
+execute if block ~ ~ ~ trapped_chest[type=left] run function itemio:v0.0.1/container/input/vanilla/double_chest_left
 
 execute if block ~ ~ ~ #itemio:container/9 run function itemio:v0.0.1/container/input/vanilla/9/try_input
 execute if block ~ ~ ~ #itemio:container/3 run function itemio:v0.0.1/container/input/vanilla/3/try_input
