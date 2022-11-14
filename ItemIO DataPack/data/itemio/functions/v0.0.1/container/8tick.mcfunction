@@ -1,6 +1,2 @@
-execute if entity @s[tag=itemio.container.hopper] run function itemio:v0.0.1/container/hopper/main
 
-# Vanilla behavior
-execute if entity @s[tag=!itemio.container.not_vanilla_container] run function itemio:v0.0.1/container/hopper/vanilla_behavior
-
-
+execute at @s[tag=itemio.container.hopper] align xyz positioned ~.5 ~.5 ~.5 run function itemio:v0.0.1/container/hopper_v2/repart_all

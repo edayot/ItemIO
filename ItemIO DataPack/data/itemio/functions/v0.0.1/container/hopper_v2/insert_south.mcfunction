@@ -1,5 +1,6 @@
+function itemio:v0.0.1/container/hopper_v2/extract_top
 
-execute at @s align xyz run summon marker ~.5 ~.5 ~.5 {data:{itemio:{ioconfig:{input_side:"north"}}},Tags:["itemio.transfer.destination","itemio.transfer.destination.temp","itemio.summoned"]}
+execute positioned ~ ~ ~1 run summon marker ~ ~ ~ {data:{itemio:{ioconfig:{input_side:"north"}}},Tags:["itemio.transfer.destination","itemio.transfer.destination.temp","itemio.summoned"]}
 
 
 scoreboard players set #max_output_count itemio.math.output 1
