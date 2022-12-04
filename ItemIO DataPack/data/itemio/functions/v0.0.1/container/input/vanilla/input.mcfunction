@@ -22,7 +22,7 @@ execute if block ~ ~ ~ chest[type=single] run function itemio:v0.0.1/container/i
 execute if block ~ ~ ~ trapped_chest[type=single] run function itemio:v0.0.1/container/input/vanilla/27/try_input
 
 execute if block ~ ~ ~ chest[type=right] run function itemio:v0.0.1/container/input/vanilla/double_chest_right
-execute if block ~ ~ ~ trapped_chest[type=right] run function itemio:v0.0.1/container/inpu/vanilla/double_chest_right
+execute if block ~ ~ ~ trapped_chest[type=right] run function itemio:v0.0.1/container/input/vanilla/double_chest_right
 
 
 execute if block ~ ~ ~ chest[type=left] run function itemio:v0.0.1/container/input/vanilla/double_chest_left
