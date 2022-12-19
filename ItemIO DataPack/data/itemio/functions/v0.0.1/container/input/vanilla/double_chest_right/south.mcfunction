@@ -6,4 +6,4 @@ scoreboard players set #double_chests itemio.math 0
 
 
 
-execute if score #success_input itemio.math.input matches 0 positioned ~1 ~ ~ run function itemio:v0.0.1/container/input/vanilla/27/try_input
+execute if score #success_input itemio.math.input matches 0 positioned ~1 ~ ~ if block ~ ~ ~ chest[facing=south,type=left] run function itemio:v0.0.1/container/input/vanilla/27/try_input
