@@ -14,6 +14,11 @@ data_pack:
   load: .
   zipped: false
       
+smithed:
+    versioning:
+      # Either a list or single item of paths to schedule clocks
+      #  Used to kill library ticking if a newer library exists in-world
+      scheduled_paths: impl/tick
 
 require:
   - smithed_libraries.plugins.companion_mod
