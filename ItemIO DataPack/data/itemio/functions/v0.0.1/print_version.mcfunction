@@ -1,1 +1,0 @@
-tellraw @s [{'translate': 'itemio.load', 'color': 'green'}, {'text': 'v0.0.1]', 'color': 'green'}]

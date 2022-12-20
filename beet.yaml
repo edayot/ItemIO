@@ -1,0 +1,29 @@
+extend: "@smithed_libraries/common.yaml"
+
+output: "dist"
+
+id: itemio
+name: ItemIO
+version: "0.0.1"
+description: lolo
+author: AirDox_
+
+
+data_pack:
+  name: "{{ project_name }} v{{ project_version }}"
+  load: .
+  zipped: false
+      
+
+require:
+  - smithed_libraries.plugins.companion_mod
+  - bolt
+
+pipeline:
+  - mecha
+
+# overrides:
+#   - > 
+#     meta.smithed.versioning = {"scheduled_paths": [
+#       "impl/technical/tick", "impl/technical/slow_tick"
+#     ]}
