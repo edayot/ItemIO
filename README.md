@@ -2,7 +2,7 @@
 
 ## Introduction
 
-A library for interacting items between datapacks.
+A library for interacting items inside custom and vanilla containers and between datapacks.
 
 With integrated feature like servo management and cable management.
 
