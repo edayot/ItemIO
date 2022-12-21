@@ -5,5 +5,5 @@ output: "build/"
 data_pack:
   zipped: false
 
-resource_pack:
-  zipped: true
+#resource_pack:
+#  zipped: true
