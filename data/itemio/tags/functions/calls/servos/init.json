@@ -1,5 +1,5 @@
 {
     "values": [
-        "itemio:impl/servo/init"
+        "itemio:impl/calls/servo/init"
     ]
 }
