@@ -1,5 +1,7 @@
 # ItemIO
 
+## Introduction
+
 A library for interacting items between datapacks
 They are integrated feature like servo management and cable management.
 
@@ -9,7 +11,7 @@ I recommend to see theses datapacks that use ItemIO to understand how it works:
 
 
 
-## Features :
+## Features
 
 ### - Containers
 All item frames, marker and armor_stand can be declared as custom container with the tag ``itemio.container``
@@ -66,3 +68,13 @@ They had to be item_frames, to have the tag ``itemio.servo``, either the tag ``i
 - On place : ``function #itemio:calls/servos/init``
 
 
+## Contributing
+
+Contributions are always welcome! The datapack is compiled using the [beet](https://mcbeet.dev) .
+
+```bash
+$ git clone https://github.com/edayot/ItemIO.git
+$ cd ItemIO
+
+$ beet
+```
