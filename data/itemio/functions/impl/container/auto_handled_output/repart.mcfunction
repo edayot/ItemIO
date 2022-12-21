@@ -1,3 +1,4 @@
+# @public
 #A item arrive from : storage itemio:io Item_auto_output
 
 data remove storage itemio:main.output input
