@@ -1,4 +1,4 @@
-
+# @public
 tag @s add itemio.cable.me
 scoreboard players set @s itemio.network_id.low 0
 scoreboard players set @s itemio.network_id.high 0

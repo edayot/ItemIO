@@ -1,3 +1,4 @@
+# @public
 scoreboard players set @s itemio.network_id.low 0
 scoreboard players set @s itemio.network_id.high 0
 execute align xyz positioned ~.5 ~.5 ~.5 run tag @e[type=#itemio:cables,tag=itemio.cable,distance=..0.5001,limit=1,sort=nearest] add itemio.cable.me

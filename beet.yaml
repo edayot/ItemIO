@@ -4,7 +4,7 @@ version: "0.0.1"
 description: lolo
 author: AirDox_
 
-output: build
+
 
 data_pack:
   name: "{{ project_name }} v{{ project_version }}"
@@ -19,8 +19,18 @@ require:
 pipeline:
   - mecha
   - smithed_libraries.plugins.versioning
+  - beet.contrib.find_replace
+
 
 meta:
+  find_replace:
+    substitute:
+      - data_pack:
+          match:
+            functions: "itemio:*"
+        substitute:
+          - find: "__version__"
+            replace: "v{{ project_version }}"
   mecha:
     formatting: preserve
 
@@ -40,7 +50,7 @@ meta:
       #  ex: smithed.actionbar/impl/reset -> smithed.actionbar/impl/v1.2.3/reset
       # here, we need to specify `{{ ctx.project_id }}`
       refactor:
-        match: "{{ project_id }}:*"                  # which files to look at
+        match: "*:*"                  # which files to look at
         find: "{{ project_id }}:impl/"               # which paths to look for
         replace: "{{ project_id }}:v{{ version }}/"  # what to replace path w/
 
@@ -53,4 +63,4 @@ meta:
         match: "{{ project_id }}:v{{ version }}"                   # match only implemented apis
         implementation_prefix: "{{ project_id }}:v{{ version }}/"  # which files match the internal path
         version_check_path: "v{{ version }}/calls"        # base path for version_checks
-        tag_path: ""                                               # base path for API tags
+        tag_path: "_useless"                                               # base path for API tags

@@ -1,3 +1,4 @@
+# @public
 execute if score #my_queue itemio.math matches ..0 run scoreboard players operation #my_queue itemio.math = #hopper_speed itemio.math
 scoreboard players remove #my_queue itemio.math 1
 

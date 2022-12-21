@@ -1,4 +1,4 @@
-
+# @public
 #tellraw @p [{"text":"try input after : "},{"nbt":"output","storage":"itemio:io"}]
 scoreboard players set #success_input itemio.math.input 0
 execute as @e[tag=itemio.transfer.destination,tag=!itemio.transfer.destination.already] unless entity @s[distance=..0.5001] run tag @s add itemio.transfer.destination.good_distance
