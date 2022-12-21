@@ -2,8 +2,9 @@
 
 ## Introduction
 
-A library for interacting items between datapacks
-They are integrated feature like servo management and cable management.
+A library for interacting items between datapacks.
+
+With integrated feature like servo management and cable management.
 
 I recommend to see theses datapacks that use ItemIO to understand how it works:
 - [EnergyUtils](https://github.com/edayot/EnergyUtils)
