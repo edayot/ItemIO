@@ -1,5 +1,5 @@
 {
     "values": [
-        "itemio:impl/calls/disable_servo"
+        "itemio:impl/calls/container/input/disable_servo"
     ]
 }

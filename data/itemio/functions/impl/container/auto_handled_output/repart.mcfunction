@@ -1,3 +1,5 @@
+#A item arrive from : storage itemio:io Item_auto_output
+
 data remove storage itemio:main.output input
 data modify storage itemio:main.output input set from storage itemio:io input
 data remove storage itemio:io output

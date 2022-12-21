@@ -1,5 +1,5 @@
 {
     "values": [
-        "itemio:impl/calls/filter"
+        "itemio:impl/calls/container/integrated_filters/repart"
     ]
 }

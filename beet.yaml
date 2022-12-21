@@ -1,27 +1,24 @@
-extend: "@smithed_libraries/common.yaml"
-
-output: "dist"
-
 id: itemio
 name: ItemIO
 version: "0.0.1"
 description: lolo
 author: AirDox_
 
+output: build
 
 data_pack:
   name: "{{ project_name }} v{{ project_version }}"
   load: .
   zipped: false
-      
 
 require:
   - smithed_libraries.plugins.companion_mod
-  - bolt
+  - smithed_libraries.plugins.misc.display_broadcasted_pack
+  - smithed_libraries.plugins.manifest.collect_version
 
 pipeline:
   - mecha
-
+  - smithed_libraries.plugins.versioning
 
 meta:
   mecha:
@@ -55,6 +52,5 @@ meta:
       api:
         match: "{{ project_id }}:v{{ version }}"                   # match only implemented apis
         implementation_prefix: "{{ project_id }}:v{{ version }}/"  # which files match the internal path
-        version_check_path: "v{{ version }}/_version_check"        # base path for version_checks
+        version_check_path: "v{{ version }}/calls"        # base path for version_checks
         tag_path: ""                                               # base path for API tags
-
