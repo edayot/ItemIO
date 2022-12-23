@@ -1,4 +1,4 @@
-
+# @public
 
 execute as @e[tag=itemio.servo,distance=..1] run function itemio:impl/container/input/disable_servo_2
 
