@@ -68,6 +68,12 @@ ItemIO provide a simple way to add servos that can insert/extract items from con
 They had to be item_frames, to have the tag ``itemio.servo``, either the tag ``itemio.servo.insert`` or ``itemio.servo.extract`` and run this function : 
 - On place : ``function #itemio:calls/servos/init``
 
+There is also configurable scores for servos :
+- `itemio.servo.stack_limit` that configure how many items pass through the servo per try 
+- `itemio.servo.retry_limit` that configure how many try the servo per second (only working for extract servos)
+
+The insert servo will just limit the `itemio.servo.stack_limit` when it insert the item
+
 
 ## Contributing
 

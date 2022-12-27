@@ -7,6 +7,9 @@ scoreboard players remove #max_iteration itemio.math.input 1
 scoreboard players set #input_size itemio.math.input -1
 execute store result score #input_size itemio.math.input if data storage itemio:main.input Items[]
 
+#tellraw @a [{"text":"#input_size : "},{"score":{"name":"#input_size","objective":"itemio.math.input"}}]
+#tellraw @a [{"text":"current item : "},{"nbt":"input","storage":"itemio:main.input"}]
+
 execute if score #input_size itemio.math.input matches 0..26 run function itemio:impl/container/input/vanilla/27/inf_insert
 execute if score #input_size itemio.math.input matches 27 run function itemio:impl/container/input/vanilla/27/sup_insert
 

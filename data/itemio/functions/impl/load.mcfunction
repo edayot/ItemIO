@@ -17,6 +17,8 @@ scoreboard objectives add itemio.network.process_queue dummy
 
 scoreboard objectives add itemio.servo.stack_limit dummy
 scoreboard objectives add itemio.servo.cooldown dummy
+scoreboard objectives add itemio.servo.retry_limit dummy
+
 
 scoreboard players set #process_queue itemio.math 20
 scoreboard players set #hopper_speed itemio.math 20
