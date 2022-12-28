@@ -9,9 +9,4 @@ data_pack:
 #  zipped: true
 
 
-pipeline:
-  - airdox_.add_license
 
-meta:
-  airdox_:
-    license_path: "LICENSE"
