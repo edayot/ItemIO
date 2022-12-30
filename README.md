@@ -26,7 +26,7 @@ You can configure the input/output feature in their entity data, the path is :
 - For armor_stands : ``ArmorItems[3].tag.itemio.ioconfig``
 
 The ioconfig data are the same for all entities and they look like : 
-```json
+```
 [
 	{
 		Slot:<The slot number of the container>,
