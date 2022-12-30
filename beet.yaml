@@ -1,6 +1,6 @@
 id: itemio
 name: ItemIO
-version: "0.0.2"
+version: "0.0.3"
 description: Item input/output lib - Easy interaction between vanilla and custom containers
 author: AirDox_
 
