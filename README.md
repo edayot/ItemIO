@@ -28,22 +28,22 @@ You can configure the input/output feature in their entity data, the path is :
 The ioconfig data are the same for all entities and they look like : 
 ```
 [
-	{
-		Slot:<The slot number of the container>,
-		mode:<"input" or "output" if not declared is the two>,
-		allowed_side:{
-			north:1b,south:1b,east:1b,west:1b,top:1b,bottom:1b
-		}, #The list of all allowed side for input and output
-		filter:{
-			id:<The minecraft item id>,
-			ctc:{
-				id:<custom id>,
-				from:<custom from>
-			}
-			energy:1b #Test if the inputed item as energy
-		}
-	},
-	(...)
+  {
+    Slot:<The slot number of the container>,
+    mode:<"input" or "output" if not declared is the two>,
+    allowed_side:{
+      north:1b,south:1b,east:1b,west:1b,top:1b,bottom:1b
+    }, #The list of all allowed side for input and output
+    filter:{
+      id:<The minecraft item id>,
+      ctc:{
+        id:<custom id>,
+        from:<custom from>
+      }
+      energy:1b #Test if the inputed item as energy
+    }
+  },
+  (...)
 ]
 ```
 Notes : 
