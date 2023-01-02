@@ -1,14 +1,12 @@
 data_pack:
   name: "{{ project_name }}-v{{ project_version }}-Datapack"
   description: "{{ project_description }}\n by {{ project_author }}, v{{ project_version }} - Datapack"
-  load: ["."]
   zipped: false
 
-#resource_pack:
-#  name: "{{ project_name }} v{{ project_version }} - Resourcepack"
-#  description: "{{ project_description }}\n by {{ project_author }}, v{{ project_version }} - Resourcepack"
-#  load: .
-#  zipped: false
+resource_pack:
+  name: "{{ project_name }}-v{{ project_version }}-Resourcepack"
+  description: "{{ project_description }}\n by {{ project_author }}, v{{ project_version }} - Resourcepack"
+  zipped: false
 
 require:
   - smithed_libraries.plugins.companion_mod
@@ -22,7 +20,9 @@ pipeline:
   - beet.contrib.find_replace
   - airdox_.add_license
   - mecha.contrib.messages
+  - beet.contrib.render
 
+ 
 
 
   
