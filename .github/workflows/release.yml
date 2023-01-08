@@ -36,4 +36,7 @@ jobs:
           git config --global user.name "github-actions"
           git config --global user.email "action@github.com"
           poetry run semantic-release publish -v DEBUG -D commit_author="github-actions <action@github.com>"
+          git add beet.yaml
+          git add pyproject.toml
+          git add CHANGELOG.md
           git push
