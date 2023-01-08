@@ -17,6 +17,7 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.semantic_release]
+branch = "master"
 major_on_zero = false
 build_command = "python -m beet -p beet-release.yaml"
 dist_path = "build"
