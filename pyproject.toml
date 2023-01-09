@@ -26,3 +26,4 @@ upload_to_release = true
 version_toml = "pyproject.toml:tool.poetry.version"
 version_pattern = "beet.yaml:(\\d+\\.\\d+\\.\\d+)"
 version_source = "tag"
+commit_version_number = true
