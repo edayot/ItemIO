@@ -1,5 +1,9 @@
 <!--next-version-placeholder-->
 
+## v0.1.1 (2023-01-18)
+### Fix
+* Hangings signs added to #itemio:stack16 ([`9364e87`](https://github.com/edayot/ItemIO/commit/9364e876138314abbd5adcb3b2af01c8f76e1549))
+
 ## v0.1.0 (2023-01-09)
 ### Feature
 *  Added auto-release ([`9f2934d`](https://github.com/edayot/item_io/commit/9f2934dbe2c5a4a6f4503c1d9c9568dd619b82f8))
