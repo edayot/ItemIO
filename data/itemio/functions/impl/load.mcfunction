@@ -28,6 +28,5 @@ tag AirDox_ add convention.debug
 
 
 schedule function itemio:impl/tick 1t replace
-schedule function itemio:impl/20tick 2t replace
 
 
