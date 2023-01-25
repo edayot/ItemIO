@@ -5,3 +5,4 @@ scoreboard players remove #my_queue itemio.math 1
 scoreboard players operation @s itemio.network.process_queue = #my_queue itemio.math
 
 tag @s add itemio.container.initialised
+scoreboard players set @s itemio.minecart_check 0

@@ -12,6 +12,7 @@ scoreboard objectives add itemio.math.input dummy
 scoreboard objectives add itemio.math.output dummy
 scoreboard objectives add itemio.network_id.low dummy
 scoreboard objectives add itemio.network_id.high dummy
+scoreboard objectives add itemio.minecart_check dummy
 
 scoreboard objectives add itemio.network.process_queue dummy
 
