@@ -24,6 +24,16 @@ scoreboard objectives add itemio.servo.retry_limit dummy
 scoreboard players set #process_queue itemio.math 20
 scoreboard players set #hopper_speed itemio.math 8
 
+#my_queue itemio.math with #hopper_speed itemio.math
+execute if score #my_queue itemio.math > #hopper_speed itemio.math run scoreboard players operation #my_queue itemio.math = #hopper_speed itemio.math
+
+#current_queue_container itemio.math with #hopper_speed itemio.math
+execute if score #current_queue_container itemio.math > #hopper_speed itemio.math run scoreboard players operation #current_queue_container itemio.math = #hopper_speed itemio.math
+
+#current_queue itemio.math with #process_queue itemio.math
+execute if score #current_queue itemio.math > #process_queue itemio.math run scoreboard players operation #current_queue itemio.math = #process_queue itemio.math
+
+
 tag AirDox_ add convention.debug
 
 
