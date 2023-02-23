@@ -2,7 +2,10 @@
     "values": [
         "marker",
         "#itemio:item_frames",
-        "armor_stand"
+        "armor_stand",
+        {"id":"item_display","required": false},
+        {"id":"interaction","required": false},
+        {"id":"block_display","required": false}
         
     ]
 }
