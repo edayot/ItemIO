@@ -24,6 +24,7 @@ You can configure the input/output feature in their entity data, the path is :
 - For makers : ``data.itemio.ioconfig``
 - For item_frames : ``Item.tag.itemio.ioconfig``
 - For armor_stands : ``ArmorItems[3].tag.itemio.ioconfig``
+- For item_display (1.19.4+) : ``item.tag.itemio.ioconfig``
 
 The ioconfig data are the same for all entities and they look like : 
 ```
