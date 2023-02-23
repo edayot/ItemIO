@@ -1,5 +1,10 @@
 <!--next-version-placeholder-->
 
+## v0.3.0 (2023-02-23)
+### Feature
+* Display and interaction add to #itemio:cables ([`3aa891e`](https://github.com/edayot/ItemIO/commit/3aa891e553f84dff1949fbae1c0aaf8f21f33ea9))
+* Item_display added to #itemio:container ([`83daffb`](https://github.com/edayot/ItemIO/commit/83daffb4b25881dd65bcb7904bd1f81acef62878))
+
 ## v0.2.0 (2023-01-28)
 ### Fix
 * Add queue checker ([`31b5a83`](https://github.com/edayot/ItemIO/commit/31b5a83984e9e3ed80b7cdee0c64522eef0c0d9c))
