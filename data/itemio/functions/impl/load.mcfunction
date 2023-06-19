@@ -1,9 +1,8 @@
 #define storage itemio:main
 
 
-forceload add -30000000 1600
 
-schedule function itemio:impl/load_2 2s
+
 
 
 gamerule maxCommandChainLength 2147483647
@@ -39,4 +38,5 @@ tag AirDox_ add convention.debug
 
 schedule function itemio:impl/tick 1t replace
 
-
+forceload add -30000000 1600
+function itemio:impl/load_2
