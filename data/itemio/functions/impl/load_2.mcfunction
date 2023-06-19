@@ -1,4 +1,3 @@
-say iteration
 
 scoreboard players set #loaded itemio.math 0
 execute if loaded -30000000 20 1610 run function itemio:impl/load_3
