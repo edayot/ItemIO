@@ -7,9 +7,9 @@ license = "MIT"
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.11"
-smithed-libraries = "0.7.0"
+python = "^3.10"
 python-semantic-release = "^7.32.2"
+smithed-libraries = "^0.7.0"
 
 
 [build-system]
