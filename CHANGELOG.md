@@ -1,5 +1,12 @@
 <!--next-version-placeholder-->
 
+## v0.4.0 (2023-06-20)
+### Fix
+* Update smithed lib ([`b96395e`](https://github.com/edayot/ItemIO/commit/b96395eebe9e25ad05afd8a938b0612b965f9b6e))
+* Control if the chunk is loaded ([`3d9fed2`](https://github.com/edayot/ItemIO/commit/3d9fed2e319c092e2530fcf58fef0558590ad84f))
+* Say ([`05bdac7`](https://github.com/edayot/ItemIO/commit/05bdac7bc44f45c2fd4af7250af4e21fb4ff2af4))
+* Use of 1.20 `execute if loaded` ([`0d64a52`](https://github.com/edayot/ItemIO/commit/0d64a524c1ac636c323c5884879d680dd2275749))
+
 ## v0.3.0 (2023-02-23)
 ### Feature
 * Display and interaction add to #itemio:cables ([`3aa891e`](https://github.com/edayot/ItemIO/commit/3aa891e553f84dff1949fbae1c0aaf8f21f33ea9))
