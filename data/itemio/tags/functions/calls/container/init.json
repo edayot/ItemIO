@@ -1,5 +1,5 @@
 {
     "values": [
-        "itemio:impl/calls/container/init"
+        "itemio:impl/calls/container/pre_init"
     ]
 }

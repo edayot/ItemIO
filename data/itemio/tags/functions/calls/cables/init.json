@@ -1,5 +1,5 @@
 {
     "values": [
-        "itemio:impl/calls/cable/init"
+        "itemio:impl/calls/cable/pre_init"
     ]
 }

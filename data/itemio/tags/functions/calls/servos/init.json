@@ -1,5 +1,5 @@
 {
     "values": [
-        "itemio:impl/calls/servo/init"
+        "itemio:impl/calls/servo/pre_init"
     ]
 }

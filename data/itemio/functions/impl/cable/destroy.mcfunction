@@ -2,15 +2,15 @@
 
 
 
-execute align xyz positioned ~.5 ~-.5 ~.5 as @e[type=#itemio:cables,tag=itemio.cable,distance=..0.5001,limit=1,sort=nearest] run function itemio:impl/cable/destroy/down
-execute align xyz positioned ~.5 ~1.5 ~.5 as @e[type=#itemio:cables,tag=itemio.cable,distance=..0.5001,limit=1,sort=nearest] run function itemio:impl/cable/destroy/up
+execute align xyz positioned ~.5 ~-.5 ~.5 as @e[type=#itemio:cables,tag=itemio.cable.initialised,distance=..0.5001,limit=1,sort=nearest] run function itemio:impl/cable/destroy/down
+execute align xyz positioned ~.5 ~1.5 ~.5 as @e[type=#itemio:cables,tag=itemio.cable.initialised,distance=..0.5001,limit=1,sort=nearest] run function itemio:impl/cable/destroy/up
 
-execute align xyz positioned ~.5 ~.5 ~-.5 as @e[type=#itemio:cables,tag=itemio.cable,distance=..0.5001,limit=1,sort=nearest] run function itemio:impl/cable/destroy/north
-execute align xyz positioned ~.5 ~.5 ~1.5 as @e[type=#itemio:cables,tag=itemio.cable,distance=..0.5001,limit=1,sort=nearest] run function itemio:impl/cable/destroy/south
+execute align xyz positioned ~.5 ~.5 ~-.5 as @e[type=#itemio:cables,tag=itemio.cable.initialised,distance=..0.5001,limit=1,sort=nearest] run function itemio:impl/cable/destroy/north
+execute align xyz positioned ~.5 ~.5 ~1.5 as @e[type=#itemio:cables,tag=itemio.cable.initialised,distance=..0.5001,limit=1,sort=nearest] run function itemio:impl/cable/destroy/south
 
 
-execute align xyz positioned ~-.5 ~.5 ~.5 as @e[type=#itemio:cables,tag=itemio.cable,distance=..0.5001,limit=1,sort=nearest] run function itemio:impl/cable/destroy/west
-execute align xyz positioned ~1.5 ~.5 ~.5 as @e[type=#itemio:cables,tag=itemio.cable,distance=..0.5001,limit=1,sort=nearest] run function itemio:impl/cable/destroy/east
+execute align xyz positioned ~-.5 ~.5 ~.5 as @e[type=#itemio:cables,tag=itemio.cable.initialised,distance=..0.5001,limit=1,sort=nearest] run function itemio:impl/cable/destroy/west
+execute align xyz positioned ~1.5 ~.5 ~.5 as @e[type=#itemio:cables,tag=itemio.cable.initialised,distance=..0.5001,limit=1,sort=nearest] run function itemio:impl/cable/destroy/east
 
 tag @e[tag=itemio.network.already_regenerated] remove itemio.network.already_regenerated
 
