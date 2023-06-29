@@ -1,5 +1,9 @@
 <!--next-version-placeholder-->
 
+## v0.4.1 (2023-06-27)
+### Fix
+* Variables are now set before auto_handled_output ([`080c6b1`](https://github.com/edayot/ItemIO/commit/080c6b1b713549e9583b5af237c7b23863451182))
+
 ## v0.4.0 (2023-06-20)
 ### Fix
 * Update smithed lib ([`b96395e`](https://github.com/edayot/ItemIO/commit/b96395eebe9e25ad05afd8a938b0612b965f9b6e))
