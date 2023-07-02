@@ -90,7 +90,7 @@ execute if score #!same_item itemio.math.input matches 0 run function itemio:imp
 	with open(str(i)+"/if_item/inf/test_nbt.mcfunction","w") as f:
 		f.write(if_item_inf_test_nbt)
 	
-	if_item_inf_fill="""item modify block ~ ~ ~ container.XXX itemio:internal/input/add_count
+	if_item_inf_fill="""item modify block ~ ~ ~ container.XXX itemio:impl/internal/input/add_count
 scoreboard players set #success_input itemio.math.input 1
 scoreboard players set #full_input itemio.math.input 1
 data modify storage itemio:main.input input.Count set value 0b

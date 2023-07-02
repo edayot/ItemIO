@@ -39,7 +39,7 @@ execute if score #test_count_output itemio.math.output > #max_output_count itemi
 scoreboard players operation #remove_count itemio.math.output = #max_output_count itemio.math.output
 
 execute if score #try_input_after itemio.math.output matches 1 run function #itemio:calls/try_input_after
-execute if score #remove_count itemio.math.output matches 1.. run item modify block ~ ~ ~ container.XXX itemio:internal/output/remove_count
+execute if score #remove_count itemio.math.output matches 1.. run item modify block ~ ~ ~ container.XXX itemio:impl/internal/output/remove_count
 """.replace("XXX",str(i))
     with open(str(i)+"/output.mcfunction","w") as f:
         f.write(output)
