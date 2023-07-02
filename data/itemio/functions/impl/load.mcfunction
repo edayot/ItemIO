@@ -7,6 +7,7 @@
 
 gamerule maxCommandChainLength 2147483647
 scoreboard objectives add itemio.math dummy
+scoreboard objectives add itemio.io dummy
 scoreboard objectives add itemio.math.input dummy
 scoreboard objectives add itemio.math.output dummy
 scoreboard objectives add itemio.network_id.low dummy
