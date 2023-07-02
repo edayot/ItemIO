@@ -7,5 +7,5 @@ tag @e[tag=itemio.transfer.destination.already] remove itemio.transfer.destinati
 tag @e[tag=itemio.transfer.destination.good_distance] remove itemio.transfer.destination.good_distance
 
 
-execute if score #success_input itemio.math.input matches 1 run scoreboard players operation #remove_count itemio.math.output = #count_to_remove itemio.math.input
+execute if score #success_input itemio.math.input matches 1 run scoreboard players operation #remove_count itemio.math.output = #count_to_remove itemio.io
 execute if score #success_input itemio.math.input matches 0 run scoreboard players set #remove_count itemio.math.output 0

@@ -42,3 +42,6 @@ execute store result score #count_output itemio.math.input run data get storage 
 scoreboard players set #count_to_remove itemio.math.input 0
 scoreboard players operation #count_to_remove itemio.math.input = #count_input itemio.math.input
 scoreboard players operation #count_to_remove itemio.math.input -= #count_output itemio.math.input
+
+scoreboard players operation #count_to_remove itemio.io = #count_to_remove itemio.math.input
+
