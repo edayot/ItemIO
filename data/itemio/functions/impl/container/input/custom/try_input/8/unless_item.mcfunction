@@ -6,8 +6,8 @@ scoreboard players set #success_input itemio.math.input 1
 scoreboard players set #full_stack itemio.math.input 64
 
 data modify entity 93682a08-d099-4e8f-a4a6-1e33a3692301 HandItems[0].id set from storage itemio:main.input input.id
-execute as 93682a08-d099-4e8f-a4a6-1e33a3692301 if predicate itemio:stack16 run scoreboard players set #full_stack itemio.math.input 16
-execute as 93682a08-d099-4e8f-a4a6-1e33a3692301 if predicate itemio:stack1 run scoreboard players set #full_stack itemio.math.input 1
+execute as 93682a08-d099-4e8f-a4a6-1e33a3692301 if predicate itemio:impl/stack16 run scoreboard players set #full_stack itemio.math.input 16
+execute as 93682a08-d099-4e8f-a4a6-1e33a3692301 if predicate itemio:impl/stack1 run scoreboard players set #full_stack itemio.math.input 1
 
 data modify storage itemio:main.input input.Slot set value 8b
 
