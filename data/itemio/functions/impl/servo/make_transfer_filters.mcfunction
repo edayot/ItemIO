@@ -9,4 +9,4 @@ scoreboard players operation #max_output_count itemio.io = @s itemio.servo.stack
 execute positioned ^ ^ ^-1 align xyz positioned ~.5 ~.5 ~.5 run function #itemio:calls/transfer
 
 data remove storage itemio:main servo_filters[0]
-execute if score #success_transfer itemio.math matches 0 if data storage itemio:main servo_filters[0] run function itemio:impl/servo/make_transfer_filters
+execute if score #success_transfer itemio.io matches 0 if data storage itemio:main servo_filters[0] run function itemio:impl/servo/make_transfer_filters

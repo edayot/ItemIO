@@ -14,6 +14,6 @@
 
 
 
-scoreboard players set #success_transfer itemio.math 0
+scoreboard players set #success_transfer itemio.io 0
 
 execute if score #loaded itemio.math matches 1 run function itemio:impl/container/transfer_2
