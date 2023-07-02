@@ -12,5 +12,5 @@
 
 
 
-execute if score #filter.valid_item itemio.math matches 1 if data storage itemio:io filter.energy run function itemio:impl/container/integrated_filters/energy
-execute if score #filter.valid_item itemio.math matches 1 if data storage itemio:io filter.id run function itemio:impl/container/integrated_filters/id
+execute if score #filter.valid_item itemio.io matches 1 if data storage itemio:io filter.energy run function itemio:impl/container/integrated_filters/energy
+execute if score #filter.valid_item itemio.io matches 1 if data storage itemio:io filter.id run function itemio:impl/container/integrated_filters/id

@@ -2,10 +2,10 @@ data remove storage itemio:main servo_filters2
 data remove storage itemio:main servo_items2
 
 
-data modify storage itemio:main servo_filters2 set from entity @s data.itemio.ioconfig.filters
+data modify storage itemio:io filters set from entity @s data.itemio.ioconfig.filters
 data modify storage itemio:main servo_items2 set from entity @s data.itemio.ioconfig.items
 
-execute store result score #if_filters_defined2 itemio.math if data storage itemio:main servo_filters2[0] 
+execute store result score #if_filters_defined2 itemio.math if data storage itemio:io filters[0] 
 execute store result score #if_items_defined2 itemio.math if data storage itemio:main servo_items2[0] 
 
 execute if score #if_filters_defined2 itemio.math matches 1 run function itemio:impl/container/output/try_input_after/loop_filters

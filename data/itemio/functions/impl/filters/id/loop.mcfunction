@@ -10,7 +10,7 @@ execute store success score #!same_id itemio.math run data modify storage itemio
 
 
 
-execute if score #!same_id itemio.math matches 0 run scoreboard players set #filter.valid_item itemio.math 1
+execute if score #!same_id itemio.math matches 0 run scoreboard players set #filter.valid_item itemio.io 1
 execute if score #!same_id itemio.math matches 1 run data remove storage itemio:main temp.id[0]
 execute if score #!same_id itemio.math matches 1 if data storage itemio:main temp.id[0] run function itemio:impl/filters/id/loop
 
