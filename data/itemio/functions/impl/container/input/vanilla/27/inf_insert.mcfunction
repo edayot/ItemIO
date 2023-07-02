@@ -11,7 +11,7 @@ execute in minecraft:overworld run function itemio:impl/container/input/vanilla/
 data modify block ~ ~ ~ Items set from storage itemio:main.input Items
 
 
-scoreboard players set #success_input itemio.math.input 1
+scoreboard players set #success_input itemio.io 1
 scoreboard players set #temp_success itemio.math.input 0
 execute if score #count_input itemio.math.input > #full_stack itemio.math.input run scoreboard players set #temp_success itemio.math.input 1
 execute if score #temp_success itemio.math.input matches 1 run scoreboard players operation #count_input itemio.math.input -= #full_stack itemio.math.input

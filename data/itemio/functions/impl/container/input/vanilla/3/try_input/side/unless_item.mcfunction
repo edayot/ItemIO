@@ -10,7 +10,7 @@ execute if score #count_input itemio.math.input > #full_stack itemio.math.input 
 execute in minecraft:overworld run function itemio:impl/container/input/vanilla/3/try_input/side/unless_item_dimension
 data modify block ~ ~ ~ Items set from storage itemio:main.input Items
 
-execute if score #valid_item itemio.math.input matches 1 run scoreboard players set #success_input itemio.math.input 1
+execute if score #valid_item itemio.math.input matches 1 run scoreboard players set #success_input itemio.io 1
 execute if score #valid_item itemio.math.input matches 1 run scoreboard players set #temp_success itemio.math.input 0
 execute if score #valid_item itemio.math.input matches 1 if score #count_input itemio.math.input > #full_stack itemio.math.input run scoreboard players set #temp_success itemio.math.input 1
 execute if score #valid_item itemio.math.input matches 1 if score #temp_success itemio.math.input matches 1 run scoreboard players operation #count_input itemio.math.input -= #full_stack itemio.math.input

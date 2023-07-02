@@ -29,7 +29,7 @@ execute if score #if_item itemio.math.input matches 1 run function itemio:impl/c
 	unless_item="""
 
 
-scoreboard players set #success_input itemio.math.input 1
+scoreboard players set #success_input itemio.io 1
 
 scoreboard players set #full_stack itemio.math.input 64
 
@@ -91,7 +91,7 @@ execute if score #!same_item itemio.math.input matches 0 run function itemio:imp
 		f.write(if_item_inf_test_nbt)
 	
 	if_item_inf_fill="""item modify block ~ ~ ~ container.XXX itemio:impl/internal/input/add_count
-scoreboard players set #success_input itemio.math.input 1
+scoreboard players set #success_input itemio.io 1
 scoreboard players set #full_input itemio.math.input 1
 data modify storage itemio:main.input input.Count set value 0b
 """.replace("XXX",str(i))
@@ -120,7 +120,7 @@ scoreboard players operation #new_count_input itemio.math.input = #new_count_con
 scoreboard players operation #new_count_input itemio.math.input -= #full_stack itemio.math.input
 execute store result storage itemio:main.input input.Count int 1 run scoreboard players get #new_count_input itemio.math.input
 
-scoreboard players set #success_input itemio.math.input 1
+scoreboard players set #success_input itemio.io 1
 scoreboard players set #full_input itemio.math.input 0
 
 """.replace("XXX",str(i))

@@ -6,6 +6,6 @@ scoreboard players operation #new_count_input itemio.math.input = #new_count_con
 scoreboard players operation #new_count_input itemio.math.input -= #full_stack itemio.math.input
 execute store result storage itemio:main.input input.Count int 1 run scoreboard players get #new_count_input itemio.math.input
 
-scoreboard players set #success_input itemio.math.input 1
+scoreboard players set #success_input itemio.io 1
 scoreboard players set #full_input itemio.math.input 0
 

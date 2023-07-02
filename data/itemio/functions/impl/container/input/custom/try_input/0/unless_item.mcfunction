@@ -1,7 +1,7 @@
 
 
 
-scoreboard players set #success_input itemio.math.input 1
+scoreboard players set #success_input itemio.io 1
 
 scoreboard players set #full_stack itemio.math.input 64
 
