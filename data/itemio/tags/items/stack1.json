@@ -103,8 +103,9 @@
         "furnace_minecart",
         "tnt_minecart",
         "hopper_minecart",
-        "saddle"
-
+        "saddle",
+        "brush",
+        "decorated_pot"
 
     ]
   }
