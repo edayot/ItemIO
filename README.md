@@ -186,6 +186,12 @@ Servos' itemio.math value is a boolean indicating if the servo is connected to a
 1 -> connected
 0 -> not connected
 
+#### NBT handling
+Servos has their own config at the NBT Path : ``data.itemio.ioconfig.filters``
+
+The filters are the same as the containers' filters and work the same way.
+
+
 
 ## Function Calls
 Function calls are called by you to trigger certain events or features.
