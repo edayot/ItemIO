@@ -12,8 +12,8 @@ SMITHED_TOKEN = os.environ['SMITHED_TOKEN']
 CURRENT_VERSION = os.environ['CURRENT_VERSION']
 
 
-
-beet = yaml.safe_load(open("../../beet.yaml"))
+print(os.listdir("."))
+beet = yaml.safe_load(open("beet.yaml"))
 
 beet["id"]
 
