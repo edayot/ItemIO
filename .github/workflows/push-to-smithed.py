@@ -73,5 +73,7 @@ response = requests.post(
     data=json.dumps({"data": pack_version})
 )
 
+print(pack_version)
+print(CURRENT_VERSION)
 print(response.status_code)
 print(response.text)
