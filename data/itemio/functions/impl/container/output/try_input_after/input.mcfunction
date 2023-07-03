@@ -5,6 +5,6 @@ execute store result score #input_size itemio.math run data get storage itemio:i
 execute if score @s itemio.servo.stack_limit < #input_size itemio.math store result storage itemio:io input.Count int 1 run scoreboard players get @s itemio.servo.stack_limit
 
 
-tellraw @a {"nbt":"input","storage":"itemio:io"}
+#tellraw @a {"nbt":"input","storage":"itemio:io"}
 
 function #itemio:calls/input
