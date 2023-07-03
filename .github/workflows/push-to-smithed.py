@@ -73,7 +73,12 @@ response = requests.post(
     data=json.dumps({"data": pack_version})
 )
 
-print(pack_version)
-print(CURRENT_VERSION)
-print(response.status_code)
-print(response.text)
+print("PACK_VERSION:")
+# print indented pack_version
+print(json.dumps({"pack_version": pack_version}["pack_version"], indent=4))
+
+
+
+# print response in a nice way
+print("RESPONSE:")
+print(json.dumps({"response": response.json()}["response"], indent=4))
