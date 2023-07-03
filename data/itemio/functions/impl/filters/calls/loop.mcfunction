@@ -1,6 +1,7 @@
 
 
 
+scoreboard players set #if_filter_in_loop itemio.io 1
 
 #tellraw @a {"nbt":"filter","storage":"itemio:io"}
 
