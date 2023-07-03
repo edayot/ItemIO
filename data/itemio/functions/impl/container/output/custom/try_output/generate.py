@@ -19,7 +19,7 @@ data remove storage itemio:main.output Item2.Count
 data remove storage itemio:main.output Item2.Slot
 
 execute store result score #!same_item itemio.math.output run data modify storage itemio:main.output Item1 set from storage itemio:main.output Item2
-execute if score #!same_item itemio.math.output matches 0 run function itemio:impl/container/output/custom/try_output/XXX/output
+execute if score #!same_item itemio.math.output matches 0 run function itemio:impl/container/output/custom/try_output/XXX/test_filters_ioconfig
 """.replace("XXX",str(i))
     with open(str(i)+"/test_nbt.mcfunction","w") as f:
         f.write(test_nbt)
@@ -45,9 +45,21 @@ execute if score #remove_count itemio.math.output matches 1.. run item modify bl
         f.write(output)
 
     test_filters="""
+
+data remove storage itemio:io item
 data modify storage itemio:io item set from storage itemio:main.output Items[{Slot:XXXb}]
+
+data remove storage itemio:io filters
+data modify storage itemio:io filters set from storage itemio:main.output filters
+
 function #itemio:calls/filters_v2
-execute if score #filters.valid_item itemio.io matches 1 run function itemio:impl/container/output/custom/try_output/XXX/output
+
+execute if score #filters.valid_item itemio.io matches 1 run function itemio:impl/container/output/custom/try_output/XXX/test_filters_ioconfig
+
+
+
+
+
 
 
 
@@ -57,6 +69,24 @@ execute if score #filters.valid_item itemio.io matches 1 run function itemio:imp
     with open(str(i)+"/test_filters.mcfunction","w") as f:
         f.write(test_filters)
 
+    test_filters_ioconfig="""
+
+data remove storage itemio:io item
+data modify storage itemio:io item set from storage itemio:main.output Items[{Slot:XXXb}]
+
+data modify storage itemio:io temp.filters set value []
+data modify storage itemio:io temp.filters append from storage itemio:main.output ioconfig[0].filters
+
+function #itemio:calls/filters_v2
+
+execute if score #filters.valid_item itemio.io matches 1 run function itemio:impl/container/output/custom/try_output/XXX/output
+
+
+
+
+""".replace("XXX",str(i))
+    with open(str(i)+"/test_filters_ioconfig.mcfunction","w") as f:
+        f.write(test_filters_ioconfig)
 
 
     

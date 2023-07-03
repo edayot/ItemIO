@@ -12,8 +12,11 @@ data remove storage itemio:main.output input
 data modify storage itemio:main.output input set from storage itemio:io input
 data remove storage itemio:io output
 
+data remove storage itemio:main.output filters 
+data modify storage itemio:main.output filters set from storage itemio:io filters
+
 execute store result score #if_ioconfig itemio.math.output if data storage itemio:main.output ioconfig[0] 
-execute store result score #if_filters_define itemio.math.output if data storage itemio:io filters[0]
+execute store result score #if_filters_define itemio.math.output if data storage itemio:main.output filters[0]
 
 
 execute if data storage itemio:io {output_side:"top"} if score #if_ioconfig itemio.math.output matches 1 run function itemio:impl/container/output/custom/repart_output/top
