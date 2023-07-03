@@ -4,7 +4,8 @@ version: "0.4.1"
 description: Item input/output lib - Easy interaction between vanilla and custom containers
 author: AirDox_
 
-supports: ["1.20","1.20.1"]
+meta:
+  supports: ["1.20","1.20.1"]
 
 data_pack:
   load: [.]
