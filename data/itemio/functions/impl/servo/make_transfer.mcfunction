@@ -14,9 +14,8 @@ data remove storage itemio:main servo_items
 
 
 data modify storage itemio:main servo_filters set from entity @s Item.tag.itemio.ioconfig.filters
-data modify storage itemio:main servo_items set from entity @s Item.tag.itemio.ioconfig.filters
+data modify storage itemio:main servo_items set from entity @s Item.tag.itemio.ioconfig.items
 
-execute store result score #if_filters_defined itemio.math if data storage itemio:main servo_filters[0] 
 execute store result score #if_items_defined itemio.math if data storage itemio:main servo_items[0] 
 
 scoreboard players set #nb_retry itemio.math 1

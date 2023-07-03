@@ -17,7 +17,7 @@ scoreboard players set #filters.valid_item itemio.io 0
 data remove storage itemio:main temp.filters
 data modify storage itemio:main temp.filters set from storage itemio:io filters
 
-execute if data storage itemio:main temp.filters[0] run function itemio:impl/filters/call/loop
+execute if data storage itemio:main temp.filters[0] run function itemio:impl/filters/calls/loop
 
 
 

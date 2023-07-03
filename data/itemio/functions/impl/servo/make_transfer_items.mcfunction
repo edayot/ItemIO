@@ -2,7 +2,7 @@ data remove storage itemio:io filter
 data remove storage itemio:io input
 
 
-data modify storage itemio:io filter set from storage itemio:main servo_items[0]
+data modify storage itemio:io input set from storage itemio:main servo_items[0]
 
 scoreboard players operation #max_output_count itemio.io = @s itemio.servo.stack_limit
 

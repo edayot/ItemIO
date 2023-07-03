@@ -1,4 +1,4 @@
-
+#say OUTPUT test
 scoreboard players set #success_output itemio.io 1
 
 data modify storage itemio:io output set from storage itemio:main.output Items[0]

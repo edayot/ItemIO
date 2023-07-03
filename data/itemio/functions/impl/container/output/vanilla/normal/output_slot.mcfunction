@@ -1,4 +1,8 @@
 execute store result score #slot_container itemio.math.output run data get storage itemio:main.output Items[0].Slot
+
+#tellraw @a {"nbt":"Items[0]","storage":"itemio:main.output"}
+
+
 execute if score #slot_container itemio.math.output matches 0 run item modify block ~ ~ ~ container.0 itemio:impl/internal/output/remove_count
 execute if score #slot_container itemio.math.output matches 1 run item modify block ~ ~ ~ container.1 itemio:impl/internal/output/remove_count
 execute if score #slot_container itemio.math.output matches 2 run item modify block ~ ~ ~ container.2 itemio:impl/internal/output/remove_count
