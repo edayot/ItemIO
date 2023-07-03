@@ -79,6 +79,6 @@ print(json.dumps({"pack_version": pack_version}["pack_version"], indent=4))
 
 
 
-# print response in a nice way
+# print response
 print("RESPONSE:")
-print(json.dumps({"response": response.json()}["response"], indent=4))
+print(response.text)
