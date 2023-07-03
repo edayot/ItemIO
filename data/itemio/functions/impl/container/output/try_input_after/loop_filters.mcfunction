@@ -1,8 +1,13 @@
-scoreboard players set #valid_item itemio.math 1
-execute if data storage itemio:main servo_filters2[0] run function itemio:impl/container/output/try_input_after/filter
+data remove storage itemio:io filters
+data modify storage itemio:io filters set from storage itemio:main servo_filters2
+
+data remove storage itemio:io item
+data modify storage itemio:io item set from storage itemio:io output
+
+function #itemio:call/filters_v2
 
 scoreboard players set #success_input itemio.io 0
-execute if score #valid_item itemio.math matches 1 run function itemio:impl/container/output/try_input_after/input
+execute if score #filters.valid_item itemio.math matches 1 run function itemio:impl/container/output/try_input_after/input
 
 
 execute if score #success_input itemio.io matches 0 run tag @s add itemio.transfer.destination.already
