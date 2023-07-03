@@ -31,7 +31,8 @@ download_url = (
     "https://github.com/edayot/"
     f"{beet['name']}/releases/download/"
     f"v{CURRENT_VERSION}/"
-    f"{beet['name']}-v{CURRENT_VERSION}-{ziptype}.zip"
+    f"{beet['name']}-v{CURRENT_VERSION}-"
+    "{ziptype}.zip"
 )
 
 try:
