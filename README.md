@@ -91,7 +91,7 @@ Containers as to be configured depending on what entity you use you have to use 
 - For item_display : ``item.tag.itemio.ioconfig``
 
 The ioconfig data are the same for all entities and they look like : 
-```
+```go
 [
   {
     Slot:0b,
@@ -105,7 +105,8 @@ The ioconfig data are the same for all entities and they look like :
         energy:1b
       },
       {
-        id:["minecraft:coal","],
+        id:["minecraft:coal",""],
+	ctc:{id:"drawer",from:"airdox_:simpledrawer"}
       }
     ]
   },
