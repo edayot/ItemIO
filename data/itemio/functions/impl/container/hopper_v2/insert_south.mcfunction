@@ -4,7 +4,7 @@ execute positioned ~ ~ ~1 run summon marker ~ ~ ~ {data:{itemio:{ioconfig:{input
 
 
 scoreboard players set #max_output_count itemio.io 1
-data remove storage itemio:io filter
+data remove storage itemio:io filters
 data remove storage itemio:io input
 data modify storage itemio:io output_side set value "south"
 function #itemio:calls/transfer

@@ -4,7 +4,7 @@ summon marker ~ ~ ~ {data:{itemio:{ioconfig:{input_side:"top"}}},Tags:["itemio.t
 
 
 scoreboard players set #max_output_count itemio.io 1
-data remove storage itemio:io filter
+data remove storage itemio:io filters
 data remove storage itemio:io input
 data modify storage itemio:io output_side set value "bottom"
 execute positioned ~ ~1 ~ run function #itemio:calls/transfer

@@ -1,4 +1,4 @@
-data remove storage itemio:io filter
+data remove storage itemio:io filters
 data remove storage itemio:io input
 
 
