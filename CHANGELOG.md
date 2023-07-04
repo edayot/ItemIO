@@ -1,5 +1,23 @@
 <!--next-version-placeholder-->
 
+## v0.5.0 (2023-07-04)
+
+### Feature
+
+* Output custom now support filters ([`297d3fb`](https://github.com/edayot/ItemIO/commit/297d3fbb5324f8714ec0698b59a0e14229000685))
+* New filters implementation ([`ba48331`](https://github.com/edayot/ItemIO/commit/ba48331dda28aff34186046d9937e4a9e5ef54fd))
+
+### Fix
+
+* Decorated pots in #itemio:stack1 ([`62958db`](https://github.com/edayot/ItemIO/commit/62958db0f2bf7cf1bb94b184c842138bea39c76d))
+* Success_transfer now work ([`3235c74`](https://github.com/edayot/ItemIO/commit/3235c74d115bb5f2d5e697218d2fa52e60ad2c4a))
+* Switch success and inputs to itemio.io, ([`25f2630`](https://github.com/edayot/ItemIO/commit/25f2630833ef9cc5add2c08574b1850a56ab0fd5))
+* Impl on predicates ([`b05dd95`](https://github.com/edayot/ItemIO/commit/b05dd950b2c12060c06331edf4d40d644c85703b))
+* Item_modifiers anow use versioning ([`2788efb`](https://github.com/edayot/ItemIO/commit/2788efb04bbe55b117e8d94e2aa13741c6b183b1))
+* Security init on servos ([`edc5710`](https://github.com/edayot/ItemIO/commit/edc571089351896eb3e13ef0b1a9f5041bdf70ff))
+* Consistant use of item_modifiers / itemio.io ([`111ea71`](https://github.com/edayot/ItemIO/commit/111ea71b5cf05069deccd10430aa64a0928efcde))
+* More checks on init ([`31f554d`](https://github.com/edayot/ItemIO/commit/31f554d786d825173da790d7d83cf32515a3dbbb))
+
 ## v0.4.1 (2023-06-27)
 ### Fix
 * Variables are now set before auto_handled_output ([`080c6b1`](https://github.com/edayot/ItemIO/commit/080c6b1b713549e9583b5af237c7b23863451182))
