@@ -129,7 +129,7 @@ Obligatory fields are marked with a ``*``
 
 Filters are called when itemio is trying input/output items from a container. 
 It's a list of __filter__  like this : 
-```
+```go
 filters:[
   {
     id:["minecraft:stone","minecraft:dirt",(...)],
