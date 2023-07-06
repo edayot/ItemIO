@@ -1,5 +1,11 @@
 <!--next-version-placeholder-->
 
+## v0.5.1 (2023-07-06)
+
+### Fix
+
+* New stack16 items ([`0fc4083`](https://github.com/edayot/ItemIO/commit/0fc40838e447b7d1ed9bf66c081ffb0fb83e9bab))
+
 ## v0.5.0 (2023-07-04)
 
 ### Feature
