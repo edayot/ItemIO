@@ -10,7 +10,11 @@
 	  {
 		"id": "#hanging_signs",
 		"required": false
-	  }
+	  },
+	  "egg",
+	  "bucket",
+	  "written_book"
+	  
 	  
 	]
   }
