@@ -1,4 +1,4 @@
-# ItemIO
+# ItemIO <img src="pack.png" width="64" height="64">
 A Minecraft Datapack library for handling items transportation and container declaration, such as for Simpledrawer or EnergyUtils. This library manages the following:
 * Entity format for declaring custom containers based on vanilla ones.
 * Cable system for transporting items between containers.
@@ -9,7 +9,7 @@ A Minecraft Datapack library for handling items transportation and container dec
 This is an embedded library, so you package it inside your datapack as opposed to having a separate download. Requires [LanternLoad](https://github.com/LanternMC/load) to operate.
 
 
-## Scoreboards
+## Scoreboards 📊
 These are scoreboard objectives used to represent a value of some kind.
 
 ```
@@ -54,11 +54,10 @@ itemio.servo.retry_limit
 
 
 
-
-## Entity Types
+## Entity Types 📦
 These are tags (added throught the /tag command) that mark entities as being something, or as needing to do something.
 
-### Containers
+### Containers 
 Containers are vanilla or custom blocks. I will present the custom block system.
 
 They are functions to call every time you do something with a container.
@@ -195,7 +194,7 @@ The filters are the same as the containers' filters and work the same way.
 
 
 
-## Function Calls
+## Function Calls 📞
 Function calls are called by you to trigger certain events or features.
 
 ```mcfunction
@@ -298,7 +297,7 @@ function #itemio:calls/auto_handled_output
 ```
 As to be used in ``#itemio:event/auto_handled_output`` (see below)
   
-## Function Event
+## Function Event 📞
 
 ```mcfunction
 function #itemio:event/auto_handled_output
