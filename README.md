@@ -1,4 +1,5 @@
-# ItemIO <img src="pack.png" width="64" height="64">
+# ItemIO <img src="https://github.com/edayot/ItemIO/blob/master/pack.png?raw=true" width="64" height="64">
+
 A Minecraft Datapack library for handling items transportation and container declaration, such as for Simpledrawer or EnergyUtils. This library manages the following:
 * Entity format for declaring custom containers based on vanilla ones.
 * Cable system for transporting items between containers.
