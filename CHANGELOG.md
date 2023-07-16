@@ -1,5 +1,11 @@
 <!--next-version-placeholder-->
 
+## v0.5.3 (2023-07-16)
+
+### Fix
+
+* Real fix ([`13dca5c`](https://github.com/edayot/ItemIO/commit/13dca5c3d745f2b46b1db42c447df03a02982bc7))
+
 ## v0.5.2 (2023-07-16)
 
 ### Fix
