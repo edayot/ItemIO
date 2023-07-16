@@ -1,5 +1,11 @@
 <!--next-version-placeholder-->
 
+## v0.5.2 (2023-07-16)
+
+### Fix
+
+* Ctc filter now works properly ([`db74138`](https://github.com/edayot/ItemIO/commit/db74138b07a7d3420ad263fa408d115d671cd032))
+
 ## v0.5.1 (2023-07-06)
 
 ### Fix
