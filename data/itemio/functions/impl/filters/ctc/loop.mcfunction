@@ -23,7 +23,7 @@ scoreboard players set #!same_ctc itemio.math 0
 execute if score #!same_ctc_id itemio.math matches 0 if score #!same_ctc_from itemio.math matches 0 run scoreboard players set #!same_ctc itemio.math 1
 
 
-execute if score #!same_ctc itemio.math matches 0 run scoreboard players set #filter.valid_item itemio.io 1
-execute if score #!same_ctc itemio.math matches 1 run data remove storage itemio:main temp.ctc[0]
-execute if score #!same_ctc itemio.math matches 1 if data storage itemio:main temp.ctc[0] run function itemio:impl/filters/ctc/loop
+execute if score #!same_ctc itemio.math matches 1 run scoreboard players set #filter.valid_item itemio.io 1
+execute if score #!same_ctc itemio.math matches 0 run data remove storage itemio:main temp.ctc[0]
+execute if score #!same_ctc itemio.math matches 0 if data storage itemio:main temp.ctc[0] run function itemio:impl/filters/ctc/loop
 
