@@ -106,7 +106,7 @@ The ioconfig data are the same for all entities and they look like :
       },
       {
         id:["minecraft:coal",""],
-	ctc:[{id:"drawer",from:"airdox_:simpledrawer"}]
+        ctc:[{id:"drawer",from:"airdox_:simpledrawer"}]
       }
     ]
   },
