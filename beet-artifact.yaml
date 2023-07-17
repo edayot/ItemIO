@@ -2,17 +2,15 @@
 extend: [beet.yaml]
 
 data_pack:
-  zipped: true
   name: "datapack"
   description: "{{ project_description }}\n by {{ project_author }}, v{{ project_version }} - __git_hash__ - Datapack"
 
 resource_pack:
-  zipped: true
   name: "resourcepack"
   description: "{{ project_description }}\n by {{ project_author }}, v{{ project_version }} - __git_hash__ - Resourcepack"
 
 
-output: ../../build
+output: build
 meta:
   find_replace:
     substitute:
