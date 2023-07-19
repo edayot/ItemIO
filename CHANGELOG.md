@@ -1,5 +1,11 @@
 <!--next-version-placeholder-->
 
+## v0.5.4 (2023-07-19)
+
+### Fix
+
+* The first container as no process queue ([`c999fa5`](https://github.com/edayot/ItemIO/commit/c999fa5299e9ce8d5bcef14bf81bcbe4d9ddcd8c))
+
 ## v0.5.3 (2023-07-16)
 
 ### Fix
