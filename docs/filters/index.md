@@ -1,6 +1,6 @@
 # Filters
 
-Filters are dictionnary used internally when ItemIO try to insert/extract items from a container.
+> Filters are dictionnary used internally when ItemIO try to insert/extract items from a container.
 
 
 ---
@@ -26,6 +26,16 @@ Reference for data structures used for filters.
 Documentation for the implementing custom filters as using filters for yourself.
 ```
 
+```{grid-item-card}
+:link: integrated_filters
+:link-type: doc
+
+💻 Integrated Filters
+^^^
+
+Usage of the integrated filters.
+```
+
 ::::
 
 ---
@@ -35,4 +45,5 @@ Documentation for the implementing custom filters as using filters for yourself.
 :hidden:
 data_types
 function_call
+integrated_filters
 ```
