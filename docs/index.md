@@ -44,13 +44,13 @@ How to use filters & add custom ones.
 ```
 
 ```{grid-item-card}
-:link: cables/index
+:link: networking/index
 :link-type: doc
 
-🔌 Cables
+🔌 Networking
 ^^^
 
-How add custom cables.
+The ItemIO networking system.
 
 ```
 
@@ -63,7 +63,7 @@ How add custom cables.
 getting_started
 containers/index
 filters/index
-cables/index
+networking/index
 changelog
 ```
 
