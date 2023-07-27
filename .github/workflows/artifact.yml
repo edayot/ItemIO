@@ -1,8 +1,17 @@
 name: Artifacts at every commit
 on:
+  workflow_dispatch:
+  # only run on master branch on push that modifies data/ by edayot
   push:
     branches:
       - master
+    paths:
+      - 'data/**'
+      - 'assets/**'
+      - 'poetry.lock'
+      - 'pyproject.toml'
+      - '.github/workflows/artifact.py'
+      - 'beet-artifact.yaml'
 
 jobs:
   release:
