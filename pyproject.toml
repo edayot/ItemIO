@@ -29,7 +29,6 @@ myst_enable_extensions = ["substitution", "colon_fence"]
 
 
 pygments_style = "zenburn"
-pygments_dark_style = "material"
 suppress_warnings = ["myst.header"]
 
 [tool.mudkip.override.html_theme_options]
