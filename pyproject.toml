@@ -11,6 +11,30 @@ python = "^3.10"
 python-semantic-release = "^7.32.2"
 smithed-libraries = {git = "https://github.com/edayot/Libraries.git"}
 cryptography = "^41.0.0"
+mudkip = "^0.8.0"
+sphinx_design = "^0.3.0"
+sphinx-pyproject = "^0.1.0"
+pygments= "^2.15.1"
+
+[tool.mudkip.override]
+html_title = "ItemIO wiki"
+html_theme = "furo"
+html_favicon = "assets/pack.ico"
+html_logo = "../pack.png"
+
+
+extensions = ["sphinx_design"]
+myst_enable_extensions = ["substitution", "colon_fence"]
+
+
+
+pygments_style = "zenburn"
+pygments_dark_style = "material"
+suppress_warnings = ["myst.header"]
+
+[tool.mudkip.override.html_theme_options]
+sidebar_hide_name = true
+
 
 
 [build-system]
