@@ -5,6 +5,7 @@
 ```{toctree}
 :hidden:
 filters/index
+containers/index
 changelog
 ```
 

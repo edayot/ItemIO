@@ -32,9 +32,11 @@ A filter that check if the item as a CTC.
 {
     ctc: [
         {id:"drawer",from:"airdox_:simpledrawer"},
+        {id:"new_drawer",from:"airdox_:simpledrawer"},
     ]
 }
 ```
+Here it will check if the item is a drawer from [SimpleDrawer](https://githuc.com/edayot/SimpleDrawer) (the legacy and 1.20 one).
 
 ## Smithed ID (Smithed Convention)
 WIP
