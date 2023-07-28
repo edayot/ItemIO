@@ -1,4 +1,4 @@
-# Cables
+# 🔌 Cables
 
 Cables are custom blocks that handle a cable system between all devices of the same network.
 
