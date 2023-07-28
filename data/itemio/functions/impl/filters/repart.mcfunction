@@ -15,4 +15,6 @@
 execute if score #filter.valid_item itemio.io matches 1 if data storage itemio:io filter.energy run function itemio:impl/filters/energy
 execute if score #filter.valid_item itemio.io matches 1 if data storage itemio:io filter.id run function itemio:impl/filters/id
 execute if score #filter.valid_item itemio.io matches 1 if data storage itemio:io filter.ctc run function itemio:impl/filters/ctc
+execute if score #filter.valid_item itemio.io matches 1 if data storage itemio:io filter.smithed.id run function itemio:impl/filters/smithed_id
+#execute if score #filter.valid_item itemio.io matches 1 if data storage itemio:io filter.smithed.dict run function itemio:impl/filters/smithed_dict
 #tellraw @a {"score":{"name":"#filter.valid_item","objective":"itemio.io"}}
