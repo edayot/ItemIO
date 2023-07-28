@@ -5,6 +5,7 @@ To make a container compatible with IO, you need to specify a format that define
 
 ItemIO don't care about the GUI protection by player interaction, it's up to you to handle it.
 
+---
 
 ## Place/destroy function call
 
@@ -32,12 +33,12 @@ IOConfig are dictionary that define what can be in a slot or not, they are dynam
 ```ts
 [
     {
-        Slot: int,
+        Slot: int, // required
         mode: "input" | "output", // any other value is both
-        allowed_side:{
+        allowed_side:{ // required
             north: 0b | 1b, south: 0b | 1b, east: 0b | 1b, west: 0b | 1b, up: 0b | 1b, down: 0b | 1b
         },
-        filters: Filters
+        filters: Filters // optional see filters section
     }
 ]
 ```

@@ -70,8 +70,9 @@ changelog
 ```{toctree}
 :caption: Project links
 :hidden:
-ItemIO Github <https://github.com/edayot/ItemIO>
-Smithed page <https://smithed.dev/packs/nhwFD5kibnbGXAlNhZan>
+Github <https://github.com/edayot/ItemIO>
+Smithed <https://smithed.dev/packs/nhwFD5kibnbGXAlNhZan>
+Modrinth <https://modrinth.com/datapack/itemio>
 ```
 
 
