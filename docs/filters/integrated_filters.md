@@ -39,4 +39,17 @@ A filter that check if the item as a CTC.
 Here it will check if the item is a drawer from [SimpleDrawer](https://githuc.com/edayot/SimpleDrawer) (the legacy and 1.20 one).
 
 ## Smithed ID (Smithed Convention)
-WIP
+
+A filter that check if the item as smithed id.
+
+### Format :
+```ts
+{
+    smithed:{
+        id: string[],
+    }
+}
+```
+Theses are part from smithed convention ID, the filter will match any of the ids.
+
+
