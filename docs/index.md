@@ -12,7 +12,7 @@ A Minecraft Datapack library for handling items transportation and container dec
 
 ::::{grid} 1 1 2 2
 ```{grid-item-card}
-:link: getting_started
+:link: getting_started/index
 :link-type: doc
 
 🚀 Getting Started
@@ -60,7 +60,7 @@ The ItemIO networking system.
 
 ```{toctree}
 :hidden:
-getting_started
+getting_started/index
 containers/index
 filters/index
 networking/index
