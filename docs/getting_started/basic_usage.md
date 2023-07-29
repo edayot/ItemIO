@@ -2,11 +2,10 @@
 
 
 
-```python
-from pydantic import BaseModel
-from pydantic_persistence import PersistenceModel
+```mcfunction
+# This is a comment
 
-class User(BaseModel):
-    name: str
-    age: int
+give @s minecraft:stone 1
+execute as @s[distance=..5,tag=aaa] at @s run say Hello World!
+data modify entity @s Health set value 1b
 ```
