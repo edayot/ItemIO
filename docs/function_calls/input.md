@@ -1,10 +1,19 @@
+
+> A function that insert an item in a container.
+
+---
+
+### Inputs
+
 | Input Name                                                        | Input Type   | Input Source             | Input Objective/Path             | 
 | ---                                                               | ---          | ---                      | ---                              | 
 | The selected container                                            | Position     |                          |                                  |
 | The item to input in the container<br> `A normal item NBT`          | storage      | input                    | itemio:io                        |
 | The input side : <br>```"north", "south", "east", "west", "top", "bottom", "wireless"``` (wireless bypass the side check)                | storage      | input_side               | itemio:io                        |
 
+---
 
+### Outputs
 
 | Output Name                                       | Output Type  | Output Source            | Output Objective/Path            |
 | ---                                               | ---          | ---                      | ---                              |
