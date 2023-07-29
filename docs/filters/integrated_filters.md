@@ -1,4 +1,4 @@
-# Intergrated Filters
+# Integrated Filters
 
 
 ## Minecraft ID
