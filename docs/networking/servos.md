@@ -47,7 +47,7 @@ Servos has their own filters config ``data.itemio.ioconfig.filters``.
 ## Visual example
 
 ::::::{grid} 1 1 2 2
-:gutter: 1
+:gutter: 2
 
 :::::{grid-item}
 :columns: 4 

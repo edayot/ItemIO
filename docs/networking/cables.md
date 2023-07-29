@@ -29,7 +29,7 @@ This can be used to update the model of the cable.
 ## Visual example
 
 ::::::{grid} 1 1 2 2
-:gutter: 1
+:gutter: 2
 
 :::::{grid-item}
 :columns: 4 

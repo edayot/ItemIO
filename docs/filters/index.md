@@ -6,6 +6,7 @@
 ---
 
 ::::{grid} 1 1 2 2
+:gutter: 2
 ```{grid-item-card}
 :link: data_types
 :link-type: doc

@@ -6,6 +6,7 @@ ItemIO is a powerful library that allows multiple things. This tutorial will go 
 
 
 ::::{grid} 1 1 2 2
+:gutter: 2
 ```{grid-item-card}
 :link: basic_usage
 :link-type: doc

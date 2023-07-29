@@ -11,6 +11,7 @@ A Minecraft Datapack library for handling items transportation and container dec
 
 
 ::::{grid} 1 1 2 2
+:gutter: 2
 ```{grid-item-card}
 :link: getting_started/index
 :link-type: doc
