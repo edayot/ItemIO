@@ -61,9 +61,9 @@ An animation of all possible states of a cable, generated using [Isometric rende
 ::::{grid} 1 1 1 1
 :gutter: 2
 
-:::{grid-item-card} Update function
+:::{grid-item-card} 
 
-`````{dropdown} Show
+`````{dropdown} #itemio:event/cable_update
 
 ```{code-block} mcfunction
 :force:
@@ -82,9 +82,9 @@ execute
 
 :::
 
-:::{grid-item-card} Model
+:::{grid-item-card}
 
-`````{dropdown} Update function
+`````{dropdown} minecraft:item/structure_void.json
 
 The modified structure void model. All references are [here](https://github.com/edayot/TransportDuct/tree/master/assets/transportduct/models/block/item_cable)
 

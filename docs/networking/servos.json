@@ -1,0 +1,12 @@
+{
+    "parent": "minecraft:block/furnace",
+    "overrides":[
+      {"predicate": {"custom_model_data": 1430117},"model": "transportduct:block/servo/insert"},
+      {"predicate": {"custom_model_data": 1430118},"model": "transportduct:block/servo/insert_connected"},
+      {"predicate": {"custom_model_data": 1430119},"model": "transportduct:block/servo/extract"},
+      {"predicate": {"custom_model_data": 1430120},"model": "transportduct:block/servo/extract_connected"}
+      
+  
+    ]
+  }
+  
