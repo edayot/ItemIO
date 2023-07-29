@@ -17,10 +17,10 @@ Reference for data structures used for filters.
 ```
 
 ```{grid-item-card}
-:link: function_call
+:link: function_calls
 :link-type: doc
 
-🔧 Function Tag
+🔧 Functions Calls
 ^^^
 
 Documentation for the implementing custom filters as using filters for yourself.
@@ -44,6 +44,6 @@ Usage of the integrated filters.
 ```{toctree}
 :hidden:
 data_types
-function_call
+function_calls
 integrated_filters
 ```

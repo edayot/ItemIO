@@ -64,6 +64,7 @@ getting_started/index
 containers/index
 filters/index
 networking/index
+function_calls/index
 changelog
 ```
 
