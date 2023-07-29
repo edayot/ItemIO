@@ -23,7 +23,7 @@ A cable system is used to connect the different network components.
 
 🔧 Servos
 ^^^
-
+Servos are custom block parts of a network that can input/output items from/to containers.
 
 ```
 
@@ -34,7 +34,7 @@ A cable system is used to connect the different network components.
 🌐 Network
 ^^^
 
-Usage of the integrated filters.
+How the network works
 ```
 
 ::::
