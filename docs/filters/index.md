@@ -1,4 +1,4 @@
-# Filters
+# 🔧 Filters
 
 > Filters are dictionnary used internally when ItemIO try to insert/extract items from a container.
 

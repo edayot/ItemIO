@@ -1,4 +1,4 @@
-# Containers
+# 📦 Containers
 
 Basicly, a container is an entity at the position of a block.
 To make a container compatible with IO, you need to specify a format that define what can be in a slot or not.
