@@ -16,9 +16,6 @@ To declare a block as a servos you need to add the tag ``itemio.servo`` to the b
 - ``itemio.servo.extract`` : To declare the servo as an extract servo
 
 
-
-
-
 ## Cable update function event
 
 This function tag is trigger when a servo connection is updated.
@@ -32,7 +29,7 @@ Servos' itemio.math value is a boolean indicating if the servo is connected to a
 0 -> not connected
 ```
 
-#### NBT handling
+## NBT handling
 Servos has their own filters config ``data.itemio.ioconfig.filters``.
 
 :::{admonition} Full specification 
@@ -40,6 +37,11 @@ Servos has their own filters config ``data.itemio.ioconfig.filters``.
 <https://edayot.github.io/ItemIO/html/filters/index.html>
 :::
 
+
+## Scores
+
+- `itemio.servo.stack_limit` : Define the number of items that can be process (range 0..64)
+- `itemio.servo.retry_limit` : Define how many times tranfer are call when process
 
 ---
 ## Visual example

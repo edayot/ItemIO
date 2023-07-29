@@ -54,6 +54,17 @@ The ItemIO networking system.
 
 ```
 
+```{grid-item-card}
+:link: function_calls/index
+:link-type: doc
+
+🧩 Function Calls
+
+^^^
+The documentation of the function calls
+
+```
+
 
 
 ::::

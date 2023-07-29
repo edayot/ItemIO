@@ -14,7 +14,7 @@ This is an embedded library, so you package it inside your datapack as opposed t
 
 ## Getting started
 
-See the wiki page (under contruction) : https://edayot.github.io/ItemIO/html/index.html
+See the documentation page (under contruction) : https://edayot.github.io/ItemIO/html/index.html
 
 ## Contributing
 Contributions are always welcome! The datapack is compiled using the [beet](https://mcbeet.dev) .

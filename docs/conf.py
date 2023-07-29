@@ -28,7 +28,7 @@ language = 'en'
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-html_title = "ItemIO wiki"
+html_title = "ItemIO documentation"
 html_theme = "furo"
 html_favicon = "assets/pack.ico"
 html_logo = "../pack.png"
