@@ -6,6 +6,7 @@ __pycache__
 pack.mcmeta
 dist/
 docs/_build/
+_build/
 *.zip
 !releases/included/*.zip
 !releases/included/none/pack.mcmeta
