@@ -1,5 +1,40 @@
 <!--next-version-placeholder-->
 
+## v0.6.0 (2023-07-29)
+
+### Feature
+
+* Implementing smithed id filter ([`5811ec2`](https://github.com/edayot/ItemIO/commit/5811ec2e655321194139599f0c3ea4a744b5fee0))
+
+### Documentation
+
+* Emojis ([`bda6fea`](https://github.com/edayot/ItemIO/commit/bda6feaebb240b23d1e5ac8c90df4573eaf0ee1b))
+* More emojis ([`47da332`](https://github.com/edayot/ItemIO/commit/47da3321d9b8db75b164cc3c5de8faa2a37c9842))
+* New logo ([`40970eb`](https://github.com/edayot/ItemIO/commit/40970ebe5bd0d9a2d7f26707befb24f8510c6fdf))
+* Gutter ([`276b947`](https://github.com/edayot/ItemIO/commit/276b947b4fa768edbc4dad653211a6858ad667bb))
+* Spelling ([`2e08402`](https://github.com/edayot/ItemIO/commit/2e084029d27ed18a88ddb7ee3b857c8d422d8068))
+* Network spec ([`f2daeb7`](https://github.com/edayot/ItemIO/commit/f2daeb737695a3f05626126d281cb33da34d4e26))
+* Delete the readme documentation & link the github pages ([`2da007a`](https://github.com/edayot/ItemIO/commit/2da007a9976790fb3aa11f65a78706d4dbe71522))
+* Transfer function ([`3a637c1`](https://github.com/edayot/ItemIO/commit/3a637c1acfced5dbeaf8e1b093d2f8907a462743))
+* Output ([`044955d`](https://github.com/edayot/ItemIO/commit/044955db2f85c1c257555b018fa28187a491820b))
+* Input ([`dafa1be`](https://github.com/edayot/ItemIO/commit/dafa1bee2a7775728761f3991425763670835a3c))
+* New function calls ([`42f6180`](https://github.com/edayot/ItemIO/commit/42f6180357d9fc81b651a7d4c006b5327181fabf))
+* Cross reference ([`05d5b4f`](https://github.com/edayot/ItemIO/commit/05d5b4fad7674155c57bef7840e0c021a6917c50))
+* Basic usage ([`e4815d7`](https://github.com/edayot/ItemIO/commit/e4815d78c54fd38343f31a90a34cd338e1915ce9))
+* Correct index ([`0a412e8`](https://github.com/edayot/ItemIO/commit/0a412e81fb55723075080b15acfc25b3e5b51bb0))
+* Servos & cables refactor ([`db907dc`](https://github.com/edayot/ItemIO/commit/db907dc448ed73a324f696507a6329324783ac71))
+* Ggds ([`a09c262`](https://github.com/edayot/ItemIO/commit/a09c26257a75935a38fd1ada45de6afe0a5bf7af))
+* Spelling & no more custom_theme ([`81eaaf3`](https://github.com/edayot/ItemIO/commit/81eaaf37970c981922dda17d477515959cc4d7ea))
+* New formatting ([`8a43278`](https://github.com/edayot/ItemIO/commit/8a432784c2d7b2d2524269210fdcd0fb61bab5f9))
+* Switch to a default sphinx install ([`fb504cc`](https://github.com/edayot/ItemIO/commit/fb504cc3366587156dbc205c531208f1c4b969ba))
+* More emojis ([`a93842d`](https://github.com/edayot/ItemIO/commit/a93842d3deaccad65525dc4c37a96ccc9b6c8052))
+* Cables documentation ([`cae30f9`](https://github.com/edayot/ItemIO/commit/cae30f99b0c4c1aa2a9efa76d46bb26fd05cb1e0))
+* Getting started ([`b4cd792`](https://github.com/edayot/ItemIO/commit/b4cd792659acf0409cabd999bc627fe1eaa29ec4))
+* Added smithed convention ([`d47f9e7`](https://github.com/edayot/ItemIO/commit/d47f9e755655a6d92c9521164a81b9b806a1ddae))
+* Networking tab ([`ed45b5a`](https://github.com/edayot/ItemIO/commit/ed45b5a794bd3077407702c58cd60dad8b536aec))
+* Front page ([`88f2a6c`](https://github.com/edayot/ItemIO/commit/88f2a6c17d1512fc4f95b06432203c81771b4525))
+* Mudkip & add filters ([`da39042`](https://github.com/edayot/ItemIO/commit/da39042f35fd731205db451a388b168be47cf54c))
+
 ## v0.5.4 (2023-07-19)
 
 ### Fix
