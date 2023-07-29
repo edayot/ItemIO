@@ -1,4 +1,4 @@
-# **ItemIO Wiki**
+# **ItemIO Documentation**
 
 A Minecraft Datapack library for handling items transportation and container declaration, such as for Simpledrawer or EnergyUtils. This library manages the following:
 * Entity format for declaring custom containers based on vanilla ones.
