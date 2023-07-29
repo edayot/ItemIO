@@ -47,7 +47,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: docs/_build/
           force_orphan: true
-          destination_dir: "test-dir"
+          destination_dir: "../"
 
       
       
