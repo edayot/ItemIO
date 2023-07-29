@@ -19,10 +19,10 @@ This function tag is trigger when a cable connection is updated.
 Cables' itemio.math value is a binary encoded number indicating which sides are connected, ie:
 
 ```
-    63 -> 1  1  1  1  1  1 -> all sides are active
-	  32 16 8  4  2  1
-          E  W  S  N  U  D
-    This can be used to update the model of the cable.
+63 -> 1  1  1  1  1  1 -> all sides are active
+      32 16 8  4  2  1
+      E  W  S  N  U  D
+This can be used to update the model of the cable.
 ```
 
 ---
