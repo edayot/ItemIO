@@ -56,5 +56,8 @@ IOConfig are dictionary that define what can be in a slot or not, they are dynam
 ]
 ```
 
-
+:::{admonition} Full specification 
+:class: seealso
+<https://edayot.github.io/ItemIO/html/filters/index.html>
+:::
 

@@ -32,6 +32,15 @@ Servos' itemio.math value is a boolean indicating if the servo is connected to a
 0 -> not connected
 ```
 
+#### NBT handling
+Servos has their own filters config ``data.itemio.ioconfig.filters``.
+
+:::{admonition} Full specification 
+:class: seealso
+<https://edayot.github.io/ItemIO/html/filters/index.html>
+:::
+
+
 ---
 ## Visual example
 
