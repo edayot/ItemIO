@@ -21,7 +21,7 @@ Reference for data structures used for filters.
 :link: function_calls
 :link-type: doc
 
-🔧 Functions Calls
+🧩 Functions Calls
 ^^^
 
 Documentation for the implementing custom filters as using filters for yourself.
