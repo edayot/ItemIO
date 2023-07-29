@@ -18,7 +18,7 @@ What ItemIO does every second for each network (for imroving performance not all
 2. For each network process them :
     1. All insert servos generate a destination 
     2. All extract servos process a a number of transfer by them retry limit
-    3. They clear the destination and restart
+    3. Clear the destination and restart
 
 
 
