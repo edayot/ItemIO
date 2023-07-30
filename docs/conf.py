@@ -63,7 +63,6 @@ myst_enable_extensions = [
     "substitution",
     "tasklist",
 ]
-myst_enable_extensions = ["substitution", "colon_fence"]
 
 
 

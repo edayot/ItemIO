@@ -81,6 +81,7 @@ containers/index
 filters/index
 networking/index
 function_calls/index
+contributing
 changelog
 ```
 

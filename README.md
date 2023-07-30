@@ -15,14 +15,8 @@ This is an embedded library, so you package it inside your datapack as opposed t
 
 ## Getting started
 
-See the documentation page (under contruction) : https://edayot.github.io/ItemIO/html/index.html
+See the [documentation](https://edayot.github.io/ItemIO/html/index.html) (under contruction)
 
 ## Contributing
-Contributions are always welcome! The datapack is compiled using the [beet](https://mcbeet.dev) .
 
-```bash
-$ git clone https://github.com/edayot/ItemIO.git
-$ cd ItemIO
-
-$ beet -p beet-release.yaml
-```
+Contributions are always welcome! see the [contributing page](https://edayot.github.io/ItemIO/html/contributing.html) for more information.
