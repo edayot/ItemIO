@@ -5,6 +5,7 @@ description: Item input/output lib - Easy interaction between vanilla and custom
 author: AirDox_
 
 meta:
+  modrinth_id: "dr6WkwxX"
   mc_supports: ["1.20","1.20.1"]
   mc_supports_dataversion: [3463,3465]
 
