@@ -28,12 +28,14 @@ language = 'en'
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-html_title = " "
+html_title = "ItemIO Documentation"
 html_theme = "furo"
 html_favicon = "assets/pack.ico"
 html_logo = "assets/banner_docs.png"
 
-
+html_theme_options = {
+    "sidebar_hide_name" : True
+}
 
 extensions = [
     "myst_parser",
