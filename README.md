@@ -11,7 +11,6 @@ This is an embedded library, so you package it inside your datapack as opposed t
 
 
 
-
 ## Getting started
 
 See the documentation page (under contruction) : https://edayot.github.io/ItemIO/html/index.html
