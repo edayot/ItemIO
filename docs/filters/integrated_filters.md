@@ -53,3 +53,27 @@ A filter that check if the item as smithed id.
 Theses are part from smithed convention ID, the filter will match any of the ids.
 
 
+## Merge Filter
+A filter that make a copy of the item, merge it with the filter and compare it with the original item.
+
+### Format :
+```ts
+{
+    merge: dict,
+}
+```
+
+### Example :
+```SNBT
+{
+    merge: {
+        display: {}
+    }
+}
+```
+This filter will check if the item as a display tag. 
+
+```{admonition} Note 
+:class: note
+This filter will not work with list, in the merge process there are replaced.
+```
