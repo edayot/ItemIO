@@ -1,5 +1,16 @@
 <!--next-version-placeholder-->
 
+## v0.7.0 (2023-07-30)
+
+### Feature
+
+* Merge check filter ([`ee65603`](https://github.com/edayot/ItemIO/commit/ee6560318c9133b3eb333ceba92882b4726351de))
+
+### Documentation
+
+* Merge filter documentation ([`51613ab`](https://github.com/edayot/ItemIO/commit/51613ab7d513659ec60cbd13f6475f3a13430995))
+* Html_title ([`1496730`](https://github.com/edayot/ItemIO/commit/1496730bc3383416d9cbcfad8aa4e77b6a1f0c8c))
+
 ## v0.6.0 (2023-07-29)
 
 ### Feature
