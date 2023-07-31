@@ -1,0 +1,563 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="prev" title="🤝 Contributing" href="contributing.html" />
+
+    <link rel="shortcut icon" href="_static/pack.ico"/><!-- Generated with Sphinx 7.1.1 and Furo 2023.07.26 -->
+        <title>🔄 Changelog - ItemIO Documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=6b489f20" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=135e06be" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=36a5483c" />
+    <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=1a872d8c" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #0d1117;
+  --color-code-foreground: #e6edf3;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #0d1117;
+  --color-code-foreground: #e6edf3;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #0d1117;
+  --color-code-foreground: #e6edf3;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="index.html"><div class="brand">ItemIO Documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo" src="_static/banner_docs.png" alt="Logo"/>
+  </div>
+  
+  
+</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <ul class="current">
+<li class="toctree-l1 has-children"><a class="reference internal" href="getting_started/index.html">🚀 Getting Started</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of 🚀 Getting Started</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="getting_started/basic_usage.html">📚 Basic Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started/advanced_usage.html">🔧 Advanced Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="containers/index.html">📦 Containers</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="filters/index.html">🔧 Filters</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of 🔧 Filters</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="filters/data_types.html">📚 Data Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="filters/function_calls.html">🧩 Function Calls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="filters/integrated_filters.html">💻 Integrated Filters</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="networking/index.html">🔌 Networking</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of 🔌 Networking</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="networking/cables.html">🔌 Cables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="networking/servos.html">🔧 Servos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="networking/network.html">🌐 Network</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="function_calls/index.html">🧩 Function Calls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">🤝 Contributing</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">🔄 Changelog</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Project links</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/edayot/ItemIO">Github</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://smithed.dev/packs/nhwFD5kibnbGXAlNhZan">Smithed</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://modrinth.com/datapack/itemio">Modrinth</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="edit-this-page">
+  <a class="muted-link" href="https://github.com/edayot/ItemIO/edit/master/docs/changelog.md" title="Edit this page">
+    <svg aria-hidden="true" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <path d="M4 20h4l10.5 -10.5a1.5 1.5 0 0 0 -4 -4l-10.5 10.5v4" />
+      <line x1="13.5" y1="6.5" x2="17.5" y2="10.5" />
+    </svg>
+    <span class="visually-hidden">Edit this page</span>
+  </a>
+</div><div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section class="tex2jax_ignore mathjax_ignore" id="changelog">
+<h1>🔄 Changelog<a class="headerlink" href="#changelog" title="Permalink to this heading">#</a></h1>
+<!--next-version-placeholder-->
+<section id="v0-7-0-2023-07-30">
+<h2>v0.7.0 (2023-07-30)<a class="headerlink" href="#v0-7-0-2023-07-30" title="Permalink to this heading">#</a></h2>
+<section id="feature">
+<h3>Feature<a class="headerlink" href="#feature" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Merge check filter (<a class="reference external" href="https://github.com/edayot/ItemIO/commit/ee6560318c9133b3eb333ceba92882b4726351de"><code class="docutils literal notranslate"><span class="pre">ee65603</span></code></a>)</p></li>
+</ul>
+</section>
+<section id="documentation">
+<h3>Documentation<a class="headerlink" href="#documentation" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Merge filter documentation (<a class="reference external" href="https://github.com/edayot/ItemIO/commit/51613ab7d513659ec60cbd13f6475f3a13430995"><code class="docutils literal notranslate"><span class="pre">51613ab</span></code></a>)</p></li>
+<li><p>Html_title (<a class="reference external" href="https://github.com/edayot/ItemIO/commit/1496730bc3383416d9cbcfad8aa4e77b6a1f0c8c"><code class="docutils literal notranslate"><span class="pre">1496730</span></code></a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="v0-6-0-2023-07-29">
+<h2>v0.6.0 (2023-07-29)<a class="headerlink" href="#v0-6-0-2023-07-29" title="Permalink to this heading">#</a></h2>
+<section id="id1">
+<h3>Feature<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Implementing smithed id filter (<a class="reference external" href="https://github.com/edayot/ItemIO/commit/5811ec2e655321194139599f0c3ea4a744b5fee0"><code class="docutils literal notranslate"><span class="pre">5811ec2</span></code></a>)</p></li>
+</ul>
+</section>
+<section id="id2">
+<h3>Documentation<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Emojis (<a class="reference external" href="https://github.com/edayot/ItemIO/commit/bda6feaebb240b23d1e5ac8c90df4573eaf0ee1b"><code class="docutils literal notranslate"><span class="pre">bda6fea</span></code></a>)</p></li>
+<li><p>More emojis (<a class="reference external" href="https://github.com/edayot/ItemIO/commit/47da3321d9b8db75b164cc3c5de8faa2a37c9842"><code class="docutils literal notranslate"><span class="pre">47da332</span></code></a>)</p></li>
+<li><p>New logo (<a class="reference external" href="https://github.com/edayot/ItemIO/commit/40970ebe5bd0d9a2d7f26707befb24f8510c6fdf"><code class="docutils literal notranslate"><span class="pre">40970eb</span></code></a>)</p></li>
+<li><p>Gutter (<a class="reference external" href="https://github.com/edayot/ItemIO/commit/276b947b4fa768edbc4dad653211a6858ad667bb"><code class="docutils literal notranslate"><span class="pre">276b947</span></code></a>)</p></li>
+<li><p>Spelling (<a class="reference external" href="https://github.com/edayot/ItemIO/commit/2e084029d27ed18a88ddb7ee3b857c8d422d8068"><code class="docutils literal notranslate"><span class="pre">2e08402</span></code></a>)</p></li>
+<li><p>Network spec (<a class="reference external" href="https://github.com/edayot/ItemIO/commit/f2daeb737695a3f05626126d281cb33da34d4e26"><code class="docutils literal notranslate"><span class="pre">f2daeb7</span></code></a>)</p></li>
+<li><p>Delete the readme documentation &amp; link the github pages (<a class="reference external" href="https://github.com/edayot/ItemIO/commit/2da007a9976790fb3aa11f65a78706d4dbe71522"><code class="docutils literal notranslate"><span class="pre">2da007a</span></code></a>)</p></li>
+<li><p>Transfer function (<a class="reference external" href="https://github.com/edayot/ItemIO/commit/3a637c1acfced5dbeaf8e1b093d2f8907a462743"><code class="docutils literal notranslate"><span class="pre">3a637c1</span></code></a>)</p></li>
+<li><p>Output (<a class="reference external" href="https://github.com/edayot/ItemIO/commit/044955db2f85c1c257555b018fa28187a491820b"><code class="docutils literal notranslate"><span class="pre">044955d</span></code></a>)</p></li>
+<li><p>Input (<a class="reference external" href="https://github.com/edayot/ItemIO/commit/dafa1bee2a7775728761f3991425763670835a3c"><code class="docutils literal notranslate"><span class="pre">dafa1be</span></code></a>)</p></li>
+<li><p>New function calls (<a class="reference external" href="https://github.com/edayot/ItemIO/commit/42f6180357d9fc81b651a7d4c006b5327181fabf"><code class="docutils literal notranslate"><span class="pre">42f6180</span></code></a>)</p></li>
+<li><p>Cross reference (<a class="reference external" href="https://github.com/edayot/ItemIO/commit/05d5b4fad7674155c57bef7840e0c021a6917c50"><code class="docutils literal notranslate"><span class="pre">05d5b4f</span></code></a>)</p></li>
+<li><p>Basic usage (<a class="reference external" href="https://github.com/edayot/ItemIO/commit/e4815d78c54fd38343f31a90a34cd338e1915ce9"><code class="docutils literal notranslate"><span class="pre">e4815d7</span></code></a>)</p></li>
+<li><p>Correct index (<a class="reference external" href="https://github.com/edayot/ItemIO/commit/0a412e81fb55723075080b15acfc25b3e5b51bb0"><code class="docutils literal notranslate"><span class="pre">0a412e8</span></code></a>)</p></li>
+<li><p>Servos &amp; cables refactor (<a class="reference external" href="https://github.com/edayot/ItemIO/commit/db907dc448ed73a324f696507a6329324783ac71"><code class="docutils literal notranslate"><span class="pre">db907dc</span></code></a>)</p></li>
+<li><p>Ggds (<a class="reference external" href="https://github.com/edayot/ItemIO/commit/a09c26257a75935a38fd1ada45de6afe0a5bf7af"><code class="docutils literal notranslate"><span class="pre">a09c262</span></code></a>)</p></li>
+<li><p>Spelling &amp; no more custom_theme (<a class="reference external" href="https://github.com/edayot/ItemIO/commit/81eaaf37970c981922dda17d477515959cc4d7ea"><code class="docutils literal notranslate"><span class="pre">81eaaf3</span></code></a>)</p></li>
+<li><p>New formatting (<a class="reference external" href="https://github.com/edayot/ItemIO/commit/8a432784c2d7b2d2524269210fdcd0fb61bab5f9"><code class="docutils literal notranslate"><span class="pre">8a43278</span></code></a>)</p></li>
+<li><p>Switch to a default sphinx install (<a class="reference external" href="https://github.com/edayot/ItemIO/commit/fb504cc3366587156dbc205c531208f1c4b969ba"><code class="docutils literal notranslate"><span class="pre">fb504cc</span></code></a>)</p></li>
+<li><p>More emojis (<a class="reference external" href="https://github.com/edayot/ItemIO/commit/a93842d3deaccad65525dc4c37a96ccc9b6c8052"><code class="docutils literal notranslate"><span class="pre">a93842d</span></code></a>)</p></li>
+<li><p>Cables documentation (<a class="reference external" href="https://github.com/edayot/ItemIO/commit/cae30f99b0c4c1aa2a9efa76d46bb26fd05cb1e0"><code class="docutils literal notranslate"><span class="pre">cae30f9</span></code></a>)</p></li>
+<li><p>Getting started (<a class="reference external" href="https://github.com/edayot/ItemIO/commit/b4cd792659acf0409cabd999bc627fe1eaa29ec4"><code class="docutils literal notranslate"><span class="pre">b4cd792</span></code></a>)</p></li>
+<li><p>Added smithed convention (<a class="reference external" href="https://github.com/edayot/ItemIO/commit/d47f9e755655a6d92c9521164a81b9b806a1ddae"><code class="docutils literal notranslate"><span class="pre">d47f9e7</span></code></a>)</p></li>
+<li><p>Networking tab (<a class="reference external" href="https://github.com/edayot/ItemIO/commit/ed45b5a794bd3077407702c58cd60dad8b536aec"><code class="docutils literal notranslate"><span class="pre">ed45b5a</span></code></a>)</p></li>
+<li><p>Front page (<a class="reference external" href="https://github.com/edayot/ItemIO/commit/88f2a6c17d1512fc4f95b06432203c81771b4525"><code class="docutils literal notranslate"><span class="pre">88f2a6c</span></code></a>)</p></li>
+<li><p>Mudkip &amp; add filters (<a class="reference external" href="https://github.com/edayot/ItemIO/commit/da39042f35fd731205db451a388b168be47cf54c"><code class="docutils literal notranslate"><span class="pre">da39042</span></code></a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="v0-5-4-2023-07-19">
+<h2>v0.5.4 (2023-07-19)<a class="headerlink" href="#v0-5-4-2023-07-19" title="Permalink to this heading">#</a></h2>
+<section id="fix">
+<h3>Fix<a class="headerlink" href="#fix" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>The first container as no process queue (<a class="reference external" href="https://github.com/edayot/ItemIO/commit/c999fa5299e9ce8d5bcef14bf81bcbe4d9ddcd8c"><code class="docutils literal notranslate"><span class="pre">c999fa5</span></code></a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="v0-5-3-2023-07-16">
+<h2>v0.5.3 (2023-07-16)<a class="headerlink" href="#v0-5-3-2023-07-16" title="Permalink to this heading">#</a></h2>
+<section id="id3">
+<h3>Fix<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Real fix (<a class="reference external" href="https://github.com/edayot/ItemIO/commit/13dca5c3d745f2b46b1db42c447df03a02982bc7"><code class="docutils literal notranslate"><span class="pre">13dca5c</span></code></a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="v0-5-2-2023-07-16">
+<h2>v0.5.2 (2023-07-16)<a class="headerlink" href="#v0-5-2-2023-07-16" title="Permalink to this heading">#</a></h2>
+<section id="id4">
+<h3>Fix<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Ctc filter now works properly (<a class="reference external" href="https://github.com/edayot/ItemIO/commit/db74138b07a7d3420ad263fa408d115d671cd032"><code class="docutils literal notranslate"><span class="pre">db74138</span></code></a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="v0-5-1-2023-07-06">
+<h2>v0.5.1 (2023-07-06)<a class="headerlink" href="#v0-5-1-2023-07-06" title="Permalink to this heading">#</a></h2>
+<section id="id5">
+<h3>Fix<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>New stack16 items (<a class="reference external" href="https://github.com/edayot/ItemIO/commit/0fc40838e447b7d1ed9bf66c081ffb0fb83e9bab"><code class="docutils literal notranslate"><span class="pre">0fc4083</span></code></a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="v0-5-0-2023-07-04">
+<h2>v0.5.0 (2023-07-04)<a class="headerlink" href="#v0-5-0-2023-07-04" title="Permalink to this heading">#</a></h2>
+<section id="id6">
+<h3>Feature<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Output custom now support filters (<a class="reference external" href="https://github.com/edayot/ItemIO/commit/297d3fbb5324f8714ec0698b59a0e14229000685"><code class="docutils literal notranslate"><span class="pre">297d3fb</span></code></a>)</p></li>
+<li><p>New filters implementation (<a class="reference external" href="https://github.com/edayot/ItemIO/commit/ba48331dda28aff34186046d9937e4a9e5ef54fd"><code class="docutils literal notranslate"><span class="pre">ba48331</span></code></a>)</p></li>
+</ul>
+</section>
+<section id="id7">
+<h3>Fix<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Decorated pots in #itemio:stack1 (<a class="reference external" href="https://github.com/edayot/ItemIO/commit/62958db0f2bf7cf1bb94b184c842138bea39c76d"><code class="docutils literal notranslate"><span class="pre">62958db</span></code></a>)</p></li>
+<li><p>Success_transfer now work (<a class="reference external" href="https://github.com/edayot/ItemIO/commit/3235c74d115bb5f2d5e697218d2fa52e60ad2c4a"><code class="docutils literal notranslate"><span class="pre">3235c74</span></code></a>)</p></li>
+<li><p>Switch success and inputs to <a class="reference external" href="http://itemio.io">itemio.io</a>, (<a class="reference external" href="https://github.com/edayot/ItemIO/commit/25f2630833ef9cc5add2c08574b1850a56ab0fd5"><code class="docutils literal notranslate"><span class="pre">25f2630</span></code></a>)</p></li>
+<li><p>Impl on predicates (<a class="reference external" href="https://github.com/edayot/ItemIO/commit/b05dd950b2c12060c06331edf4d40d644c85703b"><code class="docutils literal notranslate"><span class="pre">b05dd95</span></code></a>)</p></li>
+<li><p>Item_modifiers anow use versioning (<a class="reference external" href="https://github.com/edayot/ItemIO/commit/2788efb04bbe55b117e8d94e2aa13741c6b183b1"><code class="docutils literal notranslate"><span class="pre">2788efb</span></code></a>)</p></li>
+<li><p>Security init on servos (<a class="reference external" href="https://github.com/edayot/ItemIO/commit/edc571089351896eb3e13ef0b1a9f5041bdf70ff"><code class="docutils literal notranslate"><span class="pre">edc5710</span></code></a>)</p></li>
+<li><p>Consistant use of item_modifiers / <a class="reference external" href="http://itemio.io">itemio.io</a> (<a class="reference external" href="https://github.com/edayot/ItemIO/commit/111ea71b5cf05069deccd10430aa64a0928efcde"><code class="docutils literal notranslate"><span class="pre">111ea71</span></code></a>)</p></li>
+<li><p>More checks on init (<a class="reference external" href="https://github.com/edayot/ItemIO/commit/31f554d786d825173da790d7d83cf32515a3dbbb"><code class="docutils literal notranslate"><span class="pre">31f554d</span></code></a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="v0-4-1-2023-06-27">
+<h2>v0.4.1 (2023-06-27)<a class="headerlink" href="#v0-4-1-2023-06-27" title="Permalink to this heading">#</a></h2>
+<section id="id8">
+<h3>Fix<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Variables are now set before auto_handled_output (<a class="reference external" href="https://github.com/edayot/ItemIO/commit/080c6b1b713549e9583b5af237c7b23863451182"><code class="docutils literal notranslate"><span class="pre">080c6b1</span></code></a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="v0-4-0-2023-06-20">
+<h2>v0.4.0 (2023-06-20)<a class="headerlink" href="#v0-4-0-2023-06-20" title="Permalink to this heading">#</a></h2>
+<section id="id9">
+<h3>Fix<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Update smithed lib (<a class="reference external" href="https://github.com/edayot/ItemIO/commit/b96395eebe9e25ad05afd8a938b0612b965f9b6e"><code class="docutils literal notranslate"><span class="pre">b96395e</span></code></a>)</p></li>
+<li><p>Control if the chunk is loaded (<a class="reference external" href="https://github.com/edayot/ItemIO/commit/3d9fed2e319c092e2530fcf58fef0558590ad84f"><code class="docutils literal notranslate"><span class="pre">3d9fed2</span></code></a>)</p></li>
+<li><p>Say (<a class="reference external" href="https://github.com/edayot/ItemIO/commit/05bdac7bc44f45c2fd4af7250af4e21fb4ff2af4"><code class="docutils literal notranslate"><span class="pre">05bdac7</span></code></a>)</p></li>
+<li><p>Use of 1.20 <code class="docutils literal notranslate"><span class="pre">execute</span> <span class="pre">if</span> <span class="pre">loaded</span></code> (<a class="reference external" href="https://github.com/edayot/ItemIO/commit/0d64a524c1ac636c323c5884879d680dd2275749"><code class="docutils literal notranslate"><span class="pre">0d64a52</span></code></a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="v0-3-0-2023-02-23">
+<h2>v0.3.0 (2023-02-23)<a class="headerlink" href="#v0-3-0-2023-02-23" title="Permalink to this heading">#</a></h2>
+<section id="id10">
+<h3>Feature<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Display and interaction add to #itemio:cables (<a class="reference external" href="https://github.com/edayot/ItemIO/commit/3aa891e553f84dff1949fbae1c0aaf8f21f33ea9"><code class="docutils literal notranslate"><span class="pre">3aa891e</span></code></a>)</p></li>
+<li><p>Item_display added to #itemio:container (<a class="reference external" href="https://github.com/edayot/ItemIO/commit/83daffb4b25881dd65bcb7904bd1f81acef62878"><code class="docutils literal notranslate"><span class="pre">83daffb</span></code></a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="v0-2-0-2023-01-28">
+<h2>v0.2.0 (2023-01-28)<a class="headerlink" href="#v0-2-0-2023-01-28" title="Permalink to this heading">#</a></h2>
+<section id="id11">
+<h3>Fix<a class="headerlink" href="#id11" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Add queue checker (<a class="reference external" href="https://github.com/edayot/ItemIO/commit/31b5a83984e9e3ed80b7cdee0c64522eef0c0d9c"><code class="docutils literal notranslate"><span class="pre">31b5a83</span></code></a>)</p></li>
+<li><p>Backward compatibility (<a class="reference external" href="https://github.com/edayot/ItemIO/commit/cece72aba8038f5cefc36c26f5f9067d2d6f84bd"><code class="docutils literal notranslate"><span class="pre">cece72a</span></code></a>)</p></li>
+<li><p>Hopper_speed is now 8 (<a class="reference external" href="https://github.com/edayot/ItemIO/commit/d5da5037ff31cc0b6bec72f07c878bcc4395fd8d"><code class="docutils literal notranslate"><span class="pre">d5da503</span></code></a>)</p></li>
+<li><p>👋20tick, cause hopper minecart+activator rails (<a class="reference external" href="https://github.com/edayot/ItemIO/commit/f130135366e0eb2913f0399123aa4936ce5c5dde"><code class="docutils literal notranslate"><span class="pre">f130135</span></code></a>)</p></li>
+<li><p>20tick now run on 20tick (<a class="reference external" href="https://github.com/edayot/ItemIO/commit/5977abce30fa7324c54e5625d160cb9a6e131032"><code class="docutils literal notranslate"><span class="pre">5977abc</span></code></a>)</p></li>
+<li><p>Only check initialised containers (<a class="reference external" href="https://github.com/edayot/ItemIO/commit/259006f7a22625e1f7fb69ea4cb1aa9ea8b1532c"><code class="docutils literal notranslate"><span class="pre">259006f</span></code></a>)</p></li>
+<li><p>Disable minecart only work on marker container (<a class="reference external" href="https://github.com/edayot/ItemIO/commit/b09cf4ed0092014bb1f3b14757594fe8d1e11744"><code class="docutils literal notranslate"><span class="pre">b09cf4e</span></code></a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="v0-1-1-2023-01-18">
+<h2>v0.1.1 (2023-01-18)<a class="headerlink" href="#v0-1-1-2023-01-18" title="Permalink to this heading">#</a></h2>
+<section id="id12">
+<h3>Fix<a class="headerlink" href="#id12" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Hangings signs added to #itemio:stack16 (<a class="reference external" href="https://github.com/edayot/ItemIO/commit/9364e876138314abbd5adcb3b2af01c8f76e1549"><code class="docutils literal notranslate"><span class="pre">9364e87</span></code></a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="v0-1-0-2023-01-09">
+<h2>v0.1.0 (2023-01-09)<a class="headerlink" href="#v0-1-0-2023-01-09" title="Permalink to this heading">#</a></h2>
+<section id="id13">
+<h3>Feature<a class="headerlink" href="#id13" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Added auto-release (<a class="reference external" href="https://github.com/edayot/item_io/commit/9f2934dbe2c5a4a6f4503c1d9c9568dd619b82f8"><code class="docutils literal notranslate"><span class="pre">9f2934d</span></code></a>)</p></li>
+</ul>
+</section>
+<section id="id14">
+<h3>Fix<a class="headerlink" href="#id14" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Branch master (<a class="reference external" href="https://github.com/edayot/item_io/commit/87ac0d9bdd513878f088e6de0370ffefd48f7b9c"><code class="docutils literal notranslate"><span class="pre">87ac0d9</span></code></a>)</p></li>
+<li><p>Added yellow_shulker_box.json + git push in action (<a class="reference external" href="https://github.com/edayot/item_io/commit/43c10c7f4c40a905fb0769ac652adfa8130151f5"><code class="docutils literal notranslate"><span class="pre">43c10c7</span></code></a>)</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          
+          <a class="prev-page" href="contributing.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">🤝 Contributing</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; Erwan DAYOT
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            <div class="icons">
+              <a class="muted-link " href="https://github.com/edayot/ItemIO" aria-label="GitHub">
+            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+                </svg>
+            </a>
+              <a class="muted-link " href="https://modrinth.com/datapack/itemio" aria-label="Modrinth"><svg width="512" height="514" viewBox="0 0 512 514" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M503.16 323.56C514.55 281.47 515.32 235.91 503.2 190.76C466.57 54.2299 326.04 -26.8001 189.33 9.77991C83.8101 38.0199 11.3899 128.07 0.689941 230.47H43.99C54.29 147.33 113.74 74.7298 199.75 51.7098C306.05 23.2598 415.13 80.6699 453.17 181.38L411.03 192.65C391.64 145.8 352.57 111.45 306.3 96.8198L298.56 140.66C335.09 154.13 364.72 184.5 375.56 224.91C391.36 283.8 361.94 344.14 308.56 369.17L320.09 412.16C390.25 383.21 432.4 310.3 422.43 235.14L464.41 223.91C468.91 252.62 467.35 281.16 460.55 308.07L503.16 323.56Z" fill="currentColor"/>
+  <path d="M321.99 504.22C185.27 540.8 44.7501 459.77 8.11011 323.24C3.84011 307.31 1.17 291.33 0 275.46H43.27C44.36 287.37 46.4699 299.35 49.6799 311.29C53.0399 323.8 57.45 335.75 62.79 347.07L101.38 323.92C98.1299 316.42 95.39 308.6 93.21 300.47C69.17 210.87 122.41 118.77 212.13 94.7601C229.13 90.2101 246.23 88.4401 262.93 89.1501L255.19 133C244.73 133.05 234.11 134.42 223.53 137.25C157.31 154.98 118.01 222.95 135.75 289.09C136.85 293.16 138.13 297.13 139.59 300.99L188.94 271.38L174.07 231.95L220.67 184.08L279.57 171.39L296.62 192.38L269.47 219.88L245.79 227.33L228.87 244.72L237.16 267.79C237.16 267.79 253.95 285.63 253.98 285.64L277.7 279.33L294.58 260.79L331.44 249.12L342.42 273.82L304.39 320.45L240.66 340.63L212.08 308.81L162.26 338.7C187.8 367.78 226.2 383.93 266.01 380.56L277.54 423.55C218.13 431.41 160.1 406.82 124.05 361.64L85.6399 384.68C136.25 451.17 223.84 484.11 309.61 461.16C371.35 444.64 419.4 402.56 445.42 349.38L488.06 364.88C457.17 431.16 398.22 483.82 321.99 504.22Z" fill="currentColor"/>
+</svg>
+</a>
+              <a class="muted-link " href="https://smithed.dev/packs/nhwFD5kibnbGXAlNhZan" aria-label="Smithed"><?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <path d="M1508 4291 c-323 -163 -590 -299 -593 -303 -8 -8 1946 -988 1969 -988 23 0 1195 604 1193 615 -2 13 -1945 975 -1966 974 -9 -1 -280 -135 -603 -298z"  transform="matrix(0.1, 0, 0, -0.1, 0, 512)" fill="currentColor"/>
+  <path d="M870 3506 l0 -435 1007 -500 c553 -276 1012 -501 1018 -501 7 0 286 139 621 309 l609 310 3 441 c1 243 -1 440 -6 438 -31 -13 -1199 -613 -1206 -619 -6 -5 -16 -9 -23 -9 -7 0 -463 225 -1013 500 -550 275 -1002 500 -1005 500 -3 0 -5 -196 -5 -434z"  transform="matrix(0.1, 0, 0, -0.1, 0, 512)" fill="currentColor"/>
+  <path d="M1770 2301 l0 -260 487 -245 c268 -135 493 -246 500 -246 7 0 117 52 243 115 l230 115 0 195 c0 107 -3 195 -6 195 -3 0 -76 -36 -163 -80 -87 -44 -161 -80 -165 -80 -4 0 -257 124 -563 275 -306 151 -558 275 -559 275 -2 0 -4 -117 -4 -259z"  transform="matrix(0.1, 0, 0, -0.1, 0, 512)" fill="currentColor"/>
+  <path d="M3318 2219 l-38 -19 0 -225 0 -225 -252 -127 c-139 -71 -262 -128 -273 -128 -11 0 -238 110 -505 245 -266 135 -495 249 -507 253 -21 8 -23 15 -25 121 l-3 113 -332 -161 c-183 -88 -333 -162 -333 -165 1 -8 1416 -705 1438 -709 24 -4 1476 718 1466 728 -8 7 -594 321 -598 320 0 -1 -18 -10 -38 -21z"  transform="matrix(0.1, 0, 0, -0.1, 0, 512)" fill="currentColor"/>
+  <path d="M3246 1499 c-407 -203 -744 -369 -748 -369 -11 0 -189 86 -892 434 -329 163 -600 296 -602 296 -3 0 -3 -124 -2 -276 l3 -275 739 -365 c406 -200 744 -364 751 -364 7 0 348 164 757 364 l743 364 3 281 c1 155 -1 281 -5 280 -5 0 -341 -167 -747 -370z"  transform="matrix(0.1, 0, 0, -0.1, 0, 512)" fill="currentColor"/>
+</svg></a>
+              
+            </div>
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">🔄 Changelog</a><ul>
+<li><a class="reference internal" href="#v0-7-0-2023-07-30">v0.7.0 (2023-07-30)</a><ul>
+<li><a class="reference internal" href="#feature">Feature</a></li>
+<li><a class="reference internal" href="#documentation">Documentation</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#v0-6-0-2023-07-29">v0.6.0 (2023-07-29)</a><ul>
+<li><a class="reference internal" href="#id1">Feature</a></li>
+<li><a class="reference internal" href="#id2">Documentation</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#v0-5-4-2023-07-19">v0.5.4 (2023-07-19)</a><ul>
+<li><a class="reference internal" href="#fix">Fix</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#v0-5-3-2023-07-16">v0.5.3 (2023-07-16)</a><ul>
+<li><a class="reference internal" href="#id3">Fix</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#v0-5-2-2023-07-16">v0.5.2 (2023-07-16)</a><ul>
+<li><a class="reference internal" href="#id4">Fix</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#v0-5-1-2023-07-06">v0.5.1 (2023-07-06)</a><ul>
+<li><a class="reference internal" href="#id5">Fix</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#v0-5-0-2023-07-04">v0.5.0 (2023-07-04)</a><ul>
+<li><a class="reference internal" href="#id6">Feature</a></li>
+<li><a class="reference internal" href="#id7">Fix</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#v0-4-1-2023-06-27">v0.4.1 (2023-06-27)</a><ul>
+<li><a class="reference internal" href="#id8">Fix</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#v0-4-0-2023-06-20">v0.4.0 (2023-06-20)</a><ul>
+<li><a class="reference internal" href="#id9">Fix</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#v0-3-0-2023-02-23">v0.3.0 (2023-02-23)</a><ul>
+<li><a class="reference internal" href="#id10">Feature</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#v0-2-0-2023-01-28">v0.2.0 (2023-01-28)</a><ul>
+<li><a class="reference internal" href="#id11">Fix</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#v0-1-1-2023-01-18">v0.1.1 (2023-01-18)</a><ul>
+<li><a class="reference internal" href="#id12">Fix</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#v0-1-0-2023-01-09">v0.1.0 (2023-01-09)</a><ul>
+<li><a class="reference internal" href="#id13">Feature</a></li>
+<li><a class="reference internal" href="#id14">Fix</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=c3dca1ed"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="_static/scripts/furo.js?v=32e29ea5"></script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
+    </body>
+</html>
