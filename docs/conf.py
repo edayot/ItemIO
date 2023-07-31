@@ -64,6 +64,9 @@ html_theme_options = {
             "class": "",
         },
     ],
+    "source_repository": "https://github.com/edayot/ItemIO",
+    "source_branch": "master",
+    "source_directory": "docs/",
 }
 
 html_css_files = ['css/custom.css']
