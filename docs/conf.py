@@ -99,7 +99,7 @@ myst_enable_extensions = [
     "tasklist",
 ]
 
-
+suppress_warnings = ["myst.header"]
 
 pygments_style = 'github-dark'
 pygments_dark_style = 'github-dark'
