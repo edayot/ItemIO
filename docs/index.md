@@ -1,7 +1,5 @@
 
-<p align="center">
-<img src="https://github.com/edayot/ItemIO/blob/master/docs/assets/banner.png?raw=true" width="300">
-</p>
+![itemio](assets/banner.png){.bg-warning w=300px align=center}
 
 
 A Minecraft Datapack library for handling items transportation and container declaration, such as for Simpledrawer or EnergyUtils. This library manages the following:
