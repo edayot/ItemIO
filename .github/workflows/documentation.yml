@@ -39,7 +39,9 @@ jobs:
 
       - name: Sphinx build
         run: |
-          poetry run sphinx-build -M html docs/ docs/_build/
+          cd docs/
+          make html
+          cd ../
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
