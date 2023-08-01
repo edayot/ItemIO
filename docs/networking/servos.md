@@ -4,8 +4,8 @@ Servos are custom block parts of a network that can input/output items from/to c
 
 ## Place/destroy function call
 
-- On place : ``function #itemio:calls/servos/init``
-- On destroy : ``function #itemio:calls/servos/destroy``
+- On place : ``function #itemio:calls/servos/init``{l=mcfunction}
+- On destroy : ``function #itemio:calls/servos/destroy``{l=mcfunction}
 
 ## Tags
 
@@ -20,7 +20,7 @@ To declare a block as a servos you need to add the tag ``itemio.servo`` to the b
 
 This function tag is trigger when a servo connection is updated.
 
-``function #itemio:event/network_update``
+``function #itemio:event/network_update``{l=mcfunction}
 
 Servos' itemio.math value is a boolean indicating if the servo is connected to a network or not.
 
