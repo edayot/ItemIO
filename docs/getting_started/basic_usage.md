@@ -49,7 +49,7 @@ execute
 
 :::{admonition} Full specification 
 :class: seealso
-<https://edayot.github.io/ItemIO/html/containers/index.html>
+<https://edayot.github.io/ItemIO/containers/index.html>
 :::
 
 It's simple, you just need to define the ioconfig and add the required tags and boom, you have a container that can be used with hoppers.

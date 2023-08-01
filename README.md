@@ -15,8 +15,8 @@ This is an embedded library, so you package it inside your datapack as opposed t
 
 ## Getting started
 
-See the [documentation](https://edayot.github.io/ItemIO/html/index.html) (under contruction)
+See the [documentation](https://edayot.github.io/ItemIO/index.html) (under contruction)
 
 ## Contributing
 
-Contributions are always welcome! see the [contributing page](https://edayot.github.io/ItemIO/html/contributing.html) for more information.
+Contributions are always welcome! see the [contributing page](https://edayot.github.io/ItemIO/contributing.html) for more information.

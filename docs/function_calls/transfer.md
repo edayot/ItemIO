@@ -11,7 +11,7 @@
 
 All markers have : 
 - ``data.itemio.input_side`` : ```"north", "south", "east", "west", "top", "bottom", "wireless"``` (wireless bypass the side check)
-- ``data.itemio.ioconfig.filters`` : [filters](https://edayot.github.io/ItemIO/html/filters/index.html)
+- ``data.itemio.ioconfig.filters`` : [filters](https://edayot.github.io/ItemIO/filters/index.html)
 - ``data.itemio.ioconfig.inputs`` : A list of multiple items (NBTMatch ORed)
 
 

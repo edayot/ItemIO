@@ -10,7 +10,7 @@
 | The maximum amount of extracted item.<br> range 1..64             | score        | #smax_count_output       | itemio.io                        | 
 | The output side : <br>```"north", "south", "east", "west", "top", "bottom", "wireless"``` (wireless bypass the side check)                | storage      | output_side               | itemio:io                        |
 | Optional, it will do a full NBT check<br> `A normal item NBT`     | storage      | input                    | itemio:io                        |
-| Optional, it will do a [filters](https://edayot.github.io/ItemIO/html/filters/index.html) check                             | storage      | input                    | itemio:io                        |
+| Optional, it will do a [filters](https://edayot.github.io/ItemIO/filters/index.html) check                             | storage      | input                    | itemio:io                        |
 
 ---
 
