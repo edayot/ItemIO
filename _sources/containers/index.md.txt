@@ -10,8 +10,8 @@ ItemIO don't care about the GUI protection by player interaction, it's up to you
 ## Place/destroy function call
 
 Somes function call must be made when placing or destroying a container.
-- On place : ``function #itemio:calls/container/init``
-- On destroy : ``function #itemio:calls/container/destroy``
+- On place : ``function #itemio:calls/container/init``{l=mcfunction}
+- On destroy : ``function #itemio:calls/container/destroy``{l=mcfunction}
 
 
 ## Available Entity

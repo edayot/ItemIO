@@ -6,14 +6,14 @@ Cables are custom blocks that handle a cable system between all devices of the s
 
 ## Place/destroy function call
 
-- On place : ``function #itemio:calls/cables/init``
-- On destroy : ``function #itemio:calls/cables/destroy``
+- On place : ``function #itemio:calls/cables/init``{l=mcfunction}
+- On destroy : ``function #itemio:calls/cables/destroy``{l=mcfunction}
 
 ## Cable update function event
 
 This function tag is trigger when a cable connection is updated.
 
-``function #itemio:event/cable_update``
+``function #itemio:event/cable_update``{l=mcfunction}
 
 
 Cables' itemio.math value is a binary encoded number indicating which sides are connected, ie:
