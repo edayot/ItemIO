@@ -34,7 +34,7 @@ Servos has their own filters config ``data.itemio.ioconfig.filters``.
 
 :::{admonition} Full specification 
 :class: seealso
-<https://edayot.github.io/ItemIO/html/filters/index.html>
+<https://edayot.github.io/ItemIO/filters/index.html>
 :::
 
 

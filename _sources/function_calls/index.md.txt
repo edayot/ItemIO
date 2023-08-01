@@ -5,7 +5,7 @@
 ## Filters 
 
 
-See all here [Filters function calls](https://edayot.github.io/ItemIO/html/filters/function_calls.html)
+See all here [Filters function calls](https://edayot.github.io/ItemIO/filters/function_calls.html)
 
 
 ## Item transportation
