@@ -1,6 +1,5 @@
 
 
-scoreboard players set #full_input itemio.math.input 0
 
 
 #loading block data
