@@ -6,4 +6,4 @@ function itemio:impl/container/input/custom/input_no_config/process_input with s
 
 
 scoreboard players add #temp_slot itemio.math.input 1
-execute if score #success_input itemio.io matches 0 if score #temp_slot itemio.math.input < #block_size itemio.math.input run function itemio:impl/container/input/vanilla/sup_insert/loop
+execute if score #temp_slot itemio.math.input < #block_size itemio.math.input run function itemio:impl/container/input/vanilla/sup_insert/loop

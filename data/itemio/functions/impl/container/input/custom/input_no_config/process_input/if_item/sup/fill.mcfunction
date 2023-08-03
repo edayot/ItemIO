@@ -1,5 +1,5 @@
-execute store result storage itemio:main.input Items[{Slot:$(Slot)b}].Count byte 1 run scoreboard players get #full_stack itemio.math.input
-execute store result block ~ ~ ~ Items[{Slot:$(Slot)b}].Count byte 1 run scoreboard players get #full_stack itemio.math.input
+$execute store result storage itemio:main.input Items[{Slot:$(Slot)b}].Count byte 1 run scoreboard players get #full_stack itemio.math.input
+$execute store result block ~ ~ ~ Items[{Slot:$(Slot)b}].Count byte 1 run scoreboard players get #full_stack itemio.math.input
 
 scoreboard players set #new_count_input itemio.math.input 0
 scoreboard players operation #new_count_input itemio.math.input = #new_count_container itemio.math.input
