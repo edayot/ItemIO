@@ -1,13 +1,17 @@
-execute store result score #count_input itemio.math.input run data get storage itemio:main.input input.Count
 
 
-data modify entity 93682a08-d099-4e8f-a4a6-1e33a3692301 HandItems[0].id set from storage itemio:main.input input.id
-execute as 93682a08-d099-4e8f-a4a6-1e33a3692301 if predicate itemio:impl/stack16 run scoreboard players set #full_stack itemio.math.input 16
-execute as 93682a08-d099-4e8f-a4a6-1e33a3692301 if predicate itemio:impl/stack1 run scoreboard players set #full_stack itemio.math.input 1
 
-execute if score #count_input itemio.math.input > #full_stack itemio.math.input store result storage itemio:main.input input.Count int 1 run scoreboard players get #full_stack itemio.math.input
+scoreboard players set #loop_count_input itemio.math.input 0
+scoreboard players operation #loop_count_input itemio.math.input = #count_input itemio.math.input
+data modify storage itemio:main.input inputs set value []
+scoreboard players set #temp_slot itemio.math.input 0
+execute if score #loop_count_input itemio.math.input matches 1.. run function itemio:impl/container/input/vanilla/inf_insert/loop_items
 
-execute in minecraft:overworld run function itemio:impl/container/input/vanilla/hopper/inf_insert_dimension
+
+
+
+
+execute in minecraft:overworld run function itemio:impl/container/input/vanilla/inf_insert/dimension
 data modify block ~ ~ ~ Items set from storage itemio:main.input Items
 
 
@@ -22,4 +26,4 @@ execute if score #temp_success itemio.math.input matches 0 run scoreboard player
 execute store result storage itemio:main.input input.Count int 1 run scoreboard players get #count_input itemio.math.input
 
 
-
+#tellraw @a [{"text":"#count_input : "},{"score":{"name":"#count_input","objective":"itemio.math.input"}}]
