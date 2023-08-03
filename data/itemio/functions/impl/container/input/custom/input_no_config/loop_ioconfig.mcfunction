@@ -6,4 +6,4 @@ execute if data storage itemio:io {input_side:"wireless"} run function itemio:im
 
 
 data remove storage itemio:main.input ioconfig[0]
-execute if score #success_input itemio.io matches 0 if data storage itemio:main.input ioconfig[0] run function itemio:impl/container/input/custom/input_no_config/loop_ioconfig
+execute unless function itemio:impl/container/input/if_item_input if data storage itemio:main.input ioconfig[0] run function itemio:impl/container/input/custom/input_no_config/loop_ioconfig

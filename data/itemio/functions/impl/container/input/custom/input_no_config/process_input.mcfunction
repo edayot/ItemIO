@@ -5,7 +5,7 @@ execute if score #if_item itemio.math.input matches 1 run function itemio:impl/c
 
 
 
-#$tellraw @a [{"text":"Slot $(Slot) : "},{"score":{"name":"#if_item","objective":"itemio.math.input"}}]
+$tellraw @a [{"text":"Slot $(Slot) : "},{"score":{"name":"#if_item","objective":"itemio.math.input"}}]
 
 
 
