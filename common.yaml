@@ -19,7 +19,6 @@ require:
 
 
 pipeline:
-  - mecha
   - smithed_libraries.plugins.versioning
   - beet.contrib.find_replace
   - airdox_.add_license

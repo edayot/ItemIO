@@ -10,6 +10,7 @@ data remove storage itemio:main.input Items[{tag:{itemio:{gui:1b}}}]
 data remove storage itemio:main.input input
 data modify storage itemio:main.input input set from storage itemio:io input
 
+data remove storage itemio:main.input temp.args
 data modify storage itemio:main.input temp.args.input_side set from storage itemio:io input_side
 execute if data storage itemio:main.input ioconfig[0] run function itemio:impl/container/input/custom/input_no_config/loop_ioconfig with storage itemio:main.input temp.args
 
