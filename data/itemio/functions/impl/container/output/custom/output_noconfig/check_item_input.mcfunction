@@ -3,7 +3,7 @@ data remove storage itemio:main.output Item2
 
 
 data modify storage itemio:main.output Item1 set from storage itemio:main.output input
-data modify storage itemio:main.output Item2 set from storage itemio:main.output Items[{Slot:$(Slot)b}]
+$data modify storage itemio:main.output Item2 set from storage itemio:main.output Items[{Slot:$(Slot)b}]
 data remove storage itemio:main.output Item1.Count
 data remove storage itemio:main.output Item1.Slot
 data remove storage itemio:main.output Item2.Count
