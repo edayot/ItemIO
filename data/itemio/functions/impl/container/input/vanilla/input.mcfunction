@@ -25,9 +25,6 @@ execute if block ~ ~ ~ chest[type=right] run function itemio:impl/container/inpu
 execute if block ~ ~ ~ trapped_chest[type=right] run function itemio:impl/container/input/vanilla/double_chest_right
 
 
-execute if block ~ ~ ~ #itemio:container/3 run function itemio:impl/container/input/vanilla/3/try_input
-
-
 
 data remove storage itemio:io output
 data modify storage itemio:io output set from storage itemio:io input

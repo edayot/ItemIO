@@ -28,6 +28,5 @@ execute if block ~ ~ ~ chest[type=left] run function itemio:impl/container/outpu
 execute if block ~ ~ ~ trapped_chest[type=left] run function itemio:impl/container/output/vanilla/double_chest_left
 
 
-execute if score #if_item_block itemio.math.output matches 1 if block ~ ~ ~ #itemio:container/3 run function itemio:impl/container/output/vanilla/3/repart
 
 
