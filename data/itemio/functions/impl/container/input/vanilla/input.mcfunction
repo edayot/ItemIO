@@ -1,11 +1,8 @@
 #init
-data remove storage itemio:main.input input
-data modify storage itemio:main.input input set from storage itemio:io input
 
 
 
 
-execute store result score #input_size itemio.math.input if data storage itemio:main.input Items[]
 
 
 

@@ -2,6 +2,9 @@ data remove storage itemio:main.input Items
 data modify storage itemio:main.input Items set from block ~ ~ ~ Items
 data remove storage itemio:main.input Items[{tag:{itemio:{gui:1b}}}]
 
+data remove storage itemio:main.input input
+data modify storage itemio:main.input input set from storage itemio:io input
+
 
 execute store result score #block_stack itemio.math.input if data storage itemio:main.input Items[]
 

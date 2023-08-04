@@ -1,11 +1,10 @@
-data remove storage itemio:main.input Items
-data modify storage itemio:main.input Items set from block ~ ~ ~ Items
-data remove storage itemio:main.input Items[{tag:{itemio:{gui:1b}}}]
+# Furnace, Blast Furnace, Smoker 
+# There are using a custom ioconfig
 
-execute if data storage itemio:io {input_side:"top"} run function itemio:impl/container/input/vanilla/3/try_input/top
-execute if data storage itemio:io {input_side:"bottom"} run function itemio:impl/container/input/vanilla/3/try_input/top
-execute if data storage itemio:io {input_side:"north"} run function itemio:impl/container/input/vanilla/3/try_input/side
-execute if data storage itemio:io {input_side:"south"} run function itemio:impl/container/input/vanilla/3/try_input/side
-execute if data storage itemio:io {input_side:"east"} run function itemio:impl/container/input/vanilla/3/try_input/side
-execute if data storage itemio:io {input_side:"west"} run function itemio:impl/container/input/vanilla/3/try_input/side
-execute if data storage itemio:io {input_side:"wireless"} run function itemio:impl/container/input/vanilla/3/try_input/wireless
+data modify storage itemio:main.input ioconfig set value [ \
+    {Slot:0b,allowed_side:{top:1b}}, \
+    {Slot:1b,allowed_side:{north:1b,south:1b,east:1b,west:1b,bottom:1b},filters:[{}]} \
+    ]
+
+
+function itemio:impl/container/input/custom/input_noconfig
