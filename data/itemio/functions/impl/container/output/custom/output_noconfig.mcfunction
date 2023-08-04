@@ -11,8 +11,12 @@ data remove storage itemio:main.output input
 data modify storage itemio:main.output input set from storage itemio:io input
 data remove storage itemio:io output
 
-data remove storage itemio:main.output filters 
+data modify storage itemio:main.output filters set value []
 data modify storage itemio:main.output filters set from storage itemio:io filters
+
+execute store result score #if_filters_define itemio.math.output if data storage itemio:main.output filters[0]
+execute store result score #if_item_input itemio.math.output if data storage itemio:main.output input
+
 
 data remove storage itemio:main.output temp.args_loop_ioconfig
 data modify storage itemio:main.output temp.args_loop_ioconfig.output_side set from storage itemio:io output_side

@@ -10,6 +10,6 @@ function #itemio:calls/filters_v2
 
 
 
-execute if score #filters.valid_item itemio.io matches 1 run function itemio:impl/container/output/custom/output_no_config/process_input with storage itemio:main.output temp.args_check_filters
+execute if score #filters.valid_item itemio.io matches 1 run function itemio:impl/container/output/custom/output_no_config/check_filters with storage itemio:main.output temp.args_check_filters
 
 
