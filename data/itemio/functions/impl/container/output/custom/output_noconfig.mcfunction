@@ -14,6 +14,8 @@ data remove storage itemio:io output
 data modify storage itemio:main.output filters set value []
 data modify storage itemio:main.output filters set from storage itemio:io filters
 
+scoreboard players set #if_item_input itemio.math.output 0
+scoreboard players set #if_filters_define itemio.math.output 0
 execute store result score #if_filters_define itemio.math.output if data storage itemio:main.output filters[0]
 execute store result score #if_item_input itemio.math.output if data storage itemio:main.output input
 
