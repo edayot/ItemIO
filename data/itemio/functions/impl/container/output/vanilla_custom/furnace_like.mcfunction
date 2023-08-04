@@ -8,4 +8,4 @@ data modify storage itemio:main.input ioconfig set value [ \
     ]
 
 
-function itemio:impl/container/input/custom/input_noconfig
+function itemio:impl/container/input/custom/output_noconfig
