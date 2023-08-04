@@ -10,4 +10,4 @@ execute if score #test_count_output itemio.math.output > #max_output_count itemi
 scoreboard players operation #remove_count itemio.math.output = #max_output_count itemio.io
 
 execute if score #try_input_after itemio.math.output matches 1 run function #itemio:calls/try_input_after
-execute if score #remove_count itemio.math.output matches 1.. run item modify block ~ ~ ~ container.$(Slot) itemio:impl/internal/output/remove_count
+$execute if score #remove_count itemio.math.output matches 1.. run item modify block ~ ~ ~ container.$(Slot) itemio:impl/internal/output/remove_count
