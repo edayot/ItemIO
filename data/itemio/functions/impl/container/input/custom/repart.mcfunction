@@ -1,7 +1,6 @@
 execute store result score #slot itemio.math.input run data get storage itemio:main.input ioconfig[0].Slot
 
 
-execute if score #slot itemio.math.input matches 0 run function itemio:impl/container/input/custom/try_input/0/repart
 execute if score #full_input itemio.math.input matches 0 if score #slot itemio.math.input matches 0 run function itemio:impl/container/input/custom/try_input/0/repart
 execute if score #full_input itemio.math.input matches 0 if score #slot itemio.math.input matches 1 run function itemio:impl/container/input/custom/try_input/1/repart
 execute if score #full_input itemio.math.input matches 0 if score #slot itemio.math.input matches 2 run function itemio:impl/container/input/custom/try_input/2/repart
