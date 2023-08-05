@@ -61,3 +61,8 @@ IOConfig are dictionary that define what can be in a slot or not, they are dynam
 <https://edayot.github.io/ItemIO/filters/index.html>
 :::
 
+:::{admonition} Ignored items
+:class: seealso
+All items matching ``<item>.tag.itemio.gui: 1b``, will be ignored by ItemIO.
+:::
+
