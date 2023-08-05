@@ -72,8 +72,6 @@ data={
 
 # check if the directory exists
 build="build"
-if not os.path.isdir("build"):
-    build="../../build"
 
 files={}
 for file in os.listdir(build):
