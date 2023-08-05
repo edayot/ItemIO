@@ -1,5 +1,22 @@
 <!--next-version-placeholder-->
 
+## v0.7.1 (2023-08-05)
+
+### Fix
+
+* Item invert dup glitch & example container ([`a7bf05c`](https://github.com/edayot/ItemIO/commit/a7bf05ca6987e36706c062e715a280d763b747b7))
+* Dupe glitch in big transfer at the 1st item ([`b07d8fc`](https://github.com/edayot/ItemIO/commit/b07d8fc73d04ca6bd74659d765f2e554657b329b))
+
+### Documentation
+
+* Ignored items ([`fc93b6f`](https://github.com/edayot/ItemIO/commit/fc93b6fde1ae5ea48e1ba117c7fb9eecf39e4ecf))
+* Language inline ([`f0297c6`](https://github.com/edayot/ItemIO/commit/f0297c6a9af240435c905010ab76867ba6e087ba))
+* Clean up ([`3534b26`](https://github.com/edayot/ItemIO/commit/3534b26bcab36b88a6d76c802bdca1e1f56f6766))
+* Change html top level folder ([`1ae2b16`](https://github.com/edayot/ItemIO/commit/1ae2b16ea2e498f934ed04c23db0cbef46d52b88))
+* Addign footbar link ([`dccbeec`](https://github.com/edayot/ItemIO/commit/dccbeec0d2d183f965a4f14f2e75c92857c675fd))
+* Update title ([`f91b86b`](https://github.com/edayot/ItemIO/commit/f91b86bc9b75b393d53d128eb8396f946c3dc6d6))
+* Contrbuting page ([`c6c8f53`](https://github.com/edayot/ItemIO/commit/c6c8f533b2d1dbb3bf67e769dc46a84f174ed980))
+
 ## v0.7.0 (2023-07-30)
 
 ### Feature
