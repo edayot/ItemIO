@@ -22,4 +22,4 @@ execute store result score #if_item_input itemio.math.output if data storage ite
 
 data remove storage itemio:main.output temp.args_loop_ioconfig
 data modify storage itemio:main.output temp.args_loop_ioconfig.output_side set from storage itemio:io output_side
-execute if data storage itemio:main.output ioconfig[0] run function itemio:impl/container/output/custom/output_no_config/loop_ioconfig with storage itemio:main.output temp.args_loop_ioconfig
+execute if data storage itemio:main.output ioconfig[0] run function itemio:impl/container/output/custom/output_noconfig/loop_ioconfig with storage itemio:main.output temp.args_loop_ioconfig
