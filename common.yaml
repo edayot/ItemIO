@@ -16,6 +16,7 @@ require:
   - mecha.contrib.messages
   - beet.contrib.render
   - beet.contrib.model_merging
+  - bolt
 
 
 pipeline:
