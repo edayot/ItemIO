@@ -42,13 +42,13 @@ lxml = ["lxml"]
 
 [[package]]
 name = "beet"
-version = "0.89.1"
+version = "0.89.2"
 description = "The Minecraft pack development kit"
 optional = false
 python-versions = ">=3.10,<4.0"
 files = [
-    {file = "beet-0.89.1-py3-none-any.whl", hash = "sha256:d475658b93c132429923caadfd90e777cbb04c235eea846fa96f075c68ab1268"},
-    {file = "beet-0.89.1.tar.gz", hash = "sha256:2b3341b67b1cb871997a653fb1e8caaa6dc43011bfb80e52f6b4bdc9f37b0d68"},
+    {file = "beet-0.89.2-py3-none-any.whl", hash = "sha256:92e35ca6a47217d41233fdf9654d9953aded9bb49c26f5588f26aa62414937f1"},
+    {file = "beet-0.89.2.tar.gz", hash = "sha256:ca7e617ba565ad2e881cae8da807cdcf6080659b11d609e64a15d26ed884f722"},
 ]
 
 [package.dependencies]
@@ -763,13 +763,13 @@ files = [
 
 [[package]]
 name = "mecha"
-version = "0.74.0"
+version = "0.76.1"
 description = "A powerful Minecraft command library"
 optional = false
 python-versions = ">=3.10,<4.0"
 files = [
-    {file = "mecha-0.74.0-py3-none-any.whl", hash = "sha256:21cf560dc54213ad20da687b8f26c7d43122b80d6ad61a10f6f4a72233b80008"},
-    {file = "mecha-0.74.0.tar.gz", hash = "sha256:c7bc7bc7b68841e63921cc21a1249adfd9993403b3ddfef0a6317ab1e3cfc12c"},
+    {file = "mecha-0.76.1-py3-none-any.whl", hash = "sha256:063835b8eff9c5e186bdf46e1d64f54de85422f8173ad0e0331706b02c131cd2"},
+    {file = "mecha-0.76.1.tar.gz", hash = "sha256:7276c5333aa0f90369559027ce5b7ee8f8e6e01df69c46b8792b9a591c13d09e"},
 ]
 
 [package.dependencies]
@@ -778,13 +778,13 @@ tokenstream = ">=1.7.0,<2.0.0"
 
 [[package]]
 name = "more-itertools"
-version = "10.0.0"
+version = "10.1.0"
 description = "More routines for operating on iterables, beyond itertools"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "more-itertools-10.0.0.tar.gz", hash = "sha256:cd65437d7c4b615ab81c0640c0480bc29a550ea032891977681efd28344d51e1"},
-    {file = "more_itertools-10.0.0-py3-none-any.whl", hash = "sha256:928d514ffd22b5b0a8fce326d57f423a55d2ff783b093bab217eda71e732330f"},
+    {file = "more-itertools-10.1.0.tar.gz", hash = "sha256:626c369fa0eb37bac0291bce8259b332fd59ac792fa5497b59837309cd5b114a"},
+    {file = "more_itertools-10.1.0-py3-none-any.whl", hash = "sha256:64e0735fcfdc6f3464ea133afe8ea4483b1c5fe3a3d69852e6503b43a0b222e6"},
 ]
 
 [[package]]
@@ -977,13 +977,13 @@ email = ["email-validator (>=1.0.3)"]
 
 [[package]]
 name = "pygments"
-version = "2.15.1"
+version = "2.16.1"
 description = "Pygments is a syntax highlighting package written in Python."
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "Pygments-2.15.1-py3-none-any.whl", hash = "sha256:db2db3deb4b4179f399a09054b023b6a586b76499d36965813c71aa8ed7b5fd1"},
-    {file = "Pygments-2.15.1.tar.gz", hash = "sha256:8ace4d3c1dd481894b2005f560ead0f9f19ee64fe983366be1a21e171d12775c"},
+    {file = "Pygments-2.16.1-py3-none-any.whl", hash = "sha256:13fc09fa63bc8d8671a6d247e1eb303c4b343eaee81d861f3404db2935653692"},
+    {file = "Pygments-2.16.1.tar.gz", hash = "sha256:1daff0494820c69bc8941e407aa20f577374ee88364ee10a98fdbe0aece96e29"},
 ]
 
 [package.extras]
@@ -1217,14 +1217,14 @@ develop = false
 beet = "^0.89.1"
 bolt = "^0.37.0"
 bolt-expressions = "^0.12.2"
-mecha = "^0.74.0"
+mecha = "^0.76.0"
 pydantic = "^1.10.2"
 
 [package.source]
 type = "git"
 url = "https://github.com/edayot/Libraries.git"
 reference = "HEAD"
-resolved_reference = "56b704667d946dd9affd2ee94ea2992e4350bf6c"
+resolved_reference = "950b49af1ba916211f042477805d7484a263dc62"
 
 [[package]]
 name = "smmap"
@@ -1636,13 +1636,13 @@ files = [
 
 [[package]]
 name = "wheel"
-version = "0.41.0"
+version = "0.41.1"
 description = "A built-package format for Python"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "wheel-0.41.0-py3-none-any.whl", hash = "sha256:7e9be3bbd0078f6147d82ed9ed957e323e7708f57e134743d2edef3a7b7972a9"},
-    {file = "wheel-0.41.0.tar.gz", hash = "sha256:55a0f0a5a84869bce5ba775abfd9c462e3a6b1b7b7ec69d72c0b83d673a5114d"},
+    {file = "wheel-0.41.1-py3-none-any.whl", hash = "sha256:473219bd4cbedc62cea0cb309089b593e47c15c4a2531015f94e4e3b9a0f6981"},
+    {file = "wheel-0.41.1.tar.gz", hash = "sha256:12b911f083e876e10c595779709f8a88a59f45aacc646492a67fe9ef796c1b47"},
 ]
 
 [package.extras]
