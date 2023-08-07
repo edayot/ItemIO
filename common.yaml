@@ -28,7 +28,7 @@ pipeline:
   - mecha.contrib.messages
   - beet.contrib.render
   - beet.contrib.minify_json
-
+  - beet.contrib.minify_function
  
 
 
