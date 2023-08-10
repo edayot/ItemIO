@@ -13,7 +13,7 @@ A function tag to implement custom filters. Custom ones should be namespaced.
 
 | Input Name                            | Input Type   | Input Source             | Input Objective/Path    | 
 | ---                                   | ---          | ---                      | ---                     | 
-| 'Success of the current filter'       | score        | #filter.valid_item       | itemio.math             | 
+| 'Success of the current filter'       | score        | #filter.valid_item       | itemio.io             | 
 | 'The current filter'                  | storage      | filter                   | itemio:io               |
 | 'The current item'                    | storage      | item                     | itemio:io               |
 
