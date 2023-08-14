@@ -9,7 +9,12 @@
 project = 'ItemIO'
 author = 'edayot'
 copyright='Erwan DAYOT'
-release = '0.5.4'
+
+import yaml
+beet= yaml.safe_load(open("../beet.yaml"))
+
+
+release = beet["version"]
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
@@ -91,7 +96,6 @@ myst_enable_extensions = [
     "fieldlist",
     "html_admonition",
     "html_image",
-    "linkify",
     "replacements",
     "smartquotes",
     "strikethrough",
