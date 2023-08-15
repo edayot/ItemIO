@@ -11,7 +11,7 @@ repository = "https://github.com/edayot/ItemIO"
 python = "^3.10"
 python-semantic-release = "^7.32.2"
 smithed-libraries = {git = "https://github.com/edayot/Libraries.git"}
-cryptography = "^41.0.0"
+cryptography = "^41.0.3"
 sphinx = "^7.1.1"
 sphinx_design = "^0.5.0"
 sphinx-pyproject = "^0.1.0"
