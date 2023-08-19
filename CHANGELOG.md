@@ -1,5 +1,11 @@
 <!--next-version-placeholder-->
 
+## v0.7.2 (2023-08-19)
+
+### Fix
+
+* Deleting a say command ([`e1ccaa5`](https://github.com/edayot/ItemIO/commit/e1ccaa54b0eb34e05785854a3e803ce99e88d0ac))
+
 ## v0.7.1 (2023-08-05)
 
 ### Fix
