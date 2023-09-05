@@ -1,10 +1,11 @@
-from beet import Context, TextFile, ResourcePack, DataPack, JsonFile
+from beet import Context, TextFile, ResourcePack, DataPack, JsonFile, Mcmeta
 from copy import deepcopy
 from pathlib import PurePath
 from beet.contrib.model_merging import model_merging
 import os
 import json
 import requests
+import weld
 
 @property
 def modified_suffixes(self):
@@ -144,7 +145,7 @@ def cache_dependencies(ctx: Context):
             
 
 def load_included(ctx: Context):
-    ctx.require(model_merging)
+    weld.toolchain.main.weld(ctx)
     
     for dep in ctx.meta["smithed_dependencies"]: 
         dep_author,dep_id=dep["id"].split(":")
@@ -162,3 +163,9 @@ def load_included(ctx: Context):
         ctx.assets.merge(assets)
         ctx.data.merge(data)
 
+def add_id(ctx: Context):
+    """Function to add the id to the pack.mcmeta"""
+    ctx.assets.extra["pack.mcmeta"].data["id"]=str(ctx.project_id)
+    ctx.data.extra["pack.mcmeta"].data["id"]=str(ctx.project_id)
+
+    
