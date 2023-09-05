@@ -6,14 +6,14 @@ for facebbbb in ["north","south","east","west","top","bottom"]:
         raw f"execute if data storage itemio:main.input ioconfig[0].allowed_side{{{facebbbb}:1b}} run function itemio:impl/container/input/custom/input_no_config/check_filters"
         data remove storage itemio:main.input ioconfig[0]
         function itemio:impl/container/input/if_item_input
-        execute if score #temp_count_lol itemio.math.input if data storage itemio:main.input ioconfig[0] run function name
+        execute if score #temp_success_lol itemio.math.input matches 1 if data storage itemio:main.input ioconfig[0] run function name
 
 function itemio:impl/container/input/custom/input_no_config/loop_ioconfig:
     scoreboard players set #test_side itemio.math.input 1
     function itemio:impl/container/input/custom/input_no_config/check_filters
     data remove storage itemio:main.input ioconfig[0]
     function itemio:impl/container/input/if_item_input
-    execute if score #temp_count_lol itemio.math.input if data storage itemio:main.input ioconfig[0] run function itemio:impl/container/input/custom/input_no_config/loop_ioconfig 
+    execute if score #temp_success_lol itemio.math.input matches 1 if data storage itemio:main.input ioconfig[0] run function itemio:impl/container/input/custom/input_no_config/loop_ioconfig 
 
 
 #loading block data
