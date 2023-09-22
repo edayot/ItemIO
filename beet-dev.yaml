@@ -1,5 +1,5 @@
 extend: [beet.yaml]
-
+output: build
 #pipeline:
 #  -
 #    resource_pack:

@@ -1,0 +1,14 @@
+# Chiseled Bookshelf
+# There are using a custom ioconfig
+
+data modify storage itemio:main.output ioconfig set value [ \
+    {Slot:0b,allowed_side:{top:1b,bottom:1b,north:1b,south:1b,east:1b,west:1b}}, \
+    {Slot:1b,allowed_side:{top:1b,bottom:1b,north:1b,south:1b,east:1b,west:1b}}, \
+    {Slot:2b,allowed_side:{top:1b,bottom:1b,north:1b,south:1b,east:1b,west:1b}}, \
+    {Slot:3b,allowed_side:{top:1b,bottom:1b,north:1b,south:1b,east:1b,west:1b}}, \
+    {Slot:4b,allowed_side:{top:1b,bottom:1b,north:1b,south:1b,east:1b,west:1b}}, \
+    {Slot:5b,allowed_side:{top:1b,bottom:1b,north:1b,south:1b,east:1b,west:1b}}, \
+    ]
+
+
+function itemio:impl/container/output/custom/output_noconfig

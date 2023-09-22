@@ -16,6 +16,7 @@ require:
   - mecha.contrib.messages
   - beet.contrib.render
   - beet.contrib.model_merging
+  - bolt
 
 
 pipeline:
@@ -27,7 +28,8 @@ pipeline:
   - mecha.contrib.messages
   - beet.contrib.render
   - beet.contrib.minify_json
-
+  - beet.contrib.minify_function
+  - airdox_.add_id
  
 
 

@@ -13,6 +13,9 @@
         
         "trapped_chest",
         "#shulker_boxes",
-        "barrel"
+        "barrel",
+
+        "chiseled_bookshelf",
+        "brewing_stand"
     ]
 }
