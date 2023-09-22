@@ -1,13 +1,13 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="en" data-content_root="../">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="💻 Integrated Filters" href="integrated_filters.html" /><link rel="prev" title="📚 Data Types" href="data_types.html" />
 
-    <link rel="shortcut icon" href="../_static/pack.ico"/><!-- Generated with Sphinx 7.1.1 and Furo 2023.07.26 -->
+    <link rel="shortcut icon" href="../_static/pack.ico"/><!-- Generated with Sphinx 7.2.6 and Furo 2023.09.10 -->
         <title>🧩 Function Calls - ItemIO Documentation</title>
-      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=6b489f20" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=5432af51" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=135e06be" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=36a5483c" />
@@ -229,9 +229,9 @@
         </div>
         <article role="main">
           <section class="tex2jax_ignore mathjax_ignore" id="function-calls">
-<h1>🧩 Function Calls<a class="headerlink" href="#function-calls" title="Permalink to this heading">#</a></h1>
+<h1>🧩 Function Calls<a class="headerlink" href="#function-calls" title="Link to this heading">#</a></h1>
 <section id="itemio-event-filter-v2">
-<h2><code class="docutils literal notranslate"><span class="pre">#itemio:event/filter_v2</span></code><a class="headerlink" href="#itemio-event-filter-v2" title="Permalink to this heading">#</a></h2>
+<h2><code class="docutils literal notranslate"><span class="pre">#itemio:event/filter_v2</span></code><a class="headerlink" href="#itemio-event-filter-v2" title="Link to this heading">#</a></h2>
 <div class="warning admonition">
 <p class="admonition-title">Disclaimer</p>
 <p>This documentation is technical. Remember to not modify the input data.</p>
@@ -250,7 +250,7 @@
 <tr class="row-even"><td><p>‘Success of the current filter’</p></td>
 <td><p>score</p></td>
 <td><p>#filter.valid_item</p></td>
-<td><p>itemio.math</p></td>
+<td><p>itemio.io</p></td>
 </tr>
 <tr class="row-odd"><td><p>‘The current filter’</p></td>
 <td><p>storage</p></td>
@@ -266,14 +266,14 @@
 </table>
 </div>
 <section id="format">
-<h3>Format :<a class="headerlink" href="#format" title="Permalink to this heading">#</a></h3>
+<h3>Format :<a class="headerlink" href="#format" title="Link to this heading">#</a></h3>
 <p>The function tag will be called, implement your filters like this</p>
 <div class="highlight-mcfunction notranslate"><div class="highlight"><pre><span></span><span class="nb">execute</span><span class="w"> </span>
 <span class="w">    </span><span class="c1"># First check if the item is already valid (filter are ANDed together)</span>
 <span class="w">    </span><span class="kc">if</span><span class="w"> </span><span class="kc">score</span><span class="w"> </span><span class="vm">#filter.valid_item</span><span class="w"> </span><span class="kc">itemio.io</span><span class="w"> </span><span class="kc">matches</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span>
 <span class="w">    </span><span class="c1"># Check if the filter is your custom one</span>
 <span class="w">    </span><span class="kc">if</span><span class="w"> </span><span class="kc">data</span><span class="w"> </span><span class="kc">storage</span><span class="w"> </span><span class="nf">itemio:io</span><span class="w"> </span><span class="kc">filter.example.custom</span>
-<span class="w">    </span><span class="kc">run</span><span class="nb"> function</span><span class="w"> </span><span class="nf">example:custom_filter</span>
+<span class="w">    </span><span class="kc">run</span><span class="nb"> function</span><span class="w"> </span><span class="nf">example:custom_filter</span><span class="err">:</span>
 <span class="w">        </span><span class="c1"># Set the item invalid</span>
 <span class="w">        </span><span class="kc">scoreboard</span><span class="w"> </span><span class="kc">players</span><span class="w"> </span><span class="kc">set</span><span class="w"> </span><span class="vm">#filter.valid_item</span><span class="w"> </span><span class="kc">itemio.io</span><span class="w"> </span><span class="mf">0</span>
 <span class="w">        </span><span class="c1"># Check if the item is valid</span>
@@ -284,13 +284,13 @@
 </div>
 </section>
 <section id="example">
-<h3>Example :<a class="headerlink" href="#example" title="Permalink to this heading">#</a></h3>
+<h3>Example :<a class="headerlink" href="#example" title="Link to this heading">#</a></h3>
 <div class="highlight-mcfunction notranslate"><div class="highlight"><pre><span></span><span class="nb">execute</span><span class="w"> </span>
 <span class="w">    </span><span class="c1"># First check if the item is already valid (filter are ANDed together)</span>
 <span class="w">    </span><span class="kc">if</span><span class="w"> </span><span class="kc">score</span><span class="w"> </span><span class="vm">#filter.valid_item</span><span class="w"> </span><span class="kc">itemio.io</span><span class="w"> </span><span class="kc">matches</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span>
 <span class="w">    </span><span class="c1"># Check if the filter as an energy tag</span>
 <span class="w">    </span><span class="kc">if</span><span class="w"> </span><span class="kc">data</span><span class="w"> </span><span class="kc">storage</span><span class="w"> </span><span class="nf">itemio:io</span><span class="w"> </span><span class="kc">filter.energy</span><span class="w"> </span>
-<span class="w">    </span><span class="kc">run</span><span class="nb"> function</span><span class="w"> </span><span class="nf">itemio:impl/filters/energy</span>
+<span class="w">    </span><span class="kc">run</span><span class="nb"> function</span><span class="w"> </span><span class="nf">itemio:impl/filters/energy</span><span class="err">:</span>
 <span class="w">        </span><span class="c1"># Set the item invalid</span>
 <span class="w">        </span><span class="kc">scoreboard</span><span class="w"> </span><span class="kc">players</span><span class="w"> </span><span class="kc">set</span><span class="w"> </span><span class="vm">#filter.valid_item</span><span class="w"> </span><span class="kc">itemio.io</span><span class="w"> </span><span class="mf">0</span>
 <span class="w">        </span><span class="c1"># If the item as an energy tag, it&#39;s valid</span>
@@ -303,7 +303,7 @@
 </section>
 </section>
 <section id="itemio-calls-filters-v2">
-<h2><code class="docutils literal notranslate"><span class="pre">#itemio:calls/filters_v2</span></code><a class="headerlink" href="#itemio-calls-filters-v2" title="Permalink to this heading">#</a></h2>
+<h2><code class="docutils literal notranslate"><span class="pre">#itemio:calls/filters_v2</span></code><a class="headerlink" href="#itemio-calls-filters-v2" title="Link to this heading">#</a></h2>
 <p>A function tag to call filters verifications. An empty filters is valid and return 1.</p>
 <div class="table-wrapper colwidths-auto docutils container">
 <table class="docutils align-default">
@@ -442,9 +442,9 @@
       
     </aside>
   </div>
-</div><script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=c3dca1ed"></script>
+</div><script src="../_static/documentation_options.js?v=6dfdf7c3"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
-    <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/furo.js?v=32e29ea5"></script>
     <script src="../_static/design-tabs.js?v=36754332"></script>
     </body>

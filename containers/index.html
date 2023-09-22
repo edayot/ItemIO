@@ -1,13 +1,13 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="en" data-content_root="../">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="🔧 Filters" href="../filters/index.html" /><link rel="prev" title="🔧 Advanced Usage" href="../getting_started/advanced_usage.html" />
 
-    <link rel="shortcut icon" href="../_static/pack.ico"/><!-- Generated with Sphinx 7.1.1 and Furo 2023.07.26 -->
+    <link rel="shortcut icon" href="../_static/pack.ico"/><!-- Generated with Sphinx 7.2.6 and Furo 2023.09.10 -->
         <title>📦 Containers - ItemIO Documentation</title>
-      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=6b489f20" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=5432af51" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=135e06be" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=36a5483c" />
@@ -229,13 +229,13 @@
         </div>
         <article role="main">
           <section class="tex2jax_ignore mathjax_ignore" id="containers">
-<h1>📦 Containers<a class="headerlink" href="#containers" title="Permalink to this heading">#</a></h1>
+<h1>📦 Containers<a class="headerlink" href="#containers" title="Link to this heading">#</a></h1>
 <p>Basicly, a container is an entity at the position of a block.
 To make a container compatible with IO, you need to specify a format that define what can be in a slot or not.</p>
 <p>ItemIO don’t care about the GUI protection by player interaction, it’s up to you to handle it.</p>
 <hr class="docutils" />
 <section id="place-destroy-function-call">
-<h2>Place/destroy function call<a class="headerlink" href="#place-destroy-function-call" title="Permalink to this heading">#</a></h2>
+<h2>Place/destroy function call<a class="headerlink" href="#place-destroy-function-call" title="Link to this heading">#</a></h2>
 <p>Somes function call must be made when placing or destroying a container.</p>
 <ul class="simple">
 <li><p>On place : <code class="code docutils literal highlight highlight-mcfunction"><span class="nb">function</span><span class="w"> </span><span class="nf">#itemio:calls/container/init</span></code></p></li>
@@ -243,7 +243,7 @@ To make a container compatible with IO, you need to specify a format that define
 </ul>
 </section>
 <section id="available-entity">
-<h2>Available Entity<a class="headerlink" href="#available-entity" title="Permalink to this heading">#</a></h2>
+<h2>Available Entity<a class="headerlink" href="#available-entity" title="Link to this heading">#</a></h2>
 <p>Containers as to be configured depending on what entity you use you have to use theses NBT Paths:</p>
 <ul class="simple">
 <li><p>For makers : <code class="docutils literal notranslate"><span class="pre">data.itemio.ioconfig</span></code></p></li>
@@ -253,7 +253,7 @@ To make a container compatible with IO, you need to specify a format that define
 </ul>
 </section>
 <section id="tags">
-<h2>Tags<a class="headerlink" href="#tags" title="Permalink to this heading">#</a></h2>
+<h2>Tags<a class="headerlink" href="#tags" title="Link to this heading">#</a></h2>
 <p>To declare a block as a container you need to add the tag <code class="docutils literal notranslate"><span class="pre">itemio.container</span></code> to the block. Additionally you can add these tags to the block:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">itemio.container.nope</span></code> : If you are using a container as a custom block but without the posibility of input/output items you can add the tag.</p></li>
@@ -263,7 +263,7 @@ To make a container compatible with IO, you need to specify a format that define
 </ul>
 </section>
 <section id="ioconfig-data-structure">
-<h2>IOConfig Data Structure<a class="headerlink" href="#ioconfig-data-structure" title="Permalink to this heading">#</a></h2>
+<h2>IOConfig Data Structure<a class="headerlink" href="#ioconfig-data-structure" title="Link to this heading">#</a></h2>
 <p>IOConfig are dictionary that define what can be in a slot or not, they are dynamic and can be changed at any time.</p>
 <div class="highlight-ts notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
 <span class="w">    </span><span class="p">{</span>
@@ -379,9 +379,9 @@ To make a container compatible with IO, you need to specify a format that define
       
     </aside>
   </div>
-</div><script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=c3dca1ed"></script>
+</div><script src="../_static/documentation_options.js?v=6dfdf7c3"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
-    <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/furo.js?v=32e29ea5"></script>
     <script src="../_static/design-tabs.js?v=36754332"></script>
     </body>

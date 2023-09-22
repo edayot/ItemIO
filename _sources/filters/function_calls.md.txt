@@ -13,7 +13,7 @@ A function tag to implement custom filters. Custom ones should be namespaced.
 
 | Input Name                            | Input Type   | Input Source             | Input Objective/Path    | 
 | ---                                   | ---          | ---                      | ---                     | 
-| 'Success of the current filter'       | score        | #filter.valid_item       | itemio.math             | 
+| 'Success of the current filter'       | score        | #filter.valid_item       | itemio.io             | 
 | 'The current filter'                  | storage      | filter                   | itemio:io               |
 | 'The current item'                    | storage      | item                     | itemio:io               |
 
@@ -21,13 +21,14 @@ A function tag to implement custom filters. Custom ones should be namespaced.
 ### Format :
 The function tag will be called, implement your filters like this
 
-```mcfunction
+```{code-block} mcfunction
+:force:
 execute 
     # First check if the item is already valid (filter are ANDed together)
     if score #filter.valid_item itemio.io matches 1 
     # Check if the filter is your custom one
     if data storage itemio:io filter.example.custom
-    run function example:custom_filter
+    run function example:custom_filter:
         # Set the item invalid
         scoreboard players set #filter.valid_item itemio.io 0
         # Check if the item is valid
@@ -39,13 +40,14 @@ execute
 
 
 ### Example :
-```mcfunction
+```{code-block} mcfunction
+:force:
 execute 
     # First check if the item is already valid (filter are ANDed together)
     if score #filter.valid_item itemio.io matches 1 
     # Check if the filter as an energy tag
     if data storage itemio:io filter.energy 
-    run function itemio:impl/filters/energy
+    run function itemio:impl/filters/energy:
         # Set the item invalid
         scoreboard players set #filter.valid_item itemio.io 0
         # If the item as an energy tag, it's valid
