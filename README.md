@@ -14,8 +14,11 @@ This is an embedded library, so you package it inside your datapack as opposed t
 
 
 ## Getting started
+ItemIO is a quite complex library, and it can be hard to understand how to use it.
 
-See the [documentation](https://edayot.github.io/ItemIO/index.html) (under contruction)
+- See the [documentation](https://edayot.github.io/ItemIO/index.html) (under contruction)
+
+- Take a look at some datapacks that uses ItemIO [here](https://edayot.github.io/ItemIO/featured.html).
 
 ## Contributing
 

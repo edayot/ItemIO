@@ -80,6 +80,7 @@ filters/index
 networking/index
 function_calls/index
 contributing
+featured
 changelog
 ```
 
