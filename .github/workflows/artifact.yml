@@ -1,17 +1,8 @@
 name: Artifacts at every commit
 on:
-  workflow_dispatch:
-  # only run on master branch on push that modifies data/ by edayot
   push:
     branches:
       - master
-    paths:
-      - 'data/**'
-      - 'assets/**'
-      - 'poetry.lock'
-      - 'pyproject.toml'
-      - '.github/workflows/artifact.py'
-      - 'beet-artifact.yaml'
 
 jobs:
   release:
@@ -43,8 +34,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GIT_HASH: ${{ github.sha }}
         run: |
-          poetry run python .github/workflows/artifact.py
-          poetry run python -m beet -p beet-artifact.yaml
+          make BUILD_TYPE=artifact
       
       # Upload build/ datapack.zip, resourcepack.zip, datapack-bundled.zip, resourcepack-bundled.zip
       - uses: actions/upload-artifact@v3
