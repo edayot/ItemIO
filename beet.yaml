@@ -4,6 +4,8 @@ version: "0.7.2"
 description: Item input/output lib - Easy interaction between vanilla and custom containers
 author: AirDox_
 
+output : "build"
+
 meta:
   modrinth_id: "dr6WkwxX"
   mc_supports: ["1.20","1.20.1"]
