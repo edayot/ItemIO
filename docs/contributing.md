@@ -28,5 +28,5 @@ make livehtml
 
 The documentaion use the [bolt](https://github.com/mcbeet/bolt) format for mcfunction. That allow for multiline commands & nested commands.
 
-The parser also support the [SNBT](https://minecraft.fandom.com/wiki/NBT_format#SNBT_format) format for syntax highlighting.
+The parser also support the [SNBT](https://minecraft.wiki/w/NBT_format#SNBT_format) format for syntax highlighting.
 
