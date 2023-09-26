@@ -5,8 +5,8 @@
 
 ## Prerequisites
 
-- What is a [datapack](https://minecraft.fandom.com/wiki/Data_Pack)
-- What is a [function tag](https://minecraft.fandom.com/wiki/Function_(Java_Edition)#Invocation_from_function_tags)
+- What is a [datapack](https://minecraft.wiki/w/Data_Pack)
+- What is a [function tag](https://minecraft.wiki/w/Function_(Java_Edition)#Invocation_from_function_tags)
 - The `.mcfunction` syntax is the same as [Smithed](https://wiki.smithed.dev/libraries) syntax
 - Knowing how to place a custom block, consider using [Smithed Custom Block](https://wiki.smithed.dev/libraries/custom-block/)
 
