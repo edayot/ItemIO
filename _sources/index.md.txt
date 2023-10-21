@@ -88,7 +88,7 @@ changelog
 :caption: Project links
 :hidden:
 Github <https://github.com/edayot/ItemIO>
-Smithed <https://smithed.dev/packs/nhwFD5kibnbGXAlNhZan>
+Smithed <https://smithed.net/packs/nhwFD5kibnbGXAlNhZan>
 Modrinth <https://modrinth.com/datapack/itemio>
 ```
 
