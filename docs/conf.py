@@ -64,7 +64,7 @@ html_theme_options = {
         },
         {
             "name": "Smithed",
-            "url": "https://smithed.dev/packs/nhwFD5kibnbGXAlNhZan",
+            "url": "https://smithed.net/packs/nhwFD5kibnbGXAlNhZan",
             "html": smithed_svg,
             "class": "",
         },
