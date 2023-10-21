@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "itemio"
-version = "0.7.2"
+version = "0.8.0"
 description = "Item input/output lib - Easy interaction between vanilla and custom containers"
 authors = ["edayot <pro.e.dayot@gmail.com>"]
 license = "MIT"

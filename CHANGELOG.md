@@ -1,5 +1,30 @@
 <!--next-version-placeholder-->
 
+## v0.8.0 (2023-10-21)
+
+### Feature
+
+* Upgrade to 1.20.2 ([`cdb26e1`](https://github.com/edayot/ItemIO/commit/cdb26e1ef0ae0632dfe14f264e1f6a7555aa28d4))
+* Brewing_stand implementation ([`09c277a`](https://github.com/edayot/ItemIO/commit/09c277ade868f61f1ed6cad49b0fc80006db38de))
+* Chiseled bookshelf support ([`d96548d`](https://github.com/edayot/ItemIO/commit/d96548da3ec284dc9bc6aacfa34ba595bb0b6876))
+
+### Fix
+
+* Opti regen in cables ([`bc2379b`](https://github.com/edayot/ItemIO/commit/bc2379b67f0fc88defce109f25e9cf415f25fac8))
+* Opti gen network ([`a46a3e5`](https://github.com/edayot/ItemIO/commit/a46a3e5ddbb356db5b79b462ca92cbe6bf29f3a9))
+* Very high network bug (useless but it's here) ([`ecaf54d`](https://github.com/edayot/ItemIO/commit/ecaf54dc073a4c4c2098fbd53efb6312f55af364))
+* Global.ignore ([`523f282`](https://github.com/edayot/ItemIO/commit/523f2822bc91bf7fbb86800d70fdaa77969bdb06))
+* Loop in loop not in subfolders ([`4cd36e8`](https://github.com/edayot/ItemIO/commit/4cd36e87ba095c139639930c42fd98aec3abb246))
+
+### Documentation
+
+* Update smithed links ([`7b882db`](https://github.com/edayot/ItemIO/commit/7b882db268283628d4343029ff429e645b358413))
+* Add a template to feature datapacks ([`79af2c9`](https://github.com/edayot/ItemIO/commit/79af2c9d85c9bd5d4a716c916bb0915c44337290))
+* Adding featured datapacks list ([`1b661a7`](https://github.com/edayot/ItemIO/commit/1b661a79bc3a94efb214c05f7a75b58210a4eb4b))
+* Retrive version from beet.yaml ([`a14b745`](https://github.com/edayot/ItemIO/commit/a14b7450a5072eddba3ac29dea1da0f038093041))
+* Correct syntax ([`933faf4`](https://github.com/edayot/ItemIO/commit/933faf49161bc3bd84b0d0331cd12a32604a9ca8))
+* Spelling ([`86ca583`](https://github.com/edayot/ItemIO/commit/86ca58319674107cc8cf1012016f9729805a9487))
+
 ## v0.7.2 (2023-08-19)
 
 ### Fix
