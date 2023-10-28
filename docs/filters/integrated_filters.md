@@ -70,6 +70,7 @@ A filter that make a copy of the item, merge it with the filter and compare it w
         display: {}
     }
 }
+```
 
 ## Minecraft bookshelf_books
 A filter that match the `minecraft:bookshelf_books` tag.
@@ -84,7 +85,7 @@ A filter that match the `minecraft:bookshelf_books` tag.
 ```
 
 
-```
+
 This filter will check if the item as a display tag. 
 
 ```{admonition} Note 
