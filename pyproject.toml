@@ -23,8 +23,6 @@ sphinxcontrib-mermaid = "^0.7.1"
 sphinx_copybutton = "^0.5.2"
 furo = "^2023.7.26"
 linkify-it-py = "^2.0.2"
-numpy = "^1.26.1"
-pyarrow = "^13.0.0"
 
 
 
