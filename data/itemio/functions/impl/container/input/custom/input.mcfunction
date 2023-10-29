@@ -6,35 +6,41 @@ function ./ioconfig_storage:
 #loading ioconfig
 data remove storage itemio:main.input ioconfig 
 
-data modify storage itemio:main.input ioconfig_type set value "entity"
+scoreboard players set #ioconfig_from_storage itemio.math.input 0
+execute if entity @s[tag=itemio.container.ioconfig_from_storage] run scoreboard players set #ioconfig_from_storage itemio.math.input 1
+
 execute 
-    if entity @s[type=marker] 
-    run function ./input_marker:
-        data modify storage itemio:main.input ioconfig_type set from entity @s data.itemio.ioconfig_type
-        data modify storage itemio:main.input ioconfig set from entity @s data.itemio.ioconfig
-        execute if data storage itemio:main.input {ioconfig_type:"storage"} run function ./input_storage with storage itemio:main.input ioconfig
+    if score #ioconfig_from_storage itemio.math.input matches 0
+    run function ./input_normal:
+        execute 
+            if entity @s[type=marker] 
+            run data modify storage itemio:main.input ioconfig set from entity @s data.itemio.ioconfig
+        execute
+            if entity @s[type=#itemio:item_frames] 
+            run data modify storage itemio:main.input ioconfig set from entity @s Item.tag.itemio.ioconfig
 
-execute
-    if entity @s[type=#itemio:item_frames] 
-    run function ./input_itemframe:
-        data modify storage itemio:main.input ioconfig_type set from entity @s item.tag.itemio.ioconfig_type
-        data modify storage itemio:main.input ioconfig set from entity @s item.tag.itemio.ioconfig
-        execute if data storage itemio:main.input {ioconfig_type:"storage"} run function ./input_storage with storage itemio:main.input ioconfig
+        execute
+            if entity @s[type=armor_stand] 
+            run data modify storage itemio:main.input ioconfig set from entity @s ArmorItems[3].tag.itemio.ioconfig
 
-
+        execute
+            if entity @s[type=#itemio:item_display] 
+            run data modify storage itemio:main.input ioconfig set from entity @s item.tag.itemio.ioconfig
 execute
-    if entity @s[type=armor_stand] 
-    run function ./input_armorstand:
-        data modify storage itemio:main.input ioconfig_type set from entity @s Item.tag.itemio.ioconfig_type
-        data modify storage itemio:main.input ioconfig set from entity @s Item.tag.itemio.ioconfig
-        execute if data storage itemio:main.input {ioconfig_type:"storage"} run function ./input_storage with storage itemio:main.input ioconfig
-    
-execute
-    if entity @s[type=#itemio:item_display] 
-    run function ./input_itemdisplay:
-        data modify storage itemio:main.input ioconfig_type set from entity @s item.tag.itemio.ioconfig_type
-        data modify storage itemio:main.input ioconfig set from entity @s item.tag.itemio.ioconfig
-        execute if data storage itemio:main.input {ioconfig_type:"storage"} run function ./input_storage with storage itemio:main.input ioconfig
+    if score #ioconfig_from_storage itemio.math.input matches 1
+    run function ./input_storage:
+        execute
+            if entity @s[type=marker] 
+            run function ./ioconfig_storage with entity @s data.itemio.ioconfig
+        execute
+            if entity @s[type=#itemio:item_frames] 
+            run function ./ioconfig_storage with entity @s Item.tag.itemio.ioconfig
+        execute
+            if entity @s[type=armor_stand] 
+            run function ./ioconfig_storage with entity @s ArmorItems[3].tag.itemio.ioconfig
+        execute
+            if entity @s[type=#itemio:item_display] 
+            run function ./ioconfig_storage with entity @s item.tag.itemio.ioconfig
 
 data remove storage itemio:main.input ioconfig[{mode:"output"}]
 
