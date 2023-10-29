@@ -278,6 +278,16 @@ To make a container compatible with IO, you need to specify a format that define
 <span class="p">]</span>
 </pre></div>
 </div>
+</section>
+<section id="storage-based-ioconfig">
+<h2>Storage based ioconfig<a class="headerlink" href="#storage-based-ioconfig" title="Link to this heading">#</a></h2>
+<p>Storage based ioconfig are ioconfig that are stored in a storage, they are dynamic and can be changed at any time for all containers that use it.</p>
+<p>To use a storage based ioconfig you need to add the tag <code class="docutils literal notranslate"><span class="pre">itemio.container.ioconfig_from_storage</span></code> to the entity.</p>
+<div class="highlight-ts notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nx">storage</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="c1">// a storage location example: &quot;namespace:storage my_container.ioconfig&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 <div class="seealso admonition">
 <p class="admonition-title">Full specification</p>
 <p><a class="reference external" href="https://edayot.github.io/ItemIO/filters/index.html">https://edayot.github.io/ItemIO/filters/index.html</a></p>
@@ -943,6 +953,7 @@ To make a container compatible with IO, you need to specify a format that define
 <li><a class="reference internal" href="#available-entity">Available Entity</a></li>
 <li><a class="reference internal" href="#tags">Tags</a></li>
 <li><a class="reference internal" href="#ioconfig-data-structure">IOConfig Data Structure</a></li>
+<li><a class="reference internal" href="#storage-based-ioconfig">Storage based ioconfig</a></li>
 </ul>
 </li>
 </ul>

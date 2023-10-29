@@ -56,6 +56,19 @@ IOConfig are dictionary that define what can be in a slot or not, they are dynam
 ]
 ```
 
+## Storage based ioconfig
+
+Storage based ioconfig are ioconfig that are stored in a storage, they are dynamic and can be changed at any time for all containers that use it.
+
+To use a storage based ioconfig you need to add the tag ``itemio.container.ioconfig_from_storage`` to the entity.
+
+```ts
+{
+    storage: string // a storage location example: "namespace:storage my_container.ioconfig"
+}
+```
+
+
 :::{admonition} Full specification 
 :class: seealso
 <https://edayot.github.io/ItemIO/filters/index.html>
