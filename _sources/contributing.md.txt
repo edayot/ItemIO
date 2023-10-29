@@ -4,15 +4,23 @@ Contributions are always welcome!
 All the project is using Poetry for dependency management. 
 
 
+## Installation
 
-## Datapack
-The datapack is compiled using the [beet](https://mcbeet.dev) .
+Install the project using [poetry](https://python-poetry.org/).
+
+It use [poetry](https://python-poetry.org/) to manage the dependencies.
 
 ```bash
 $ git clone https://github.com/edayot/ItemIO.git
 $ cd ItemIO
+$ poetry install
+```
 
-$ poetry run beet -p beet-release.yaml
+## Datapack
+The datapack is compiled using the [beet](https://mcbeet.dev).
+
+```bash
+$ make watch # Compile the datapack on file change
 ```
 
 
@@ -22,8 +30,8 @@ The documentation is built using [Sphinx](https://www.sphinx-doc.org/en/master/)
 
 This script will host a live server on http://localhost:8000/.
 ```bash
-cd docs/
-make livehtml
+$ cd docs/
+$ make livehtml
 ```
 
 The documentaion use the [bolt](https://github.com/mcbeet/bolt) format for mcfunction. That allow for multiline commands & nested commands.

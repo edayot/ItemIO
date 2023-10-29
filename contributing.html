@@ -233,13 +233,20 @@
 <h1>🤝 Contributing<a class="headerlink" href="#contributing" title="Link to this heading">#</a></h1>
 <p>Contributions are always welcome!</p>
 <p>All the project is using Poetry for dependency management.</p>
-<section id="datapack">
-<h2>Datapack<a class="headerlink" href="#datapack" title="Link to this heading">#</a></h2>
-<p>The datapack is compiled using the <a class="reference external" href="https://mcbeet.dev">beet</a> .</p>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Link to this heading">#</a></h2>
+<p>Install the project using <a class="reference external" href="https://python-poetry.org/">poetry</a>.</p>
+<p>It use <a class="reference external" href="https://python-poetry.org/">poetry</a> to manage the dependencies.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/edayot/ItemIO.git
 $<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>ItemIO
-
-$<span class="w"> </span>poetry<span class="w"> </span>run<span class="w"> </span>beet<span class="w"> </span>-p<span class="w"> </span>beet-release.yaml
+$<span class="w"> </span>poetry<span class="w"> </span>install
+</pre></div>
+</div>
+</section>
+<section id="datapack">
+<h2>Datapack<a class="headerlink" href="#datapack" title="Link to this heading">#</a></h2>
+<p>The datapack is compiled using the <a class="reference external" href="https://mcbeet.dev">beet</a>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>make<span class="w"> </span>watch<span class="w"> </span><span class="c1"># Compile the datapack on file change</span>
 </pre></div>
 </div>
 </section>
@@ -247,8 +254,8 @@ $<span class="w"> </span>poetry<span class="w"> </span>run<span class="w"> </spa
 <h2>Documentation<a class="headerlink" href="#documentation" title="Link to this heading">#</a></h2>
 <p>The documentation is built using <a class="reference external" href="https://www.sphinx-doc.org/en/master/">Sphinx</a>.</p>
 <p>This script will host a live server on http://localhost:8000/.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>docs/
-make<span class="w"> </span>livehtml
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>docs/
+$<span class="w"> </span>make<span class="w"> </span>livehtml
 </pre></div>
 </div>
 <p>The documentaion use the <a class="reference external" href="https://github.com/mcbeet/bolt">bolt</a> format for mcfunction. That allow for multiline commands &amp; nested commands.</p>
@@ -906,6 +913,7 @@ make<span class="w"> </span>livehtml
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">🤝 Contributing</a><ul>
+<li><a class="reference internal" href="#installation">Installation</a></li>
 <li><a class="reference internal" href="#datapack">Datapack</a></li>
 <li><a class="reference internal" href="#documentation">Documentation</a></li>
 </ul>
