@@ -1,5 +1,15 @@
 <!--next-version-placeholder-->
 
+## v0.9.0 (2023-10-30)
+
+### Feature
+
+* Storage based ioconfig ([`790c74e`](https://github.com/edayot/ItemIO/commit/790c74e381bd595c89bb4a899f48f6a91962edfc))
+
+### Documentation
+
+* Contributing page update ([`ab21058`](https://github.com/edayot/ItemIO/commit/ab210586a41331c06dde5740a34f1538c3b557fd))
+
 ## v0.8.0 (2023-10-21)
 
 ### Feature
