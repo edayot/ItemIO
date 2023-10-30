@@ -63,9 +63,6 @@ files = [
     {file = "Babel-2.13.1.tar.gz", hash = "sha256:33e0952d7dd6374af8dbf6768cc4ddf3ccfefc244f9986d4074704f2fbd18900"},
 ]
 
-[package.dependencies]
-setuptools = {version = "*", markers = "python_version >= \"3.12\""}
-
 [package.extras]
 dev = ["freezegun (>=1.0,<2.0)", "pytest (>=6.0)", "pytest-cov"]
 
@@ -100,13 +97,13 @@ lxml = ["lxml"]
 
 [[package]]
 name = "beet"
-version = "0.96.1"
+version = "0.97.0"
 description = "The Minecraft pack development kit"
 optional = false
 python-versions = ">=3.10,<4.0"
 files = [
-    {file = "beet-0.96.1-py3-none-any.whl", hash = "sha256:cfd9e33c6ef9e4c27b733953dacb78b901dd0bfa21eadedcf69725da544d422d"},
-    {file = "beet-0.96.1.tar.gz", hash = "sha256:36fcd594cafc5b725bb9df1be43cec92faf5f958006c02574ccfdbe9b22aac04"},
+    {file = "beet-0.97.0-py3-none-any.whl", hash = "sha256:cf493d207ee2fe00a89bed9f47ee88a52d4e7a2150f1e45913d8aed94781c52e"},
+    {file = "beet-0.97.0.tar.gz", hash = "sha256:37944afe3856d4757b3448279a3959efaf9c475286bdc0a3c265f32d5d1dd6cf"},
 ]
 
 [package.dependencies]
@@ -137,18 +134,18 @@ files = [
 
 [[package]]
 name = "bolt"
-version = "0.39.0"
+version = "0.39.1"
 description = "Supercharge Minecraft commands with Python"
 optional = false
 python-versions = ">=3.10,<4.0"
 files = [
-    {file = "bolt-0.39.0-py3-none-any.whl", hash = "sha256:04438cb88f111d191a6d3b99505abf3d62af43d0a90182be1c11df32dbc37932"},
-    {file = "bolt-0.39.0.tar.gz", hash = "sha256:e8c8ae9f3dd2f2ef290df587793104b596c345cc177a94a840e52c7c6130fdf7"},
+    {file = "bolt-0.39.1-py3-none-any.whl", hash = "sha256:f3fba824803f07ab2e10ef954108e5692dc21cd243e52591bd05382d7b3a655a"},
+    {file = "bolt-0.39.1.tar.gz", hash = "sha256:339bb5acab175600412d9cc5071ab226bdeb61fb4d7eebb49cca66690565ce35"},
 ]
 
 [package.dependencies]
-beet = ">=0.96.1"
-mecha = ">=0.79.0"
+beet = ">=0.97.0"
+mecha = ">=0.81.0"
 
 [[package]]
 name = "bolt-expressions"
@@ -470,10 +467,7 @@ files = [
 ]
 
 [package.dependencies]
-numpy = [
-    {version = ">=1.16,<2.0", markers = "python_version <= \"3.11\""},
-    {version = ">=1.26.0rc1,<2.0", markers = "python_version >= \"3.12\""},
-]
+numpy = {version = ">=1.16,<2.0", markers = "python_version <= \"3.11\""}
 
 [package.extras]
 bokeh = ["bokeh", "selenium"]
@@ -883,13 +877,13 @@ ply = "*"
 
 [[package]]
 name = "jsonschema"
-version = "4.19.1"
+version = "4.19.2"
 description = "An implementation of JSON Schema validation for Python"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "jsonschema-4.19.1-py3-none-any.whl", hash = "sha256:cd5f1f9ed9444e554b38ba003af06c0a8c2868131e56bfbef0550fb450c0330e"},
-    {file = "jsonschema-4.19.1.tar.gz", hash = "sha256:ec84cc37cfa703ef7cd4928db24f9cb31428a5d0fa77747b8b51a847458e0bbf"},
+    {file = "jsonschema-4.19.2-py3-none-any.whl", hash = "sha256:eee9e502c788e89cb166d4d37f43084e3b64ab405c795c03d343a4dbc2c810fc"},
+    {file = "jsonschema-4.19.2.tar.gz", hash = "sha256:c9ff4d7447eed9592c23a12ccee508baf0dd0d59650615e847feb6cdca74f392"},
 ]
 
 [package.dependencies]
@@ -1403,17 +1397,17 @@ files = [
 
 [[package]]
 name = "mecha"
-version = "0.80.0"
+version = "0.81.0"
 description = "A powerful Minecraft command library"
 optional = false
 python-versions = ">=3.10,<4.0"
 files = [
-    {file = "mecha-0.80.0-py3-none-any.whl", hash = "sha256:55471928aad6b609bb8f39927f9bf2978e42e1183bdd687259342ef73fc25479"},
-    {file = "mecha-0.80.0.tar.gz", hash = "sha256:70a255cfc3b1e77432e5fa4c60fee9a71f56a841b38f0cad80bcb84148048b2f"},
+    {file = "mecha-0.81.0-py3-none-any.whl", hash = "sha256:5dffd72fd7f53837295ce8022f91c03c6c58b2b70a30df09ef79fd0f1c1daf48"},
+    {file = "mecha-0.81.0.tar.gz", hash = "sha256:1ee8c957f85af7350451970ec4daca23892cd3c347f2feeed013dc3d91c09ca7"},
 ]
 
 [package.dependencies]
-beet = ">=0.96.0"
+beet = ">=0.97.0"
 tokenstream = ">=1.7.0,<2.0.0"
 
 [[package]]
@@ -1594,10 +1588,7 @@ files = [
 ]
 
 [package.dependencies]
-numpy = [
-    {version = ">=1.23.2,<2", markers = "python_version == \"3.11\""},
-    {version = ">=1.26.0,<2", markers = "python_version >= \"3.12\""},
-]
+numpy = {version = ">=1.23.2,<2", markers = "python_version == \"3.11\""}
 python-dateutil = ">=2.8.2"
 pytz = ">=2020.1"
 tzdata = ">=2022.1"
@@ -3155,13 +3146,13 @@ watchmedo = ["PyYAML (>=3.10)"]
 
 [[package]]
 name = "wheel"
-version = "0.41.2"
+version = "0.41.3"
 description = "A built-package format for Python"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "wheel-0.41.2-py3-none-any.whl", hash = "sha256:75909db2664838d015e3d9139004ee16711748a52c8f336b52882266540215d8"},
-    {file = "wheel-0.41.2.tar.gz", hash = "sha256:0c5ac5ff2afb79ac23ab82bab027a0be7b5dbcf2e54dc50efe4bf507de1f7985"},
+    {file = "wheel-0.41.3-py3-none-any.whl", hash = "sha256:488609bc63a29322326e05560731bf7bfea8e48ad646e1f5e40d366607de0942"},
+    {file = "wheel-0.41.3.tar.gz", hash = "sha256:4d4987ce51a49370ea65c0bfd2234e8ce80a12780820d9dc462597a6e60d0841"},
 ]
 
 [package.extras]
@@ -3184,5 +3175,5 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 
 [metadata]
 lock-version = "2.0"
-python-versions = ">=3.11,<3.13"
-content-hash = "b96a2da2404db76362631c1a6bc250272216354364671e10edcc9b706fac350e"
+python-versions = "3.11"
+content-hash = "c906e02a98a7e1fa73f21ecace53f46af8f2e2068c5c497fc76879a0bac67829"
