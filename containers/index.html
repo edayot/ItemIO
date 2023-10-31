@@ -278,16 +278,6 @@ To make a container compatible with IO, you need to specify a format that define
 <span class="p">]</span>
 </pre></div>
 </div>
-</section>
-<section id="storage-based-ioconfig">
-<h2>Storage based ioconfig<a class="headerlink" href="#storage-based-ioconfig" title="Link to this heading">#</a></h2>
-<p>Storage based ioconfig are ioconfig that are stored in a storage, they are dynamic and can be changed at any time for all containers that use it.</p>
-<p>To use a storage based ioconfig you need to add the tag <code class="docutils literal notranslate"><span class="pre">itemio.container.ioconfig_from_storage</span></code> to the entity.</p>
-<div class="highlight-ts notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">    </span><span class="nx">storage</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="c1">// a storage location example: &quot;namespace:storage my_container.ioconfig&quot;</span>
-<span class="p">}</span>
-</pre></div>
-</div>
 <div class="seealso admonition">
 <p class="admonition-title">Full specification</p>
 <p><a class="reference external" href="https://edayot.github.io/ItemIO/filters/index.html">https://edayot.github.io/ItemIO/filters/index.html</a></p>
@@ -295,6 +285,21 @@ To make a container compatible with IO, you need to specify a format that define
 <div class="seealso admonition">
 <p class="admonition-title">Ignored items</p>
 <p>All items matching <code class="docutils literal notranslate"><span class="pre">&lt;item&gt;.tag.itemio.gui:</span> <span class="pre">1b</span></code>, will be ignored by ItemIO.</p>
+</div>
+</section>
+<section id="storage-based-ioconfig">
+<h2>Storage based ioconfig<a class="headerlink" href="#storage-based-ioconfig" title="Link to this heading">#</a></h2>
+<div class="seealso admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Warning
+This is a very advanced feature, you should not use it unless you know what you are doing.</p>
+</div>
+<p>Storage based ioconfig are ioconfig that are stored in a storage, they are dynamic and can be changed at any time for all containers that use it.</p>
+<p>To use a storage based ioconfig you need to add the tag <code class="docutils literal notranslate"><span class="pre">itemio.container.ioconfig_from_storage</span></code> to the entity.</p>
+<div class="highlight-ts notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nx">storage</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="c1">// a storage location example: &quot;namespace:storage my_container.ioconfig&quot;</span>
+<span class="p">}</span>
+</pre></div>
 </div>
 </section>
 </section>
@@ -965,7 +970,7 @@ To make a container compatible with IO, you need to specify a format that define
       
     </aside>
   </div>
-</div><script src="../_static/documentation_options.js?v=486e5634"></script>
+</div><script src="../_static/documentation_options.js?v=39bb1c6d"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/furo.js?v=32e29ea5"></script>
