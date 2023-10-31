@@ -56,7 +56,26 @@ IOConfig are dictionary that define what can be in a slot or not, they are dynam
 ]
 ```
 
+
+:::{admonition} Full specification 
+:class: seealso
+<https://edayot.github.io/ItemIO/filters/index.html>
+:::
+
+:::{admonition} Ignored items
+:class: seealso
+All items matching ``<item>.tag.itemio.gui: 1b``, will be ignored by ItemIO.
+:::
+
+
 ## Storage based ioconfig
+
+:::{warning} Warning
+:class: seealso
+This is a very advanced feature, you should not use it unless you know what you are doing.
+:::
+
+
 
 Storage based ioconfig are ioconfig that are stored in a storage, they are dynamic and can be changed at any time for all containers that use it.
 
@@ -68,14 +87,4 @@ To use a storage based ioconfig you need to add the tag ``itemio.container.iocon
 }
 ```
 
-
-:::{admonition} Full specification 
-:class: seealso
-<https://edayot.github.io/ItemIO/filters/index.html>
-:::
-
-:::{admonition} Ignored items
-:class: seealso
-All items matching ``<item>.tag.itemio.gui: 1b``, will be ignored by ItemIO.
-:::
 
