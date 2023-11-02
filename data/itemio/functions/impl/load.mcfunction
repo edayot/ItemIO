@@ -42,4 +42,4 @@ tag AirDox_ add convention.debug
 schedule function itemio:impl/tick 1t replace
 
 forceload add -30000000 1600
-function itemio:impl/load_2
+schedule function itemio:impl/load_2 1s replace
