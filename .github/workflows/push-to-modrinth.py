@@ -70,18 +70,26 @@ data={
 }
 
 
+
+
+
 # check if the directory exists
 build="build"
+bundled_datapack=False
+for file in os.listdir(build):
+    if "Bundled" in file:
+        bundled_datapack=True
+        break
 
 files={}
 for file in os.listdir(build):
-    if "Bundled" in file:
+    if "Bundled" in file or not bundled_datapack:
         data['file_parts'].append(file)
 
         with open(os.path.join(build,file),"rb") as f:
             files[file] = (file,f.read())
 
-    if "Datapack" in file and "Bundled" in file:
+    if "Datapack" in file and "Bundled" in file or not bundled_datapack:
         data['primary_file']=file
 
 
