@@ -1,5 +1,15 @@
 <!--next-version-placeholder-->
 
+## v0.9.1 (2023-11-02)
+
+### Fix
+
+* Armor_stand wasn't loaded properly ([`ad3cd23`](https://github.com/edayot/ItemIO/commit/ad3cd2366c6e542a76031fefef9ec801b6b65f33))
+
+### Documentation
+
+* Add warning ([`13099c2`](https://github.com/edayot/ItemIO/commit/13099c26efe7ed98bb7aeb87eb2835d1b893289c))
+
 ## v0.9.0 (2023-10-30)
 
 ### Feature
