@@ -2,7 +2,6 @@ name: Artifacts at every commit
 on:
   push:
     branches:
-      - master
       - dev
 
 jobs:
