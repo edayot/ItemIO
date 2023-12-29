@@ -37,8 +37,8 @@ jobs:
           GIT_HASH: ${{ github.sha }}
         run: |
           make BUILD_TYPE=artifact
-      - uses: actions/checkout@v4
-      - uses: CarbonSmasher/packtest_runner@82535200a0a3870ef2b337b0cd3ad34c1acbeb61
+      - name: Run packtest unit tests
+        uses: CarbonSmasher/packtest_runner@82535200a0a3870ef2b337b0cd3ad34c1acbeb61
         with:
           packs: 'build/datapack/'
       
