@@ -27,7 +27,7 @@ kill @e[tag=dummy]
 
 
 # origin, destination, count
-# ~3 ~3 ~2, ~3 ~1 ~2, 1
+# ~3 ~3 ~3, ~3 ~1 ~3, 1
 
 scoreboard players set #max_output_count itemio.io 1
 data modify storage itemio:io output_side set value "wireless"
@@ -48,7 +48,7 @@ kill @e[tag=dummy]
 
 
 # origin, destination, count
-# ~3 ~3 ~2, ~3 ~1 ~2, 1
+# ~3 ~3 ~3, ~3 ~1 ~3, 1
 
 scoreboard players set #max_output_count itemio.io 1
 data modify storage itemio:io output_side set value "wireless"
@@ -69,7 +69,7 @@ kill @e[tag=dummy]
 
 
 # origin, destination, count
-# ~3 ~3 ~4, ~3 ~1 ~4, 64
+# ~3 ~3 ~5, ~3 ~1 ~5, 64
 
 scoreboard players set #max_output_count itemio.io 64
 data modify storage itemio:io output_side set value "wireless"
@@ -88,7 +88,7 @@ kill @e[tag=dummy]
 
 
 # origin, destination, count
-# ~3 ~3 ~4, ~3 ~1 ~4, 8
+# ~3 ~3 ~5, ~3 ~1 ~5, 8
 
 scoreboard players set #max_output_count itemio.io 8
 data modify storage itemio:io output_side set value "wireless"
@@ -108,13 +108,34 @@ kill @e[tag=dummy]
 
 
 # destination
-# ~3 ~1 ~6
+# ~3 ~1 ~7
 
 data modify storage itemio:io input_side set value "wireless"
-data modify storage itemio:io input set value {Slot:0b,id:"minecraft:egg",Count:1}
+data modify storage itemio:io input set value {Slot:0b,id:"minecraft:sugar",Count:512}
 
 
-execute positioned ~3 ~1 ~6 run function #itemio:calls/input
+execute positioned ~3 ~1 ~7 run function #itemio:calls/input
 
 assert score #success_input itemio.io matches 1
 assert score #count_to_remove itemio.io matches 512
+
+assert block ~3 ~1 ~7 barrel{Items:[{Slot: 0b, id: "minecraft:redstone_block", Count: 1b}, {Slot: 1b, id: "minecraft:redstone_block", Count: 1b}, {Slot: 2b, id: "minecraft:redstone_block", Count: 1b}, {Slot: 3b, id: "minecraft:redstone_block", Count: 1b}, {Slot: 4b, id: "minecraft:sugar", Count: 64b}, {Slot: 5b, id: "minecraft:sugar", Count: 64b}, {Slot: 6b, id: "minecraft:sugar", Count: 64b}, {Slot: 7b, id: "minecraft:sugar", Count: 64b}, {Slot: 8b, id: "minecraft:sugar", Count: 64b}, {Slot: 9b, id: "minecraft:sugar", Count: 64b}, {Slot: 10b, id: "minecraft:sugar", Count: 64b}, {Slot: 11b, id: "minecraft:sugar", Count: 64b}]}
+
+
+
+
+# destination
+# ~3 ~1 ~7
+
+data modify storage itemio:io input_side set value "wireless"
+data modify storage itemio:io input set value {Slot:0b,id:"minecraft:redstone_block",Count:143}
+
+
+execute positioned ~3 ~1 ~7 run function #itemio:calls/input
+
+assert score #success_input itemio.io matches 1
+assert score #count_to_remove itemio.io matches 143
+
+
+assert block ~3 ~1 ~7 barrel{Items:[{Slot: 0b, id: "minecraft:redstone_block", Count: 64b}, {Slot: 1b, id: "minecraft:redstone_block", Count: 64b}, {Slot: 2b, id: "minecraft:redstone_block", Count: 3b}, {Slot: 3b, id: "minecraft:redstone_block", Count: 1b}, {Slot: 4b, id: "minecraft:sugar", Count: 64b}, {Slot: 5b, id: "minecraft:sugar", Count: 64b}, {Slot: 6b, id: "minecraft:sugar", Count: 64b}, {Slot: 7b, id: "minecraft:sugar", Count: 64b}, {Slot: 8b, id: "minecraft:sugar", Count: 64b}, {Slot: 9b, id: "minecraft:sugar", Count: 64b}, {Slot: 10b, id: "minecraft:sugar", Count: 64b}, {Slot: 11b, id: "minecraft:sugar", Count: 64b}]}
+
