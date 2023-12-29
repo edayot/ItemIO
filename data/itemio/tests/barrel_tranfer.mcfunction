@@ -12,7 +12,10 @@ assert block -30000000 22 1610 yellow_shulker_box
 assert block -30000000 23 1610 barrel
 
 
-await delay 5s
+forceload add ~-16 ~-16 ~16 ~16
+await delay 1s
+
+execute unless loaded ~	~ ~ run await delay 1t 
 
 scoreboard players set #max_output_count itemio.io 1
 data modify storage itemio:io output_side set value "wireless"
