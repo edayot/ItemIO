@@ -15,7 +15,8 @@ assert block -30000000 23 1610 barrel
 forceload add ~-16 ~-16 ~16 ~16
 await delay 1s
 
-execute unless loaded ~ ~ ~ run await delay 1t
+execute unless loaded ~-16 ~ ~-16 run await delay 1t
+execute unless loaded ~16 ~ ~16 run await delay 1t
 
 scoreboard players set #max_output_count itemio.io 1
 data modify storage itemio:io output_side set value "wireless"
@@ -27,14 +28,16 @@ execute positioned ~3 ~3 ~1 run function #itemio:calls/transfer
 
 assert score #success_transfer itemio.io matches 1
 
+await delay 1t
 assert block ~3 ~3 ~1 barrel{Items:[]}
-assert block ~3 ~1 ~1 barrel{Items:[{Slot: 0b, id: "minecraft:diamond", Count: 1b}]}
+execute unless block ~3 ~1 ~1 barrel{Items:[{Slot: 0b, id: "minecraft:diamond", Count: 1b}]} run fail {"nbt":"{}","block":"~3 ~1 ~1"}
 
 
 assert not data block ~3 ~3 ~1 Items[0]
 assert not data block ~3 ~1 ~1 Items[1]
 kill @e[tag=dummy]
 
+fail "dummy fail"
 
 # origin, destination, count
 # ~3 ~3 ~3, ~3 ~1 ~3, 1
