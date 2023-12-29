@@ -14,5 +14,7 @@
 
 scoreboard players set #success_output itemio.io 0
 
-
-execute if score #loaded itemio.math matches 1 run function itemio:impl/container/output/repart_2
+execute 
+    if score #loaded itemio.math matches 1
+    align xyz positioned ~.5 ~.5 ~.5
+    run function itemio:impl/container/output/repart_2
