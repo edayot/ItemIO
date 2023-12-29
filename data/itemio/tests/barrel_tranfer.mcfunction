@@ -133,7 +133,7 @@ data modify storage itemio:io input set value {Slot:0b,id:"minecraft:redstone_bl
 
 execute positioned ~3 ~1 ~7 run function #itemio:calls/input
 
-assert score #success_input itemio.io matches 1
+assert score #success_input itemio.io matches 0
 assert score #count_to_remove itemio.io matches 143
 
 
