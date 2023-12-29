@@ -5,7 +5,14 @@
 # origin, destination, count
 # ~3 ~3 ~1, ~3 ~1 ~1, 1
 
-await delay 1s
+await entity 93682a08-d099-4e8f-a4a6-1e33a3692301
+
+
+assert block -30000000 22 1610 yellow_shulker_box
+assert block -30000000 23 1610 barrel
+
+
+await 5s
 
 scoreboard players set #max_output_count itemio.io 1
 data modify storage itemio:io output_side set value "wireless"
