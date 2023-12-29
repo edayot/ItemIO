@@ -15,7 +15,7 @@ assert block -30000000 23 1610 barrel
 forceload add ~-16 ~-16 ~16 ~16
 await delay 1s
 
-execute unless loaded ~	~ ~ run await delay 1t 
+execute unless loaded ~ ~ ~ run await delay 1t
 
 scoreboard players set #max_output_count itemio.io 1
 data modify storage itemio:io output_side set value "wireless"
