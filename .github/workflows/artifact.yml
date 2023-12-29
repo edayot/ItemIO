@@ -38,7 +38,7 @@ jobs:
         run: |
           make BUILD_TYPE=artifact
       - name: Run packtest unit tests
-        uses: CarbonSmasher/packtest_runner@82535200a0a3870ef2b337b0cd3ad34c1acbeb61
+        uses: CarbonSmasher/packtest_runner@0.2.0
         with:
           packs: 'build/datapack/'
       
