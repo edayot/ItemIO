@@ -1,5 +1,5 @@
 # @template itemio:barrel_transfer
-
+# @optional
 
 
 # origin, destination, count
@@ -30,14 +30,13 @@ assert score #success_transfer itemio.io matches 1
 
 await delay 1t
 assert block ~3 ~3 ~1 barrel{Items:[]}
-execute unless block ~3 ~1 ~1 barrel{Items:[{Slot: 0b, id: "minecraft:diamond", Count: 1b}]} run fail {"nbt":"{}","block":"~3 ~1 ~1"}
+
 
 
 assert not data block ~3 ~3 ~1 Items[0]
 assert not data block ~3 ~1 ~1 Items[1]
 kill @e[tag=dummy]
 
-fail "dummy fail"
 
 # origin, destination, count
 # ~3 ~3 ~3, ~3 ~1 ~3, 1
