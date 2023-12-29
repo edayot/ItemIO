@@ -2,10 +2,23 @@ from beet import Context, TextFile, ResourcePack, DataPack, JsonFile, Mcmeta
 from copy import deepcopy
 from pathlib import PurePath
 from beet.contrib.model_merging import model_merging
+from typing import ClassVar, Iterable, List, Optional, Tuple, TypeVar, Union
+import beet
+from beet.core.file import (
+    BinaryFileBase,
+    BinaryFileContent,
+    FileDeserialize,
+    JsonFile,
+    TextFileBase,
+    TextFileContent,
+)
+from dataclasses import dataclass
+from beet.library.base import NamespacePin, NamespaceProxyDescriptor
 import os
 import json
 import requests
-import weld
+from smithed import weld
+from tqdm import tqdm
 
 @property
 def modified_suffixes(self):
@@ -117,12 +130,12 @@ def cache_dependencies(ctx: Context):
 
     list_dep=list()
     for dep in ctx.meta["smithed_dependencies"]:
-        list_dep.append(f"{dep['id']}@{dep['version_']}")
+        if dep["versioning"]["type"]=="normal":
+            list_dep.append(f"{dep['id']}@{dep['version_']}")
     
-      
+    list_dep=tqdm(list_dep,desc="Downloading dependencies", total=len(list_dep), dynamic_ncols = True, leave=False)
     for dep in list_dep:
         if dep not in ctx.cache.json["airdox_"]["list_dep"]:
-            print(f"Downloading {dep}")
             ctx.cache.json["airdox_"]["list_dep"].append(dep)
             dep_full_id,dep_version=dep.split("@")
             dep_author,dep_id=dep_full_id.split(":")
@@ -132,15 +145,38 @@ def cache_dependencies(ctx: Context):
             try:
                 os.mkdir(f"{ctx.cache.path}/airdox_")
                 os.mkdir(f"{ctx.cache.path}/airdox_/dep")
-            except:
+            except FileExistsError:
                 pass
-            with open(f"{ctx.cache.path}/airdox_/dep/{dep_id}@{dep_version}_datapack.zip","wb") as f:
-                f.write(datapack.content)
-            with open(f"{ctx.cache.path}/airdox_/dep/{dep_id}@{dep_version}_resourcepack.zip","wb") as f:
-                f.write(resourcepack.content)
 
-            
-            
+            if datapack.ok and resourcepack.ok:
+                with open(f"{ctx.cache.path}/airdox_/dep/{dep_id}@{dep_version}_datapack.zip","wb") as f:
+                    f.write(datapack.content)
+                with open(f"{ctx.cache.path}/airdox_/dep/{dep_id}@{dep_version}_resourcepack.zip","wb") as f:
+                    f.write(resourcepack.content)
+            elif not datapack.ok:
+                raise Exception(f"Error downloading {dep} datapack")
+            elif not resourcepack.ok:
+                raise Exception(f"Error downloading {dep} resourcepack")
+
+class PackTest(TextFileBase[List[str]]):
+    """Class representing a PackTest test."""
+
+    scope: ClassVar[Tuple[str, ...]] = ("tests",)
+    extension: ClassVar[str] = ".mcfunction"
+
+@dataclass
+class PackTestManager:
+    """Service for managing json messages."""
+
+    ctx: Context
+
+    def __post_init__(self):
+        self.ctx.data.extend_namespace.append(PackTest)
+    
+
+
+def add_tests_directory(ctx: Context):
+   ctx.inject(PackTestManager)
             
             
 
@@ -152,6 +188,9 @@ def load_included(ctx: Context):
     weld.toolchain.main.weld(ctx)
     
     for dep in ctx.meta["smithed_dependencies"]: 
+        if not dep["versioning"]["type"]=="normal":
+            continue
+
         dep_author,dep_id=dep["id"].split(":")
         identifier=f"{dep_id}@{dep['version_']}"
         data=DataPack(zipfile=f"{ctx.cache.path}/airdox_/dep/{identifier}_datapack.zip")
