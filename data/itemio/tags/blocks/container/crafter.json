@@ -1,0 +1,6 @@
+{
+    "__comment":"Crafter impl for backward compatibility",
+    "values": [
+        {"id":"crafter","required":false}
+    ]
+}

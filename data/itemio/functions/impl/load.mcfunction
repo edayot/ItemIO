@@ -26,6 +26,8 @@ scoreboard players set #hopper_speed itemio.math 8
 
 scoreboard players add #my_queue itemio.math 0
 
+scoreboard players set #crafter_input itemio.math.input 0
+
 #my_queue itemio.math with #hopper_speed itemio.math
 execute if score #my_queue itemio.math > #hopper_speed itemio.math run scoreboard players operation #my_queue itemio.math = #hopper_speed itemio.math
 

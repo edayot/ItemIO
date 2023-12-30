@@ -3,7 +3,8 @@
     "values": [
         "#itemio:container/27_chest",
         "#itemio:container/9",
-        "hopper"
+        "hopper",
+        {"id":"#itemio:container/crafter","required":false}
         
     ]
 }
