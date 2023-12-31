@@ -37,15 +37,12 @@ jobs:
           GIT_HASH: ${{ github.sha }}
         run: |
           make BUILD_TYPE=artifact
-      - name: Run packtest unit tests
-        uses: CarbonSmasher/packtest_runner@0.2.0
-        with:
-          packs: 'build/datapack/'
-      
       # Upload build/ datapack.zip, resourcepack.zip, datapack-bundled.zip, resourcepack-bundled.zip
       - uses: actions/upload-artifact@v3
         with:
           name: datapack
           path: build/datapack/
-      
-      
+      - name: Run packtest unit tests
+        uses: CarbonSmasher/packtest_runner@0.2.0
+        with:
+          packs: 'build/datapack/'
