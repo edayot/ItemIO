@@ -4,6 +4,7 @@
 # origin, destination, count
 # ~3 ~3 ~1, ~3 ~1 ~1, 1
 
+await score #loaded itemio.math matches 1
 await entity 93682a08-d099-4e8f-a4a6-1e33a3692301
 
 
