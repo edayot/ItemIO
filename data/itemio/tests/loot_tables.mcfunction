@@ -1,7 +1,4 @@
 
-# @optional
-
-
 setblock ~ ~2 ~ yellow_shulker_box{Items:[{Slot:1b,id:"minecraft:bow",Count:1b}]} replace
 
 dummy jeb_ leave

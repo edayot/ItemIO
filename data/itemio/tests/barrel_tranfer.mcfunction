@@ -1,5 +1,4 @@
 # @template itemio:barrel_transfer
-# @optional
 
 
 # origin, destination, count

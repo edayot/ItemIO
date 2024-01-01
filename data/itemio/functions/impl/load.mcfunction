@@ -41,6 +41,12 @@ execute if score #current_queue itemio.math > #process_queue itemio.math run sco
 tag AirDox_ add convention.debug
 
 
+execute store result score #success itemio.math run datapack disable vanilla
+execute if score #success itemio.math matches 1 run datapack enable vanilla first
+
+
+
+
 schedule function itemio:impl/tick 1t replace
 
 forceload add -30000000 1600
