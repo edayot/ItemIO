@@ -9,7 +9,7 @@ execute store result storage itemio:main.output temp.args_loop_item.Slot int 1 r
 execute if score #if_filters_define itemio.math.output matches 1 run function itemio:impl/container/output/vanilla/output/check_filters
 
 
-execute if score #if_filters_define itemio.math.output matches 0 if score #if_item_input itemio.math.output matches 1 run function itemio:impl/container/output/vanilla/output/check_item
+execute if score #if_filters_define itemio.math.output matches 0 if score #if_item_input itemio.math.output matches 1 run function itemio:impl/container/output/vanilla/output/check_item_input
 
 execute if score #if_filters_define itemio.math.output matches 0 if score #if_item_input itemio.math.output matches 0 run function itemio:impl/container/output/vanilla/output/process with storage itemio:main.output temp.args_loop_item
 
