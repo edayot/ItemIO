@@ -12,6 +12,8 @@ execute if block ~ ~ ~ chest[type=single] run scoreboard players set #block_size
 execute if block ~ ~ ~ trapped_chest[type=single] run scoreboard players set #block_size itemio.math.input 27
 
 execute if block ~ ~ ~ #itemio:container/9 run scoreboard players set #block_size itemio.math.input 9
+scoreboard players set #crafter_input itemio.math.input 0
+execute if block ~ ~ ~ #itemio:container/crafter run scoreboard players set #crafter_input itemio.math.input 1
 execute if block ~ ~ ~ hopper[enabled=true] run scoreboard players set #block_size itemio.math.input 5
 
 

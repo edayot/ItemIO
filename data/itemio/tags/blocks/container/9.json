@@ -2,6 +2,7 @@
     "__comment":"All 9 stack container of minecraft",
     "values": [
         "dropper",
-        "dispenser"
+        "dispenser",
+        {"id":"#itemio:container/crafter","required":false}
     ]
 }

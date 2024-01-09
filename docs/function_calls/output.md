@@ -7,10 +7,10 @@
 | Input Name                                                        | Input Type   | Input Source             | Input Objective/Path             | 
 | ---                                                               | ---          | ---                      | ---                              |
 | The selected container                                            | Position     |                          |                                  |
-| The maximum amount of extracted item.<br> range 1..64             | score        | #max_count_output       | itemio.io                        | 
+| The maximum amount of extracted item.<br> range 1..64             | score        | #max_output_count       | itemio.io                        | 
 | The output side : <br>```"north", "south", "east", "west", "top", "bottom", "wireless"``` (wireless bypass the side check)                | storage      | output_side               | itemio:io                        |
 | Optional, it will do a full NBT check<br> `A normal item NBT`     | storage      | input                    | itemio:io                        |
-| Optional, it will do a [filters](https://edayot.github.io/ItemIO/filters/index.html) check                             | storage      | input                    | itemio:io                        |
+| Optional, it will do a [filters](https://edayot.github.io/ItemIO/filters/index.html) check                             | storage      | filters                    | itemio:io                        |
 
 ---
 

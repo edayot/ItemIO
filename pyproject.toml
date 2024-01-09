@@ -9,11 +9,13 @@ repository = "https://github.com/edayot/ItemIO"
 
 [tool.poetry.dependencies]
 python = ">=3.11,<3.12"
+weld-deps = {git = "https://github.com/edayot/weld-deps.git", branch = "main"}
 smithed-libraries = {git = "https://github.com/edayot/Libraries.git", branch = "1.20.4"}
 smithed= {git = "https://github.com/Smithed-MC/smithed-python.git", branch = "main"}
-python-semantic-release = "^7.32.2"
 cryptography = "^41.0.0"
+tqdm = "^4.66.1"
 
+[tool.poetry.dev-dependencies]
 sphinx = "^7.1.1"
 sphinx_design = "^0.5.0"
 sphinx-pyproject = "^0.1.0"
@@ -24,7 +26,17 @@ sphinxcontrib-mermaid = "^0.7.1"
 sphinx_copybutton = "^0.5.2"
 furo = "^2023.7.26"
 linkify-it-py = "^2.0.2"
+python-semantic-release = "^8.7.0"
 
+[tool.semantic_release]
+major_on_zero = true
+build_command = "make BUILD_TYPE=release"
+dist_path = "build"
+version_toml = ["pyproject.toml:tool.poetry.version"]
+version_source = "commit"
+
+remove_dist = false
+upload_to_vcs_release = true
 
 
 
@@ -32,15 +44,3 @@ linkify-it-py = "^2.0.2"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
-
-[tool.semantic_release]
-branch = "master"
-major_on_zero = false
-build_command = "make BUILD_TYPE=release"
-dist_path = "build"
-upload_to_pypi = false
-upload_to_release = true
-version_toml = "pyproject.toml:tool.poetry.version"
-version_pattern = "beet.yaml:(?<=version: \")(\\d+\\.\\d+\\.\\d+)"
-version_source = "commit"
-remove_dist = false

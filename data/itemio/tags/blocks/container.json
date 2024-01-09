@@ -16,6 +16,8 @@
         "barrel",
 
         "chiseled_bookshelf",
-        "brewing_stand"
+        "brewing_stand",
+
+        {"id":"#itemio:container/crafter","required":false}
     ]
 }
