@@ -40,12 +40,6 @@ execute if score #current_queue itemio.math > #process_queue itemio.math run sco
 
 tag AirDox_ add convention.debug
 
-scoreboard players add #ensure_first itemio.math 0
-execute if score #ensure_first itemio.math matches 0 store success score #success itemio.math run datapack disable vanilla
-execute if score #ensure_first itemio.math matches 0 if score #success itemio.math matches 1 run datapack enable vanilla first
-execute if score #ensure_first itemio.math matches 0 run scoreboard players set #ensure_first itemio.math 1
-
-
 
 
 schedule function itemio:impl/tick 1t replace

@@ -7,8 +7,8 @@ output : "build"
 
 meta:
   modrinth_id: "dr6WkwxX"
-  mc_supports: ["1.20.2"]
-  mc_supports_dataversion: [3578]
+  mc_supports: ["1.20.4"]
+  mc_supports_dataversion: [3700]
 
 data_pack:
   load: [.]
