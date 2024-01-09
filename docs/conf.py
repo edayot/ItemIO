@@ -10,8 +10,9 @@ project = 'ItemIO'
 author = 'edayot'
 copyright='Erwan DAYOT'
 
-import yaml
-beet= yaml.safe_load(open("../beet.yaml"))
+import toml
+pyproject = toml.load("../pyproject.toml")
+beet = pyproject["tool"]["poetry"]
 
 
 release = beet["version"]
