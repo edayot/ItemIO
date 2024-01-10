@@ -8,8 +8,6 @@ require:
   - airdox_.add_tests_directory
   - airdox_.allow_function_without_name
   - smithed_libraries.plugins.companion_mod
-  - smithed_libraries.plugins.misc.display_broadcasted_pack
-  - smithed_libraries.plugins.manifest.collect_version
   - mecha.contrib.messages
   - beet.contrib.render
   - beet.contrib.model_merging
@@ -19,6 +17,7 @@ require:
 pipeline:
   - mecha
   - smithed_libraries.plugins.versioning
+  - airdox_.clean_useless_tags
   - beet.contrib.find_replace
   - airdox_.add_license
   - airdox_.add_readme
@@ -26,7 +25,6 @@ pipeline:
   - beet.contrib.render
   - beet.contrib.minify_json
   - beet.contrib.minify_function
-  - beet.contrib.unknown_files
   - airdox_.add_id
  
 
