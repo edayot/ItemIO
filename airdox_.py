@@ -1,4 +1,4 @@
-from beet import Context, TextFile, ResourcePack, DataPack, JsonFile, Mcmeta
+from beet import Context, TextFile, ResourcePack, DataPack, JsonFile, Mcmeta, Predicate
 from copy import deepcopy
 from pathlib import PurePath
 from beet.contrib.model_merging import model_merging
