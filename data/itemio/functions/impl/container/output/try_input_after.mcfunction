@@ -9,3 +9,6 @@ tag @e[tag=itemio.transfer.destination.good_distance] remove itemio.transfer.des
 
 execute if score #success_input itemio.io matches 1 run scoreboard players operation #remove_count itemio.math.output = #count_to_remove itemio.io
 execute if score #success_input itemio.io matches 0 run scoreboard players set #remove_count itemio.math.output 0
+
+
+execute if score #servos_transfer itemio.math matches 1 if score #success_input itemio.io matches 0 run function #itemio:calls/disable_servo

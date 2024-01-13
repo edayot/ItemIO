@@ -12,3 +12,4 @@ data modify storage itemio:main.output ioconfig set value [ \
 
 
 function itemio:impl/container/output/custom/output_noconfig
+function itemio:impl/container/chiseled_bookshelf
