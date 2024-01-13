@@ -49,18 +49,22 @@ jobs:
           git config --global user.email "action@github.com"
           if [ "$VERSION_BUMP" = "automatic" ]; then
             poetry run semantic-release -v version ;
+            poetry run semantic-release -v publish ;
             exit;
           fi
           if [ "$VERSION_BUMP" = "patch" ]; then
             poetry run semantic-release -v version --patch;
+            poetry run semantic-release -v publish ;
             exit;
           fi
           if [ "$VERSION_BUMP" = "minor" ]; then
             poetry run semantic-release -v version --minor;
+            poetry run semantic-release -v publish ;
             exit;
           fi
           if [ "$VERSION_BUMP" = "major" ]; then
             poetry run semantic-release -v version --major;
+            poetry run semantic-release -v publish ;
             exit;
           fi
       - name: Push to smithed
