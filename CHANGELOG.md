@@ -2,9 +2,34 @@
 
 
 
+## v0.11.0 (2024-01-13)
+
+### Chore
+
+* chore: update common ([`c4b525b`](https://github.com/edayot/ItemIO/commit/c4b525b57ce5b7d4e165863f8fc42b10e7c76dfe))
+
+* chore: update common ([`203578f`](https://github.com/edayot/ItemIO/commit/203578fdb3fe056fb5e60239bca273c4fc9a3db9))
+
+* chore: poetry lock ([`f5faa9e`](https://github.com/edayot/ItemIO/commit/f5faa9ec1a7737089a615d3e7758063a8e364d83))
+
+### Feature
+
+* feat: protecting over hopper minecart #13 ([`a73dcc3`](https://github.com/edayot/ItemIO/commit/a73dcc3acfdb439736b50127c74b47058ac3135a))
+
+### Fix
+
+* fix: useless tag remove ([`be7dac8`](https://github.com/edayot/ItemIO/commit/be7dac8adc774b99058f0edb74d59cb86d373993))
+
+### Unknown
+
+* Merge branch &#39;master&#39; into dev ([`dd43da8`](https://github.com/edayot/ItemIO/commit/dd43da8cd79a28d528b06f050cce3955866880a0))
+
+
 ## v0.10.0 (2024-01-09)
 
 ### Chore
+
+* chore: fix building action ([`c8383b5`](https://github.com/edayot/ItemIO/commit/c8383b573b4ecf6383fd89a7d9c4c3fe2ac030d7))
 
 * chore: fix docs build ([`5ca22f2`](https://github.com/edayot/ItemIO/commit/5ca22f2bbfa293a2961dc434c675ea31fb9ca0ed))
 
