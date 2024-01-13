@@ -5,7 +5,7 @@
 
 Featured datapacks are datapacks that uses ItemIO in a way that is worth mentioning.
 
-If you think your datapack should be featured, feel free to open a PR & edit [this file](https://github.com/edayot/ItemIO/blob/master/docs/features.md).
+If you think your datapack should be featured, feel free to open a PR & edit [this file](https://github.com/edayot/ItemIO/blob/master/docs/featured.md).
 
 ---
 
