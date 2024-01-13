@@ -49,14 +49,18 @@ except FileNotFoundError:
     except FileNotFoundError:
         sys.exit(1,"beet.yaml not found")
 
+# get current version using poetry version command
+command = f"poetry version | cut -d' ' -f2"
+CURRENT_VERSION = os.popen(command).read().strip()
+print("CURRENT_VERSION: " + CURRENT_VERSION)
 
-release=requests.get(f"https://api.github.com/repos/edayot/{beet['name']}/releases/tags/v{beet['version']}").json()
+release=requests.get(f"https://api.github.com/repos/edayot/{beet['name']}/releases/tags/v{CURRENT_VERSION}").json()
 
 
 
 data={
-    "name":f"v{beet['version']}",
-    "version_number":beet['version'],
+    "name":f"v{CURRENT_VERSION}",
+    "version_number":CURRENT_VERSION,
     "changelog":release['body'],
     "dependencies":[],
     "game_versions":beet['meta']['mc_supports'],

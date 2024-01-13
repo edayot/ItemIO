@@ -8,14 +8,12 @@ import os
 import sys
 
 try: 
-    SMITHED_UID = os.environ['SMITHED_UID']
     SMITHED_TOKEN = os.environ['SMITHED_TOKEN']
     beet = yaml.safe_load(open("beet.yaml"))
 except KeyError:
     try:
         with open("credentials.json", "r") as f:
             creds = json.load(f)
-        SMITHED_UID = creds['SMITHED_UID']
         SMITHED_TOKEN = creds['SMITHED_TOKEN']
         beet = yaml.safe_load(open("../../beet.yaml"))
     except:
@@ -25,7 +23,10 @@ except KeyError:
 
 print(beet)
 
-CURRENT_VERSION=beet['version']
+# get current version using poetry version command
+command = f"poetry version | cut -d' ' -f2"
+CURRENT_VERSION = os.popen(command).read().strip()
+print("CURRENT_VERSION: " + CURRENT_VERSION)
 
 
 
