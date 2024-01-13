@@ -37,6 +37,7 @@ version_source = "commit"
 
 remove_dist = false
 upload_to_vcs_release = true
+tag_format = "v{version}"
 
 
 
