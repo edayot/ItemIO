@@ -71,9 +71,17 @@ A filter that make a copy of the item, merge it with the filter and compare it w
     }
 }
 ```
+This filter will check if the item as a display tag. 
 
-## Minecraft bookshelf_books
-A filter that match the `minecraft:bookshelf_books` tag.
+```{admonition} Note 
+:class: note
+This filter will not work with list, in the merge process there are replaced.
+```
+
+## Minecraft Tags
+All the minecraft tags are available as filters.
+
+The full list is available [here](https://github.com/misode/mcmeta/tree/registries/tag/item)
 
 ### Example :
 ```SNBT
@@ -85,10 +93,4 @@ A filter that match the `minecraft:bookshelf_books` tag.
 ```
 
 
-
-This filter will check if the item as a display tag. 
-
-```{admonition} Note 
-:class: note
-This filter will not work with list, in the merge process there are replaced.
-```
+This filter will check if the item is a book that can be placed in a chiseled bookshelf.
