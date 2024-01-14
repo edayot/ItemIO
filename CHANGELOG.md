@@ -2,6 +2,13 @@
 
 
 
+## v0.12.1 (2024-01-14)
+
+### Fix
+
+* fix: more protection against hopper minecart #15 ([`a683dec`](https://github.com/edayot/ItemIO/commit/a683decbab11221c3d4b1fde375af8e47b13340e))
+
+
 ## v0.12.0 (2024-01-14)
 
 ### Chore
