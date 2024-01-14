@@ -2,6 +2,37 @@
 
 
 
+## v0.12.0 (2024-01-14)
+
+### Chore
+
+* chore: all on master ([`70d67ec`](https://github.com/edayot/ItemIO/commit/70d67ec67e4931d5d96bdf24d9468397d474c207))
+
+* chore: add auto building after release ([`d8495aa`](https://github.com/edayot/ItemIO/commit/d8495aa0cce9f6acbf382bc9b06b9b8132188d68))
+
+* chore: update release template ([`ad6f973`](https://github.com/edayot/ItemIO/commit/ad6f97349e054b5938cf0172f3290e4d9a11a999))
+
+* chore: udate internal script ([`620b25a`](https://github.com/edayot/ItemIO/commit/620b25a6e6f02462bff17d487d56db726d138f96))
+
+### Documentation
+
+* docs: d ([`d787a5a`](https://github.com/edayot/ItemIO/commit/d787a5aab02015dc535c70ff97d36501f57d13e3))
+
+* docs: changelog changes ([`2998e00`](https://github.com/edayot/ItemIO/commit/2998e003b47aa00b3adbc0249f87c300f3478886))
+
+* docs: wip ([`450f071`](https://github.com/edayot/ItemIO/commit/450f071375d40b101efeaee679cbe0c1271f83ae))
+
+* docs: update integrated filters list ([`3e97824`](https://github.com/edayot/ItemIO/commit/3e978248eafc910bba37a1f70bf2371828300183))
+
+### Feature
+
+* feat: implementing all vanilla tags filter ([`37c97dc`](https://github.com/edayot/ItemIO/commit/37c97dc595e702ad9000b4de1830845b513493f2))
+
+### Fix
+
+* fix: visual chiseled bookshelf ([`a6122db`](https://github.com/edayot/ItemIO/commit/a6122db4b973969b447b6225309aa2e91d330f48))
+
+
 ## v0.11.0 (2024-01-13)
 
 ### Chore
