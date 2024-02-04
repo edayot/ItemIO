@@ -43,7 +43,7 @@ To declare a block as a container you need to add the tag ``itemio.container`` t
     - The data location must ends with letters, example: 
         - "block ~ ~ ~ Items" is valid
         - "entity ~ ~ ~ data.complex_list[0]" is not valid, even if it's a list of items.
-- ``itemio.container.nbt_items.on_passenger`` : 
+- ``itemio.container.nbt_items.on_passengers`` : 
     - Require ``itemio.container.nbt_items``. 
     - Indicate if the NBT path is on the passenger of the entity.
     - Can be used to make minecart compatible with IO.

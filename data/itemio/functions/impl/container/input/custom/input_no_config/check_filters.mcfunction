@@ -11,6 +11,7 @@ function #itemio:calls/filters_v2
 
 data remove storage itemio:main.input temp.args
 data modify storage itemio:main.input temp.args.Slot set from storage itemio:main.input ioconfig[0].Slot
+data modify storage itemio:main.input temp.args.nbt_items_path set from storage itemio:main.input nbt_items_path
 execute store result storage itemio:main.input temp.args.Slot int 1 run data get storage itemio:main.input temp.args.Slot
 
 

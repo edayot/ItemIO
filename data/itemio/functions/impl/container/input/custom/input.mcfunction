@@ -44,4 +44,7 @@ execute
 
 data remove storage itemio:main.input ioconfig[{mode:"output"}]
 
+scoreboard players set #good_context_entity itemio.math.input 1
 execute if data storage itemio:main.input ioconfig if data storage itemio:io input run function itemio:impl/container/input/custom/input_noconfig
+scoreboard players set #good_context_entity itemio.math.input 0
+

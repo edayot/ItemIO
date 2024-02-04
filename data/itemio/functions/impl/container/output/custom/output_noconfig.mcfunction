@@ -7,12 +7,13 @@ execute if score #good_context_entity itemio.math.output matches 1 if entity @s[
 
 #loading block data
 data remove storage itemio:main.output Items
+data remove storage itemio:main.output nbt_items_path
+data modify storage itemio:main.output nbt_items_path set value "storage do_not_use:realy blabla"
 
 execute if score #nbt_items itemio.math.output matches 0 run data modify storage itemio:main.output Items set from block ~ ~ ~ Items
 execute 
     if score #nbt_items itemio.math.output matches 1
     run function ./nbt_items_repart:
-        data remove storage itemio:main.output nbt_items_path
         execute
             if entity @s[type=marker] 
             run data modify storage itemio:main.output nbt_items_path set from entity @s data.itemio.nbt_items_path
@@ -26,9 +27,9 @@ execute
             if entity @s[type=#itemio:item_display] 
             run data modify storage itemio:main.output nbt_items_path set from entity @s item.tag.itemio.nbt_items_path
         
-        execute if entity @s[tag=itemio.container.nbt_items.on_passenger] on passengers run function ./nbt_items with storage itemio:main.output {}
+        execute if entity @s[tag=itemio.container.nbt_items.on_passengers] on passengers run function ./nbt_items with storage itemio:main.output {}
         execute if entity @s[tag=itemio.container.nbt_items.on_vehicle] on vehicle run function ./nbt_items with storage itemio:main.output {}
-        execute if entity @s[tag=!itemio.container.nbt_items.on_passenger,tag=!itemio.container.nbt_items.on_vehicle] run function ./nbt_items with storage itemio:main.output {}
+        execute if entity @s[tag=!itemio.container.nbt_items.on_passengers,tag=!itemio.container.nbt_items.on_vehicle] run function ./nbt_items with storage itemio:main.output {}
 
 
 function ./nbt_items:
