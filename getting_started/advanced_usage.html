@@ -162,6 +162,7 @@
 <li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">🚀 Getting Started</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of 🚀 Getting Started</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="basic_usage.html">📚 Basic Usage</a></li>
 <li class="toctree-l2 current current-page"><a class="current reference internal" href="#">🔧 Advanced Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#a-minecart-chest-but-custom">A minecart chest, but custom</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../containers/index.html">📦 Containers</a></li>
@@ -231,7 +232,65 @@
         <article role="main">
           <section class="tex2jax_ignore mathjax_ignore" id="advanced-usage">
 <h1>🔧 Advanced Usage<a class="headerlink" href="#advanced-usage" title="Link to this heading">#</a></h1>
-<p>WIP</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="a-minecart-chest-but-custom">
+<h1>A minecart chest, but custom<a class="headerlink" href="#a-minecart-chest-but-custom" title="Link to this heading">#</a></h1>
+<p>This function uses the <code class="docutils literal notranslate"><span class="pre">itemio.container.nbt_items</span></code> and <code class="docutils literal notranslate"><span class="pre">itemio.container.nbt_items.on_vehicle</span></code> tags to make a minecart chest with an ioconfig. The ioconfig is set to accept only dirt in the first 3 slots, and the nbt_items_path is set to “entity &#64;s Items”.</p>
+<p>Under the hood, the container is the marker entity, but it points to the minecart chest via an <code class="docutils literal notranslate"><span class="pre">execute</span> <span class="pre">on</span> <span class="pre">vehicle</span></code> command.</p>
+<p>Here it’s required to use a marker, because an chest_minecart can’t hold an itemio.ioconfig NBT tag.</p>
+<div class="highlight-mcfunction notranslate"><div class="highlight"><pre><span></span><span class="nb">summon</span><span class="w"> </span><span class="kc">chest_minecart</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="na">Passengers</span><span class="p">:[{</span><span class="na">id</span><span class="p">:</span><span class="s2">&quot;minecraft:marker&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="na">Tags</span><span class="p">:[</span>
+<span class="w">        </span><span class="na">&quot;example.chest_minecart_container.base&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="na">&quot;itemio.container&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="na">&quot;itemio.container.hopper&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="na">&quot;itemio.container.nbt_items&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="na">&quot;itemio.container.nbt_items.on_vehicle&quot;</span>
+<span class="w">        </span><span class="p">]</span>
+<span class="w">    </span><span class="p">}],</span>
+<span class="w">    </span><span class="na">Tags</span><span class="p">:[</span><span class="na">&quot;example.chest_minecart_container&quot;</span><span class="p">,</span><span class="na">&quot;example.chest_minecart_container.summoned&quot;</span><span class="p">]</span>
+
+<span class="p">}</span>
+
+
+<span class="nb">execute</span><span class="w"> </span>
+<span class="w">    </span><span class="kc">as</span><span class="w"> </span><span class="nv">@e</span><span class="p">[</span><span class="na">tag</span><span class="p">=</span><span class="nt">itemio.chest_minecart_container.summoned</span><span class="p">]</span>
+<span class="w">    </span><span class="kc">run</span><span class="nb"> function</span><span class="w"> </span><span class="o">~/</span><span class="kc">on_summon</span><span class="err">:</span>
+<span class="w">        </span><span class="kc">tag</span><span class="w"> </span><span class="nv">@s</span><span class="w"> </span><span class="kc">remove</span><span class="w"> </span><span class="kc">itemio.chest_minecart_container.summoned</span>
+<span class="w">        </span><span class="kc">execute</span><span class="w"> </span>
+<span class="w">            </span><span class="kc">on</span><span class="w"> </span><span class="kc">passengers</span><span class="w"> </span>
+<span class="w">            </span><span class="kc">run</span><span class="nb"> function</span><span class="w"> </span><span class="nf">./on_summon_marker</span><span class="err">:</span>
+<span class="w">                </span><span class="kc">data</span><span class="w"> </span><span class="kc">modify</span><span class="w"> </span><span class="kc">entity</span><span class="w"> </span><span class="nv">@s</span><span class="w"> </span><span class="kc">data.itemio.ioconfig</span><span class="w"> </span><span class="kc">set</span><span class="w"> </span><span class="kc">value</span><span class="w"> </span><span class="p">[]</span>
+<span class="w">                </span><span class="kc">data</span><span class="w"> </span><span class="kc">modify</span><span class="w"> </span><span class="kc">entity</span><span class="w"> </span><span class="nv">@s</span><span class="w"> </span><span class="kc">data.itemio.ioconfig</span><span class="w"> </span><span class="kc">append</span><span class="w"> </span><span class="kc">value</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="na">Slot</span><span class="p">:</span><span class="m m-Byte">0b</span><span class="p">,</span>
+<span class="w">                    </span><span class="na">mode</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;input&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="na">allowed_side</span><span class="p">:{</span><span class="na">bottom</span><span class="p">:</span><span class="m m-Byte">1b</span><span class="p">,</span><span class="na">north</span><span class="p">:</span><span class="m m-Byte">1b</span><span class="p">,</span><span class="na">east</span><span class="p">:</span><span class="m m-Byte">1b</span><span class="p">,</span><span class="na">south</span><span class="p">:</span><span class="m m-Byte">1b</span><span class="p">,</span><span class="na">west</span><span class="p">:</span><span class="m m-Byte">1b</span><span class="p">,</span><span class="na">top</span><span class="p">:</span><span class="m m-Byte">1b</span><span class="p">},</span>
+<span class="w">                    </span><span class="na">filters</span><span class="p">:[</span>
+<span class="w">                        </span><span class="p">{</span><span class="na">id</span><span class="p">:[</span><span class="na">&quot;minecraft</span><span class="p">:</span><span class="nt">dirt</span><span class="s2">&quot;]}</span>
+<span class="w">                    </span><span class="err">]</span>
+<span class="w">                </span><span class="err">}</span>
+<span class="w">                </span><span class="kc">data</span><span class="w"> </span><span class="kc">modify</span><span class="w"> </span><span class="kc">entity</span><span class="w"> </span><span class="nv">@s</span><span class="w"> </span><span class="kc">data.itemio.ioconfig</span><span class="w"> </span><span class="kc">append</span><span class="w"> </span><span class="kc">value</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="na">Slot</span><span class="p">:</span><span class="m m-Byte">1b</span><span class="p">,</span>
+<span class="w">                    </span><span class="na">mode</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;input&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="na">allowed_side</span><span class="p">:{</span><span class="na">bottom</span><span class="p">:</span><span class="m m-Byte">1b</span><span class="p">,</span><span class="na">north</span><span class="p">:</span><span class="m m-Byte">1b</span><span class="p">,</span><span class="na">east</span><span class="p">:</span><span class="m m-Byte">1b</span><span class="p">,</span><span class="na">south</span><span class="p">:</span><span class="m m-Byte">1b</span><span class="p">,</span><span class="na">west</span><span class="p">:</span><span class="m m-Byte">1b</span><span class="p">,</span><span class="na">top</span><span class="p">:</span><span class="m m-Byte">1b</span><span class="p">},</span>
+<span class="w">                    </span><span class="na">filters</span><span class="p">:[</span>
+<span class="w">                        </span><span class="p">{</span><span class="na">id</span><span class="p">:[</span><span class="na">&quot;minecraft</span><span class="p">:</span><span class="nt">dirt</span><span class="s2">&quot;]}</span>
+<span class="w">                    </span><span class="err">]</span>
+<span class="w">                </span><span class="err">}</span>
+<span class="w">                </span><span class="kc">data</span><span class="w"> </span><span class="kc">modify</span><span class="w"> </span><span class="kc">entity</span><span class="w"> </span><span class="nv">@s</span><span class="w"> </span><span class="kc">data.itemio.ioconfig</span><span class="w"> </span><span class="kc">append</span><span class="w"> </span><span class="kc">value</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="na">Slot</span><span class="p">:</span><span class="m m-Byte">2b</span><span class="p">,</span>
+<span class="w">                    </span><span class="na">mode</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;input&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="na">allowed_side</span><span class="p">:{</span><span class="na">bottom</span><span class="p">:</span><span class="m m-Byte">1b</span><span class="p">,</span><span class="na">north</span><span class="p">:</span><span class="m m-Byte">1b</span><span class="p">,</span><span class="na">east</span><span class="p">:</span><span class="m m-Byte">1b</span><span class="p">,</span><span class="na">south</span><span class="p">:</span><span class="m m-Byte">1b</span><span class="p">,</span><span class="na">west</span><span class="p">:</span><span class="m m-Byte">1b</span><span class="p">,</span><span class="na">top</span><span class="p">:</span><span class="m m-Byte">1b</span><span class="p">},</span>
+<span class="w">                    </span><span class="na">filters</span><span class="p">:[</span>
+<span class="w">                        </span><span class="p">{</span><span class="na">id</span><span class="p">:[</span><span class="na">&quot;minecraft</span><span class="p">:</span><span class="nt">dirt</span><span class="s2">&quot;]}</span>
+<span class="w">                    </span><span class="err">]</span>
+<span class="w">                </span><span class="err">}</span>
+<span class="w">                </span><span class="kc">data</span><span class="w"> </span><span class="kc">modify</span><span class="w"> </span><span class="kc">entity</span><span class="w"> </span><span class="nv">@s</span><span class="w"> </span><span class="kc">data.itemio.nbt_items_path</span><span class="w"> </span><span class="kc">set</span><span class="w"> </span><span class="kc">value</span><span class="w"> </span><span class="s2">&quot;entity @s Items&quot;</span>
+
+
+<span class="w">                </span><span class="kc">function</span><span class="w"> </span><span class="nf">#itemio:calls/container/init</span>
+</pre></div>
+</div>
 </section>
 
         </article>
