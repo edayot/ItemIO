@@ -37,6 +37,18 @@ To declare a block as a container you need to add the tag ``itemio.container`` t
 
 - ``itemio.container.auto_handled_io`` : If you want to handle the input/output of the container by yourself (see SimpleDrawer)
 
+- ``itemio.container.nbt_items`` : If you want a custom NBT path search for items. Like in a other block entity, or in the entity itself.
+    - Store this information in itemio.nbt_items_path as a string.
+    - The string is a data location like "block ~ ~ ~ Items" (default behavior).
+    - The data location must ends with letters, example: 
+        - "block ~ ~ ~ Items" is valid
+        - "entity ~ ~ ~ data.complex_list[0]" is not valid, even if it's a list of items.
+- ``itemio.container.nbt_items.on_passenger`` : 
+    - Require ``itemio.container.nbt_items``. 
+    - Indicate if the NBT path is on the passenger of the entity.
+    - Can be used to make minecart compatible with IO.
+- ``itemio.container.nbt_items.on_vehicle`` :
+    - Same as above but for the vehicle of the entity.
 
 
 ## IOConfig Data Structure

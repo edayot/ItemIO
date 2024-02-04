@@ -261,6 +261,30 @@ To make a container compatible with IO, you need to specify a format that define
 <li><p><code class="docutils literal notranslate"><span class="pre">itemio.container.hopper</span></code> : To make the container compatible with hoppers just add the tag. ItemIO will automatically handle the hoppers for you.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">itemio.container.not_vanilla_container</span></code> : if the custom container does not use a vanilla container, this will tell ItemIO to not disable vanilla hoppers around the block.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">itemio.container.auto_handled_io</span></code> : If you want to handle the input/output of the container by yourself (see SimpleDrawer)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">itemio.container.nbt_items</span></code> : If you want a custom NBT path search for items. Like in a other block entity, or in the entity itself.</p>
+<ul>
+<li><p>Store this information in itemio.nbt_items_path as a string.</p></li>
+<li><p>The string is a data location like “block ~ ~ ~ Items” (default behavior).</p></li>
+<li><p>The data location must ends with letters, example:</p>
+<ul>
+<li><p>“block ~ ~ ~ Items” is valid</p></li>
+<li><p>“entity ~ ~ ~ data.complex_list[0]” is not valid, even if it’s a list of items.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">itemio.container.nbt_items.on_passenger</span></code> :</p>
+<ul>
+<li><p>Require <code class="docutils literal notranslate"><span class="pre">itemio.container.nbt_items</span></code>.</p></li>
+<li><p>Indicate if the NBT path is on the passenger of the entity.</p></li>
+<li><p>Can be used to make minecart compatible with IO.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">itemio.container.nbt_items.on_vehicle</span></code> :</p>
+<ul>
+<li><p>Same as above but for the vehicle of the entity.</p></li>
+</ul>
+</li>
 </ul>
 </section>
 <section id="ioconfig-data-structure">
@@ -970,7 +994,7 @@ This is a very advanced feature, you should not use it unless you know what you 
       
     </aside>
   </div>
-</div><script src="../_static/documentation_options.js?v=61ccb1f1"></script>
+</div><script src="../_static/documentation_options.js?v=c5b435e8"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/furo.js?v=32e29ea5"></script>
