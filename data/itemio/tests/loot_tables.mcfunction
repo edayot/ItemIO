@@ -1,7 +1,5 @@
 
 
-datapack disable vanilla
-datapack enable vanilla first
 
 
 setblock ~ ~2 ~ yellow_shulker_box{Items:[{Slot:1b,id:"minecraft:bow",Count:1b}]} replace
