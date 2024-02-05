@@ -4,6 +4,11 @@ on:
     branches:
       - master
 
+env:
+  TEST_FABRIC_SERVER: https://meta.fabricmc.net/v2/versions/loader/1.20.4/0.15.3/0.11.2/server/jar
+  TEST_FABRIC_API: https://cdn.modrinth.com/data/P7dR8mSH/versions/JMCwDuki/fabric-api-0.92.0%2B1.20.4.jar
+  TEST_PACKTEST: https://cdn.modrinth.com/data/XsKUhp45/versions/18smpIeE/packtest-1.6-mc1.20.4.jar
+
 jobs:
   release:
     runs-on: ubuntu-latest
@@ -42,7 +47,18 @@ jobs:
         with:
           name: datapack
           path: build/datapack/
-      - name: Run packtest unit tests
-        uses: CarbonSmasher/packtest_runner@0.2.0
+      - uses: actions/setup-java@v4
         with:
-          packs: 'build/datapack/'
+          distribution: 'temurin'
+          java-version: '17'
+      - name: Download and prepare files
+        run: |
+          curl -o server.jar $TEST_FABRIC_SERVER
+          mkdir mods
+          curl -o mods/fabric-api.jar $TEST_FABRIC_API
+          curl -o mods/packtest.jar $TEST_PACKTEST
+          mkdir -p world/datapacks
+          cp -r build/datapack/ world/datapacks/datapack/
+      - name: Run tests
+        run: |
+          java -Xmx2G -Dpacktest.auto -Dpacktest.auto.annotations -jar server.jar nogui
