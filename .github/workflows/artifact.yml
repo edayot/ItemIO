@@ -60,6 +60,6 @@ jobs:
           mkdir -p world/datapacks
       - name: Run tests
         run: |
-          java -Xmx2G -Dpacktest.auto -Dpacktest.auto.annotations -jar server.jar nogui
+          java -Xmx2G -jar server.jar nogui & sleep 30s && echo "stop" | telnet localhost 25565
           cp -r build/datapack/ world/datapacks/datapack/
           java -Xmx2G -Dpacktest.auto -Dpacktest.auto.annotations -jar server.jar nogui
