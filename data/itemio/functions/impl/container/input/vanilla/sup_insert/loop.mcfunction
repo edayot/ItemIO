@@ -1,6 +1,8 @@
 
 data remove storage itemio:main.input temp.args
 execute store result storage itemio:main.input temp.args.Slot int 1 run scoreboard players get #temp_slot itemio.math.input
+data modify storage itemio:main.input temp.args.nbt_items_path set value "storage blbblb:yolo do_not_use"
+
 function itemio:impl/container/input/custom/input_no_config/process_input with storage itemio:main.input temp.args
 
 
