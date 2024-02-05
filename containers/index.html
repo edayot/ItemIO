@@ -269,7 +269,7 @@ To make a container compatible with IO, you need to specify a format that define
 <li><p>The data location must ends with letters, example:</p>
 <ul>
 <li><p>“block ~ ~ ~ Items” is valid</p></li>
-<li><p>“entity ~ ~ ~ data.complex_list[0]” is not valid, even if it’s a list of items.</p></li>
+<li><p>“entity &#64;s data.complex_list[0]” is not valid, even if it’s a list of items.</p></li>
 </ul>
 </li>
 </ul>
@@ -277,8 +277,8 @@ To make a container compatible with IO, you need to specify a format that define
 <li><p><code class="docutils literal notranslate"><span class="pre">itemio.container.nbt_items.on_passengers</span></code> :</p>
 <ul>
 <li><p>Require <code class="docutils literal notranslate"><span class="pre">itemio.container.nbt_items</span></code>.</p></li>
-<li><p>Indicate if the NBT path is on the passenger of the entity.</p></li>
-<li><p>Can be used to make minecart compatible with IO.</p></li>
+<li><p>For example if yout are using “entity &#64;s …”, the &#64;s will be the passenger of the container entity.</p></li>
+<li><p>Keep in mind that itemio assume that there is only one direct passenger.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">itemio.container.nbt_items.on_vehicle</span></code> :</p>
