@@ -1,9 +1,5 @@
 # @template itemio:barrel_transfer
 
-
-datapack disable vanilla
-datapack enable vanilla first
-
 # origin, destination, count
 # ~3 ~3 ~1, ~3 ~1 ~1, 1
 
