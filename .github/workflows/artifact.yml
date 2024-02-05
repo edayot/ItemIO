@@ -60,7 +60,8 @@ jobs:
           mkdir -p world/datapacks
       - name: Run tests
         run: |
-          echo "eula=true" > eula.txt
-          java -Xmx2G -jar server.jar nogui & sleep 100s && echo "stop" | telnet localhost 25565
+          mkdir -p world/datapacks/fakepack/data/fakepack/tests/
+          echo "succeed" > world/datapacks/fakepack/data/fakepack/tests/succeed.mcfunction
+          java -Xmx2G -Dpacktest.auto -Dpacktest.auto.annotations -jar server.jar nogui
           cp -r build/datapack/ world/datapacks/datapack/
           java -Xmx2G -Dpacktest.auto -Dpacktest.auto.annotations -jar server.jar nogui
