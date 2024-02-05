@@ -62,6 +62,7 @@ jobs:
         run: |
           mkdir -p world/datapacks/fakepack/data/fakepack/tests/
           echo "succeed" > world/datapacks/fakepack/data/fakepack/tests/succeed.mcfunction
+          cp build/datapack/pack.mcmeta world/datapacks/fakepack/pack.mcmeta
           java -Xmx2G -Dpacktest.auto -Dpacktest.auto.annotations -jar server.jar nogui
           cp -r build/datapack/ world/datapacks/datapack/
           java -Xmx2G -Dpacktest.auto -Dpacktest.auto.annotations -jar server.jar nogui
