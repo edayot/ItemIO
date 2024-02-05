@@ -1,4 +1,9 @@
 
+datapack disable "file/datapack"
+datapack enable "file/datapack" after "vanilla"
+await delay 1s
+
+
 
 
 
