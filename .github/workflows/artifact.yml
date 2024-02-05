@@ -58,7 +58,8 @@ jobs:
           curl -o mods/fabric-api.jar $TEST_FABRIC_API
           curl -o mods/packtest.jar $TEST_PACKTEST
           mkdir -p world/datapacks
-          cp -r build/datapack/ world/datapacks/datapack/
       - name: Run tests
         run: |
+          java -Xmx2G -Dpacktest.auto -Dpacktest.auto.annotations -jar server.jar nogui
+          cp -r build/datapack/ world/datapacks/datapack/
           java -Xmx2G -Dpacktest.auto -Dpacktest.auto.annotations -jar server.jar nogui
