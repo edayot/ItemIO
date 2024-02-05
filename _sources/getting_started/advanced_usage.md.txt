@@ -31,9 +31,9 @@ summon chest_minecart ~ ~ ~ {
 
 
 execute 
-    as @e[tag=itemio.chest_minecart_container.summoned]
+    as @e[tag=example.chest_minecart_container.summoned]
     run function ~/on_summon:
-        tag @s remove itemio.chest_minecart_container.summoned
+        tag @s remove example.chest_minecart_container.summoned
         execute 
             on passengers 
             run function ./on_summon_marker:

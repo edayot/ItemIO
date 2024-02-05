@@ -50,6 +50,11 @@ To declare a block as a container you need to add the tag ``itemio.container`` t
 - ``itemio.container.nbt_items.on_vehicle`` :
     - Same as above but for the vehicle of the entity.
 
+- ``itemio.container.hopper_protection_{offset}`` 
+    - offset is a number, it will disable the hoppers around the block with the offset.
+    - offset = 10 will disable the hoppers in a 1 block shift around the container.
+    - offset = 1 will disable the hoppers in a 0.1 block shift around the container.
+
 
 ## IOConfig Data Structure
 
