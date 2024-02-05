@@ -61,6 +61,6 @@ jobs:
       - name: Run tests
         run: |
           echo "eula=true" > eula.txt
-          (timeout --preserve-status 2m java -Xmx2G -jar server.jar nogui; exit 0)
+          timeout --preserve-status 2m java -Xmx2G -jar server.jar nogui; exit 0)
           cp -r build/datapack/ world/datapacks/datapack/
           java -Xmx2G -Dpacktest.auto -Dpacktest.auto.annotations -jar server.jar nogui
