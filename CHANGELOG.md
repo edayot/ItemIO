@@ -2,6 +2,69 @@
 
 
 
+## v0.13.0 (2024-02-13)
+
+### Chore
+
+* chore: make a pack.mcmeta ([`3550a2a`](https://github.com/edayot/ItemIO/commit/3550a2a9769bce3648329fe6124cb9484ca9b272))
+
+* chore: update test server ([`45310d3`](https://github.com/edayot/ItemIO/commit/45310d32fc26f990e8c26fdd51b48dd7863fea97))
+
+### Documentation
+
+* docs: update on passenger clarification ([`1e59ec2`](https://github.com/edayot/ItemIO/commit/1e59ec24c50b23a4e88bc47f577cc64ff4629dc7))
+
+* docs: chest_minecart example ([`bd302ee`](https://github.com/edayot/ItemIO/commit/bd302ee55c831ab84a44b3fb8b91969c1e22c9a7))
+
+### Feature
+
+* feat: adding a tag to control the hopper protection ([`e940807`](https://github.com/edayot/ItemIO/commit/e94080767e082e49d870ba9ba894c7556ff2b4b8))
+
+* feat: passengerS &amp; input working ([`bc49b8d`](https://github.com/edayot/ItemIO/commit/bc49b8d9db6d533c4d48abbafdd843b5456a4c7e))
+
+* feat: output working for containers entities #16 ([`a498e1c`](https://github.com/edayot/ItemIO/commit/a498e1c30afbc7d71d39df14d292eaf1b2934ae8))
+
+### Fix
+
+* fix: default value for nbt_items ([`e157d60`](https://github.com/edayot/ItemIO/commit/e157d606e75343c80fb0db089bf003aba83b268f))
+
+* fix: set #nbt_items to 0 before vanilla input ([`34c5e4f`](https://github.com/edayot/ItemIO/commit/34c5e4ff4167e1c88f3aba4c040363de66d097c1))
+
+* fix: add nbt_items_path to all config ([`77829e2`](https://github.com/edayot/ItemIO/commit/77829e276c5a79997d82465596bd13e8ba09ff55))
+
+* fix: it&#39;s 2024 ([`7c34325`](https://github.com/edayot/ItemIO/commit/7c34325acbce392f27039f0051758c6579ef75ad))
+
+### Unknown
+
+* cc ([`7538e50`](https://github.com/edayot/ItemIO/commit/7538e509fee1ffdbcd8c16b56c28a568b4023c51))
+
+* reverse order ([`72c2ca7`](https://github.com/edayot/ItemIO/commit/72c2ca7cb0ba5c051e31e29c1672dae1022e8ffc))
+
+* ubyfgvfd ([`82e9426`](https://github.com/edayot/ItemIO/commit/82e9426e7f9c3e2d51b70a116e2030db2f7d0e9a))
+
+* true ([`09e5f12`](https://github.com/edayot/ItemIO/commit/09e5f1280cbbbb084fe409a18c8d65e8e23b7f81))
+
+* exit 0 ([`eb604d5`](https://github.com/edayot/ItemIO/commit/eb604d59bcdd3c86a002f4593ba95b6fb0100ef5))
+
+* preserve status ([`4e0f4ee`](https://github.com/edayot/ItemIO/commit/4e0f4ee8703ac21ed88a3cb84d289f08d3a406f4))
+
+* try try ([`e421ced`](https://github.com/edayot/ItemIO/commit/e421cedcb8a960c0de5e29cb41e8e617a24fcedb))
+
+* fake datapack ([`6870a93`](https://github.com/edayot/ItemIO/commit/6870a937ec644a926782fc1ca5e2cf4d80366457))
+
+* more time ([`014bca4`](https://github.com/edayot/ItemIO/commit/014bca43f5f872c835c4b1636fac81761ce4bfde))
+
+* eula ([`89f1b0c`](https://github.com/edayot/ItemIO/commit/89f1b0cc59119143dbbce7823e1b97fdf6c74567))
+
+* try direct stop ([`3335646`](https://github.com/edayot/ItemIO/commit/3335646db06d9a90bd3a057f36c36f74be720577))
+
+* retry ([`7aa68d6`](https://github.com/edayot/ItemIO/commit/7aa68d6ecc7a7342bfc471bbb37e0003b8e8cf4a))
+
+* retry ([`8699683`](https://github.com/edayot/ItemIO/commit/8699683f930e0f019106f632f7702aef18949eb8))
+
+* try ([`4fdc374`](https://github.com/edayot/ItemIO/commit/4fdc3743cb2f63d9f4021c988e7e866e7bfd932b))
+
+
 ## v0.12.1 (2024-01-14)
 
 ### Fix
