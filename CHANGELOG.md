@@ -2,6 +2,13 @@
 
 
 
+## v0.13.1 (2024-02-13)
+
+### Fix
+
+* fix: offset wasn&#39;t working fine ([`e5d8f47`](https://github.com/edayot/ItemIO/commit/e5d8f4763f9a8005218b8dbfe414cd90393b2efb))
+
+
 ## v0.13.0 (2024-02-13)
 
 ### Chore
