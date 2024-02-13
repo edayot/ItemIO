@@ -54,6 +54,7 @@ To declare a block as a container you need to add the tag ``itemio.container`` t
     - offset is a number, it will disable the hoppers around the block with the offset.
     - offset = 10 will disable the hoppers in a 1 block shift around the container.
     - offset = 1 will disable the hoppers in a 0.1 block shift around the container.
+    - offset range from 1 to 20.
 
 
 ## IOConfig Data Structure
