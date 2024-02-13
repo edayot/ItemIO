@@ -8,10 +8,10 @@ def tag_offset(offset):
     offset_float = offset / 10
     generate_predicates(ctx, offset_float)
 
-    pred_1 = f"itemio:impl/container/hopper_x_plus_{offset}"
-    pred_2 = f"itemio:impl/container/hopper_z_plus_{offset}"
-    pred_3 = f"itemio:impl/container/hopper_x_minus_{offset}"
-    pred_4 = f"itemio:impl/container/hopper_z_minus_{offset}"
+    pred_1 = f"itemio:impl/container/hopper_x_plus_{offset_float}"
+    pred_2 = f"itemio:impl/container/hopper_z_plus_{offset_float}"
+    pred_3 = f"itemio:impl/container/hopper_x_minus_{offset_float}"
+    pred_4 = f"itemio:impl/container/hopper_z_minus_{offset_float}"
 
     tag_name = f"itemio.container.hopper_protection_{offset}"
     function_name = f"itemio:impl/container/disabling_hopper/{offset}"
@@ -21,27 +21,27 @@ def tag_offset(offset):
 
     function function_name:
         execute
-            positioned ~offset_float ~ ~
             if predicate pred_1
-            run function itemio:impl/container/hopper
-
-        execute
-            positioned ~ ~ ~offset_float
-            if predicate pred_2
-            run function itemio:impl/container/hopper
-
-        execute
             positioned ~offset_float ~ ~
-            if predicate pred_3
             run function itemio:impl/container/hopper
 
         execute
+            if predicate pred_2
             positioned ~ ~ ~offset_float
+            run function itemio:impl/container/hopper
+
+        execute
+            if predicate pred_3
+            positioned ~-offset_float ~ ~
+            run function itemio:impl/container/hopper
+
+        execute
             if predicate pred_4
+            positioned ~ ~ ~-offset_float
             run function itemio:impl/container/hopper
 
 
-for offset in range(1, 11):
+for offset in range(1, 20):
     tag_offset(offset)
 
 
