@@ -20,8 +20,31 @@ $ poetry install
 The datapack is compiled using the [beet](https://mcbeet.dev).
 
 ```bash
-$ make watch # Compile the datapack on file change
+# Build the datapack
+$ make b BUILD_TYPE=release
+
+# Build the datapack in live mode
+$ make watch
 ```
+
+:::{admonition} Env variables
+:class: seealso
+Can be pass or set in the `.env` file.
+- `BUILD_TYPE` : `release` or `debug` (optional)
+- `MINECRAFT_FOLDER` : The path to the minecraft folder (required for watch)
+- `SAVE_FOLDER` : The path to the save folder (required for watch)
+- `DATAPACKS_FOLDER` : The path to the datapacks folder (required for watch)
+- `RESOURCES_PACK_FOLDER` : The path to the resourcepacks folder (required for watch)
+
+Example :
+```bash
+MINECRAFT_FOLDER = /mnt/c/Users/erwan/AppData/Roaming/PrismLauncher/instances/Simply\ Optimized\(1\)/.minecraft/
+SAVE_FOLDER = $(MINECRAFT_FOLDER)saves/Datapack\ island/
+DATAPACKS_FOLDER = $(SAVE_FOLDER)datapacks/
+RESOURCES_PACK_FOLDER = $(MINECRAFT_FOLDER)resourcepacks/
+```
+
+:::
 
 
 ## Documentation

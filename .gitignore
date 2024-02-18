@@ -10,5 +10,6 @@ _build/
 *.zip
 !releases/included/*.zip
 !releases/included/none/pack.mcmeta
+.env
 
 build

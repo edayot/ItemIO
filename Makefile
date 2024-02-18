@@ -1,10 +1,15 @@
 
+# check for a .env file and load it if it exists
+ifeq ($(wildcard .env),)
+    include_env :=
+else
+    include_env := .env
+endif
 
-MINECRAFT_FOLDER = /mnt/c/Users/erwan/AppData/Roaming/PrismLauncher/instances/Simply\ Optimized\(1\)/.minecraft/
-SAVE_FOLDER = $(MINECRAFT_FOLDER)saves/Datapack\ island/
-DATAPACKS_FOLDER = $(SAVE_FOLDER)datapacks/
-RESOURCES_PACK_FOLDER = $(MINECRAFT_FOLDER)resourcepacks/
-
+# If .env exists, include it
+ifneq ($(include_env),)
+    include $(include_env)
+endif
 
 # BUILD_TYPE is an argument passed via make build BUILD_TYPE=release
 BUILD_TYPE ?= dev
@@ -65,6 +70,28 @@ BUNDLED_ARGS = $(ARGS) \
 
 
 # Build
+
+check_env:
+
+# trow error if any of the required environment variables are not set
+# - MINECRAFT_FOLDER
+# - SAVE_FOLDER
+# - DATAPACKS_FOLDER
+# - RESOURCES_PACK_FOLDER
+
+ifndef MINECRAFT_FOLDER
+	$(error MINECRAFT_FOLDER is not set)
+endif
+ifndef SAVE_FOLDER
+	$(error SAVE_FOLDER is not set)
+endif
+ifndef DATAPACKS_FOLDER
+	$(error DATAPACKS_FOLDER is not set)
+endif
+ifndef RESOURCES_PACK_FOLDER
+	$(error RESOURCES_PACK_FOLDER is not set)
+endif
+
 b: clean
 ifeq ($(BUILD_TYPE), dev)
 	@poetry run beet $(UNBUNDLED_ARGS) build
@@ -76,7 +103,7 @@ endif
 watch: link
 	@poetry run beet $(UNBUNDLED_ARGS) watch 
 
-link:
+link: check_env
 	@poetry run beet l --minecraft $(MINECRAFT_FOLDER) --data-pack $(DATAPACKS_FOLDER) --resource-pack $(RESOURCES_PACK_FOLDER) 
 
 
