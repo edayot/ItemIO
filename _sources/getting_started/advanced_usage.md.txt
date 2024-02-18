@@ -1,7 +1,12 @@
 # 🔧 Advanced Usage
 
 
-# A minecart chest, but custom
+## A minecart chest, but custom
+
+:::{admonition} Warning
+:class: warning
+This is a proof of concept, this usage is not recommended.
+:::
 
 
 This function uses the `itemio.container.nbt_items` and `itemio.container.nbt_items.on_vehicle` tags to make a minecart chest with an ioconfig. The ioconfig is set to accept only dirt in the first 3 slots, and the nbt_items_path is set to "entity @s Items".

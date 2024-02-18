@@ -136,7 +136,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -162,7 +162,6 @@
 <li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">🚀 Getting Started</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of 🚀 Getting Started</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="basic_usage.html">📚 Basic Usage</a></li>
 <li class="toctree-l2 current current-page"><a class="current reference internal" href="#">🔧 Advanced Usage</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#a-minecart-chest-but-custom">A minecart chest, but custom</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../containers/index.html">📦 Containers</a></li>
@@ -224,7 +223,7 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
@@ -232,9 +231,12 @@
         <article role="main">
           <section class="tex2jax_ignore mathjax_ignore" id="advanced-usage">
 <h1>🔧 Advanced Usage<a class="headerlink" href="#advanced-usage" title="Link to this heading">#</a></h1>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="a-minecart-chest-but-custom">
-<h1>A minecart chest, but custom<a class="headerlink" href="#a-minecart-chest-but-custom" title="Link to this heading">#</a></h1>
+<section id="a-minecart-chest-but-custom">
+<h2>A minecart chest, but custom<a class="headerlink" href="#a-minecart-chest-but-custom" title="Link to this heading">#</a></h2>
+<div class="warning admonition">
+<p class="admonition-title">Warning</p>
+<p>This is a proof of concept, this usage is not recommended.</p>
+</div>
 <p>This function uses the <code class="docutils literal notranslate"><span class="pre">itemio.container.nbt_items</span></code> and <code class="docutils literal notranslate"><span class="pre">itemio.container.nbt_items.on_vehicle</span></code> tags to make a minecart chest with an ioconfig. The ioconfig is set to accept only dirt in the first 3 slots, and the nbt_items_path is set to “entity &#64;s Items”.</p>
 <p>Under the hood, the container is the marker entity, but it points to the minecart chest via an <code class="docutils literal notranslate"><span class="pre">execute</span> <span class="pre">on</span> <span class="pre">vehicle</span></code> command.</p>
 <p>Here it’s required to use a marker, because an chest_minecart can’t hold an itemio.ioconfig NBT tag.</p>
@@ -291,6 +293,7 @@
 <span class="w">                </span><span class="kc">function</span><span class="w"> </span><span class="nf">#itemio:calls/container/init</span>
 </pre></div>
 </div>
+</section>
 </section>
 
         </article>
@@ -930,8 +933,27 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">🔧 Advanced Usage</a><ul>
+<li><a class="reference internal" href="#a-minecart-chest-but-custom">A minecart chest, but custom</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>
