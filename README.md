@@ -8,12 +8,11 @@
 <img src="https://github.com/edayot/ItemIO/blob/master/docs/assets/banner.png?raw=true" width="300">
 </p>
 
-A Minecraft Datapack library for handling items transportation and container declaration, such as for Simpledrawer or EnergyUtils. This library manages the following:
-* Entity format for declaring custom containers based on vanilla ones.
-* Cable system for transporting items between containers.
-* Servo system for extracting and inserting items into containers.
-* Custom filters handling for servos and more.
-* Function call to output, input and transfer items between containers.
+The all in one library to handle item transportation / container declaration in datapacks.
+
+* A cable system, to transport items between locations
+* An entity based container declaration
+* A filter system, that can be added to any slots
 
 This is an embedded library, so you package it inside your datapack as opposed to having a separate download. Requires [LanternLoad](https://github.com/LanternMC/load) to operate.
 
@@ -22,7 +21,7 @@ This is an embedded library, so you package it inside your datapack as opposed t
 ## Getting started
 ItemIO is a quite complex library, and it can be hard to understand how to use it.
 
-- See the [documentation](https://edayot.github.io/ItemIO/index.html) (under contruction)
+- See the [documentation](https://edayot.github.io/ItemIO/index.html)
 
 - Take a look at some datapacks that uses ItemIO [here](https://edayot.github.io/ItemIO/featured.html).
 
