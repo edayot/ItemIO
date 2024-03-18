@@ -25,6 +25,17 @@ ItemIO is a quite complex library, and it can be hard to understand how to use i
 
 - Take a look at some datapacks that uses ItemIO [here](https://edayot.github.io/ItemIO/featured.html).
 
+## The lib in action : 
+
+Here are some videos of the lib in action, with a complete cable system.
+
+The barrel on the right only accepts dirt in the second row of the chest and the barrel on the left is a normal barrel.
+
+![Video 1](https://github.com/edayot/ItemIO/blob/master/videos/reverse_compress.mp4?raw=true)
+![Video 1](https://github.com/edayot/ItemIO/blob/master/videos/full_input_compress.mp4?raw=true)
+![Video 1](https://github.com/edayot/ItemIO/blob/master/videos/filter_compress.mp4?raw=true)
+
+
 ## Contributing
 
 Contributions are always welcome! see the [contributing page](https://edayot.github.io/ItemIO/contributing.html) for more information.
