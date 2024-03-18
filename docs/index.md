@@ -70,6 +70,34 @@ The documentation of the function calls
 
 ::::
 
+
+
+
+
+## The datapack in action
+
+
+::::::{grid} 1 1 1 1
+:gutter: 2
+
+:::{grid-item-card}
+<video controls src="https://github.com/edayot/ItemIO/blob/master/docs/assets/reverse_compress.mp4?raw=true" title="" width="100%"></video>
+:::
+
+
+:::{grid-item-card}
+<video controls src="https://github.com/edayot/ItemIO/blob/master/docs/assets/full_input_compress.mp4?raw=true" title="" width="100%"></video>
+:::
+:::{grid-item-card}
+<video controls src="https://github.com/edayot/ItemIO/blob/master/docs/assets/filter_compress.mp4?raw=true" title="" width="100%"></video>
+:::
+
+::::::
+
+
+
+
+
 ```{toctree}
 :hidden:
 getting_started/index
