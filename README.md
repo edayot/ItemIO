@@ -31,9 +31,9 @@ Here are some videos of the lib in action, with a complete cable system.
 
 The barrel on the right only accepts dirt in the second row of the chest and the barrel on the left is a normal barrel.
 
-![Video 1](https://github.com/edayot/ItemIO/blob/master/videos/reverse_compress.mp4?raw=true)
-![Video 1](https://github.com/edayot/ItemIO/blob/master/videos/full_input_compress.mp4?raw=true)
-![Video 1](https://github.com/edayot/ItemIO/blob/master/videos/filter_compress.mp4?raw=true)
+https://github.com/edayot/ItemIO/blob/master/videos/reverse_compress.mp4
+https://github.com/edayot/ItemIO/blob/master/videos/full_input_compress.mp4
+https://github.com/edayot/ItemIO/blob/master/videos/filter_compress.mp4
 
 
 ## Contributing
