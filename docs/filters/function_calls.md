@@ -52,7 +52,7 @@ execute
         scoreboard players set #filter.valid_item itemio.io 0
         # If the item as an energy tag, it's valid
         execute 
-            if data storage itemio:io item.tag.energy 
+            if data storage itemio:io item.components."minecraft:custom_data".energy 
             run scoreboard players set #filter.valid_item itemio.io 1
 ```
 It's a filter that actually exist in the library check [this](https://github.com/edayot/ItemIO/blob/master/data/itemio/functions/impl/filters/repart.mcfunction).

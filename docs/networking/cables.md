@@ -75,7 +75,7 @@ execute
 
         scoreboard players operation #model transportduct.math += @s itemio.math
         execute 
-            store result entity @s item.tag.CustomModelData int 1 
+            store result entity @s item.components."minecraft:custom_data".CustomModelData int 1 
             run scoreboard players get #model transportduct.math
 ```
 `````

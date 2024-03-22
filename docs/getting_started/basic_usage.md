@@ -32,8 +32,8 @@ execute
     summon item_display
     run function example:my_block/place_entity:
         # Define the ioconfig
-        data modify entity @s item.tag.itemio.ioconfig set value []
-        data modify entity @s item.tag.itemio.ioconfig append value {
+        data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig set value []
+        data modify entity @s item.components."minecraft:custom_data".itemio.ioconfig append value {
             Slot:0b,
             mode: "input",
             allowed_side:{bottom:1b},

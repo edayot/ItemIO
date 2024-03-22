@@ -19,11 +19,11 @@ Containers as to be configured depending on what entity you use you have to use 
 
 - For makers : ``data.itemio.ioconfig``
 
-- For item_frames : ``Item.tag.itemio.ioconfig``
+- For item_frames : ``Item.components."minecraft:custom_data".itemio.ioconfig``
 
-- For armor_stands : ``ArmorItems[3].tag.itemio.ioconfig``
+- For armor_stands : ``ArmorItems[3].components."minecraft:custom_data".itemio.ioconfig``
 
-- For item_display : ``item.tag.itemio.ioconfig``
+- For item_display : ``item.components."minecraft:custom_data".itemio.ioconfig``
 
 ## Tags
 
@@ -82,7 +82,7 @@ IOConfig are dictionary that define what can be in a slot or not, they are dynam
 
 :::{admonition} Ignored items
 :class: seealso
-All items matching ``<item>.tag.itemio.gui: 1b``, will be ignored by ItemIO.
+All items matching ``<item>.components."minecraft:custom_data".itemio.gui: 1b``, will be ignored by ItemIO.
 :::
 
 

@@ -95,7 +95,7 @@ execute
         execute 
             if entity @s[tag=itemio.servo.extract]
             run scoreboard players add #model transportduct.math 2
-        execute store result entity @s Item.tag.CustomModelData int 1 run scoreboard players get #model transportduct.math
+        execute store result entity @s Item.components."minecraft:custom_data".CustomModelData int 1 run scoreboard players get #model transportduct.math
 
 
 
