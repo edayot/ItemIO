@@ -20,7 +20,7 @@ scoreboard players set #success_input itemio.io 1
 
 scoreboard players set #count_input itemio.math.input 0
 
-data modify storage itemio:main.input input.Count set value 0
+data modify storage itemio:main.input input.count set value 0
 
 
 #tellraw @a [{"text":"#count_input : "},{"score":{"name":"#count_input","objective":"itemio.math.input"}}]

@@ -65,10 +65,10 @@ execute if score #test_side itemio.math.input matches 0 if data storage itemio:i
 
 data remove storage itemio:io output
 data modify storage itemio:io output set from storage itemio:io input
-data modify storage itemio:io output.Count set from storage itemio:main.input input.Count
+data modify storage itemio:io output.count set from storage itemio:main.input input.count
 
-execute store result score #count_input itemio.math.input run data get storage itemio:io input.Count
-execute store result score #count_output itemio.math.input run data get storage itemio:io output.Count
+execute store result score #count_input itemio.math.input run data get storage itemio:io input.count
+execute store result score #count_output itemio.math.input run data get storage itemio:io output.count
 
 scoreboard players set #count_to_remove itemio.math.input 0
 scoreboard players operation #count_to_remove itemio.math.input = #count_input itemio.math.input

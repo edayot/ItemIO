@@ -1,5 +1,5 @@
-$execute store result score #count_container itemio.math.input run data get storage itemio:main.input Items[{Slot:$(Slot)b}].Count
-execute store result score #count_input itemio.math.input run data get storage itemio:main.input input.Count
+$execute store result score #count_container itemio.math.input run data get storage itemio:main.input Items[{Slot:$(Slot)b}].count
+execute store result score #count_input itemio.math.input run data get storage itemio:main.input input.count
 
 
 scoreboard players set #full_stack itemio.math.input 64

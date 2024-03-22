@@ -13,6 +13,6 @@ function ~/nbt_items:
 
 
 
-data modify storage itemio:main.input input.Count set value 0b
+data modify storage itemio:main.input input.count set value 0b
 
 

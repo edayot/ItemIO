@@ -4,9 +4,9 @@ data remove storage itemio:main.output Item2
 
 data modify storage itemio:main.output Item1 set from storage itemio:main.output input
 data modify storage itemio:main.output Item2 set from storage itemio:io Item_auto_output
-data remove storage itemio:main.output Item1.Count
+data remove storage itemio:main.output Item1.count
 data remove storage itemio:main.output Item1.Slot
-data remove storage itemio:main.output Item2.Count
+data remove storage itemio:main.output Item2.count
 data remove storage itemio:main.output Item2.Slot
 
 execute store result score #!same_item itemio.math.output run data modify storage itemio:main.output Item1 set from storage itemio:main.output Item2

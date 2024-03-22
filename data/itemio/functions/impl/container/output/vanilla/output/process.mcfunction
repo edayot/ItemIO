@@ -4,8 +4,8 @@ scoreboard players set #success_output itemio.io 1
 data modify storage itemio:io output set from storage itemio:main.output Items[0]
 
 #check maxcount
-execute store result score #test_count_output itemio.math.output run data get storage itemio:io output.Count
-execute if score #test_count_output itemio.math.output > #max_output_count itemio.io store result storage itemio:io output.Count int 1 run scoreboard players get #max_output_count itemio.io
+execute store result score #test_count_output itemio.math.output run data get storage itemio:io output.count
+execute if score #test_count_output itemio.math.output > #max_output_count itemio.io store result storage itemio:io output.count int 1 run scoreboard players get #max_output_count itemio.io
 
 scoreboard players operation #remove_count itemio.math.output = #max_output_count itemio.io
 

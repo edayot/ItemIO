@@ -17,7 +17,7 @@ execute as 93682a08-d099-4e8f-a4a6-1e33a3692301 if predicate itemio:impl/stack1 
 execute if score #crafter_input itemio.math.input matches 1 run scoreboard players set #full_stack itemio.math.input 1
 
 
-execute store result score #count_input itemio.math.input run data get storage itemio:main.input input.Count
+execute store result score #count_input itemio.math.input run data get storage itemio:main.input input.count
 
 
 scoreboard players operation #needed_stack itemio.math.input = #count_input itemio.math.input
