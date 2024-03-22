@@ -2,6 +2,61 @@
 
 
 
+## v0.13.2 (2024-03-22)
+
+### Chore
+
+* chore(deps): bump cryptography from 41.0.7 to 42.0.4
+
+Bumps [cryptography](https://github.com/pyca/cryptography) from 41.0.7 to 42.0.4.
+- [Changelog](https://github.com/pyca/cryptography/blob/main/CHANGELOG.rst)
+- [Commits](https://github.com/pyca/cryptography/compare/41.0.7...42.0.4)
+
+---
+updated-dependencies:
+- dependency-name: cryptography
+  dependency-type: direct:production
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`19ff00b`](https://github.com/edayot/ItemIO/commit/19ff00b5e902aa7996f61151eb5167b4f9c6aa2a))
+
+* chore: fix b is required ([`916b5fe`](https://github.com/edayot/ItemIO/commit/916b5fed1d2f6811382ae7dc652ba51c3b4781a4))
+
+* chore: no more env variables hardcoded ([`43bb7e3`](https://github.com/edayot/ItemIO/commit/43bb7e38247577dc50cf8c90c783e0a62faef1cf))
+
+### Documentation
+
+* docs: moving files ([`f0675e2`](https://github.com/edayot/ItemIO/commit/f0675e2195a2bb23b7c374564a125a7d2edb1fe1))
+
+* docs: videos to readme ([`f5531da`](https://github.com/edayot/ItemIO/commit/f5531dafc78df8e441104e8ee598815efc30ab6d))
+
+* docs: add 3_2 banner ([`3ed2a77`](https://github.com/edayot/ItemIO/commit/3ed2a77cedeb7172f6e1ca66ab8ac94b68612511))
+
+* docs: add 4_3 banner ([`a319f22`](https://github.com/edayot/ItemIO/commit/a319f22740489fb58bc348307a1c3cc68ece3e07))
+
+* docs: add known limitation page #19 ([`b58d3a1`](https://github.com/edayot/ItemIO/commit/b58d3a15a566faf0c6910121767c995fee8c7f3f))
+
+* docs: Update README.md ([`8ff9414`](https://github.com/edayot/ItemIO/commit/8ff9414f2c90a64ac79236df40edbcb3c574d31d))
+
+### Feature
+
+* feat: adding vids to the doc ([`7717036`](https://github.com/edayot/ItemIO/commit/77170362bf3d2c177ffc8d7d7436fbc8800d5597))
+
+### Fix
+
+* fix: Dup glitch when inputing more than 64 items in a container ([`97505d9`](https://github.com/edayot/ItemIO/commit/97505d9b431ca91ad4fb0d04822d5618d4d472c3))
+
+### Unknown
+
+* delete ([`5bfa493`](https://github.com/edayot/ItemIO/commit/5bfa49320369979f341a4e0d8674f32ef6711a52))
+
+* Update readme ([`6260972`](https://github.com/edayot/ItemIO/commit/62609726b219b3017b016de305f34464a71dfd7e))
+
+* Merge pull request #21 from edayot/dependabot/pip/cryptography-42.0.4
+
+chore(deps): bump cryptography from 41.0.7 to 42.0.4 ([`6f61131`](https://github.com/edayot/ItemIO/commit/6f61131c688a0d6931bf8dae1d3a46fee1249d76))
+
+
 ## v0.13.1 (2024-02-13)
 
 ### Fix
