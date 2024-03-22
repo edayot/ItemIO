@@ -1,5 +1,5 @@
 
-
+# say inf_insert
 
 scoreboard players set #loop_count_input itemio.math.input 0
 scoreboard players operation #loop_count_input itemio.math.input = #count_input itemio.math.input
@@ -9,6 +9,7 @@ execute if score #loop_count_input itemio.math.input matches 1.. run function it
 
 
 
+# tellraw @a [{"text":"storage : "},{"nbt":"inputs","storage":"itemio:main.input"}]
 
 
 execute in minecraft:overworld run function itemio:impl/container/input/vanilla/inf_insert/dimension

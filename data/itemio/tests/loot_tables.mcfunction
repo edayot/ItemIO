@@ -15,7 +15,7 @@ dummy jeb_ respawn
 
 await delay 2s
 
-loot give jeb_ mine ~ ~2 ~ air{drop_contents:1b}
+loot give jeb_ mine ~ ~2 ~ command_block[minecraft:custom_data={drop_contents:1b}]
 
 assert data entity jeb_ SelectedItem{id:"minecraft:bow"}
 

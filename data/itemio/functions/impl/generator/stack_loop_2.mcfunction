@@ -20,9 +20,9 @@ setblock -30000000 24 1610 furnace
 setblock -30000000 25 1610 blast_furnace
 setblock -30000000 26 1610 smoker
 
-loot insert -30000000 24 1610 mine -30000000 22 1610 air{drop_contents:1b}
-loot insert -30000000 25 1610 mine -30000000 22 1610 air{drop_contents:1b}
-loot insert -30000000 26 1610 mine -30000000 22 1610 air{drop_contents:1b}
+raw loot insert -30000000 24 1610 mine -30000000 22 1610 command_block[minecraft:custom_data={drop_contents:1b}]
+raw loot insert -30000000 25 1610 mine -30000000 22 1610 command_block[minecraft:custom_data={drop_contents:1b}]
+raw loot insert -30000000 26 1610 mine -30000000 22 1610 command_block[minecraft:custom_data={drop_contents:1b}]
 
 $execute if data block -30000000 24 1610 Items[{Slot:1b}] run data modify storage itemio:main temp.result_furnace set value '$(result_furnace)"$(item)",'
 $execute if data block -30000000 25 1610 Items[{Slot:1b}] run data modify storage itemio:main temp.result_blast_furnace set value '$(result_blast_furnace)"$(item)",'
