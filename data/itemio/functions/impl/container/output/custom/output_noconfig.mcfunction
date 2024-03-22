@@ -27,6 +27,7 @@ execute
             if entity @s[type=#itemio:item_display] 
             run data modify storage itemio:main.output nbt_items_path set from entity @s item.components."minecraft:custom_data".itemio.nbt_items_path
         
+        scoreboard players set #nb_entities itemio.math.output 0
         execute if entity @s[tag=itemio.container.nbt_items.on_passengers] on passengers run function ./nbt_items with storage itemio:main.output {}
         execute if entity @s[tag=itemio.container.nbt_items.on_vehicle] on vehicle run function ./nbt_items with storage itemio:main.output {}
         execute if entity @s[tag=!itemio.container.nbt_items.on_passengers,tag=!itemio.container.nbt_items.on_vehicle] run function ./nbt_items with storage itemio:main.output {}
@@ -35,6 +36,7 @@ execute
 function ./nbt_items:
     $execute unless data $(nbt_items_path) run data modify $(nbt_items_path) set value []
     $data modify storage itemio:main.output Items set from $(nbt_items_path)
+    scoreboard players add #nb_entities itemio.math.output 1
     
 
 data remove storage itemio:main.output Items[{tag:{itemio:{gui:1b}}}]
@@ -57,4 +59,7 @@ data modify storage itemio:main.output temp.args_loop_ioconfig.output_side set f
 # tellraw @p [{"text":"Items : "},{"nbt":"Items","storage":"itemio:main.output"}]
 # tellraw @p [{"text":"ioconfig : "},{"nbt":"ioconfig","storage":"itemio:main.output"}]
 
-execute if data storage itemio:main.output ioconfig[0] run function itemio:impl/container/output/custom/output_noconfig/loop_ioconfig with storage itemio:main.output temp.args_loop_ioconfig
+execute
+    if score #nb_entities itemio.math.output matches 1 
+    if data storage itemio:main.output ioconfig[0] 
+    run function itemio:impl/container/output/custom/output_noconfig/loop_ioconfig with storage itemio:main.output temp.args_loop_ioconfig

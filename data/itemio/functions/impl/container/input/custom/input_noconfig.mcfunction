@@ -43,6 +43,7 @@ execute
             if entity @s[type=#itemio:item_display] 
             run data modify storage itemio:main.input nbt_items_path set from entity @s item.components."minecraft:custom_data".itemio.nbt_items_path
         
+        scoreboard players set #nb_entities itemio.math.input 0
         execute if entity @s[tag=itemio.container.nbt_items.on_passengers] on passengers run function ./nbt_items with storage itemio:main.input {}
         execute if entity @s[tag=itemio.container.nbt_items.on_vehicle] on vehicle run function ./nbt_items with storage itemio:main.input {}
         execute if entity @s[tag=!itemio.container.nbt_items.on_passengers,tag=!itemio.container.nbt_items.on_vehicle] run function ./nbt_items with storage itemio:main.input {}
@@ -51,6 +52,7 @@ execute
 function ./nbt_items:
     $execute unless data $(nbt_items_path) run data modify $(nbt_items_path) set value []
     $data modify storage itemio:main.input Items set from $(nbt_items_path)
+    scoreboard players add #nb_entities itemio.math.input 1
     
 data remove storage itemio:main.input Items[{tag:{itemio:{gui:1b}}}]
 data remove storage itemio:main.input input
@@ -58,9 +60,13 @@ data modify storage itemio:main.input input set from storage itemio:io input
 
 scoreboard players set #test_side itemio.math.input 0
 for facebbbb in ["north","south","east","west","top","bottom"]:
-    raw f"execute if score #test_side itemio.math.input matches 0 if data storage itemio:io {{input_side: \"{facebbbb}\"}} run function itemio:impl/container/input/custom/input_no_config/loop_ioconfig/{facebbbb}"
+    raw f"execute if score #nb_entities itemio.math.input matches 1 if score #test_side itemio.math.input matches 0 if data storage itemio:io {{input_side: \"{facebbbb}\"}} run function itemio:impl/container/input/custom/input_no_config/loop_ioconfig/{facebbbb}"
 
-execute if score #test_side itemio.math.input matches 0 if data storage itemio:io {input_side:"wireless"} run function itemio:impl/container/input/custom/input_no_config/loop_ioconfig
+execute 
+    if score #nb_entities itemio.math.input matches 1 
+    if score #test_side itemio.math.input matches 0 
+    if data storage itemio:io {input_side:"wireless"} 
+    run function itemio:impl/container/input/custom/input_no_config/loop_ioconfig
 
 
 data remove storage itemio:io output
