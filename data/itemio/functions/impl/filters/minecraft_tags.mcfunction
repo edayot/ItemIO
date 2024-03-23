@@ -1,12 +1,15 @@
 from beet import Context, Predicate
 import json
+import semver
 
 
 def cache_tag_list(ctx: Context):
     """
     Cache the list of tags.
     """
-    MC_VERSION = ctx.minecraft_version
+    mc_versions = ctx.meta["mc_supports"]
+    mc_versions.sort(key=semver.VersionInfo.parse)
+    MC_VERSION = mc_versions[-1]
     URL = f"https://raw.githubusercontent.com/misode/mcmeta/{MC_VERSION}-registries/tag/item/data.json"
     cache = ctx.cache["itemio"]
     return cache.download(URL)
