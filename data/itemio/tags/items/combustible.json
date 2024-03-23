@@ -1,5 +1,5 @@
 {
-    "replace":"true",
+    "replace":true,
     "values":[
        "acacia_boat",
        "acacia_button",
