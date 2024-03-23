@@ -39,7 +39,7 @@ function ./nbt_items:
     scoreboard players add #nb_entities itemio.math.output 1
     
 
-data remove storage itemio:main.output Items[{tag:{itemio:{gui:1b}}}]
+data remove storage itemio:main.output Items[{components:{"minecraft:custom_data":{itemio:{gui:1b}}}}]
 
 data remove storage itemio:main.output input
 data modify storage itemio:main.output input set from storage itemio:io input

@@ -54,7 +54,7 @@ function ./nbt_items:
     $data modify storage itemio:main.input Items set from $(nbt_items_path)
     scoreboard players add #nb_entities itemio.math.input 1
     
-data remove storage itemio:main.input Items[{tag:{itemio:{gui:1b}}}]
+data remove storage itemio:main.input Items[{components:{"minecraft:custom_data":{itemio:{gui:1b}}}}]
 data remove storage itemio:main.input input
 data modify storage itemio:main.input input set from storage itemio:io input
 
