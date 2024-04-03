@@ -1,4 +1,6 @@
 #define storage itemio:main
+#define storage itemio:main.input
+#define storage itemio:main.output
 
 
 
