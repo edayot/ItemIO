@@ -7,7 +7,7 @@ await delay 1s
 
 
 
-setblock ~ ~2 ~ yellow_shulker_box{Items:[{Slot:1b,id:"minecraft:bow",Count:1b}]} replace
+setblock ~ ~2 ~ yellow_shulker_box{Items:[{Slot:1b,id:"minecraft:bow",count:1}]} replace
 
 dummy jeb_ leave
 dummy jeb_ spawn
