@@ -2,11 +2,6 @@
 
 
 
-data modify entity 93682a08-d099-4e8f-a4a6-1e33a3692301 HandItems[0] set from storage itemio:main.input input
-execute as 93682a08-d099-4e8f-a4a6-1e33a3692301 store result score #stack_size itemio.math.input run function itemio:impl/utils/get_stack_size
-
-
-
 # get the count in the crafter at $(Slot)
 $scoreboard players set #count_crafter itemio.math.input $(count)
 scoreboard players add #count_crafter itemio.math.input 1
