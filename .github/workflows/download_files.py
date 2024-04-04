@@ -29,8 +29,8 @@ fabric_serv_url = (
 fabric_api_url = get_modrinth_url("fabric-api", FABRIC_API_VERSION)
 packtest_url = get_modrinth_url("packtest", PACKTEST_VERSION)
 
-download_file(fabric_serv_url, f"server.jar")
-download_file(fabric_api_url, f"mods/fabric-api.jar")
-download_file(packtest_url, f"mods/packtest.jar")
+download_file(fabric_serv_url, f"./server.jar")
+download_file(fabric_api_url, f"./mods/fabric-api.jar")
+download_file(packtest_url, f"./mods/packtest.jar")
 
 
