@@ -18,12 +18,13 @@ MINECRAFT_VERSION = os.getenv("MINECRAFT_VERSION")
 FABRIC_LOADER_VERSION = os.getenv("FABRIC_LOADER_VERSION")
 PACKTEST_VERSION = os.getenv("PACKTEST_VERSION")
 FABRIC_API_VERSION = os.getenv("FABRIC_API_VERSION")
+INSTALLER_VERSION = os.getenv("INSTALLER_VERSION")
 
 fabric_serv_url = (
     "https://meta.fabricmc.net/v2/versions/loader/"
+    f"{MINECRAFT_VERSION}/"
     f"{FABRIC_LOADER_VERSION}/"
-    f"{FABRIC_API_VERSION}/"
-    f"{PACKTEST_VERSION}/server/jar"
+    f"{INSTALLER_VERSION}/server/jar"
 )
 fabric_api_url = get_modrinth_url("fabric-api", FABRIC_API_VERSION)
 packtest_url = get_modrinth_url("packtest", PACKTEST_VERSION)
