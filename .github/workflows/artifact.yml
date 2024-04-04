@@ -3,11 +3,13 @@ on:
   push:
     branches:
       - master
+      - 1.20.5
 
 env:
-  TEST_FABRIC_SERVER: https://meta.fabricmc.net/v2/versions/loader/1.20.4/0.15.3/0.11.2/server/jar
-  TEST_FABRIC_API: https://cdn.modrinth.com/data/P7dR8mSH/versions/JMCwDuki/fabric-api-0.92.0%2B1.20.4.jar
-  TEST_PACKTEST: https://cdn.modrinth.com/data/XsKUhp45/versions/18smpIeE/packtest-1.6-mc1.20.4.jar
+  MINECRAFT_VERSION: 24w12a
+  FABRIC_LOADER_VERSION: 0.15.3
+  PACKTEST_VERSION: 1.7.0-beta3
+  FABRIC_API_VERSION: 0.96.12+1.20.5
 
 jobs:
   release:
@@ -51,12 +53,13 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '17'
+
+      - name: Download server and mods in a python script
+        run: |
+          python3 .github/workflows/download_files.py
+          
       - name: Download and prepare files
         run: |
-          curl -o server.jar $TEST_FABRIC_SERVER
-          mkdir mods
-          curl -o mods/fabric-api.jar $TEST_FABRIC_API
-          curl -o mods/packtest.jar $TEST_PACKTEST
           mkdir -p world/datapacks
           cp -r build/datapack/ world/datapacks/datapack/
       - name: Run tests
