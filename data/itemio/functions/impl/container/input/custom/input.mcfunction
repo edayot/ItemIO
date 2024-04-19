@@ -1,6 +1,6 @@
 
 function ./ioconfig_storage:
-    $data modify storage itemio:main.input ioconfig set from storage $(storage)
+    $data modify storage itemio:main.input ioconfig set from storage $(ioconfig_from_storage)
 
 
 #loading ioconfig
@@ -31,16 +31,16 @@ execute
     run function ./input_storage:
         execute
             if entity @s[type=marker] 
-            run function ./ioconfig_storage with entity @s data.itemio.ioconfig
+            run function ./ioconfig_storage with entity @s data.itemio
         execute
             if entity @s[type=#itemio:item_frames] 
-            run function ./ioconfig_storage with entity @s Item.components."minecraft:custom_data".itemio.ioconfig
+            run function ./ioconfig_storage with entity @s Item.components."minecraft:custom_data".itemio
         execute
             if entity @s[type=armor_stand] 
-            run function ./ioconfig_storage with entity @s ArmorItems[3].components."minecraft:custom_data".itemio.ioconfig
+            run function ./ioconfig_storage with entity @s ArmorItems[3].components."minecraft:custom_data".itemio
         execute
             if entity @s[type=#itemio:item_display] 
-            run function ./ioconfig_storage with entity @s item.components."minecraft:custom_data".itemio.ioconfig
+            run function ./ioconfig_storage with entity @s item.components."minecraft:custom_data".itemio
 
 data remove storage itemio:main.input ioconfig[{mode:"output"}]
 
