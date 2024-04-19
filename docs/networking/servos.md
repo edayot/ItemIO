@@ -95,9 +95,18 @@ execute
         execute 
             if entity @s[tag=itemio.servo.extract]
             run scoreboard players add #model transportduct.math 2
-        execute store result entity @s Item.components."minecraft:custom_data".CustomModelData int 1 run scoreboard players get #model transportduct.math
-
-
+        item modify entity @s container.0 {
+            "function": "minecraft:set_custom_model_data",
+            "value": {
+                "type": "minecraft:score",
+                "target": {
+                "type": "minecraft:fixed",
+                "name": "#model"
+                },
+                "score": "transportduct.math",
+                "scale": 1
+            }
+        }
 
 
 
