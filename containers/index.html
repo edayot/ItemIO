@@ -5,7 +5,7 @@
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="🔧 Filters" href="../filters/index.html" /><link rel="prev" title="🔧 Advanced Usage" href="../getting_started/advanced_usage.html" />
 
-    <link rel="shortcut icon" href="../_static/pack.ico"/><!-- Generated with Sphinx 7.2.6 and Furo 2023.09.10 -->
+    <link rel="shortcut icon" href="../_static/pack.ico"/><!-- Generated with Sphinx 7.3.7 and Furo 2023.09.10 -->
         <title>📦 Containers - ItemIO Documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=5432af51" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=135e06be" />
@@ -231,13 +231,13 @@
         </div>
         <article role="main">
           <section class="tex2jax_ignore mathjax_ignore" id="containers">
-<h1>📦 Containers<a class="headerlink" href="#containers" title="Link to this heading">#</a></h1>
+<h1>📦 Containers<a class="headerlink" href="#containers" title="Link to this heading">¶</a></h1>
 <p>Basicly, a container is an entity at the position of a block.
 To make a container compatible with IO, you need to specify a format that define what can be in a slot or not.</p>
 <p>ItemIO don’t care about the GUI protection by player interaction, it’s up to you to handle it.</p>
 <hr class="docutils" />
 <section id="place-destroy-function-call">
-<h2>Place/destroy function call<a class="headerlink" href="#place-destroy-function-call" title="Link to this heading">#</a></h2>
+<h2>Place/destroy function call<a class="headerlink" href="#place-destroy-function-call" title="Link to this heading">¶</a></h2>
 <p>Somes function call must be made when placing or destroying a container.</p>
 <ul class="simple">
 <li><p>On place : <code class="code docutils literal highlight highlight-mcfunction"><span class="nb">function</span><span class="w"> </span><span class="nf">#itemio:calls/container/init</span></code></p></li>
@@ -245,59 +245,83 @@ To make a container compatible with IO, you need to specify a format that define
 </ul>
 </section>
 <section id="available-entity">
-<h2>Available Entity<a class="headerlink" href="#available-entity" title="Link to this heading">#</a></h2>
+<h2>Available Entity<a class="headerlink" href="#available-entity" title="Link to this heading">¶</a></h2>
 <p>Containers as to be configured depending on what entity you use you have to use theses NBT Paths:</p>
 <ul class="simple">
 <li><p>For makers : <code class="docutils literal notranslate"><span class="pre">data.itemio.ioconfig</span></code></p></li>
-<li><p>For item_frames : <code class="docutils literal notranslate"><span class="pre">Item.tag.itemio.ioconfig</span></code></p></li>
-<li><p>For armor_stands : <code class="docutils literal notranslate"><span class="pre">ArmorItems[3].tag.itemio.ioconfig</span></code></p></li>
-<li><p>For item_display : <code class="docutils literal notranslate"><span class="pre">item.tag.itemio.ioconfig</span></code></p></li>
+<li><p>For item_frames : <code class="docutils literal notranslate"><span class="pre">Item.components.&quot;minecraft:custom_data&quot;.itemio.ioconfig</span></code></p></li>
+<li><p>For armor_stands : <code class="docutils literal notranslate"><span class="pre">ArmorItems[3].components.&quot;minecraft:custom_data&quot;.itemio.ioconfig</span></code></p></li>
+<li><p>For item_display : <code class="docutils literal notranslate"><span class="pre">item.components.&quot;minecraft:custom_data&quot;.itemio.ioconfig</span></code></p></li>
 </ul>
+<div class="note admonition">
+<p class="admonition-title">Note</p>
+<p>All theses entity must have the <code class="docutils literal notranslate"><span class="pre">itemio.container</span></code> tag to be considered as a container.</p>
+</div>
 </section>
 <section id="tags">
-<h2>Tags<a class="headerlink" href="#tags" title="Link to this heading">#</a></h2>
-<p>To declare a block as a container you need to add the tag <code class="docutils literal notranslate"><span class="pre">itemio.container</span></code> to the block. Additionally you can add these tags to the block:</p>
+<h2>Tags<a class="headerlink" href="#tags" title="Link to this heading">¶</a></h2>
+<p>Theses tags are used to specify simple behaviour of the container.</p>
+<section id="itemio-container-nope">
+<h3><code class="docutils literal notranslate"><span class="pre">itemio.container.nope</span></code><a class="headerlink" href="#itemio-container-nope" title="Link to this heading">¶</a></h3>
+<p>If you are using a container as a custom block but without the posibility of input/output items you can add the tag.</p>
+</section>
+<section id="itemio-container-hopper">
+<h3><code class="docutils literal notranslate"><span class="pre">itemio.container.hopper</span></code><a class="headerlink" href="#itemio-container-hopper" title="Link to this heading">¶</a></h3>
+<p>Mark the custom container compatible with hoppers.</p>
+</section>
+<section id="itemio-container-not-vanilla-container">
+<h3><code class="docutils literal notranslate"><span class="pre">itemio.container.not_vanilla_container</span></code><a class="headerlink" href="#itemio-container-not-vanilla-container" title="Link to this heading">¶</a></h3>
+<p>By default, ItemIO disable all hoppers around the container, if you are not using a block with hopper capabilities, you can add this tag to disable the hopper protection.</p>
+</section>
+</section>
+<section id="advanced-tags">
+<h2>Advanced Tags<a class="headerlink" href="#advanced-tags" title="Link to this heading">¶</a></h2>
+<p>Tags here require an advanced understanding of ItemIO internal behaviour.</p>
+<section id="itemio-container-auto-handled-io">
+<h3><code class="docutils literal notranslate"><span class="pre">itemio.container.auto_handled_io</span></code><a class="headerlink" href="#itemio-container-auto-handled-io" title="Link to this heading">¶</a></h3>
+<p>If you want to handle the input/output of the container by yourself (see SimpleDrawer)</p>
+</section>
+<section id="itemio-container-hopper-protection-offset">
+<h3><code class="docutils literal notranslate"><span class="pre">itemio.container.hopper_protection_{offset}</span></code><a class="headerlink" href="#itemio-container-hopper-protection-offset" title="Link to this heading">¶</a></h3>
+<p>By default, ItemIO disable all hoppers around the container
+You can add theses tags to disable the hopper protection</p>
+<section id="example">
+<h4>Example<a class="headerlink" href="#example" title="Link to this heading">¶</a></h4>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">itemio.container.nope</span></code> : If you are using a container as a custom block but without the posibility of input/output items you can add the tag.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">itemio.container.hopper</span></code> : To make the container compatible with hoppers just add the tag. ItemIO will automatically handle the hoppers for you.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">itemio.container.not_vanilla_container</span></code> : if the custom container does not use a vanilla container, this will tell ItemIO to not disable vanilla hoppers around the block.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">itemio.container.auto_handled_io</span></code> : If you want to handle the input/output of the container by yourself (see SimpleDrawer)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">itemio.container.nbt_items</span></code> : If you want a custom NBT path search for items. Like in a other block entity, or in the entity itself.</p>
-<ul>
-<li><p>Store this information in itemio.nbt_items_path as a string.</p></li>
-<li><p>The string is a data location like “block ~ ~ ~ Items” (default behavior).</p></li>
-<li><p>The data location must ends with letters, example:</p>
-<ul>
-<li><p>“block ~ ~ ~ Items” is valid</p></li>
-<li><p>“entity &#64;s data.complex_list[0]” is not valid, even if it’s a list of items.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">itemio.container.hopper_protection_10</span></code> will disable the hoppers in a 1 block shift around the container.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">itemio.container.hopper_protection_1</span></code> will disable the hoppers in a 0.1 block shift around the container.</p></li>
 </ul>
-</li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">itemio.container.nbt_items.on_passengers</span></code> :</p>
-<ul>
-<li><p>Require <code class="docutils literal notranslate"><span class="pre">itemio.container.nbt_items</span></code>.</p></li>
-<li><p>For example if yout are using “entity &#64;s …”, the &#64;s will be the passenger of the container entity.</p></li>
-<li><p>Keep in mind that itemio assume that there is only one direct passenger.</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">itemio.container.nbt_items.on_vehicle</span></code> :</p>
-<ul>
-<li><p>Same as above but for the vehicle of the entity.</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">itemio.container.hopper_protection_{offset}</span></code></p>
-<ul>
-<li><p>offset is a number, it will disable the hoppers around the block with the offset.</p></li>
-<li><p>offset = 10 will disable the hoppers in a 1 block shift around the container.</p></li>
-<li><p>offset = 1 will disable the hoppers in a 0.1 block shift around the container.</p></li>
-<li><p>offset range from 1 to 20.</p></li>
-</ul>
-</li>
+<p><code class="docutils literal notranslate"><span class="pre">offset</span></code> must be between 1 and 20</p>
+</section>
+</section>
+<section id="itemio-container-ioconfig-from-storage">
+<h3><code class="docutils literal notranslate"><span class="pre">itemio.container.ioconfig_from_storage</span></code> :<a class="headerlink" href="#itemio-container-ioconfig-from-storage" title="Link to this heading">¶</a></h3>
+<p>Specify that the container will use a storage based ioconfig. Use the itemio.ioconfig_from_storage NBT path to specify the storage.</p>
+</section>
+<section id="itemio-container-nbt-items">
+<h3><code class="docutils literal notranslate"><span class="pre">itemio.container.nbt_items</span></code><a class="headerlink" href="#itemio-container-nbt-items" title="Link to this heading">¶</a></h3>
+<p>This tag specify the stored location of the items in the container.
+(default is in the container block)</p>
+<p>The NBT path is stored in <code class="docutils literal notranslate"><span class="pre">itemio.nbt_items_path</span></code></p>
+<section id="id1">
+<h4>Example<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h4>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">block</span> <span class="pre">~</span> <span class="pre">~</span> <span class="pre">~</span> <span class="pre">Items</span></code> is valid</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">entity</span> <span class="pre">&#64;s</span> <span class="pre">data.Inventory</span></code> is valid</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">entity</span> <span class="pre">&#64;s</span> <span class="pre">data.complex_list[0]</span></code> is not valid (it ends with a list)</p></li>
 </ul>
 </section>
+<section id="additional-tags">
+<h4>Additional tags<a class="headerlink" href="#additional-tags" title="Link to this heading">¶</a></h4>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">itemio.container.nbt_items.on_passengers</span></code> When editing items, ItemIO will change the <code class="docutils literal notranslate"><span class="pre">&#64;s</span></code> context to the passenger.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">itemio.container.nbt_items.on_vehicle</span></code> When editing items, ItemIO will change the <code class="docutils literal notranslate"><span class="pre">&#64;s</span></code> context to the vehicle.</p></li>
+</ul>
+</section>
+</section>
+</section>
 <section id="ioconfig-data-structure">
-<h2>IOConfig Data Structure<a class="headerlink" href="#ioconfig-data-structure" title="Link to this heading">#</a></h2>
+<h2>IOConfig Data Structure<a class="headerlink" href="#ioconfig-data-structure" title="Link to this heading">¶</a></h2>
 <p>IOConfig are dictionary that define what can be in a slot or not, they are dynamic and can be changed at any time.</p>
 <div class="highlight-ts notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
 <span class="w">    </span><span class="p">{</span>
@@ -317,22 +341,7 @@ To make a container compatible with IO, you need to specify a format that define
 </div>
 <div class="seealso admonition">
 <p class="admonition-title">Ignored items</p>
-<p>All items matching <code class="docutils literal notranslate"><span class="pre">&lt;item&gt;.tag.itemio.gui:</span> <span class="pre">1b</span></code>, will be ignored by ItemIO.</p>
-</div>
-</section>
-<section id="storage-based-ioconfig">
-<h2>Storage based ioconfig<a class="headerlink" href="#storage-based-ioconfig" title="Link to this heading">#</a></h2>
-<div class="seealso admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Warning
-This is a very advanced feature, you should not use it unless you know what you are doing.</p>
-</div>
-<p>Storage based ioconfig are ioconfig that are stored in a storage, they are dynamic and can be changed at any time for all containers that use it.</p>
-<p>To use a storage based ioconfig you need to add the tag <code class="docutils literal notranslate"><span class="pre">itemio.container.ioconfig_from_storage</span></code> to the entity.</p>
-<div class="highlight-ts notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">    </span><span class="nx">storage</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="c1">// a storage location example: &quot;namespace:storage my_container.ioconfig&quot;</span>
-<span class="p">}</span>
-</pre></div>
+<p>All items matching <code class="docutils literal notranslate"><span class="pre">&lt;item&gt;.components.&quot;minecraft:custom_data&quot;.itemio.gui:</span> <span class="pre">1b</span></code>, will be ignored by ItemIO.</p>
 </div>
 </section>
 </section>
@@ -989,9 +998,27 @@ This is a very advanced feature, you should not use it unless you know what you 
 <li><a class="reference internal" href="#">📦 Containers</a><ul>
 <li><a class="reference internal" href="#place-destroy-function-call">Place/destroy function call</a></li>
 <li><a class="reference internal" href="#available-entity">Available Entity</a></li>
-<li><a class="reference internal" href="#tags">Tags</a></li>
+<li><a class="reference internal" href="#tags">Tags</a><ul>
+<li><a class="reference internal" href="#itemio-container-nope"><code class="docutils literal notranslate"><span class="pre">itemio.container.nope</span></code></a></li>
+<li><a class="reference internal" href="#itemio-container-hopper"><code class="docutils literal notranslate"><span class="pre">itemio.container.hopper</span></code></a></li>
+<li><a class="reference internal" href="#itemio-container-not-vanilla-container"><code class="docutils literal notranslate"><span class="pre">itemio.container.not_vanilla_container</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#advanced-tags">Advanced Tags</a><ul>
+<li><a class="reference internal" href="#itemio-container-auto-handled-io"><code class="docutils literal notranslate"><span class="pre">itemio.container.auto_handled_io</span></code></a></li>
+<li><a class="reference internal" href="#itemio-container-hopper-protection-offset"><code class="docutils literal notranslate"><span class="pre">itemio.container.hopper_protection_{offset}</span></code></a><ul>
+<li><a class="reference internal" href="#example">Example</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#itemio-container-ioconfig-from-storage"><code class="docutils literal notranslate"><span class="pre">itemio.container.ioconfig_from_storage</span></code> :</a></li>
+<li><a class="reference internal" href="#itemio-container-nbt-items"><code class="docutils literal notranslate"><span class="pre">itemio.container.nbt_items</span></code></a><ul>
+<li><a class="reference internal" href="#id1">Example</a></li>
+<li><a class="reference internal" href="#additional-tags">Additional tags</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li><a class="reference internal" href="#ioconfig-data-structure">IOConfig Data Structure</a></li>
-<li><a class="reference internal" href="#storage-based-ioconfig">Storage based ioconfig</a></li>
 </ul>
 </li>
 </ul>
@@ -1004,7 +1031,7 @@ This is a very advanced feature, you should not use it unless you know what you 
     </aside>
   </div>
 </div><script src="../_static/documentation_options.js?v=8399f5db"></script>
-    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/furo.js?v=32e29ea5"></script>
     <script src="../_static/design-tabs.js?v=36754332"></script>

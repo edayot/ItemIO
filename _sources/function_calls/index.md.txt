@@ -32,5 +32,5 @@ See all here [Filters function calls](https://edayot.github.io/ItemIO/filters/fu
 
 :::{admonition} Ignored items
 :class: seealso
-All items matching ``<item>.tag.itemio.gui: 1b``, will be ignored by ItemIO.
+All items matching ``<item>.components."minecraft:custom_data".itemio.gui: 1b``, will be ignored by ItemIO.
 :::

@@ -5,7 +5,7 @@
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="🌐 Network" href="network.html" /><link rel="prev" title="🔌 Cables" href="cables.html" />
 
-    <link rel="shortcut icon" href="../_static/pack.ico"/><!-- Generated with Sphinx 7.2.6 and Furo 2023.09.10 -->
+    <link rel="shortcut icon" href="../_static/pack.ico"/><!-- Generated with Sphinx 7.3.7 and Furo 2023.09.10 -->
         <title>🔧 Servos - ItemIO Documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=5432af51" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=135e06be" />
@@ -231,17 +231,17 @@
         </div>
         <article role="main">
           <section class="tex2jax_ignore mathjax_ignore" id="servos">
-<h1>🔧 Servos<a class="headerlink" href="#servos" title="Link to this heading">#</a></h1>
+<h1>🔧 Servos<a class="headerlink" href="#servos" title="Link to this heading">¶</a></h1>
 <p>Servos are custom block parts of a network that can input/output items from/to containers.</p>
 <section id="place-destroy-function-call">
-<h2>Place/destroy function call<a class="headerlink" href="#place-destroy-function-call" title="Link to this heading">#</a></h2>
+<h2>Place/destroy function call<a class="headerlink" href="#place-destroy-function-call" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>On place : <code class="code docutils literal highlight highlight-mcfunction"><span class="nb">function</span><span class="w"> </span><span class="nf">#itemio:calls/servos/init</span></code></p></li>
 <li><p>On destroy : <code class="code docutils literal highlight highlight-mcfunction"><span class="nb">function</span><span class="w"> </span><span class="nf">#itemio:calls/servos/destroy</span></code></p></li>
 </ul>
 </section>
 <section id="tags">
-<h2>Tags<a class="headerlink" href="#tags" title="Link to this heading">#</a></h2>
+<h2>Tags<a class="headerlink" href="#tags" title="Link to this heading">¶</a></h2>
 <p>To declare a block as a servos you need to add the tag <code class="docutils literal notranslate"><span class="pre">itemio.servo</span></code> to the block. Additionally you can add these tags to the block:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">itemio.servo.insert</span></code> : To declare the servo as an insert servo</p></li>
@@ -249,7 +249,7 @@
 </ul>
 </section>
 <section id="cable-update-function-event">
-<h2>Cable update function event<a class="headerlink" href="#cable-update-function-event" title="Link to this heading">#</a></h2>
+<h2>Cable update function event<a class="headerlink" href="#cable-update-function-event" title="Link to this heading">¶</a></h2>
 <p>This function tag is trigger when a servo connection is updated.</p>
 <p><code class="code docutils literal highlight highlight-mcfunction"><span class="nb">function</span><span class="w"> </span><span class="nf">#itemio:event/network_update</span></code></p>
 <p>Servos’ itemio.math value is a boolean indicating if the servo is connected to a network or not.</p>
@@ -259,7 +259,7 @@
 </div>
 </section>
 <section id="nbt-handling">
-<h2>NBT handling<a class="headerlink" href="#nbt-handling" title="Link to this heading">#</a></h2>
+<h2>NBT handling<a class="headerlink" href="#nbt-handling" title="Link to this heading">¶</a></h2>
 <p>Servos has their own filters config <code class="docutils literal notranslate"><span class="pre">data.itemio.ioconfig.filters</span></code>.</p>
 <div class="seealso admonition">
 <p class="admonition-title">Full specification</p>
@@ -267,7 +267,7 @@
 </div>
 </section>
 <section id="scores">
-<h2>Scores<a class="headerlink" href="#scores" title="Link to this heading">#</a></h2>
+<h2>Scores<a class="headerlink" href="#scores" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">itemio.servo.stack_limit</span></code> : Define the number of items that can be process (range 0…64)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">itemio.servo.retry_limit</span></code> : Define how many times tranfer are call when process</p></li>
@@ -275,7 +275,7 @@
 </section>
 <hr class="docutils" />
 <section id="visual-example">
-<h2>Visual example<a class="headerlink" href="#visual-example" title="Link to this heading">#</a></h2>
+<h2>Visual example<a class="headerlink" href="#visual-example" title="Link to this heading">¶</a></h2>
 <div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
 <div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-2 sd-row-cols-lg-2 sd-g-2 sd-g-xs-2 sd-g-sm-2 sd-g-md-2 sd-g-lg-2 docutils">
 <div class="sd-col sd-d-flex-column sd-col-4 sd-col-xs-4 sd-col-sm-4 sd-col-md-4 sd-col-lg-4 docutils">
@@ -321,7 +321,18 @@
 <span class="w">        </span><span class="kc">execute</span><span class="w"> </span>
 <span class="w">            </span><span class="kc">if</span><span class="w"> </span><span class="kc">entity</span><span class="w"> </span><span class="nv">@s</span><span class="p">[</span><span class="na">tag</span><span class="p">=</span><span class="nt">itemio.servo.extract</span><span class="p">]</span>
 <span class="w">            </span><span class="kc">run</span><span class="nb"> scoreboard</span><span class="w"> </span><span class="kc">players</span><span class="w"> </span><span class="kc">add</span><span class="w"> </span><span class="vm">#model</span><span class="w"> </span><span class="kc">transportduct.math</span><span class="w"> </span><span class="mf">2</span>
-<span class="w">        </span><span class="kc">execute</span><span class="w"> </span><span class="kc">store</span><span class="w"> </span><span class="kc">result</span><span class="w"> </span><span class="kc">entity</span><span class="w"> </span><span class="nv">@s</span><span class="w"> </span><span class="kc">Item.tag.CustomModelData</span><span class="w"> </span><span class="kc">int</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="kc">run</span><span class="nb"> scoreboard</span><span class="w"> </span><span class="kc">players</span><span class="w"> </span><span class="kc">get</span><span class="w"> </span><span class="vm">#model</span><span class="w"> </span><span class="kc">transportduct.math</span>
+<span class="w">        </span><span class="kc">item</span><span class="w"> </span><span class="kc">modify</span><span class="w"> </span><span class="kc">entity</span><span class="w"> </span><span class="nv">@s</span><span class="w"> </span><span class="kc">container.0</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="na">&quot;function&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;minecraft:set_custom_model_data&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="na">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="na">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;minecraft:score&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="na">&quot;target&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="na">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;minecraft:fixed&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="na">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#model&quot;</span>
+<span class="w">                </span><span class="p">},</span>
+<span class="w">                </span><span class="na">&quot;score&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;transportduct.math&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="na">&quot;scale&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">1</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
 </pre></div>
 </div>
 </div>
@@ -1040,7 +1051,7 @@ minecraft:item/furnace.json<div class="sd-summary-down docutils">
     </aside>
   </div>
 </div><script src="../_static/documentation_options.js?v=8399f5db"></script>
-    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/furo.js?v=32e29ea5"></script>
     <script src="../_static/design-tabs.js?v=36754332"></script>

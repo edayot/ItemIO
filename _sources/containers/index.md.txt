@@ -19,42 +19,66 @@ Containers as to be configured depending on what entity you use you have to use 
 
 - For makers : ``data.itemio.ioconfig``
 
-- For item_frames : ``Item.tag.itemio.ioconfig``
+- For item_frames : ``Item.components."minecraft:custom_data".itemio.ioconfig``
 
-- For armor_stands : ``ArmorItems[3].tag.itemio.ioconfig``
+- For armor_stands : ``ArmorItems[3].components."minecraft:custom_data".itemio.ioconfig``
 
-- For item_display : ``item.tag.itemio.ioconfig``
+- For item_display : ``item.components."minecraft:custom_data".itemio.ioconfig``
+
+:::{admonition} Note
+:class: note
+
+All theses entity must have the ``itemio.container`` tag to be considered as a container.
+:::
 
 ## Tags
 
-To declare a block as a container you need to add the tag ``itemio.container`` to the block. Additionally you can add these tags to the block:
+Theses tags are used to specify simple behaviour of the container.
 
-- ``itemio.container.nope`` : If you are using a container as a custom block but without the posibility of input/output items you can add the tag.
+### ``itemio.container.nope``
+If you are using a container as a custom block but without the posibility of input/output items you can add the tag.
 
-- ``itemio.container.hopper`` : To make the container compatible with hoppers just add the tag. ItemIO will automatically handle the hoppers for you.
+### ``itemio.container.hopper`` 
+Mark the custom container compatible with hoppers.
 
-- ``itemio.container.not_vanilla_container`` : if the custom container does not use a vanilla container, this will tell ItemIO to not disable vanilla hoppers around the block.
+### ``itemio.container.not_vanilla_container``
+By default, ItemIO disable all hoppers around the container, if you are not using a block with hopper capabilities, you can add this tag to disable the hopper protection.
 
-- ``itemio.container.auto_handled_io`` : If you want to handle the input/output of the container by yourself (see SimpleDrawer)
+## Advanced Tags
 
-- ``itemio.container.nbt_items`` : If you want a custom NBT path search for items. Like in a other block entity, or in the entity itself.
-    - Store this information in itemio.nbt_items_path as a string.
-    - The string is a data location like "block ~ ~ ~ Items" (default behavior).
-    - The data location must ends with letters, example: 
-        - "block ~ ~ ~ Items" is valid
-        - "entity @s data.complex_list[0]" is not valid, even if it's a list of items.
-- ``itemio.container.nbt_items.on_passengers`` : 
-    - Require ``itemio.container.nbt_items``. 
-    - For example if yout are using "entity @s ...", the @s will be the passenger of the container entity.
-    - Keep in mind that itemio assume that there is only one direct passenger.
-- ``itemio.container.nbt_items.on_vehicle`` :
-    - Same as above but for the vehicle of the entity.
+Tags here require an advanced understanding of ItemIO internal behaviour.
 
-- ``itemio.container.hopper_protection_{offset}`` 
-    - offset is a number, it will disable the hoppers around the block with the offset.
-    - offset = 10 will disable the hoppers in a 1 block shift around the container.
-    - offset = 1 will disable the hoppers in a 0.1 block shift around the container.
-    - offset range from 1 to 20.
+### ``itemio.container.auto_handled_io``
+If you want to handle the input/output of the container by yourself (see SimpleDrawer)
+
+### ``itemio.container.hopper_protection_{offset}`` 
+By default, ItemIO disable all hoppers around the container
+You can add theses tags to disable the hopper protection
+
+#### Example
+- ``itemio.container.hopper_protection_10`` will disable the hoppers in a 1 block shift around the container.
+- ``itemio.container.hopper_protection_1`` will disable the hoppers in a 0.1 block shift around the container.
+
+``offset`` must be between 1 and 20
+
+### ``itemio.container.ioconfig_from_storage`` :
+Specify that the container will use a storage based ioconfig. Use the itemio.ioconfig_from_storage NBT path to specify the storage.
+
+
+### ``itemio.container.nbt_items``
+This tag specify the stored location of the items in the container.
+(default is in the container block)
+
+The NBT path is stored in ``itemio.nbt_items_path``
+
+#### Example
+- ``block ~ ~ ~ Items`` is valid
+- ``entity @s data.Inventory`` is valid
+- ``entity @s data.complex_list[0]`` is not valid (it ends with a list)
+
+#### Additional tags
+- ``itemio.container.nbt_items.on_passengers`` When editing items, ItemIO will change the ``@s`` context to the passenger.
+- ``itemio.container.nbt_items.on_vehicle`` When editing items, ItemIO will change the ``@s`` context to the vehicle.
 
 
 ## IOConfig Data Structure
@@ -82,27 +106,9 @@ IOConfig are dictionary that define what can be in a slot or not, they are dynam
 
 :::{admonition} Ignored items
 :class: seealso
-All items matching ``<item>.tag.itemio.gui: 1b``, will be ignored by ItemIO.
+All items matching ``<item>.components."minecraft:custom_data".itemio.gui: 1b``, will be ignored by ItemIO.
 :::
 
 
-## Storage based ioconfig
-
-:::{warning} Warning
-:class: seealso
-This is a very advanced feature, you should not use it unless you know what you are doing.
-:::
-
-
-
-Storage based ioconfig are ioconfig that are stored in a storage, they are dynamic and can be changed at any time for all containers that use it.
-
-To use a storage based ioconfig you need to add the tag ``itemio.container.ioconfig_from_storage`` to the entity.
-
-```ts
-{
-    storage: string // a storage location example: "namespace:storage my_container.ioconfig"
-}
-```
 
 
