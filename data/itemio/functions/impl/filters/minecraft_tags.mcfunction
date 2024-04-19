@@ -27,7 +27,7 @@ execute
     run function ~/_check_all:
         for tag in tags:
             function_name = "itemio:impl/filters/minecraft_tags/" + tag
-            raw f"execute if score #filter.valid_item itemio.io matches 1 if data storage itemio:io filter.minecraft.{tag} run function {function_name}"
+            raw f"execute if score #filter.valid_item itemio.io matches 1 if data storage itemio:io filter.minecraft.\"{tag}\" run function {function_name}"
             function function_name:
                 scoreboard players set #filter.valid_item itemio.io 0
                 data modify entity @s HandItems[0] set value {id:"minecraft:air"}
