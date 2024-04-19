@@ -91,7 +91,7 @@ IOConfig are dictionary that define what can be in a slot or not, they are dynam
         Slot: int, // required
         mode: "input" | "output", // any other value is both
         allowed_side:{ // required
-            north: 0b | 1b, south: 0b | 1b, east: 0b | 1b, west: 0b | 1b, up: 0b | 1b, down: 0b | 1b
+            north: 0b | 1b, south: 0b | 1b, east: 0b | 1b, west: 0b | 1b, top: 0b | 1b, bottom: 0b | 1b
         },
         filters: Filters // optional see filters section
     }
