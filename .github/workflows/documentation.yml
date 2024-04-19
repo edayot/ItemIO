@@ -51,6 +51,8 @@ jobs:
           publish_branch: gh-pages
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: docs/_build/
+          tag_name: ${{ steps.prepare_tag.outputs.DEPLOY_TAG_NAME }}
+          tag_message: 'Deployment ${{ github.ref_name }}'
           destination_dir: "."
 
       
