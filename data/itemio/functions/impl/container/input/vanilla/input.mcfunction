@@ -12,8 +12,6 @@ execute if block ~ ~ ~ chest[type=single] run scoreboard players set #block_size
 execute if block ~ ~ ~ trapped_chest[type=single] run scoreboard players set #block_size itemio.math.input 27
 
 execute if block ~ ~ ~ #itemio:container/9 run scoreboard players set #block_size itemio.math.input 9
-scoreboard players set #crafter_input itemio.math.input 0
-execute if block ~ ~ ~ #itemio:container/crafter run scoreboard players set #crafter_input itemio.math.input 1
 execute if block ~ ~ ~ hopper[enabled=true] run scoreboard players set #block_size itemio.math.input 5
 
 
@@ -30,10 +28,10 @@ execute if block ~ ~ ~ trapped_chest[type=right] run function itemio:impl/contai
 
 data remove storage itemio:io output
 data modify storage itemio:io output set from storage itemio:io input
-data modify storage itemio:io output.Count set from storage itemio:main.input input.Count
+data modify storage itemio:io output.count set from storage itemio:main.input input.count
 
-execute store result score #count_input itemio.math.input run data get storage itemio:io input.Count
-execute store result score #count_output itemio.math.input run data get storage itemio:io output.Count
+execute store result score #count_input itemio.math.input run data get storage itemio:io input.count
+execute store result score #count_output itemio.math.input run data get storage itemio:io output.count
 
 scoreboard players set #count_to_remove itemio.math.input 0
 scoreboard players operation #count_to_remove itemio.math.input = #count_input itemio.math.input

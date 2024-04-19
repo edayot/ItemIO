@@ -94,3 +94,23 @@ The full list is available [here](https://github.com/misode/mcmeta/tree/registri
 
 
 This filter will check if the item is a book that can be placed in a chiseled bookshelf.
+
+
+
+## Items predicate
+
+A filter that check if the item match a predicate.
+
+It's only a 24w12a+ feature.
+
+### Format :
+```ts
+{
+    item_predicate: string,
+}
+```
+
+In implementation, this use this command :
+```mcfunction
+execute if items entity @s weapon <item_predicate> run ...
+```

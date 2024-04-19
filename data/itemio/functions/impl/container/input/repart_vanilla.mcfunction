@@ -7,3 +7,6 @@ execute if block ~ ~ ~ chiseled_bookshelf run function itemio:impl/container/inp
 
 
 execute if block ~ ~ ~ brewing_stand run function itemio:impl/container/input/vanilla_custom/brewing_stand
+
+
+execute if block ~ ~ ~ #itemio:container/crafter run function itemio:impl/container/input/vanilla_custom/crafter

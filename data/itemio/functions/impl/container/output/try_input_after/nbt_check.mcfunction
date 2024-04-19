@@ -7,8 +7,8 @@ data modify storage itemio:main Item2 set from storage itemio:main servo_items[0
 data remove storage itemio:main Item1.Slot
 data remove storage itemio:main Item2.Slot
 
-data remove storage itemio:main Item1.Count
-data remove storage itemio:main Item2.Count
+data remove storage itemio:main Item1.count
+data remove storage itemio:main Item2.count
 
 scoreboard players set #valid_item itemio.math 0
 execute store result score #!same_item itemio.math run data modify storage itemio:main Item1 set from storage itemio:main Item2

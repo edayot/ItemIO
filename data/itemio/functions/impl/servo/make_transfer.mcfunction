@@ -13,8 +13,8 @@ data remove storage itemio:main servo_filters
 data remove storage itemio:main servo_items
 
 
-data modify storage itemio:main servo_filters set from entity @s Item.tag.itemio.ioconfig.filters
-data modify storage itemio:main servo_items set from entity @s Item.tag.itemio.ioconfig.items
+data modify storage itemio:main servo_filters set from entity @s Item.components."minecraft:custom_data".itemio.ioconfig.filters
+data modify storage itemio:main servo_items set from entity @s Item.components."minecraft:custom_data".itemio.ioconfig.items
 
 execute store result score #if_items_defined itemio.math if data storage itemio:main servo_items[0] 
 

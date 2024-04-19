@@ -4,9 +4,9 @@ scoreboard players set #success_output itemio.io 1
 $data modify storage itemio:io output set from storage itemio:main.output Items[{Slot:$(Slot)b}]
 
 #check maxcount
-execute store result score #test_count_output itemio.math.output run data get storage itemio:io output.Count
-execute store result score #init_count_output itemio.math.output run data get storage itemio:io output.Count
-execute if score #test_count_output itemio.math.output > #max_output_count itemio.io store result storage itemio:io output.Count int 1 run scoreboard players get #max_output_count itemio.io
+execute store result score #test_count_output itemio.math.output run data get storage itemio:io output.count
+execute store result score #init_count_output itemio.math.output run data get storage itemio:io output.count
+execute if score #test_count_output itemio.math.output > #max_output_count itemio.io store result storage itemio:io output.count int 1 run scoreboard players get #max_output_count itemio.io
 
 scoreboard players operation #remove_count itemio.math.output = #max_output_count itemio.io
 scoreboard players operation #new_count itemio.math.output = #init_count_output itemio.math.output
@@ -27,7 +27,7 @@ function ./remove_count_nbt_items:
     execute if entity @s[tag=!itemio.container.nbt_items.on_passengers,tag=!itemio.container.nbt_items.on_vehicle] run function ./real_remove_count_nbt_items with storage itemio:main.output temp.args_check_filters
 
 function ./real_remove_count_nbt_items:
-    $execute store result $(nbt_items_path)[{Slot:$(Slot)b}].Count int 1 run scoreboard players get #new_count itemio.math.output
+    $execute store result $(nbt_items_path)[{Slot:$(Slot)b}].count int 1 run scoreboard players get #new_count itemio.math.output
 
 
 

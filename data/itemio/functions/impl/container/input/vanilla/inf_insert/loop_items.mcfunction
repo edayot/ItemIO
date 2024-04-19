@@ -3,8 +3,8 @@
 data modify storage itemio:main.input input_to_add set from storage itemio:main.input input
 execute store result storage itemio:main.input input_to_add.Slot int 1 run scoreboard players get #temp_slot itemio.math.input
 
-execute if score #loop_count_input itemio.math.input >= #full_stack itemio.math.input store result storage itemio:main.input input_to_add.Count int 1 run scoreboard players get #full_stack itemio.math.input
-execute unless score #loop_count_input itemio.math.input >= #full_stack itemio.math.input store result storage itemio:main.input input_to_add.Count int 1 run scoreboard players get #loop_count_input itemio.math.input
+execute if score #loop_count_input itemio.math.input >= #full_stack itemio.math.input store result storage itemio:main.input input_to_add.count int 1 run scoreboard players get #full_stack itemio.math.input
+execute unless score #loop_count_input itemio.math.input >= #full_stack itemio.math.input store result storage itemio:main.input input_to_add.count int 1 run scoreboard players get #loop_count_input itemio.math.input
 
 data modify storage itemio:main.input inputs append from storage itemio:main.input input_to_add
 

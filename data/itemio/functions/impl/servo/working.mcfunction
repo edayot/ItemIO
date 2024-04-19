@@ -22,8 +22,8 @@ execute as @e[type=#itemio:servos,tag=itemio.servo.same_network,tag=itemio.servo
 
         execute if score #facing itemio.math matches 4 run data modify storage itemio:main entity.input_side set value "west"
         execute if score #facing itemio.math matches 5 run data modify storage itemio:main entity.input_side set value "east"
-        execute if data entity @s Item.tag.itemio.ioconfig.filters run data modify storage itemio:main entity.filters set from entity @s Item.tag.itemio.ioconfig.filters
-        execute if data entity @s Item.tag.itemio.ioconfig.items run data modify storage itemio:main entity.items set from entity @s Item.tag.itemio.ioconfig.items
+        execute if data entity @s Item.components."minecraft:custom_data".itemio.ioconfig.filters run data modify storage itemio:main entity.filters set from entity @s Item.components."minecraft:custom_data".itemio.ioconfig.filters
+        execute if data entity @s Item.components."minecraft:custom_data".itemio.ioconfig.items run data modify storage itemio:main entity.items set from entity @s Item.components."minecraft:custom_data".itemio.ioconfig.items
         scoreboard players operation #temp_stack_limit itemio.math = @s itemio.servo.stack_limit
         execute 
             summon marker 

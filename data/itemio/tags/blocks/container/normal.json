@@ -3,8 +3,7 @@
     "values": [
         "#itemio:container/27",
         "#itemio:container/9",
-        "hopper",
-        {"id":"#itemio:container/crafter","required":false}
+        "hopper"
 
     ]
 }

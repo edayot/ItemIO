@@ -4,7 +4,7 @@ scoreboard players set #!same_id itemio.math 1
 data modify storage itemio:main temp.id1 set value ""
 data modify storage itemio:main temp.id2 set value ""
 data modify storage itemio:main temp.id1 set from storage itemio:main temp.id[0]
-data modify storage itemio:main temp.id2 set from storage itemio:io item.tag.smithed.id
+data modify storage itemio:main temp.id2 set from storage itemio:io item.components."minecraft:custom_data".smithed.id
 
 execute store success score #!same_id itemio.math run data modify storage itemio:main temp.id1 set from storage itemio:main temp.id2
 
