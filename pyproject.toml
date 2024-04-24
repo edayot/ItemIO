@@ -29,7 +29,7 @@ linkify-it-py = "^2.0.2"
 python-semantic-release = "^8.7.0"
 
 [tool.semantic_release]
-major_on_zero = true
+major_on_zero = false
 build_command = "make b BUILD_TYPE=release"
 dist_path = "build"
 version_toml = ["pyproject.toml:tool.poetry.version"]
