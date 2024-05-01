@@ -10,10 +10,12 @@ repository = "https://github.com/edayot/ItemIO"
 [tool.poetry.dependencies]
 python = ">=3.11,<3.12"
 weld-deps = {git = "https://github.com/edayot/weld-deps.git", branch = "main"}
-smithed-libraries = {git = "https://github.com/edayot/Libraries.git", branch = "1.20.4"}
+smithed-libraries = {git = "https://github.com/edayot/Libraries.git", branch = "main"}
 smithed= {git = "https://github.com/Smithed-MC/smithed-python.git", branch = "main"}
 cryptography = "^42.0.4"
 tqdm = "^4.66.1"
+mecha = ">=0.94.0"
+
 
 [tool.poetry.dev-dependencies]
 sphinx = "^7.1.1"
