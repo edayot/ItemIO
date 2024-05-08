@@ -2,6 +2,19 @@
 
 
 
+## v0.14.2 (2024-05-08)
+
+### Chore
+
+* chore: update deps ([`476c8a2`](https://github.com/edayot/ItemIO/commit/476c8a2c2bf3f17de3d08824e2656c5bf5500a03))
+
+* chore: update deps ([`5ef3631`](https://github.com/edayot/ItemIO/commit/5ef3631f6d27605ef1e02239814e552a4639db36))
+
+### Fix
+
+* fix: delete useless raw ([`75ac7da`](https://github.com/edayot/ItemIO/commit/75ac7daa4fed2227ba929e194401181cb89b525f))
+
+
 ## v0.14.1 (2024-04-24)
 
 
