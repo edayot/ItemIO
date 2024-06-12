@@ -2,6 +2,13 @@
 
 
 
+## v1.0.1 (2024-06-12)
+
+### Fix
+
+* fix: itemio.minecart_disable goes to -infinity ([`38d7738`](https://github.com/edayot/ItemIO/commit/38d77380e01683afebc02adaef13e03c409f6e68))
+
+
 ## v1.0.0 (2024-05-08)
 
 
