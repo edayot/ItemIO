@@ -5,10 +5,14 @@ author: AirDox_
 
 output : "build"
 
+pipeline:
+  - airdox_.monkey_patch_1_21
+
+
 meta:
   modrinth_id: "dr6WkwxX"
-  mc_supports: ["1.20.5"]
-  mc_supports_dataversion: [3837]
+  mc_supports: ["1.21"]
+  mc_supports_dataversion: [3953]
 
 data_pack:
   load: [.]
