@@ -129,7 +129,7 @@ execute unless score #{project_id}.{dep_id} load.status matches 1 run tellraw @a
 class PackTest(TextFileBase[List[str]]):
     """Class representing a PackTest test."""
 
-    scope: ClassVar[Tuple[str, ...]] = ("tests",)
+    scope: ClassVar[Tuple[str, ...]] = ("test",)
     extension: ClassVar[str] = ".mcfunction"
 
 @dataclass
