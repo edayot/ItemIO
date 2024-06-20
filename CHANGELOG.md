@@ -2,6 +2,17 @@
 
 
 
+## v1.1.0 (2024-06-20)
+
+### Chore
+
+* chore: update deps, monkey patch 1.21 ([`2574600`](https://github.com/edayot/ItemIO/commit/2574600c1a36e5d4be17fd6e4871f6bbe04c3dee))
+
+### Ci
+
+* ci: update minecraft version ([`56f1155`](https://github.com/edayot/ItemIO/commit/56f1155040cd74ad77542052789d552794c334fe))
+
+
 ## v1.0.1 (2024-06-12)
 
 ### Fix
