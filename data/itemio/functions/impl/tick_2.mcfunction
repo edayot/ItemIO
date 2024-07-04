@@ -6,7 +6,7 @@ execute as @e[type=hopper_minecart,tag=itemio.minecart_disabled] at @s run funct
 
 
 execute as @e[type=#itemio:servos,tag=itemio.servo.extract,tag=itemio.servo.initialised,predicate=itemio:impl/internal/good_queue] run function itemio:impl/servo/test_already
-tag @e[tag=itemio.servo.already] remove itemio.servo.already
+tag @e[type=#itemio:servos,tag=itemio.servo.already] remove itemio.servo.already
 
 scoreboard players remove @e[type=#itemio:servos,tag=itemio.servo.initialised,scores={itemio.servo.cooldown=1..}] itemio.servo.cooldown 1
 
