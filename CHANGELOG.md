@@ -2,6 +2,19 @@
 
 
 
+## v1.1.1 (2024-07-04)
+
+### Chore
+
+* chore: delete find replace ([`9daf57f`](https://github.com/edayot/ItemIO/commit/9daf57f2af448670f505e6407e9d280fd7f809ac))
+
+* chore: github actions releases ([`66eb7e5`](https://github.com/edayot/ItemIO/commit/66eb7e505c9aa658b7ceff8245652fb2675546dd))
+
+### Fix
+
+* fix: performance ([`84437a8`](https://github.com/edayot/ItemIO/commit/84437a8a42512f17230428876c32657d63f60a6a))
+
+
 ## v1.1.0 (2024-06-20)
 
 ### Chore
