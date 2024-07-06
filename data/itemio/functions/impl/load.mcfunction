@@ -9,6 +9,17 @@
 
 gamerule maxCommandChainLength 2147483647
 scoreboard objectives add itemio.math dummy
+scoreboard players set #0 itemio.math 0
+scoreboard players set #1 itemio.math 1
+scoreboard players set #2 itemio.math 2
+scoreboard players set #4 itemio.math 4
+scoreboard players set #8 itemio.math 8
+scoreboard players set #16 itemio.math 16
+scoreboard players set #32 itemio.math 32
+scoreboard players set #64 itemio.math 64
+scoreboard players set #128 itemio.math 128
+scoreboard players set #256 itemio.math 256
+
 scoreboard objectives add itemio.io dummy
 scoreboard objectives add itemio.math.input dummy
 scoreboard objectives add itemio.math.output dummy
