@@ -1,5 +1,6 @@
 # @public
-
+tag @s remove itemio.network
+tag @s remove itemio.cable.initialised
 
 
 execute align xyz positioned ~.5 ~-.5 ~.5 as @e[type=#itemio:cables,tag=itemio.cable.initialised,distance=..0.5001,limit=1,sort=nearest] run function itemio:impl/cable/destroy/down
@@ -26,3 +27,4 @@ execute
         function #itemio:event/network_update
 
 
+execute as @e[type=#itemio:cables,tag=itemio.cable.initialised,distance=..2] at @s run function itemio:impl/cable/update_model

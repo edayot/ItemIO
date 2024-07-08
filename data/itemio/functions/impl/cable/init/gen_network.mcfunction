@@ -6,7 +6,6 @@ scoreboard players operation @s itemio.network.process_queue %= #process_queue i
 
 
 #tellraw @a ["Initial value : ",{"score":{"name":"#model_final","objective":"itemio.math"}}]
-function itemio:impl/servo/calc_cable_model
 #tellraw @a ["Final value : ",{"score":{"name":"#model_final","objective":"itemio.math"}}]
 #tellraw @a ["% : ",{"score":{"name":"#model_final_temp","objective":"itemio.math"}}]
 

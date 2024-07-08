@@ -10,7 +10,6 @@ scoreboard players set @s itemio.network_id.high 0
 
 
 #Update network if for all cables connected
-scoreboard players set #model_final itemio.math 0
 scoreboard players set #success_connected itemio.math 0
 
 execute align xyz positioned ~.5 ~-.5 ~.5 as @e[type=#itemio:cables,tag=itemio.cable.initialised,distance=..0.5001,limit=1,sort=nearest] run function itemio:impl/cable/init/down
@@ -42,9 +41,10 @@ execute
     align xyz positioned ~.5 ~.5 ~.5 
     as @e[type=#itemio:network,tag=itemio.network,tag=!itemio.cable,distance=..0.5001] 
     run function itemio:impl/cable/init/gen_network
+
+execute as @e[type=#itemio:cables,tag=itemio.cable.initialised,distance=..2] at @s run function itemio:impl/cable/update_model
+
+
 tag @s remove itemio.cable.me
 
-#handeling custom model data
-scoreboard players set @s itemio.math 0
-scoreboard players operation @s itemio.math = #model_final itemio.math
-function #itemio:event/cable_update
+
