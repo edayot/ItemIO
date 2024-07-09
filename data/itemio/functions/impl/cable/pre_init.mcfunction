@@ -1,3 +1,3 @@
 # @public
 
-execute if entity @s[type=#itemio:cables] run function itemio:impl/cable/init
+execute if entity @s[type=#itemio:cables] at @s run function itemio:impl/cable/init
