@@ -2,6 +2,19 @@
 
 
 
+## v1.2.0 (2024-07-11)
+
+### Feature
+
+* feat: cables now connect to servos #26 ([`559fe31`](https://github.com/edayot/ItemIO/commit/559fe31552a04123ff1afcd805e8ad27a21f19bd))
+
+### Fix
+
+* fix: more at @s ([`43f604d`](https://github.com/edayot/ItemIO/commit/43f604d7df59780ed5f6a74dee43b55f15c19623))
+
+* fix: centralized cable model calculation ([`ff6a9de`](https://github.com/edayot/ItemIO/commit/ff6a9de7dafb55e31b902ed8bc2ec6ac5649b722))
+
+
 ## v1.1.1 (2024-07-04)
 
 ### Chore
