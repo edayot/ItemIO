@@ -39,7 +39,7 @@ execute
                 "predicate": {
                     "equipment": {
                         "mainhand": {
-                            "tag": f"minecraft:{tag}"
+                            "items": f"minecraft:{tag}"
                         }
                     }
                 }
