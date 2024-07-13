@@ -29,7 +29,7 @@ execute
             raw f"execute if score #filter.valid_item itemio.io matches 1 if data storage itemio:io filter.minecraft.\"{tag}\" run function {function_name}"
             function function_name:
                 scoreboard players set #filter.valid_item itemio.io 0
-                data modify entity @s HandItems[0] set value {id:"minecraft:air"}
+                data modify entity @s HandItems[0] set value {}
                 data modify entity @s HandItems[0] set from storage itemio:io item
                 raw f"execute if predicate itemio:impl/minecraft/{tag} run scoreboard players set #filter.valid_item itemio.io 1"
             
@@ -39,7 +39,7 @@ execute
                 "predicate": {
                     "equipment": {
                         "mainhand": {
-                            "items": f"minecraft:{tag}"
+                            "items": f"#minecraft:{tag}"
                         }
                     }
                 }
