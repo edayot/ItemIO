@@ -1,5 +1,4 @@
-execute if score #if_items_defined itemio.math matches 1 run function itemio:impl/servo/make_transfer_items
-execute if score #if_items_defined itemio.math matches 0 run function itemio:impl/servo/make_transfer_normal
+function itemio:impl/servo/make_transfer_normal
 
 
 scoreboard players remove #nb_retry itemio.math 1

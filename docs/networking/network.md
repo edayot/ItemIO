@@ -5,14 +5,14 @@
 
 
 ## Unique identifier
-All network component have a `itemio.network_id.low` and `itemio.network_id.high`, it's a unique identifier for separacting networks.
+All network component have a `itemio.network_id.low` and `itemio.network_id.high` scores, it's a unique identifier for separating networks.
 
-It's updated at every cable/servo placement
+It's updated at every cable/servo placement or removal.
 
 
 ## Functionalities
 
-What ItemIO does every second for each network (for imroving performance not all network are process on the same tick) :
+What ItemIO does every second for each network (each network is not processed at the same time) :
 
 1. Take all network
 2. For each network process them :

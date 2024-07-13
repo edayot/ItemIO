@@ -30,7 +30,9 @@ Servos' itemio.math value is a boolean indicating if the servo is connected to a
 ```
 
 ## NBT handling
-Servos has their own filters config ``data.itemio.ioconfig.filters``.
+Servos has their own filters.
+
+- For item frames : `Item.components."minecraft:custom_data".itemio.ioconfig.filters`
 
 :::{admonition} Full specification 
 :class: seealso
@@ -41,7 +43,7 @@ Servos has their own filters config ``data.itemio.ioconfig.filters``.
 ## Scores
 
 - `itemio.servo.stack_limit` : Define the number of items that can be process (range 0..64)
-- `itemio.servo.retry_limit` : Define how many times tranfer are call when process
+- `itemio.servo.retry_limit` : Define how many times tranfer are made by the servo (range 0..64)
 
 ---
 ## Visual example
