@@ -2,10 +2,9 @@
 
 # origin, destination, count
 # ~3 ~3 ~1, ~3 ~1 ~1, 1
+say starting barrel_transfer test
 
-datapack disable "file/datapack"
-datapack enable "file/datapack" after "vanilla"
-await delay 1s
+await delay 2s
 kill @e[tag=dummy]
 
 
@@ -75,11 +74,9 @@ data remove storage itemio:io filters
 
 summon marker ~3 ~1 ~3 {Tags:["itemio.transfer.destination","dummy"],data:{itemio:{input_side:"wireless"}}}
 
-say Transfer start
 
 execute positioned ~3 ~3 ~3 run function #itemio:calls/transfer
 
-say Transfer end
 
 assert score #success_transfer itemio.io matches 0
 

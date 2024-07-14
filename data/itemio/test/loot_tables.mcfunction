@@ -1,8 +1,9 @@
 
-datapack disable "file/datapack"
-datapack enable "file/datapack" after "vanilla"
-await delay 1s
+say starting loot_tables test
 
+await delay 2s
+await score #loaded itemio.math matches 1
+await entity 93682a08-d099-4e8f-a4a6-1e33a3692301
 
 
 
