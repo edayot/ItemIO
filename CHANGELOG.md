@@ -2,6 +2,23 @@
 
 
 
+## v1.2.1 (2024-07-14)
+
+### Fix
+
+* fix: logging message ([`ea9c06c`](https://github.com/edayot/ItemIO/commit/ea9c06c9b9fd2b9f81ddc6e968b620c452d052d3))
+
+* fix: tag predicate on minecraft tags filter ([`5ec5a47`](https://github.com/edayot/ItemIO/commit/5ec5a473fb48f5f119a5c5cfa9a8a5dfaead4e40))
+
+* fix: not restricting servo to item frame ([`d5d9d3e`](https://github.com/edayot/ItemIO/commit/d5d9d3e6814fcf9ca1944069cffbe7e65496f5a9))
+
+* fix: release name ([`b078a28`](https://github.com/edayot/ItemIO/commit/b078a28e6a5eee52ec652d0718676912fe4c4b1e))
+
+### Unknown
+
+* feat:: wip typing system ([`fa5b2f9`](https://github.com/edayot/ItemIO/commit/fa5b2f97ba100ff718b357f467c1839ab7a4f1f4))
+
+
 ## v1.2.0 (2024-07-11)
 
 ### Feature
