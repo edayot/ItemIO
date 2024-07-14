@@ -1,4 +1,5 @@
 
+
 for facebbbb in ["north","south","east","west","top","bottom"]:
     name = "itemio:impl/container/input/custom/input_no_config/loop_ioconfig/"+facebbbb
     function name:
@@ -60,10 +61,26 @@ data modify storage itemio:main.input input set from storage itemio:io input
 
 scoreboard players set #test_side itemio.math.input 0
 for facebbbb in ["north","south","east","west","top","bottom"]:
-    raw f"execute if score #nb_entities itemio.math.input matches 1 if score #test_side itemio.math.input matches 0 if data storage itemio:io {{input_side: \"{facebbbb}\"}} run function itemio:impl/container/input/custom/input_no_config/loop_ioconfig/{facebbbb}"
+    execute 
+        if score #nbt_items itemio.math.input matches 1
+        if score #nb_entities itemio.math.input matches 1 
+        if score #test_side itemio.math.input matches 0 
+        if data storage itemio:io {input_side: f"{facebbbb}"} 
+        run function f"itemio:impl/container/input/custom/input_no_config/loop_ioconfig/{facebbbb}"
+    execute 
+        if score #nbt_items itemio.math.input matches 0
+        if score #test_side itemio.math.input matches 0 
+        if data storage itemio:io {input_side: f"{facebbbb}"} 
+        run function f"itemio:impl/container/input/custom/input_no_config/loop_ioconfig/{facebbbb}"
 
 execute 
+    if score #nbt_items itemio.math.input matches 1
     if score #nb_entities itemio.math.input matches 1 
+    if score #test_side itemio.math.input matches 0 
+    if data storage itemio:io {input_side:"wireless"} 
+    run function itemio:impl/container/input/custom/input_no_config/loop_ioconfig
+execute
+    if score #nbt_items itemio.math.input matches 0
     if score #test_side itemio.math.input matches 0 
     if data storage itemio:io {input_side:"wireless"} 
     run function itemio:impl/container/input/custom/input_no_config/loop_ioconfig

@@ -60,6 +60,11 @@ data modify storage itemio:main.output temp.args_loop_ioconfig.output_side set f
 # tellraw @p [{"text":"ioconfig : "},{"nbt":"ioconfig","storage":"itemio:main.output"}]
 
 execute
+    if score #nbt_items itemio.math.output matches 1
     if score #nb_entities itemio.math.output matches 1 
+    if data storage itemio:main.output ioconfig[0] 
+    run function itemio:impl/container/output/custom/output_noconfig/loop_ioconfig with storage itemio:main.output temp.args_loop_ioconfig
+execute
+    if score #nbt_items itemio.math.output matches 0
     if data storage itemio:main.output ioconfig[0] 
     run function itemio:impl/container/output/custom/output_noconfig/loop_ioconfig with storage itemio:main.output temp.args_loop_ioconfig
