@@ -2,6 +2,17 @@
 
 
 
+## v1.2.2 (2024-07-14)
+
+### Fix
+
+* fix: check the number of entities if there is to check it ([`b8b2687`](https://github.com/edayot/ItemIO/commit/b8b26874beec16e47c0e63ac602c27c93d74f445))
+
+* fix: using cached thing in servo working ([`4741010`](https://github.com/edayot/ItemIO/commit/47410107287e86769b6a91c32a31206707ff3ae6))
+
+* fix: useless @s ([`c2b3479`](https://github.com/edayot/ItemIO/commit/c2b3479e6a2fd343b368597ea64cdd37a45120de))
+
+
 ## v1.2.1 (2024-07-14)
 
 ### Fix
