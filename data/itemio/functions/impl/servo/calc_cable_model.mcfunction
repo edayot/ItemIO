@@ -35,7 +35,6 @@ execute
     if score #rotation_0 itemio.math matches 90
     if score #rotation_1 itemio.math matches 0
     run function ~/west:
-        say west
         scoreboard players operation #model_final_temp itemio.math /= #32 itemio.math
         scoreboard players operation #model_final_temp itemio.math %= #2 itemio.math
         execute if score #model_final_temp itemio.math matches 0 run scoreboard players add #model_final itemio.math 32
