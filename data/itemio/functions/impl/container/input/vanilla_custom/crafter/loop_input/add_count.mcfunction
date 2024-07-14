@@ -17,11 +17,11 @@ execute if score #count_crafter itemio.math.input matches 1 run scoreboard playe
 
 
 # if not, just update the count in the storage
-$execute unless score #count_crafter itemio.math.input matches 1 if score #count_crafter itemio.math.input <= #stack_size itemio.math.input store result storage itemio:main.input Items_clean[{Slot:$(Slot)b}].count int 1 run scoreboard players get #count_crafter itemio.math.input
-execute unless score #count_crafter itemio.math.input matches 1 if score #count_crafter itemio.math.input <= #stack_size itemio.math.input run scoreboard players set #success_input itemio.math.input 1
+$execute unless score #count_crafter itemio.math.input matches 1 if score #count_crafter itemio.math.input <= #full_stack itemio.math.input store result storage itemio:main.input Items_clean[{Slot:$(Slot)b}].count int 1 run scoreboard players get #count_crafter itemio.math.input
+execute unless score #count_crafter itemio.math.input matches 1 if score #count_crafter itemio.math.input <= #full_stack itemio.math.input run scoreboard players set #success_input itemio.math.input 1
 
 scoreboard players set #full_input itemio.math.input 0
-execute unless score #count_crafter itemio.math.input matches 1 unless score #count_crafter itemio.math.input <= #stack_size itemio.math.input run scoreboard players set #full_input itemio.math.input 1
+execute unless score #count_crafter itemio.math.input matches 1 unless score #count_crafter itemio.math.input <= #full_stack itemio.math.input run scoreboard players set #full_input itemio.math.input 1
 
 
 scoreboard players remove #count_input itemio.math.input 1
