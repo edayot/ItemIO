@@ -2,6 +2,17 @@
 
 
 
+## v1.2.3 (2024-07-14)
+
+### Fix
+
+* fix: chiseled_bookshelf does not stack items ([`990c94e`](https://github.com/edayot/ItemIO/commit/990c94e996449d174397952a93226a6365216d22))
+
+* fix: useless say ([`cc7947a`](https://github.com/edayot/ItemIO/commit/cc7947afcfab16b3e17f46afa3a8b33911cf7ee7))
+
+* fix: wrong score usage ([`d4c6d11`](https://github.com/edayot/ItemIO/commit/d4c6d114d1a6a41a3fd23e1221a736850165e15d))
+
+
 ## v1.2.2 (2024-07-14)
 
 ### Fix
