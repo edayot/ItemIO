@@ -1,5 +1,6 @@
 
 
+execute if score #override_stack_size itemio.math.input matches 1 run return 1
 
 execute if data entity @s HandItems[0].components."minecraft:max_stack_size" run return run data get entity @s HandItems[0].components."minecraft:max_stack_size"
 

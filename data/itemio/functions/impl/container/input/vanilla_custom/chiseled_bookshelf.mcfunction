@@ -11,6 +11,8 @@ data modify storage itemio:main.input ioconfig set value [ \
     ]
 
 
+scoreboard players set #override_stack_size itemio.math.input 1
 function itemio:impl/container/input/custom/input_noconfig
+scoreboard players set #override_stack_size itemio.math.input 0
 
 function itemio:impl/container/chiseled_bookshelf
