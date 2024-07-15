@@ -2,6 +2,21 @@
 
 
 
+## v1.2.4 (2024-07-15)
+
+### Feature
+
+* feat: add a test for crafter ([`3db02cd`](https://github.com/edayot/ItemIO/commit/3db02cda751736f4812df27b886a8207efbeb44e))
+
+* feat: network test ([`9c03160`](https://github.com/edayot/ItemIO/commit/9c031608f7d1af1ac9b1384cbc08a9552baa3512))
+
+* feat: add new test ([`f9a0e03`](https://github.com/edayot/ItemIO/commit/f9a0e03245ae4f821e438f3c74179e5e0d694b17))
+
+### Fix
+
+* fix: wrong handeling of items for crafter input ([`33d3881`](https://github.com/edayot/ItemIO/commit/33d38810eb2077e3e0c2e0fbf650edab43647f3c))
+
+
 ## v1.2.3 (2024-07-14)
 
 ### Fix
