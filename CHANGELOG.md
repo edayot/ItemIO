@@ -2,6 +2,13 @@
 
 
 
+## v1.2.5 (2024-07-15)
+
+### Fix
+
+* fix: double speed crafter ([`de87d19`](https://github.com/edayot/ItemIO/commit/de87d19235a6fedf91f5a4ab03baddfa04b209bb))
+
+
 ## v1.2.4 (2024-07-15)
 
 ### Feature
