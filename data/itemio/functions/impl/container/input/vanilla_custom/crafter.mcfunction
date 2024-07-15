@@ -47,6 +47,7 @@ execute if score #count_input itemio.math.input matches 1.. if data storage item
 
 execute if score #success_input itemio.math.input matches 1 run function itemio:impl/container/input/vanilla_custom/crafter/success:
 
+    data remove storage itemio:main.input Items_clean[{id:"do_not_useFDSDFS"}]
     data modify block ~ ~ ~ Items append from storage itemio:main.input Items_clean[]
     scoreboard players set #success_input itemio.io 1
 
