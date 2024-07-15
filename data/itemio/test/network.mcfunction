@@ -7,6 +7,7 @@ await score #loaded itemio.math matches 1
 await entity 93682a08-d099-4e8f-a4a6-1e33a3692301
 
 kill @e[tag=dummy_cable]
+kill @e[tag=dummy_servo]
 
 
 # summon cable
@@ -30,8 +31,6 @@ execute as @e[tag=dummy_cable] run assert score @s itemio.network_id.low = #netw
 
 await delay 5t
 
-execute as @e[type=item_frame] if items entity @s contents red_wool run say aaaa
-
 
 execute as @e[type=item_frame] if items entity @s contents red_wool run tag @s add itemio.servo
 execute as @e[type=item_frame] if items entity @s contents lime_wool run tag @s add itemio.servo
@@ -40,6 +39,7 @@ execute as @e[type=item_frame] if items entity @s contents lime_wool run tag @s 
 
 execute as @e[tag=itemio.servo] run scoreboard players set @s itemio.servo.stack_limit 1
 execute as @e[tag=itemio.servo] run scoreboard players set @s itemio.servo.retry_limit 32
+execute as @e[tag=itemio.servo] run tag @s add dummy_servo
 
 execute as @e[tag=itemio.servo] run function #itemio:calls/servos/init
 
