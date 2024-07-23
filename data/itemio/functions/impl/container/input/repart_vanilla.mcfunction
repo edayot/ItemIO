@@ -1,4 +1,6 @@
-execute if block ~ ~ ~ #itemio:container/normal unless block ~ ~ ~ #itemio:container/crafter run function itemio:impl/container/input/vanilla/test_input
+execute if block ~ ~ ~ #itemio:container/normal unless block ~ ~ ~ #itemio:container/crafter unless block ~ ~ ~ #shulker_boxes run function itemio:impl/container/input/vanilla/test_input
+
+execute if block ~ ~ ~ #shulker_boxes run function itemio:impl/container/input/vanilla_custom/shulker_boxes
 
 execute if block ~ ~ ~ #itemio:container/3 run function itemio:impl/container/input/vanilla_custom/furnace_like
 
