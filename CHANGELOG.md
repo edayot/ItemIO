@@ -2,6 +2,13 @@
 
 
 
+## v1.2.6 (2024-07-23)
+
+### Fix
+
+* fix: shulker boxes shoudn&#39;t go in shulker boxes #27 ([`ccfbc3b`](https://github.com/edayot/ItemIO/commit/ccfbc3bf5f354963eee49affb59fe43537786cb9))
+
+
 ## v1.2.5 (2024-07-15)
 
 ### Fix
