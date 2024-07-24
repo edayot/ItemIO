@@ -5,9 +5,6 @@ author: AirDox_
 
 output : "build"
 
-pipeline:
-  - airdox_.monkey_patch_1_21
-
 
 meta:
   modrinth_id: "dr6WkwxX"
