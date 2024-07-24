@@ -12,3 +12,7 @@ execute if block ~ ~ ~ brewing_stand run function itemio:impl/container/input/va
 
 
 execute if block ~ ~ ~ #itemio:container/crafter run function itemio:impl/container/input/vanilla_custom/crafter
+
+
+execute if block ~ ~ ~ decorated_pot run function itemio:impl/container/input/vanilla_custom/decorated_pot
+execute if block ~ ~ ~ jukebox run function itemio:impl/container/input/vanilla_custom/jukebox

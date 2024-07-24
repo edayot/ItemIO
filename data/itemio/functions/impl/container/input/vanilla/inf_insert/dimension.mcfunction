@@ -1,3 +1,5 @@
+setblock -30000000 22 1610 air
+setblock -30000000 23 1610 air
 setblock -30000000 22 1610 yellow_shulker_box
 setblock -30000000 23 1610 barrel
 data modify block -30000000 22 1610 Items append from storage itemio:main.input inputs[]
