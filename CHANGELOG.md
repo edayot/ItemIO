@@ -2,6 +2,35 @@
 
 
 
+## v1.3.0 (2024-08-11)
+
+### Chore
+
+* chore: doc update trigger ([`eb50a60`](https://github.com/edayot/ItemIO/commit/eb50a608ce53b2764404e465c6aca6b06fa3b9e9))
+
+* chore: update beet version ([`3257c20`](https://github.com/edayot/ItemIO/commit/3257c203f5d4a8d2788c6d063cd81c08480cbc9c))
+
+### Feature
+
+* feat: optional config to limit the stack ([`d31e6e1`](https://github.com/edayot/ItemIO/commit/d31e6e16dc7ee395f8d72bc58846b59cc70ab3e8))
+
+* feat: unique item outputing ([`4f4ee87`](https://github.com/edayot/ItemIO/commit/4f4ee87aa8fa8b87b504733ee0615de9eb0f3961))
+
+* feat: single item input + jukebox song ([`2c2efac`](https://github.com/edayot/ItemIO/commit/2c2efac851da6862c0022967a9204486a171aa1d))
+
+### Fix
+
+* fix: storage path ([`c290f9f`](https://github.com/edayot/ItemIO/commit/c290f9f9988be2665ae9a05ed43305f6ca959b6b))
+
+* fix: only override if needed ([`4c234fd`](https://github.com/edayot/ItemIO/commit/4c234fdbc459beca053151a232d2b7c88815c608))
+
+* fix: storage storage ([`719d78b`](https://github.com/edayot/ItemIO/commit/719d78b71cdc71f4a7af5629cba219c13c3f12b4))
+
+* fix: random fail in CI ([`dd227f4`](https://github.com/edayot/ItemIO/commit/dd227f4f14d09af8a3664a7d9858f4c0e1987734))
+
+* fix: restricting to music disc ([`0c185f2`](https://github.com/edayot/ItemIO/commit/0c185f2d3aa2564551f2cbb6e42c330444727523))
+
+
 ## v1.2.6 (2024-07-23)
 
 ### Fix
