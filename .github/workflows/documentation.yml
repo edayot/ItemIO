@@ -8,6 +8,8 @@ on:
     paths:
       - 'docs/**'
       - 'pyproject.toml'
+      - 'README.md'
+      - 'CHANGELOG.md'
   release:
     types: [published]
 
