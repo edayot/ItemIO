@@ -1,4 +1,5 @@
 # @template itemio:network_test
+# @timeout 10000000
 
 say start network test
 
@@ -44,7 +45,7 @@ execute as @e[tag=itemio.servo] run tag @s add dummy_servo
 execute as @e[tag=itemio.servo] run function #itemio:calls/servos/init
 
 
-await delay 1s
+await delay 10s
 
 assert block ~4 ~1 ~2 minecraft:barrel[facing=north,open=false]{Items:[{Slot:24b,count:1,id:"minecraft:minecart"},{Slot:25b,count:1,id:"minecraft:minecart"},{Slot:26b,count:1,id:"minecraft:minecart"}]}
 

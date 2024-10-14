@@ -8,6 +8,7 @@
 
 
 gamerule maxCommandChainLength 2147483647
+gamerule maxCommandForkCount 2147483647
 scoreboard objectives add itemio.math dummy
 scoreboard players set #0 itemio.math 0
 scoreboard players set #1 itemio.math 1

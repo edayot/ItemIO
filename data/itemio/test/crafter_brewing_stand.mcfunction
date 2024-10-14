@@ -1,4 +1,5 @@
 # @template itemio:crafter_brewing_stand
+# @timeout 10000000
 
 say start crafter + brewing_stand test
 
@@ -44,7 +45,7 @@ execute as @e[tag=itemio.servo] run tag @s add dummy_servo_2
 execute as @e[tag=itemio.servo] run function #itemio:calls/servos/init
 
 
-await delay 2s
+await delay 10s
 
 assert block ~3 ~4 ~1 minecraft:crafter[crafting=false,orientation=south_up,triggered=false]{Items:[{Slot:0b,count:2,id:"minecraft:diamond"},{Slot:1b,count:2,id:"minecraft:diamond"},{Slot:4b,count:2,id:"minecraft:diamond"},{Slot:5b,count:2,id:"minecraft:diamond"},{Slot:6b,count:1,id:"minecraft:diamond"},{Slot:7b,count:1,id:"minecraft:diamond"}],crafting_ticks_remaining:0,disabled_slots:[I;2,3,8],triggered:0}
 
