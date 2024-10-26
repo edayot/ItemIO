@@ -91,11 +91,15 @@ IOConfig are dictionary that define what can be in a slot or not, they are dynam
         Slot: int, // required
         mode: "input" | "output", // any other value is both
         allowed_side:{ // required
-            north: 0b | 1b, south: 0b | 1b, east: 0b | 1b, west: 0b | 1b, top: 0b | 1b, bottom: 0b | 1b
+            north: 0b | 1b, south: 0b | 1b, east: 0b | 1b,
+            west: 0b | 1b, top: 0b | 1b, bottom: 0b | 1b
         },
-        filters: Filters // optional see filters section
-        max_stack_size: int // optional default to 2147483647, it's used to limit the stack size of a stackable item
-    }
+        filters: Filters // optional default to []
+        // See filters section
+        max_stack_size: int // optional default to 2147483647, 
+        // Used to limit the stack size of a stackable item
+    },
+    (...)
 ]
 ```
 
