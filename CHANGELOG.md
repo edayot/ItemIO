@@ -2,6 +2,27 @@
 
 
 
+## v1.3.1 (2024-11-01)
+
+### Chore
+
+* chore: update version list ([`94c79e0`](https://github.com/edayot/ItemIO/commit/94c79e0a462573ce38b2c8968f4d4a2ba71ea2a5))
+
+* chore: update ([`4af6b6e`](https://github.com/edayot/ItemIO/commit/4af6b6e46a7085a13d5add9cfeaf205cb1733ad5))
+
+* chore: fabric loader ([`3001261`](https://github.com/edayot/ItemIO/commit/3001261eba5d6c903b2d7fda82b8b8262dd116ef))
+
+* chore: update test deps ([`a4923ed`](https://github.com/edayot/ItemIO/commit/a4923ed8849ae0b6c387ef81fd6ae303da92012b))
+
+### Documentation
+
+* docs: more readable ([`3f3fd59`](https://github.com/edayot/ItemIO/commit/3f3fd5998599eec77c9a5eae973d188f6281ce84))
+
+### Fix
+
+* fix: some test issue (normally less random) ([`f532fd6`](https://github.com/edayot/ItemIO/commit/f532fd6533c14bcc69ed6f45ec06ed4fd5181bfe))
+
+
 ## v1.3.0 (2024-08-11)
 
 ### Chore
