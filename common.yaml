@@ -21,8 +21,7 @@ pipeline:
   - airdox_.add_readme
   - mecha.contrib.messages
   - beet.contrib.render
-  - beet.contrib.minify_json
-  - beet.contrib.minify_function
+  - airdox_.minify_functions
   - airdox_.add_id
  
 

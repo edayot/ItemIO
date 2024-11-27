@@ -12,6 +12,10 @@ meta:
 
 data_pack:
   load: [.]
+  pack_format: 57
+  supported_formats: 
+    min_inclusive: 42
+    max_inclusive: 57
 #resource_pack:
 #  load: [.]
 

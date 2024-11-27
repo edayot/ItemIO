@@ -1,4 +1,4 @@
-from beet import Context, TextFile, JsonFile
+from beet import Context, TextFile, JsonFile, Function
 from copy import deepcopy
 from pathlib import PurePath
 from typing import ClassVar, List, Tuple
@@ -143,3 +143,14 @@ def add_id(ctx: Context):
     ctx.assets.extra["pack.mcmeta"].data["id"]=str(ctx.project_id)
     ctx.data.extra["pack.mcmeta"].data["id"]=str(ctx.project_id)
 
+
+
+def minify_functions(ctx: Context):
+    for _, function in ctx[Function]:
+        text = function.text
+        # replace triple \n with double \n until there are no triple \n
+        while "\n\n\n" in text:
+            text = text.replace("\n\n\n", "\n\n")
+        # add a \n at the end of the file
+        text = "\n" + text.strip("\n") + "\n"
+        function.text = text
