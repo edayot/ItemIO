@@ -7,6 +7,10 @@ scoreboard players remove @s[scores={itemio.minecart_check=1..}] itemio.minecart
 
 
 # 8 tick
-execute if entity @s[tag=itemio.container.hopper] if predicate itemio:impl/internal/good_queue_container run function itemio:impl/container/8tick
+execute 
+    if score #loaded itemio.math matches 1 
+    if entity @s[tag=itemio.container.hopper] 
+    if predicate itemio:impl/internal/good_queue_container 
+    run function itemio:impl/container/8tick
 
 
