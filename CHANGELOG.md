@@ -2,6 +2,15 @@
 
 
 
+## v1.3.2 (2024-11-27)
+
+### Fix
+
+* fix: multiple pack_format support + change minify function ([`60f3131`](https://github.com/edayot/ItemIO/commit/60f313156a3366bdf1877bf0080db616be41e9f4))
+
+* fix: hopper protection not working at every reload ([`d897016`](https://github.com/edayot/ItemIO/commit/d897016ac3ecc8ca9a31e6e800455bbaf60d13f2))
+
+
 ## v1.3.1 (2024-11-01)
 
 ### Chore
