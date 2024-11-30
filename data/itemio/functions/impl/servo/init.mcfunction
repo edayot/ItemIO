@@ -50,3 +50,9 @@ execute
 
 function #itemio:event/network_update
 tag @e[tag=itemio.cable.me] remove itemio.cable.me
+
+
+scoreboard players operation @s itemio.version.major = #itemio.major load.status
+scoreboard players operation @s itemio.version.minor = #itemio.minor load.status
+scoreboard players operation @s itemio.version.patch = #itemio.patch load.status
+

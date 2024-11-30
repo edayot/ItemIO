@@ -48,3 +48,8 @@ execute as @e[type=#itemio:cables,tag=itemio.cable.initialised,distance=..2] at 
 tag @s remove itemio.cable.me
 
 
+scoreboard players operation @s itemio.version.major = #itemio.major load.status
+scoreboard players operation @s itemio.version.minor = #itemio.minor load.status
+scoreboard players operation @s itemio.version.patch = #itemio.patch load.status
+
+
