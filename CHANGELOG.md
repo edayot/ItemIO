@@ -2,6 +2,17 @@
 
 
 
+## v1.3.3 (2024-12-07)
+
+### Chore
+
+* chore: bump version ([`98db7a1`](https://github.com/edayot/ItemIO/commit/98db7a1589d3cf0a5d0cebd9961b7f141fdb3528))
+
+### Feature
+
+* feat: #28 Add versionning to all entities ([`9a04681`](https://github.com/edayot/ItemIO/commit/9a046814d650647502a70242cfddfaeb501ffd67))
+
+
 ## v1.3.2 (2024-11-27)
 
 ### Fix
