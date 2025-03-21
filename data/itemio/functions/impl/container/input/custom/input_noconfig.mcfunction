@@ -39,7 +39,7 @@ execute
             run data modify storage itemio:main.input nbt_items_path set from entity @s Item.components."minecraft:custom_data".itemio.nbt_items_path
         execute
             if entity @s[type=armor_stand] 
-            run data modify storage itemio:main.input nbt_items_path set from entity @s ArmorItems[3].components."minecraft:custom_data".itemio.nbt_items_path
+            run data modify storage itemio:main.input nbt_items_path set from entity @s equipment.head.components."minecraft:custom_data".itemio.nbt_items_path
         execute
             if entity @s[type=#itemio:item_display] 
             run data modify storage itemio:main.input nbt_items_path set from entity @s item.components."minecraft:custom_data".itemio.nbt_items_path

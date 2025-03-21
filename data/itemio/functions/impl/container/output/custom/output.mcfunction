@@ -21,7 +21,7 @@ execute
 
         execute
             if entity @s[type=armor_stand] 
-            run data modify storage itemio:main.output ioconfig set from entity @s ArmorItems[3].components."minecraft:custom_data".itemio.ioconfig
+            run data modify storage itemio:main.output ioconfig set from entity @s equipment.head.components."minecraft:custom_data".itemio.ioconfig
 
         execute
             if entity @s[type=#itemio:item_display] 
@@ -37,7 +37,7 @@ execute
             run function ./ioconfig_storage with entity @s Item.components."minecraft:custom_data".itemio
         execute
             if entity @s[type=armor_stand] 
-            run function ./ioconfig_storage with entity @s ArmorItems[3].components."minecraft:custom_data".itemio
+            run function ./ioconfig_storage with entity @s equipment.head.components."minecraft:custom_data".itemio
         execute
             if entity @s[type=#itemio:item_display] 
             run function ./ioconfig_storage with entity @s item.components."minecraft:custom_data".itemio
