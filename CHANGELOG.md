@@ -2,6 +2,19 @@
 
 
 
+## v1.4.0 (2025-04-12)
+
+### Chore
+
+* chore: update test suite ([`2bbe89d`](https://github.com/edayot/ItemIO/commit/2bbe89d0f5f461a3fb7f80849f03c6371c27ea41))
+
+* chore: update to 1.21.5 ([`a42e5a2`](https://github.com/edayot/ItemIO/commit/a42e5a287ee085d667bac5ec09869642c9e93a36))
+
+### Feature
+
+* feat: start update to 1.21.5 ([`c7808fe`](https://github.com/edayot/ItemIO/commit/c7808feec4ec730113b5218cf44ce127d8ed3e69))
+
+
 ## v1.3.3 (2024-12-07)
 
 ### Chore
