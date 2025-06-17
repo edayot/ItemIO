@@ -8,17 +8,13 @@ output : "build"
 
 meta:
   modrinth_id: "dr6WkwxX"
-  mc_supports: ["1.21.5"]
+  mc_supports: ["1.21.6"]
   lsp:
     excluded_plugins:
       - smithed_libraries.plugins.versioning
 
 data_pack:
   load: [.]
-  pack_format: 57
-  supported_formats: 
-    min_inclusive: 42
-    max_inclusive: 57
 #resource_pack:
 #  load: [.]
 
