@@ -2,6 +2,13 @@
 
 
 
+## v1.4.1 (2025-06-17)
+
+### Fix
+
+* fix: update deps and minecraft version ([`e5e0bc7`](https://github.com/edayot/ItemIO/commit/e5e0bc7620e8d8241add2acf8e90a4fc5979b241))
+
+
 ## v1.4.0 (2025-04-12)
 
 ### Chore
