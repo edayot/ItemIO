@@ -1,7 +1,7 @@
 
 
 
-data modify entity 93682a08-d099-4e8f-a4a6-1e33a3692301 equipment.mainhand set value {}
+data remove entity 93682a08-d099-4e8f-a4a6-1e33a3692301 equipment.mainhand
 data modify entity 93682a08-d099-4e8f-a4a6-1e33a3692301 equipment.mainhand set from storage itemio:io input
 
 execute unless items entity 93682a08-d099-4e8f-a4a6-1e33a3692301 weapon.mainhand *[minecraft:jukebox_playable] run return fail

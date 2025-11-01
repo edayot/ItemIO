@@ -4,6 +4,7 @@ execute store result score #count_input itemio.math.input run data get storage i
 
 scoreboard players set #full_stack itemio.math.input 64
 
+data remove entity 93682a08-d099-4e8f-a4a6-1e33a3692301 equipment.mainhand
 data modify entity 93682a08-d099-4e8f-a4a6-1e33a3692301 equipment.mainhand set from storage itemio:main.input input
 execute as 93682a08-d099-4e8f-a4a6-1e33a3692301 store result score #full_stack itemio.math.input run function itemio:impl/utils/get_stack_size
 scoreboard players set #config_max_stack_size itemio.math.input 2147483647
