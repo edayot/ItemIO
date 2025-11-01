@@ -21,7 +21,7 @@ Containers as to be configured depending on what entity you use you have to use 
 
 - For item_frames : ``Item.components."minecraft:custom_data".itemio.ioconfig``
 
-- For armor_stands : ``ArmorItems[3].components."minecraft:custom_data".itemio.ioconfig``
+- For armor_stands : ``equipment.head.components."minecraft:custom_data".itemio.ioconfig``
 
 - For item_display : ``item.components."minecraft:custom_data".itemio.ioconfig``
 
