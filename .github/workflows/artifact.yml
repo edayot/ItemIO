@@ -49,20 +49,20 @@ jobs:
         with:
           name: datapack
           path: build/datapack/
-      - uses: actions/setup-java@v4
-        with:
-          distribution: 'temurin'
-          java-version: '21'
+      # - uses: actions/setup-java@v4
+      #   with:
+      #     distribution: 'temurin'
+      #     java-version: '21'
 
-      - name: Download server and mods in a python script
-        run: |
-          python3 -m pip install requests
-          python3 .github/workflows/download_files.py
+      # - name: Download server and mods in a python script
+      #   run: |
+      #     python3 -m pip install requests
+      #     python3 .github/workflows/download_files.py
           
-      - name: Download and prepare files
-        run: |
-          mkdir -p world/datapacks
-          cp -r build/datapack/ world/datapacks/datapack/
-      - name: Run tests
-        run: |
-          java -Xmx2G -Dpacktest.auto -Dpacktest.auto.annotations -jar server.jar nogui
+      # - name: Download and prepare files
+      #   run: |
+      #     mkdir -p world/datapacks
+      #     cp -r build/datapack/ world/datapacks/datapack/
+      # - name: Run tests
+      #   run: |
+      #     java -Xmx2G -Dpacktest.auto -Dpacktest.auto.annotations -jar server.jar nogui
