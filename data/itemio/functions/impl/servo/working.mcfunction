@@ -39,6 +39,7 @@ scoreboard players set #servos_transfer itemio.math 1
 execute 
     if score #network_as_insert itemio.math matches 1
     as @e[tag=itemio.servo.same_network,tag=itemio.servo.extract] 
+    if score @s itemio.servo.cooldown matches 0 
     at @s 
     run function itemio:impl/servo/make_transfer
 scoreboard players set #servos_transfer itemio.math 0
