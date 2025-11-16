@@ -1,7 +1,5 @@
 # 🔌 Networking
 
-> **Note:** This section is still under construction.
-
 
 ---
 
