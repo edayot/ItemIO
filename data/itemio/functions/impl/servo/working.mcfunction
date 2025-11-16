@@ -1,4 +1,8 @@
 
+
+execute if score #max_network_per_tick itemio.math matches 1.. run scoreboard players add #network_in_tick itemio.math 1
+
+
 scoreboard players operation #own_network.low itemio.math = @s itemio.network_id.low
 scoreboard players operation #own_network.high itemio.math = @s itemio.network_id.high
 

@@ -17,6 +17,6 @@ execute
     at @s 
     run function itemio:impl/container/disable_minecart
 
-execute if score #loaded itemio.math matches 1 run function itemio:impl/tick_2
+execute if score #loaded itemio.math matches 1 run function itemio:impl/tick_if_loaded
 
 schedule function itemio:impl/tick 1t replace

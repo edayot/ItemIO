@@ -43,6 +43,12 @@ scoreboard objectives add itemio.version.patch dummy
 scoreboard players set #process_queue itemio.math 20
 scoreboard players set #hopper_speed itemio.math 8
 
+
+# Maximum networks processed per tick
+# If set to 0, no limit is applied
+
+execute unless score #max_network_per_tick itemio.math matches 0.. run scoreboard players set #max_network_per_tick itemio.math 2
+
 scoreboard players add #my_queue itemio.math 0
 
 
