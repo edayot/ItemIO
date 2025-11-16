@@ -25,6 +25,19 @@ A simple datapack that adds a drawers to minecraft.
 Features : 📦 🧩
 
 ```
+
+```{grid-item-card}
+:link: https://github.com/Stoupy51/SimplEnergy
+:link-type: github
+
+![logo](https://raw.githubusercontent.com/Stoupy51/SimplEnergy/refs/heads/main/assets/showcase/primary.png)
+^^^
+SimplEnergy is a simple Energy Datapack created to add simples energy mechanics in your survival world.
+
+Features : 📦 🔌
+
+```
+
 ::::
 
 
