@@ -9,8 +9,9 @@ data modify storage itemio:main.input disabled_slots set from block ~ ~ ~ disabl
 data remove storage itemio:main.input input
 data modify storage itemio:main.input input set from storage itemio:io input
 
-data modify entity 93682a08-d099-4e8f-a4a6-1e33a3692301 equipment.mainhand set from storage itemio:main.input input
-execute as 93682a08-d099-4e8f-a4a6-1e33a3692301 store result score #full_stack itemio.math.input run function itemio:impl/utils/get_stack_size
+data remove storage itemio:main get_stack_size
+data modify storage itemio:main get_stack_size set from storage itemio:main.input input
+execute store result score #full_stack itemio.math.input run function itemio:impl/utils/get_stack_size
 
 scoreboard players set #success_input itemio.math.input 0
 

@@ -10,7 +10,7 @@ kill @e[tag=dummy]
 
 
 await score #loaded itemio.math matches 1
-await entity 93682a08-d099-4e8f-a4a6-1e33a3692301
+await entity a97c9c67-fde0-4b89-926d-54fa4a866004
 
 
 assert block -30000000 22 1610 yellow_shulker_box

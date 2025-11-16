@@ -2,10 +2,10 @@
 
 scoreboard players set #is_shulker_box itemio.math.input 0
 
-data remove entity 93682a08-d099-4e8f-a4a6-1e33a3692301 equipment.mainhand
-data modify entity 93682a08-d099-4e8f-a4a6-1e33a3692301 equipment.mainhand set from storage itemio:io input
+data remove entity a97c9c67-fde0-4b89-926d-54fa4a866004 container.0
+data modify entity a97c9c67-fde0-4b89-926d-54fa4a866004 container.0 set from storage itemio:io input
 
-execute if items entity 93682a08-d099-4e8f-a4a6-1e33a3692301 weapon.mainhand #itemio:shulker_boxes run return fail
+execute if items entity a97c9c67-fde0-4b89-926d-54fa4a866004 container.0 #itemio:shulker_boxes run return fail
 
 
 

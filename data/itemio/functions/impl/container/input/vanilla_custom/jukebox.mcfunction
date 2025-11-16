@@ -1,10 +1,10 @@
 
 
 
-data remove entity 93682a08-d099-4e8f-a4a6-1e33a3692301 equipment.mainhand
-data modify entity 93682a08-d099-4e8f-a4a6-1e33a3692301 equipment.mainhand set from storage itemio:io input
+data remove entity a97c9c67-fde0-4b89-926d-54fa4a866004 container.0
+data modify entity a97c9c67-fde0-4b89-926d-54fa4a866004 container.0 set from storage itemio:io input
 
-execute unless items entity 93682a08-d099-4e8f-a4a6-1e33a3692301 weapon.mainhand *[minecraft:jukebox_playable] run return fail
+execute unless items entity a97c9c67-fde0-4b89-926d-54fa4a866004 container.0 *[minecraft:jukebox_playable] run return fail
 
 
 data remove storage itemio:main.input ItemUnique

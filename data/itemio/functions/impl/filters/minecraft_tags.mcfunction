@@ -22,26 +22,13 @@ with open(path) as f:
 execute 
     if score #filter.valid_item itemio.io matches 1 
     if data storage itemio:io filter.minecraft 
-    as 93682a08-d099-4e8f-a4a6-1e33a3692301 
+    as a97c9c67-fde0-4b89-926d-54fa4a866004 
     run function ~/_check_all:
         for tag in tags:
             function_name = "itemio:impl/filters/minecraft_tags/" + tag
             raw f"execute if score #filter.valid_item itemio.io matches 1 if data storage itemio:io filter.minecraft.\"{tag}\" run function {function_name}"
             function function_name:
                 scoreboard players set #filter.valid_item itemio.io 0
-                data remove entity @s equipment.mainhand
-                data modify entity @s equipment.mainhand set from storage itemio:io item
-                raw f"execute if predicate itemio:impl/minecraft/{tag} run scoreboard players set #filter.valid_item itemio.io 1"
-            
-            predicate_tag = {
-                "condition": "minecraft:entity_properties",
-                "entity": "this",
-                "predicate": {
-                    "equipment": {
-                        "mainhand": {
-                            "items": f"#minecraft:{tag}"
-                        }
-                    }
-                }
-            }
-            ctx.data.predicates[f"itemio:impl/minecraft/{tag}"] = Predicate(predicate_tag)
+                data remove entity @s container.0
+                data modify entity @s container.0 set from storage itemio:io item
+                execute if items entity @s container.0 f"#{tag}" run scoreboard players set #filter.valid_item itemio.io 1

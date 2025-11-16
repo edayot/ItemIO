@@ -3,7 +3,7 @@ say start furnace test
 
 await delay 2s
 await score #loaded itemio.math matches 1
-await entity 93682a08-d099-4e8f-a4a6-1e33a3692301
+await entity a97c9c67-fde0-4b89-926d-54fa4a866004
 
 
 
