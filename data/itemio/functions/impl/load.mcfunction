@@ -48,6 +48,7 @@ scoreboard players set #hopper_speed itemio.math 8
 # If set to 0, no limit is applied
 
 execute unless score #max_network_per_tick itemio.math matches 0.. run scoreboard players set #max_network_per_tick itemio.math 2
+execute unless score #max_servos_per_tick itemio.math matches 0.. run scoreboard players set #max_servos_per_tick itemio.math 128
 
 scoreboard players add #my_queue itemio.math 0
 

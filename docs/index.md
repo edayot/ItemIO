@@ -105,6 +105,7 @@ containers/index
 filters/index
 networking/index
 function_calls/index
+configuration
 known_limitations
 contributing
 featured

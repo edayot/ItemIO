@@ -48,5 +48,8 @@ execute
     run function itemio:impl/servo/make_transfer
 scoreboard players set #servos_transfer itemio.math 0
 
-tag @e[tag=itemio.servo.same_network] remove itemio.servo.same_network
+execute store result score #temp itemio.math run tag @e[tag=itemio.servo.same_network] remove itemio.servo.same_network
+
+execute unless score #servos_in_tick itemio.math matches 0 run scoreboard players operation #servos_in_tick itemio.math += #servos_transfer itemio.math
+
 kill @e[tag=itemio.transfer.destination.temp]
