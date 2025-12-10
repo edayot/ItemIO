@@ -8,7 +8,7 @@ output : "build"
 
 meta:
   modrinth_id: "dr6WkwxX"
-  mc_supports: ["1.21.11-pre2"]
+  mc_supports: ["1.21.11"]
   lsp:
     excluded_plugins:
       - smithed_libraries.plugins.versioning
