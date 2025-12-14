@@ -2,6 +2,51 @@
 
 
 
+## v1.5.0 (2025-12-14)
+
+### Chore
+
+* chore: update to 1.21.11 ([`88217ac`](https://github.com/edayot/ItemIO/commit/88217ac87dd1d83bc13bc12213091b985f1aeca1))
+
+### Documentation
+
+* docs: add SimplEnergy featured datapack ([`dbb388a`](https://github.com/edayot/ItemIO/commit/dbb388add9bf1edfd54b3c354dad0bc68b671aa3))
+
+### Feature
+
+* feat: add configuration ([`a938483`](https://github.com/edayot/ItemIO/commit/a938483aef4b333d25bc9352aa3ecbc771880c69))
+
+* feat: opti ([`5c6d3e4`](https://github.com/edayot/ItemIO/commit/5c6d3e4e448b10dce0bf8734549bbb307f672475))
+
+* feat: maximum allowed networks in a tick (default: 2) ([`0df0377`](https://github.com/edayot/ItemIO/commit/0df03777a6e1981987d859df6661c6fe8fd0e881))
+
+* feat: update to latest snapshot ([`c66fb2d`](https://github.com/edayot/ItemIO/commit/c66fb2d2046ba1f62c3ed9496c552ef1d65b65f2))
+
+### Fix
+
+* fix: rollback yellow shulker box thing ([`a81a78d`](https://github.com/edayot/ItemIO/commit/a81a78d6211d882eaecc539fb77f43efe702def4))
+
+* fix: disable servo works at all steps ([`df4a940`](https://github.com/edayot/ItemIO/commit/df4a94026a1f63f8ac7c55065015b432c9e30237))
+
+### Performance
+
+* perf: armor_stand -&gt; item_display ([`d8ee525`](https://github.com/edayot/ItemIO/commit/d8ee525a6c4a624836e1fa91bbb9a03fc793a4c6))
+
+### Unknown
+
+* 3.11 -&gt; 3.14 ([`3ce4fe1`](https://github.com/edayot/ItemIO/commit/3ce4fe195e4ccd309a87f182a48000056a577e57))
+
+* beta beet ([`ede819e`](https://github.com/edayot/ItemIO/commit/ede819e8df03d8aabd4ef405b1ae339820298309))
+
+* update to latest version ([`9091e21`](https://github.com/edayot/ItemIO/commit/9091e210f30d2509e3ebf6f457affc16134c6d6a))
+
+* avoid brute deleting of items in armor_stand ([`216afba`](https://github.com/edayot/ItemIO/commit/216afbac5f1e17894205b98699bddb1fccbb52df))
+
+* disable tests ([`72ce38f`](https://github.com/edayot/ItemIO/commit/72ce38fa872a11d3b8b8db26726f9869ddcd60a4))
+
+* rollback ([`c89813e`](https://github.com/edayot/ItemIO/commit/c89813e75652a4e2378afe8916d5c68186177618))
+
+
 ## v1.4.1 (2025-06-17)
 
 ### Fix
