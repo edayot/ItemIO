@@ -15,7 +15,7 @@ require:
 
 pipeline:
   - mecha
-  - smithed_libraries.plugins.versioning
+  - itemio.versioning
   - airdox_.clean_useless_tags
   - airdox_.add_license
   - airdox_.add_readme

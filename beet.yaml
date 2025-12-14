@@ -4,6 +4,7 @@ description: Item input/output lib - Easy interaction between vanilla and custom
 author: AirDox_
 
 output : "build"
+minecraft: "1.21.11"
 
 
 meta:
@@ -15,8 +16,6 @@ meta:
 
 data_pack:
   load: [.]
-  min_format: [94.0]
-  max_format: [94.0]
 #resource_pack:
 #  load: [.]
 
