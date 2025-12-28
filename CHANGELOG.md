@@ -2,6 +2,13 @@
 
 
 
+## v1.5.1 (2025-12-28)
+
+### Fix
+
+* fix: using project_version ([`3b99d76`](https://github.com/edayot/ItemIO/commit/3b99d76d34ecebda139e717cc4b2bcdca97a9111))
+
+
 ## v1.5.0 (2025-12-14)
 
 ### Chore
