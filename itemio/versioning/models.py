@@ -63,7 +63,7 @@ class VersioningOptions(ContextualModel):
         version_check_path: str = "v{{ version }}/calls"
         tag_path: str = ""
 
-    scoreholder: str = "#{{ project_id }}"
+    scoreholder: str = "#itemio"
     schema_: list[str] = Field(default=["major", "minor", "patch"], alias="schema")
     scheduled_paths: ListOption[str] = ListOption(__root__=["impl/tick"])
     version: Version | None = None
