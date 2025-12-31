@@ -16,14 +16,14 @@ execute
         data modify entity @s item set value {id:"minecraft:stone",count:1}
         data modify entity @s item.id set from storage itemio:main get_stack_size.id
 
-        execute if items entity @s weapon *[minecraft:max_stack_size=64] run return 64
-        execute if items entity @s weapon *[minecraft:max_stack_size=16] run return 16
-        execute if items entity @s weapon *[minecraft:max_stack_size=1] run return 1
+        execute if items entity @s container.0 *[minecraft:max_stack_size=64] run return 64
+        execute if items entity @s container.0 *[minecraft:max_stack_size=16] run return 16
+        execute if items entity @s container.0 *[minecraft:max_stack_size=1] run return 1
 
 
         for i in range(1, 100):
             if not i in [1, 16, 64]:
-                raw f"execute if items entity @s weapon *[minecraft:max_stack_size={i}] run return {i}"
+                raw f"execute if items entity @s container.0 *[minecraft:max_stack_size={i}] run return {i}"
 
 
         return 1
