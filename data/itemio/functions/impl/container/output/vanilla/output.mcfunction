@@ -20,15 +20,12 @@ data modify storage itemio:main.output filters set from storage itemio:io filter
 execute if block ~ ~ ~ #itemio:container/normal_chest if data storage itemio:main.output Items[0] run function itemio:impl/container/output/vanilla/output/loop_item
 
 
-execute if block ~ ~ ~ chest[type=single] if data storage itemio:main.output Items[0] run function itemio:impl/container/output/vanilla/output/loop_item
-execute if block ~ ~ ~ trapped_chest[type=single] if data storage itemio:main.output Items[0] run function itemio:impl/container/output/vanilla/output/loop_item
+execute if block ~ ~ ~ #itemio:container/chests[type=single] if data storage itemio:main.output Items[0] run function itemio:impl/container/output/vanilla/output/loop_item
 
 
-execute if block ~ ~ ~ chest[type=right] run function itemio:impl/container/output/vanilla/double_chest_right
-execute if block ~ ~ ~ trapped_chest[type=right] run function itemio:impl/container/output/vanilla/double_chest_right
+execute if block ~ ~ ~ #itemio:container/chests[type=right] run function itemio:impl/container/output/vanilla/double_chest_right
 
-execute if block ~ ~ ~ chest[type=left] run function itemio:impl/container/output/vanilla/double_chest_left
-execute if block ~ ~ ~ trapped_chest[type=left] run function itemio:impl/container/output/vanilla/double_chest_left
+execute if block ~ ~ ~ #itemio:container/chests[type=left] run function itemio:impl/container/output/vanilla/double_chest_left
 
 
 

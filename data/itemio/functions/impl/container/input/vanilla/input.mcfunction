@@ -5,11 +5,9 @@
 
 
 
-
 scoreboard players set #block_size itemio.math.input 0
 execute if block ~ ~ ~ #itemio:container/27_chest run scoreboard players set #block_size itemio.math.input 27
-execute if block ~ ~ ~ chest[type=single] run scoreboard players set #block_size itemio.math.input 27
-execute if block ~ ~ ~ trapped_chest[type=single] run scoreboard players set #block_size itemio.math.input 27
+execute if block ~ ~ ~ #itemio:container/chests[type=single] run scoreboard players set #block_size itemio.math.input 27
 
 execute if block ~ ~ ~ #itemio:container/9 run scoreboard players set #block_size itemio.math.input 9
 execute if block ~ ~ ~ hopper[enabled=true] run scoreboard players set #block_size itemio.math.input 5
@@ -18,12 +16,9 @@ execute if block ~ ~ ~ hopper[enabled=true] run scoreboard players set #block_si
 execute unless score #block_size itemio.math.input matches 0 run function itemio:impl/container/input/vanilla/try_input
 
 
-execute if block ~ ~ ~ chest[type=left] run function itemio:impl/container/input/vanilla/double_chest_left
-execute if block ~ ~ ~ trapped_chest[type=left] run function itemio:impl/container/input/vanilla/double_chest_left
+execute if block ~ ~ ~ #itemio:container/chests[type=left] run function itemio:impl/container/input/vanilla/double_chest_left
 
-execute if block ~ ~ ~ chest[type=right] run function itemio:impl/container/input/vanilla/double_chest_right
-execute if block ~ ~ ~ trapped_chest[type=right] run function itemio:impl/container/input/vanilla/double_chest_right
-
+execute if block ~ ~ ~ #itemio:container/chests[type=right] run function itemio:impl/container/input/vanilla/double_chest_right
 
 
 data remove storage itemio:io output

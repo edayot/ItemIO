@@ -1,9 +1,7 @@
 {
     "__comment":"All 27 stack container of minecraft",
     "values": [
-        "barrel",
-        "chest",
-        "trapped_chest",
-        "#shulker_boxes"
+        "#itemio:container/27_chest",
+        "#itemio:container/chests"
     ]
 }
