@@ -67,12 +67,84 @@ jobs:
             poetry run semantic-release -v publish ;
             exit;
           fi
+      - name: Upload build artifacts
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: build
+          path: build/
+
+  publish-smithed:
+    needs: release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Setup Python 3.14
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.14
+      - name: Install Poetry
+        uses: snok/install-poetry@v1
+        with:
+          version: 1.6.1
+          virtualenvs-create: true
+          virtualenvs-in-project: true
+      - name: Setup cache for dependencies
+        id: cached-poetry-dependencies
+        uses: actions/cache@v4
+        with:
+          path: .venv
+          key: venv-${{  runner.os }}-${{ hashFiles('**/poetry.lock') }}
+      - name: Install dependencies
+        if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
+        run: poetry install
+      - name: Download build artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: build
+          path: build
       - name: Push to smithed
         continue-on-error: true
         run: poetry run python .github/workflows/push-to-smithed.py 
         env:
           SMITHED_UID: ${{ secrets.SMITHED_UID }}
           SMITHED_TOKEN: ${{ secrets.SMITHED_TOKEN }}
+
+  publish-modrinth:
+    needs: release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Setup Python 3.14
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.14
+      - name: Install Poetry
+        uses: snok/install-poetry@v1
+        with:
+          version: 1.6.1
+          virtualenvs-create: true
+          virtualenvs-in-project: true
+      - name: Setup cache for dependencies
+        id: cached-poetry-dependencies
+        uses: actions/cache@v4
+        with:
+          path: .venv
+          key: venv-${{  runner.os }}-${{ hashFiles('**/poetry.lock') }}
+      - name: Install dependencies
+        if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
+        run: poetry install
+      - name: Download build artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: build
+          path: build
       - name: Push to Modrinth
         continue-on-error: true
         run: poetry run python .github/workflows/push-to-modrinth.py 
