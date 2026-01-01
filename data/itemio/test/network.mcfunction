@@ -17,7 +17,7 @@ fill ~ ~ ~ ~5 ~5 ~5 command_block{Command:"summon minecraft:item_display ~ ~ ~ {
 await delay 5t
 
 execute as @e[tag=dummy_cable] at @s run setblock ~ ~ ~ minecraft:conduit[waterlogged=false]
-execute as @e[tag=dummy_cable] run data modify entity @s item set value {id: "minecraft:light_gray_stained_glass_pane", count: 1, components: {"minecraft:custom_model_data": 1430000}}
+execute as @e[tag=dummy_cable] run data modify entity @s item set value {id: "minecraft:light_gray_stained_glass_pane", count: 1}
 execute as @e[tag=dummy_cable] run data merge entity @s {transformation: {scale: [1.001f, 1.001f, 1.001f]}}
 execute as @e[tag=dummy_cable,sort=random] run function #itemio:calls/cables/init
 
