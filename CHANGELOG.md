@@ -2,6 +2,13 @@
 
 
 
+## v1.5.3 (2026-01-01)
+
+### Chore
+
+* chore: update version ([`bbea037`](https://github.com/edayot/ItemIO/commit/bbea037c03c7ba3024b67d233c620cdf9f5855e1))
+
+
 ## v1.5.2 (2026-01-01)
 
 ### Chore
