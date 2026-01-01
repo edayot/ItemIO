@@ -4,7 +4,8 @@
         "#itemio:container/27_chest",
         "#itemio:container/9",
         "hopper",
-        {"id":"#itemio:container/crafter","required":false}
+        {"id":"#itemio:container/crafter","required":false},
+        "#wooden_shelves"
         
     ]
 }

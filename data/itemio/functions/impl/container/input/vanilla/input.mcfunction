@@ -10,6 +10,7 @@ execute if block ~ ~ ~ #itemio:container/27_chest run scoreboard players set #bl
 execute if block ~ ~ ~ #itemio:container/chests[type=single] run scoreboard players set #block_size itemio.math.input 27
 
 execute if block ~ ~ ~ #itemio:container/9 run scoreboard players set #block_size itemio.math.input 9
+execute if block ~ ~ ~ #wooden_shelves run scoreboard players set #block_size itemio.math.input 3
 execute if block ~ ~ ~ hopper[enabled=true] run scoreboard players set #block_size itemio.math.input 5
 
 
