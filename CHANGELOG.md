@@ -2,6 +2,31 @@
 
 
 
+## v1.5.2 (2026-01-01)
+
+### Chore
+
+* chore: release splitted in different jobs ([`a2a21f0`](https://github.com/edayot/ItemIO/commit/a2a21f0856e6831bdb7b4770dbf8bc85139391a9))
+
+* chore: split ([`f2ca1a7`](https://github.com/edayot/ItemIO/commit/f2ca1a79ca40ef6e86d1d4cfd6aca1925f149df6))
+
+* chore: run tests ? ([`fd77af3`](https://github.com/edayot/ItemIO/commit/fd77af3fed2deb0117e3980a2e598d503d008164))
+
+### Feature
+
+* feat: copper chest support #31 ([`7d412f9`](https://github.com/edayot/ItemIO/commit/7d412f94dc6fe5c7e01a555c3111412eb4319e29))
+
+### Fix
+
+* fix: dumb issue with item display ([`c671b42`](https://github.com/edayot/ItemIO/commit/c671b42ab18f4edc13d95fbeff381738963483d4))
+
+### Unknown
+
+* delete useless component ([`db6aba8`](https://github.com/edayot/ItemIO/commit/db6aba89f0126c21b2e79723f61c845737d650dd))
+
+* forcing itemio project_id (since it don&#39;t want to resolver properly ([`1aa2da0`](https://github.com/edayot/ItemIO/commit/1aa2da00d05ecc1a1d9cd09c486fd8d28d1e7281))
+
+
 ## v1.5.1 (2025-12-28)
 
 ### Fix
