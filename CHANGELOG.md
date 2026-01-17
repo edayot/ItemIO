@@ -2,6 +2,13 @@
 
 
 
+## v1.6.1 (2026-01-17)
+
+### Fix
+
+* fix: only disable extraction ([`b257377`](https://github.com/edayot/ItemIO/commit/b2573772a5033f03f0ea530cbf408f3e83977e37))
+
+
 ## v1.6.0 (2026-01-17)
 
 
