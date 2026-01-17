@@ -2,6 +2,23 @@
 
 
 
+## v1.5.4 (2026-01-17)
+
+### Chore
+
+* chore: using pushed sha ([`b26e6b6`](https://github.com/edayot/ItemIO/commit/b26e6b681e160162748d61ce5b8ece2db282dbc7))
+
+### Feature
+
+* feat: implement shelves input/output function #32 ([`2075ab0`](https://github.com/edayot/ItemIO/commit/2075ab0d6e32e2961f476a9f1527c0ead84c0912))
+
+### Fix
+
+* fix: check transfer cooldown when the hopper function ([`448023c`](https://github.com/edayot/ItemIO/commit/448023c5ef4cef3e4890cd67dcd25367b54c4b27))
+
+* fix: TransferCooldown is increase only if the transfer was succesfull ([`1d3b064`](https://github.com/edayot/ItemIO/commit/1d3b06495df5ba495118c7416a9e946549d051fd))
+
+
 ## v1.5.3 (2026-01-01)
 
 ### Chore
