@@ -4,12 +4,12 @@ description: Item input/output lib - Easy interaction between vanilla and custom
 author: AirDox_
 
 output : "build"
-minecraft: "1.21.11"
+minecraft: "26.1"
 
 
 meta:
   modrinth_id: "dr6WkwxX"
-  mc_supports: ["1.21.11"]
+  mc_supports: ["26.1"]
   lsp:
     excluded_plugins:
       - smithed_libraries.plugins.versioning
