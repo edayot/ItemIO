@@ -2,6 +2,15 @@
 
 
 
+## v1.7.0 (2026-03-28)
+
+### Unknown
+
+* update to 26.1 ([`88e75d5`](https://github.com/edayot/ItemIO/commit/88e75d5fb7419e875508fc8d582478590bac3550))
+
+* remove knwon limitation (fixed) ([`f21c9d4`](https://github.com/edayot/ItemIO/commit/f21c9d440347b89500054e7e356f8e9c38cf433a))
+
+
 ## v1.6.1 (2026-01-17)
 
 ### Fix
