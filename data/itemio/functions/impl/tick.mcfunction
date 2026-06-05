@@ -7,11 +7,14 @@ execute
     run scoreboard players set @e[
         type=#itemio:container,
         tag=itemio.container.initialised,
-        scores={itemio.minecart_check=..1}
+        scores={itemio.minecart_check=..1},
+        distance=..5
     ] itemio.minecart_check 5 
+
 execute 
     as @e[type=#itemio:container,tag=itemio.container.initialised] 
     at @s run function itemio:impl/container/tick
+
 execute 
     as @e[type=hopper_minecart,tag=itemio.minecart_disabled] 
     at @s 
@@ -20,3 +23,4 @@ execute
 execute if score #loaded itemio.math matches 1 run function itemio:impl/tick_if_loaded
 
 schedule function itemio:impl/tick 1t replace
+
