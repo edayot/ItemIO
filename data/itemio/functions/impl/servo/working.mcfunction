@@ -9,7 +9,7 @@ scoreboard players operation #own_network.high itemio.math = @s itemio.network_i
 execute as @e[type=#itemio:servos,tag=itemio.servo.initialised,predicate=itemio:impl/internal/same_id] run function itemio:impl/servo/add_tags
 
 scoreboard players set #network_as_insert itemio.math 0
-execute as @e[type=#itemio:servos,tag=itemio.servo.same_network,tag=itemio.servo.insert,scores={itemio.servo.cooldown=0}] 
+execute as @e[type=#itemio:servos,tag=itemio.servo.same_network,tag=itemio.servo.insert,predicate=!itemio:impl/cooldown_superior_equal] 
     at @s positioned ^ ^ ^-1 
     align xyz 
     positioned ~.5 ~.5 ~.5
@@ -42,8 +42,7 @@ execute as @e[type=#itemio:servos,tag=itemio.servo.same_network,tag=itemio.servo
 scoreboard players set #servos_transfer itemio.math 1
 execute 
     if score #network_as_insert itemio.math matches 1
-    as @e[tag=itemio.servo.same_network,tag=itemio.servo.extract] 
-    if score @s itemio.servo.cooldown matches 0 
+    as @e[tag=itemio.servo.same_network,tag=itemio.servo.extract,predicate=!itemio:impl/cooldown_superior_equal] 
     at @s 
     run function itemio:impl/servo/make_transfer
 scoreboard players set #servos_transfer itemio.math 0

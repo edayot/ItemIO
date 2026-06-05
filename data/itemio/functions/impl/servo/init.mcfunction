@@ -6,7 +6,7 @@ scoreboard players set @s itemio.network_id.high 0
 
 # initial value for scores
 scoreboard players set @s itemio.math 0
-scoreboard players set @s itemio.servo.cooldown 0
+scoreboard players operation @s itemio.servo.cooldown = #global_tick itemio.math
 scoreboard players add @s itemio.servo.stack_limit 0
 scoreboard players add @s itemio.servo.retry_limit 0
 

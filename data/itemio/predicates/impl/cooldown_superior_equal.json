@@ -1,0 +1,16 @@
+{
+	"condition": "minecraft:entity_scores",
+	"entity": "this",
+	"scores": {
+		"itemio.servo.cooldown": {
+			"min": {
+				"type": "minecraft:score",
+				"target": {
+					"type": "minecraft:fixed",
+					"name": "#global_tick"
+				},
+				"score": "itemio.math"
+			}
+		}
+	}
+}

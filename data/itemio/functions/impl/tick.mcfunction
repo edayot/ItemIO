@@ -1,5 +1,7 @@
 
-#should always run 
+#should always run
+scoreboard players add #global_tick itemio.math 1
+
 #tick container
 execute 
     at @e[type=hopper_minecart] 
