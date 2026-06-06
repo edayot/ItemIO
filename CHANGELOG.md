@@ -2,6 +2,17 @@
 
 
 
+## v1.7.1 (2026-06-06)
+
+### Fix
+
+* fix: Fixed extract top hopper shenanigan and optimized cooldown checks (#33)
+
+* fix: Fixed extract top checking static TransferCooldown
+
+* perf: Optimized cooldown checks ([`0db0c87`](https://github.com/edayot/ItemIO/commit/0db0c877cd8c0901c8c5aece46e50e79a9df5dbe))
+
+
 ## v1.7.0 (2026-03-28)
 
 ### Unknown
