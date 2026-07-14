@@ -10,12 +10,10 @@ project = 'ItemIO'
 author = 'edayot'
 copyright='Erwan DAYOT'
 
-import toml
-pyproject = toml.load("../pyproject.toml")
-beet = pyproject["tool"]["poetry"]
-
-
-release = beet["version"]
+import tomllib
+with open("../pyproject.toml", "rb") as f:
+    pyproject = tomllib.load(f)
+release = pyproject["project"]["version"]
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration

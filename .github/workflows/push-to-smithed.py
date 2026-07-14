@@ -23,9 +23,10 @@ except KeyError:
 
 print(beet)
 
-# get current version using poetry version command
-command = f"poetry version | cut -d' ' -f2"
-CURRENT_VERSION = os.popen(command).read().strip()
+import tomllib
+with open("pyproject.toml", "rb") as f:
+    pyproject = tomllib.load(f)
+CURRENT_VERSION = pyproject["project"]["version"]
 print("CURRENT_VERSION: " + CURRENT_VERSION)
 
 

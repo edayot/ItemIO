@@ -1,40 +1,46 @@
-[tool.poetry]
+[project]
 name = "itemio"
 version = "1.7.1"
 description = "Item input/output lib - Easy interaction between vanilla and custom containers"
-authors = ["edayot <pro.e.dayot@gmail.com>"]
-license = "MIT"
 readme = "README.md"
+requires-python = ">=3.14"
+authors = [
+    {name = "edayot", email = "pro.e.dayot@gmail.com"},
+]
+license = {text = "MIT"}
 repository = "https://github.com/edayot/ItemIO"
+dependencies = [
+    "beet>=0.113.0-beta.10",
+    "cryptography>=42.0.4",
+    "tqdm>=4.66.1",
+    "mecha>=0.102.0-beta.2",
+    "bolt>=0.50.0-beta.5",
+    "semver>=3.0.4",
+]
 
-[tool.poetry.dependencies]
-python = ">=3.14,<4.0"
-beet = ">=0.113.0-beta.10"
-cryptography = "^42.0.4"
-tqdm = "^4.66.1"
-mecha = ">=0.102.0-beta.2"
-bolt = ">=0.50.0-beta.5"
-semver = "^3.0.4"
-
-
-[tool.poetry.dev-dependencies]
-sphinx = "^7.1.1"
-sphinx_design = "^0.5.0"
-sphinx-pyproject = "^0.1.0"
-sphinx-autobuild = "^2021.3.14"
-pygments= "^2.15.1"
-myst-parser = "^2.0.0"
-sphinxcontrib-mermaid = "^0.7.1"
-sphinx_copybutton = "^0.5.2"
-furo = "^2023.7.26"
-linkify-it-py = "^2.0.2"
-python-semantic-release = "^8.7.0"
+[dependency-groups]
+dev = [
+    "sphinx>=7.1.1",
+    "sphinx-design>=0.5.0",
+    "sphinx-pyproject>=0.1.0",
+    "sphinx-autobuild>=2021.3.14",
+    "pygments>=2.15.1",
+    "myst-parser>=2.0.0",
+    "sphinxcontrib-mermaid>=0.7.1",
+    "sphinx-copybutton>=0.5.2",
+    "furo>=2023.7.26",
+    "linkify-it-py>=2.0.2",
+    "python-semantic-release>=8.7.0",
+]
 
 [tool.semantic_release]
 major_on_zero = false
-build_command = "make b BUILD_TYPE=release"
+build_command = "uv run beet -s data_pack.zipped=true -s resource_pack.zipped=true -s data_pack.name=\"{{ project_id }}_{{ project_version }}_dp_bundled\" -s resource_pack.name=\"{{ project_id }}_{{ project_version }}_rp_bundled\" && uv run beet -s data_pack.zipped=true -s resource_pack.zipped=true -s data_pack.name=\"{{ project_id }}_{{ project_version }}_dp\" -s resource_pack.name=\"{{ project_id }}_{{ project_version }}_rp\""
 dist_path = "build"
-version_toml = ["pyproject.toml:tool.poetry.version"]
+version_toml = ["pyproject.toml:project.version"]
+version_variables = [
+    "beet.yaml:version",
+]
 version_source = "commit"
 
 remove_dist = false
@@ -43,9 +49,3 @@ tag_format = "v{version}"
 [tool.semantic_release.publish]
 dist_glob_patterns = ["build/*.zip"]
 upload_to_vcs_release = true
-
-
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"

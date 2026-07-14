@@ -1,1 +1,1 @@
-tellraw @s [{"text": f"[Loaded ItemIO {ctx.meta.version_string}]", "color": "green"}]
+tellraw @s [{"text": f"[Loaded ItemIO {ctx.project_version}]", "color": "green"}]

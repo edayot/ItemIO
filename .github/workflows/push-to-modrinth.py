@@ -49,9 +49,10 @@ except FileNotFoundError:
     except FileNotFoundError:
         sys.exit(1,"beet.yaml not found")
 
-# get current version using poetry version command
-command = f"poetry version | cut -d' ' -f2"
-CURRENT_VERSION = os.popen(command).read().strip()
+import tomllib
+with open("pyproject.toml", "rb") as f:
+    pyproject = tomllib.load(f)
+CURRENT_VERSION = pyproject["project"]["version"]
 print("CURRENT_VERSION: " + CURRENT_VERSION)
 
 release=requests.get(f"https://api.github.com/repos/edayot/{beet['name']}/releases/tags/v{CURRENT_VERSION}").json()
