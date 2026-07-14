@@ -36,9 +36,9 @@ jobs:
           MC_VERSION: ${{ steps.get-mc-version.outputs.mc_version }}
         with:
           commands: |
-            uv run beet -s data_pack.name=\"datapack\" -s resource_pack.name=\"resourcepack\"
+            uv run beet -s data_pack.name=\"datapack\"
 
-            uv run mcward test -p build/datapack -v $MC_VERSION --reporter github
+            uv run mcward test -p ./build/datapack -v $MC_VERSION --reporter github
 
       
       # Upload build/ datapack.zip, resourcepack.zip, datapack-bundled.zip, resourcepack-bundled.zip
