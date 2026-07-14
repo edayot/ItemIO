@@ -16,6 +16,7 @@ dependencies = [
     "mecha>=0.102.0-beta.2",
     "bolt>=0.50.0-beta.5",
     "semver>=3.0.4",
+    "mcward[cli]>=1.0.0",
 ]
 
 [dependency-groups]
