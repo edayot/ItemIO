@@ -22,15 +22,23 @@ jobs:
           enable-cache: true
       - name: Install dependencies
         run: uv sync --group dev
+      - name: Get Minecraft version
+        id: get-mc-version
+        run: |
+          MC_VERSION=$(uv run python -c 'import yaml; print(yaml.safe_load(open("beet.yaml"))["minecraft"])')
+          echo "mc_version=$MC_VERSION" >> "$GITHUB_OUTPUT"
+        shell: bash
       - name: Setup OpenGL and Run Tests
         uses: edayot/model_resolver@master
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GIT_HASH: ${{ github.sha }}
+          MC_VERSION: ${{ steps.get-mc-version.outputs.mc_version }}
         with:
           commands: |
-            uv run beet -s data_pack.name=\"datapack-bundled\" -s resource_pack.name=\"resourcepack-bundled\"
-            uv run beet -s data_pack.name=\"datapack\" -s resource_pack.name=\"resourcepack\" -s meta.weld_deps.enabled=false
+            uv run beet -s data_pack.name=\"datapack\" -s resource_pack.name=\"resourcepack\"
+
+            uv run mcward test -p build/datapack -v $MC_VERSION --reporter github
 
       
       # Upload build/ datapack.zip, resourcepack.zip, datapack-bundled.zip, resourcepack-bundled.zip
@@ -40,13 +48,5 @@ jobs:
           path: build/datapack/
       - uses: actions/upload-artifact@v4
         with:
-          name: resourcepack
-          path: build/resourcepack/
-      - uses: actions/upload-artifact@v4
-        with:
           name: datapack-bundled
           path: build/datapack-bundled/
-      - uses: actions/upload-artifact@v4
-        with:
-          name: resourcepack-bundled
-          path: build/resourcepack-bundled/
