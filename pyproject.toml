@@ -55,8 +55,8 @@ upload_to_vcs_release = true
 
 
 [tool.uv.sources]
-mcward = { path = "/home/erwan/Documents/dev/ward/", editable = true }
-beet = { path = "/home/erwan/Documents/dev/beet/", editable = true }
-bolt = { path = "/home/erwan/Documents/dev/beet/packages/bolt", editable = true }
-mecha = { path = "/home/erwan/Documents/dev/beet/packages/mecha", editable = true }
+mcward = { git = "https://github.com/edayot/ward/"}
+# beet = { path = "/home/erwan/Documents/dev/beet/", editable = true }
+# bolt = { path = "/home/erwan/Documents/dev/beet/packages/bolt", editable = true }
+# mecha = { path = "/home/erwan/Documents/dev/beet/packages/mecha", editable = true }
 

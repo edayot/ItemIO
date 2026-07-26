@@ -69,7 +69,7 @@ wheels = [
 [[package]]
 name = "beet"
 version = "0.116.0"
-source = { editable = "../beet" }
+source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "click" },
     { name = "click-help-colors" },
@@ -81,44 +81,22 @@ dependencies = [
     { name = "pyyaml" },
     { name = "toml" },
 ]
-
-[package.metadata]
-requires-dist = [
-    { name = "click", specifier = ">=8.3.1" },
-    { name = "click-help-colors", specifier = ">=0.9.4" },
-    { name = "jinja2", specifier = ">=3.1.6" },
-    { name = "nbtlib", specifier = "==1.12.1" },
-    { name = "pathspec", specifier = ">=0.12.1" },
-    { name = "pillow", specifier = ">=12.0.0" },
-    { name = "pydantic", specifier = ">=2.12.4" },
-    { name = "pyyaml", specifier = ">=6.0.3" },
-    { name = "toml", specifier = ">=0.10.2" },
-]
-
-[package.metadata.requires-dev]
-dev = [
-    { name = "basedpyright", specifier = ">=1.33.0" },
-    { name = "pytest", specifier = ">=9.0.0" },
-    { name = "pytest-insta", specifier = ">=0.4.0" },
-    { name = "pytest-minecraft", specifier = ">=0.2.0" },
-    { name = "python-semantic-release", specifier = ">=10.5.2" },
-    { name = "ruff", specifier = ">=0.14.4" },
-    { name = "zensical", specifier = ">=0.0.20" },
+sdist = { url = "https://files.pythonhosted.org/packages/2a/0b/cf16e81838c3bc23dd4752bb11e874b6ade6692ed66be4cf07bde267b754/beet-0.116.0.tar.gz", hash = "sha256:11e680777f8f5f9a139c70e6f0b51067552bad36726e7dc64e3136a91b1edf5a", size = 95924, upload-time = "2026-06-26T20:53:55.979Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/6d/cf/80c118bec8247bd1d1d7270152f683a9e4edf49f7ef46ec92e9ce9799ada/beet-0.116.0-py3-none-any.whl", hash = "sha256:0955308e3768fe40119c70ba047b411485fef3164a6da77e6e8fb172d5cd23c7", size = 125348, upload-time = "2026-06-26T20:53:54.75Z" },
 ]
 
 [[package]]
 name = "bolt"
 version = "0.50.1"
-source = { editable = "../beet/packages/bolt" }
+source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "beet" },
     { name = "mecha" },
 ]
-
-[package.metadata]
-requires-dist = [
-    { name = "beet", editable = "../beet" },
-    { name = "mecha", editable = "../beet/packages/mecha" },
+sdist = { url = "https://files.pythonhosted.org/packages/b4/3c/53d8b950adbba601fdf4a0d2f1f1da652ca5f5879e040da2d8d8a020f9db/bolt-0.50.1.tar.gz", hash = "sha256:5bcb0ee76c87c0504fdf52fb79cf71a9acd0e681cc6df33fa9829039d8277ab8", size = 52341, upload-time = "2026-01-17T13:59:47.578Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/3f/9b/fa2699f4d991fa7b83b61daecb0c7a533487358448191bf4eefbcef89ce7/bolt-0.50.1-py3-none-any.whl", hash = "sha256:89c5505050d4431f0c0a6fed28691c626d0439c8d2432c3fdfdc185dbcddf592", size = 59733, upload-time = "2026-01-17T13:59:48.527Z" },
 ]
 
 [[package]]
@@ -497,12 +475,12 @@ dev = [
 
 [package.metadata]
 requires-dist = [
-    { name = "beet", editable = "../beet" },
-    { name = "bolt", editable = "../beet/packages/bolt" },
+    { name = "beet", specifier = ">=0.113.0b10" },
+    { name = "bolt", specifier = ">=0.50.0b5" },
     { name = "cryptography", specifier = ">=42.0.4" },
-    { name = "mcward", extras = ["beet"], editable = "../ward" },
-    { name = "mcward", extras = ["cli"], editable = "../ward" },
-    { name = "mecha", editable = "../beet/packages/mecha" },
+    { name = "mcward", extras = ["beet"], git = "https://github.com/edayot/ward/" },
+    { name = "mcward", extras = ["cli"], git = "https://github.com/edayot/ward/" },
+    { name = "mecha", specifier = ">=0.102.0b2" },
     { name = "semver", specifier = ">=3.0.4" },
     { name = "tqdm", specifier = ">=4.66.1" },
 ]
@@ -591,7 +569,7 @@ wheels = [
 [[package]]
 name = "mcward"
 version = "1.0.0"
-source = { editable = "../ward" }
+source = { git = "https://github.com/edayot/ward/#4c3dd3d9d8a1904bc5bc54550418467c636d7b37" }
 dependencies = [
     { name = "mcward-core" },
 ]
@@ -604,42 +582,20 @@ cli = [
     { name = "mcward-cli" },
 ]
 
-[package.metadata]
-requires-dist = [
-    { name = "mcward-beet", marker = "extra == 'beet'", editable = "../ward/packages/mcward-beet" },
-    { name = "mcward-cli", marker = "extra == 'cli'", editable = "../ward/packages/mcward-cli" },
-    { name = "mcward-core", editable = "../ward/packages/mcward-core" },
-]
-provides-extras = ["beet", "cli"]
-
-[package.metadata.requires-dev]
-dev = [
-    { name = "httpx", specifier = ">=0.27" },
-    { name = "pytest", specifier = ">=9.0.3" },
-    { name = "pytest-cov", specifier = ">=7.1.0" },
-    { name = "ruff", specifier = ">=0.15.13" },
-    { name = "ty", specifier = ">=0.0.56" },
-]
-
 [[package]]
 name = "mcward-beet"
-source = { editable = "../ward/packages/mcward-beet" }
+version = "1.0.0"
+source = { git = "https://github.com/edayot/ward/?subdirectory=packages%2Fmcward-beet#4c3dd3d9d8a1904bc5bc54550418467c636d7b37" }
 dependencies = [
     { name = "beet" },
     { name = "mcward-cli" },
     { name = "mcward-core" },
 ]
 
-[package.metadata]
-requires-dist = [
-    { name = "beet", specifier = ">=0.116.0" },
-    { name = "mcward-cli", editable = "../ward/packages/mcward-cli" },
-    { name = "mcward-core", editable = "../ward/packages/mcward-core" },
-]
-
 [[package]]
 name = "mcward-cli"
-source = { editable = "../ward/packages/mcward-cli" }
+version = "1.0.0"
+source = { git = "https://github.com/edayot/ward/?subdirectory=packages%2Fmcward-cli#4c3dd3d9d8a1904bc5bc54550418467c636d7b37" }
 dependencies = [
     { name = "click" },
     { name = "mcward-core" },
@@ -648,29 +604,14 @@ dependencies = [
     { name = "rich-click" },
 ]
 
-[package.metadata]
-requires-dist = [
-    { name = "click", specifier = ">=8.4.0" },
-    { name = "mcward-core", editable = "../ward/packages/mcward-core" },
-    { name = "questionary", specifier = ">=2.1.1" },
-    { name = "rich", specifier = ">=15.0.0" },
-    { name = "rich-click", specifier = ">=1.8.0" },
-]
-
 [[package]]
 name = "mcward-core"
-source = { editable = "../ward/packages/mcward-core" }
+version = "1.0.0"
+source = { git = "https://github.com/edayot/ward/?subdirectory=packages%2Fmcward-core#4c3dd3d9d8a1904bc5bc54550418467c636d7b37" }
 dependencies = [
     { name = "httpx" },
     { name = "platformdirs" },
     { name = "psutil" },
-]
-
-[package.metadata]
-requires-dist = [
-    { name = "httpx", specifier = ">=0.27.0" },
-    { name = "platformdirs", specifier = ">=4.0.0" },
-    { name = "psutil", specifier = ">=7.2.2" },
 ]
 
 [[package]]
@@ -697,16 +638,14 @@ wheels = [
 [[package]]
 name = "mecha"
 version = "0.104.1"
-source = { editable = "../beet/packages/mecha" }
+source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "beet" },
     { name = "tokenstream" },
 ]
-
-[package.metadata]
-requires-dist = [
-    { name = "beet", editable = "../beet" },
-    { name = "tokenstream", specifier = ">=1.7.0" },
+sdist = { url = "https://files.pythonhosted.org/packages/76/2d/156adc46d5131a5e0f0f92552891fe68d3ed0b60830845978cdb3e3c4649/mecha-0.104.1.tar.gz", hash = "sha256:501238c30fb994ad8c9c1b0afe2b570a6cdc31e581a7bbd2ad0799ae4363509d", size = 630435, upload-time = "2026-07-08T05:12:48.65Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/00/ec/eb3dadaef58be5792df49b60ebd874989b78658e6d62669cd06bbde1fed2/mecha-0.104.1-py3-none-any.whl", hash = "sha256:3c71947bfdf343694d6bf7cad5f1cb902fb7b8cc5e16a8b95af69d38a0cef1c9", size = 667823, upload-time = "2026-07-08T05:12:47.051Z" },
 ]
 
 [[package]]
