@@ -60,12 +60,13 @@ data_pack:
 
 
 require:
-  - airdox_.add_tests_directory
+  - bolt
+  - mcward.beet
+  - mcward.mecha
   - airdox_.allow_function_without_name
   - mecha.contrib.messages
   - beet.contrib.render
-  - beet.contrib.model_merging
-  - bolt
+  - beet.contrib.livereload
 
 
 pipeline:

@@ -1,6 +1,4 @@
 
-say starting loot_tables test
-
 await delay 2s
 await score #loaded itemio.math matches 1
 await entity a97c9c67-fde0-4b89-926d-54fa4a866004

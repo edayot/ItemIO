@@ -7,6 +7,7 @@ from beet.core.file import (
     TextFileBase,
 )
 from dataclasses import dataclass
+import mcward
 
 
 @property
@@ -112,29 +113,6 @@ execute unless score #{project_id}.{dep_id} load.status matches 1 run tellraw @a
         load_dependencies_tag["values"].append({"id":"{dep_prefix}:load".format(dep_prefix=dep["versioning"]["prefix"]), "required":False})
     
     ctx.data.function_tags["{project_id}:load/dependencies".format(project_id=ctx.project_id)]=JsonFile(load_dependencies_tag)
-        
-
-
-class PackTest(TextFileBase[List[str]]):
-    """Class representing a PackTest test."""
-
-    scope: ClassVar[Tuple[str, ...]] = ("test",)
-    extension: ClassVar[str] = ".mcfunction"
-
-@dataclass
-class PackTestManager:
-    """Service for managing json messages."""
-
-    ctx: Context
-
-    def __post_init__(self):
-        self.ctx.data.extend_namespace.append(PackTest)
-    
-
-
-def add_tests_directory(ctx: Context):
-   ctx.inject(PackTestManager)
-            
             
 
 
@@ -154,3 +132,4 @@ def minify_functions(ctx: Context):
         # add a \n at the end of the file
         text = "\n" + text.strip("\n") + "\n"
         function.text = text
+
