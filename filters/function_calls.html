@@ -332,9 +332,9 @@
 <span class="w">    </span><span class="kc">run</span><span class="nb"> function</span><span class="w"> </span><span class="nf">itemio:impl/filters/energy</span><span class="err">:</span>
 <span class="w">        </span><span class="c1"># Set the item invalid</span>
 <span class="w">        </span><span class="kc">scoreboard</span><span class="w"> </span><span class="kc">players</span><span class="w"> </span><span class="kc">set</span><span class="w"> </span><span class="vm">#filter.valid_item</span><span class="w"> </span><span class="kc">itemio.io</span><span class="w"> </span><span class="mf">0</span>
-<span class="w">        </span><span class="c1"># If the item as an energy tag, it&#39;s valid</span>
+<span class="w">        </span><span class="c1"># If the item as an energy tag, it's valid</span>
 <span class="w">        </span><span class="kc">execute</span><span class="w"> </span>
-<span class="w">            </span><span class="kc">if</span><span class="w"> </span><span class="kc">data</span><span class="w"> </span><span class="kc">storage</span><span class="w"> </span><span class="nf">itemio:io</span><span class="w"> </span><span class="kc">item.components.</span><span class="s2">&quot;minecraft:custom_data&quot;</span><span class="o">.</span><span class="kc">energy</span><span class="w"> </span>
+<span class="w">            </span><span class="kc">if</span><span class="w"> </span><span class="kc">data</span><span class="w"> </span><span class="kc">storage</span><span class="w"> </span><span class="nf">itemio:io</span><span class="w"> </span><span class="kc">item.components.</span><span class="s2">"minecraft:custom_data"</span><span class="o">.</span><span class="kc">energy</span><span class="w"> </span>
 <span class="w">            </span><span class="kc">run</span><span class="nb"> scoreboard</span><span class="w"> </span><span class="kc">players</span><span class="w"> </span><span class="kc">set</span><span class="w"> </span><span class="vm">#filter.valid_item</span><span class="w"> </span><span class="kc">itemio.io</span><span class="w"> </span><span class="mf">1</span>
 </pre></div>
 </div>

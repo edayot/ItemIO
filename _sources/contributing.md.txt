@@ -41,3 +41,14 @@ The documentaion use the [bolt](https://github.com/mcbeet/bolt) format for mcfun
 
 The parser also support the [SNBT](https://minecraft.wiki/w/NBT_format#SNBT_format) format for syntax highlighting.
 
+
+## Testing
+The tests are run using [ward](https://github.com/mcbookshelf/ward/). It handle tests and coverage.
+
+```bash
+# Run the tests
+uv run beet test
+
+# With coverage
+uv run beet test --coverage --coverage-report html
+```
