@@ -38,7 +38,7 @@ jobs:
           commands: |
             uv run beet -s data_pack.name=\"datapack\"
 
-            uv run mcward test -p ./build/datapack -v $MC_VERSION --reporter github
+            uv run mcward test -p ./build/datapack -v $MC_VERSION --reporter github --coverage --coverage-report lcov:lcov.info
 
       
       # Upload build/ datapack.zip, resourcepack.zip, datapack-bundled.zip, resourcepack-bundled.zip
@@ -50,3 +50,8 @@ jobs:
         with:
           name: datapack-bundled
           path: build/datapack-bundled/
+
+      - name: Upload results to Codecov
+        uses: codecov/codecov-action@v5
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
