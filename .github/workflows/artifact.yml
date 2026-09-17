@@ -55,6 +55,7 @@ jobs:
           path: build/datapack-bundled/
 
       - name: Upload results to Codecov
+        if: github.event_name == 'push'
         uses: codecov/codecov-action@v5
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
