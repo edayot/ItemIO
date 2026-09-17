@@ -5,12 +5,12 @@ description: Item input/output lib - Easy interaction between vanilla and custom
 author: AirDox_
 
 output : "build"
-minecraft: "26.2"
+minecraft: "26.3"
 
 
 meta:
   modrinth_id: "dr6WkwxX"
-  mc_supports: ["26.2"]
+  mc_supports: ["26.3"]
   lsp:
     excluded_plugins:
       - smithed_libraries.plugins.versioning
@@ -20,6 +20,8 @@ meta:
   mecha:
     formatting: preserve
     multiline: true
+    # mecha has no 26.3 command tree yet, so functions keep being parsed against 26.2
+    version: "26.2"
 
   smithed:
     versioning:

@@ -1,28 +1,16 @@
-[
-    {
-        "condition": "minecraft:value_check",
-        "value": {
-            "type": "minecraft:score",
-            "target": "this",
-            "score": "itemio.network.process_queue"
-        },
-        "range": {
-            "min": {
-                "type": "minecraft:score",
-                "target": {
-                    "type": "minecraft:fixed",
-                    "name": "#current_queue"
-                },
-                "score": "itemio.math"
-            },
-            "max": {
-                "type": "minecraft:score",
-                "target": {
-                    "type": "minecraft:fixed",
-                    "name": "#current_queue"
-                },
-                "score": "itemio.math"
-            }
-        }
-    }
-]
+{
+	"type": "minecraft:int_value_check",
+	"value": {
+		"type": "minecraft:score",
+		"target": "this",
+		"score": "itemio.network.process_queue"
+	},
+	"test": {
+		"type": "minecraft:score",
+		"target": {
+			"type": "minecraft:fixed",
+			"name": "#current_queue"
+		},
+		"score": "itemio.math"
+	}
+}
