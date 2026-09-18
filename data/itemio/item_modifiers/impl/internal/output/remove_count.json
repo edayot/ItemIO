@@ -1,18 +1,13 @@
 {
-    "type": "minecraft:sequence",
-    "functions": [
-        {
-            "type": "minecraft:set_count",
-            "count": {
-                "type": "minecraft:score",
-                "target": {
-                    "type": "minecraft:fixed",
-                    "name": "#remove_count"
-                },
-                "score": "itemio.math.output",
-                "scale": -1
-            },
-            "add": true
-        }
-    ]
+    "type": "minecraft:set_count",
+    "count": {
+        "type": "minecraft:score",
+        "target": {
+            "type": "minecraft:fixed",
+            "name": "#remove_count"
+        },
+        "score": "itemio.math.output",
+        "scale": -1
+    },
+    "add": true
 }
