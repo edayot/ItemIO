@@ -8,9 +8,9 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:yellow_shulker_box",
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:copy_components",
+              "type": "minecraft:copy_components",
               "source": "block_entity",
               "include": [
                 "minecraft:custom_name",
@@ -22,21 +22,19 @@
           ]
         }
       ],
-      "conditions": [
-        {
-          "condition": "minecraft:inverted",
-          "term": {
-            "condition": "minecraft:match_tool",
-            "predicate": {
-              "predicates": {
-                "minecraft:custom_data": {
-                  "drop_contents": 1
-                }
+      "condition": {
+        "type": "minecraft:inverted",
+        "term": {
+          "type": "minecraft:match_tool",
+          "predicate": {
+            "predicates": {
+              "minecraft:custom_data": {
+                "drop_contents": 1
               }
             }
           }
         }
-      ]
+      }
     },
     {
       "rolls": 1,
@@ -47,18 +45,16 @@
           "name": "minecraft:contents"
         }
       ],
-      "conditions": [
-        {
-          "condition": "minecraft:match_tool",
-          "predicate": {
-            "predicates": {
-              "minecraft:custom_data": {
-                "drop_contents": 1
-              }
+      "condition": {
+        "type": "minecraft:match_tool",
+        "predicate": {
+          "predicates": {
+            "minecraft:custom_data": {
+              "drop_contents": 1
             }
           }
         }
-      ]
+      }
     }
   ],
   "random_sequence": "minecraft:blocks/yellow_shulker_box",

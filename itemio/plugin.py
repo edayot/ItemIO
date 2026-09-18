@@ -2,13 +2,20 @@
 from beet import Predicate, Context
 
 
+def single(terms):
+    """A 26.3 predicate file holds one condition, not a list of them"""
+
+    return terms[0] if len(terms) == 1 else {"type": "minecraft:all_of", "terms": terms}
+
+
+
 def get_predicates(offset):
     predicate_hopper_X = [
         {
-            "condition": "minecraft:any_of",
+            "type": "minecraft:any_of",
             "terms": [
                 {
-                    "condition": "minecraft:location_check",
+                    "type": "minecraft:location_check",
                     "offsetY": -1,
                     "offsetX": offset,
                     "predicate": {
@@ -20,7 +27,7 @@ def get_predicates(offset):
                     }
                 },
                 {
-                    "condition": "minecraft:location_check",
+                    "type": "minecraft:location_check",
                     "offsetY": 1,
                     "offsetX": offset,
                     "facing": "down",
@@ -36,7 +43,7 @@ def get_predicates(offset):
                     }
                 },
                 {
-                    "condition": "minecraft:location_check",
+                    "type": "minecraft:location_check",
                     "offsetZ": -1,
                     "offsetX": offset,
                     "facing": "south",
@@ -52,7 +59,7 @@ def get_predicates(offset):
                     }
                 },
                 {
-                    "condition": "minecraft:location_check",
+                    "type": "minecraft:location_check",
                     "offsetZ": 1,
                     "offsetX": offset,
                     "facing": "north",
@@ -68,7 +75,7 @@ def get_predicates(offset):
                     }
                 },
                 {
-                    "condition": "minecraft:location_check",
+                    "type": "minecraft:location_check",
                     "offsetX": -1 + offset,
                     "facing": "east",
                     "predicate": {
@@ -83,7 +90,7 @@ def get_predicates(offset):
                     }
                 },
                 {
-                    "condition": "minecraft:location_check",
+                    "type": "minecraft:location_check",
                     "offsetX": 1 + offset,
                     "facing": "west",
                     "predicate": {
@@ -102,10 +109,10 @@ def get_predicates(offset):
     ]
     predicate_hopper_Z = [
         {
-            "condition": "minecraft:any_of",
+            "type": "minecraft:any_of",
             "terms": [
                 {
-                    "condition": "minecraft:location_check",
+                    "type": "minecraft:location_check",
                     "offsetY": -1,
                     "offsetZ": offset,
                     "predicate": {
@@ -117,7 +124,7 @@ def get_predicates(offset):
                     }
                 },
                 {
-                    "condition": "minecraft:location_check",
+                    "type": "minecraft:location_check",
                     "offsetY": 1,
                     "offsetZ": offset,
                     "facing": "down",
@@ -133,7 +140,7 @@ def get_predicates(offset):
                     }
                 },
                 {
-                    "condition": "minecraft:location_check",
+                    "type": "minecraft:location_check",
                     "offsetZ": -1 + offset,
                     
                     "facing": "south",
@@ -149,7 +156,7 @@ def get_predicates(offset):
                     }
                 },
                 {
-                    "condition": "minecraft:location_check",
+                    "type": "minecraft:location_check",
                     "offsetZ": 1 + offset,
                     "facing": "north",
                     "predicate": {
@@ -164,7 +171,7 @@ def get_predicates(offset):
                     }
                 },
                 {
-                    "condition": "minecraft:location_check",
+                    "type": "minecraft:location_check",
                     "offsetX": -1,
                     "offsetZ": offset,
                     "facing": "east",
@@ -180,7 +187,7 @@ def get_predicates(offset):
                     }
                 },
                 {
-                    "condition": "minecraft:location_check",
+                    "type": "minecraft:location_check",
                     "offsetX": 1,
                     "offsetZ": offset,
                     "facing": "west",
@@ -203,12 +210,12 @@ def generate_predicates(ctx : Context, offset):
     
     predicate_hopper_X, predicate_hopper_Z = get_predicates(offset)
 
-    ctx.data.predicates[f"itemio:impl/container/hopper_x_plus_{offset}"] = Predicate(predicate_hopper_X)
-    ctx.data.predicates[f"itemio:impl/container/hopper_z_plus_{offset}"] = Predicate(predicate_hopper_Z)
+    ctx.data.predicates[f"itemio:impl/container/hopper_x_plus_{offset}"] = Predicate(single(predicate_hopper_X))
+    ctx.data.predicates[f"itemio:impl/container/hopper_z_plus_{offset}"] = Predicate(single(predicate_hopper_Z))
 
     predicate_hopper_X, predicate_hopper_Z = get_predicates(-offset)
 
-    ctx.data.predicates[f"itemio:impl/container/hopper_x_minus_{offset}"] = Predicate(predicate_hopper_X)
-    ctx.data.predicates[f"itemio:impl/container/hopper_z_minus_{offset}"] = Predicate(predicate_hopper_Z)
+    ctx.data.predicates[f"itemio:impl/container/hopper_x_minus_{offset}"] = Predicate(single(predicate_hopper_X))
+    ctx.data.predicates[f"itemio:impl/container/hopper_z_minus_{offset}"] = Predicate(single(predicate_hopper_Z))
 
     return predicate_hopper_X, predicate_hopper_Z
