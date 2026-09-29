@@ -13,3 +13,4 @@ _build/
 .env
 
 build
+coverage.html
