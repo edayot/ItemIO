@@ -30,7 +30,7 @@ Servos' itemio.math value is a boolean indicating if the servo is connected to a
 ```
 
 ## NBT handling
-Servos has their own filters config ``data.itemio.ioconfig.filters``.
+Servos has their own filters config ``@s Item.components."minecraft:custom_data".itemio.ioconfig.filters``.
 
 :::{admonition} Full specification 
 :class: seealso
