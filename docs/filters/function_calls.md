@@ -71,7 +71,7 @@ A function tag to call filters verifications. An empty filters is valid and retu
 
 
 
-| Output Name       | Output Type  | Output Source             | Output Objective/Path    | 
+| Output Name       | Output Type  | Output Source             | Output Objective/Path   | 
 | ---               | ---          | ---                       | ---                     | 
-| 'Success'         | score        | #filters.valid_item       | itemio.math             | 
+| 'Success'         | score        | #filters.valid_item       | itemio.io               | 
 

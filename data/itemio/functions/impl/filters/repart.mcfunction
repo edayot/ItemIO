@@ -12,6 +12,7 @@
 
 
 
+# tellraw @a {"score":{"name":"#filter.valid_item","objective":"itemio.io"}}
 
 
 

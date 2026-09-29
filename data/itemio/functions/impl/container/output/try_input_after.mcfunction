@@ -1,5 +1,5 @@
 # @public
-#tellraw @p [{"text":"try input after : "},{"nbt":"output","storage":"itemio:io"}]
+# tellraw @p [{"text":"try input after : "},{"nbt":"output","storage":"itemio:io"}]
 scoreboard players set #success_input itemio.io 0
 
 data remove storage itemio:main temp.seen_item
