@@ -2,6 +2,19 @@
 
 
 
+## v1.8.1 (2026-10-02)
+
+### Bug fixes
+
+* fix: disable printing ([`d161371`](https://github.com/edayot/ItemIO/commit/d161371a9fe7b21891b1cb32ccf62eeb44503b98))
+
+* fix: jukebox inputing ([`5398c5f`](https://github.com/edayot/ItemIO/commit/5398c5fef682424f476d9326640d43bc41c22783))
+
+### Unknown
+
+* update release thingy ([`53cb4d5`](https://github.com/edayot/ItemIO/commit/53cb4d5b2b6ee404c2d4a4174d9d5e7fdcd897be))
+
+
 ## v1.8.0 (2026-10-02)
 
 ### Chores
