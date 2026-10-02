@@ -39,13 +39,7 @@ post_url = (
 )
 
 
-download_url = (
-    "https://github.com/edayot/"
-    f"{beet['name']}/releases/download/"
-    f"v{CURRENT_VERSION}/"
-    f"{beet['name']}-v{CURRENT_VERSION}-"
-    "{ziptype}.zip"
-)
+download_url = (f"https://github.com/edayot/ItemIO/releases/download/v{CURRENT_VERSION}/itemio_{CURRENT_VERSION}_dp.zip")
 
 try:
     dep_no = beet['meta']['smithed_dependencies']
