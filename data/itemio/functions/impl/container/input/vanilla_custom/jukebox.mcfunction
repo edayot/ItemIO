@@ -48,9 +48,9 @@ function ~/loot_item_components:
                     { \
                         "type": "minecraft:item", \
                         "name": "$(id)", \
-                        "functions": [ \
+                        "modifier": [ \
                             { \
-                                "function": "minecraft:set_components", \
+                                "type": "minecraft:set_components", \
                                 "components": $(components) \
                             } \
                         ] \
