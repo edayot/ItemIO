@@ -2,13 +2,66 @@
 
 
 
+## v1.8.0 (2026-10-02)
+
+### Chores
+
+* chore: managing deps ([`a2c0e4c`](https://github.com/edayot/ItemIO/commit/a2c0e4ca5f15a177cd972449010e6899e72c2194))
+
+### Documentation
+
+* docs: coverage ([`a9e23ea`](https://github.com/edayot/ItemIO/commit/a9e23ea6856feb2c4a346c8aa47dbf12831575a4))
+
+### Features
+
+* feat: update to 26.3 ([`1dbb18c`](https://github.com/edayot/ItemIO/commit/1dbb18c6530d13a3d0b81518ef38d29096fa411f))
+
+* feat: more coverage ([`3f6dbfa`](https://github.com/edayot/ItemIO/commit/3f6dbfaf3451c4855cdacafcfce383fb3ec89b27))
+
+### Refactoring
+
+* refactor: test suite ([`efcea00`](https://github.com/edayot/ItemIO/commit/efcea00b374585fc188cd2523ee1350c34af92fb))
+
+### Unknown
+
+* brewing test ([`4304a4a`](https://github.com/edayot/ItemIO/commit/4304a4a179742ee1e5b31416ba4a1eca1f30ce03))
+
+* reverse chest ([`de82441`](https://github.com/edayot/ItemIO/commit/de82441387bbf0eca67ab7c22f49aae17cfedc3a))
+
+* Update artifact.yml ([`7900b7c`](https://github.com/edayot/ItemIO/commit/7900b7c41fa4eb0365cb16af5ed8327a01a2a610))
+
+* Update artifact.yml ([`34190fc`](https://github.com/edayot/ItemIO/commit/34190fcb0e17a11baed1ceed9e0f4a5b4c037dca))
+
+* Update artifact.yml to run on prs ([`9ab352d`](https://github.com/edayot/ItemIO/commit/9ab352d47ffab9d86197c1f3ed3d48243e75c6d9))
+
+* add test coverage upload ([`e09520b`](https://github.com/edayot/ItemIO/commit/e09520ba7df646d9b9a67bfeb9dadd1b73761ef2))
+
+* coverage ([`8833c7f`](https://github.com/edayot/ItemIO/commit/8833c7f0dfe62af471d60715b75fc2884977ef18))
+
+* delete useless file ([`59efb9b`](https://github.com/edayot/ItemIO/commit/59efb9bdf005408870e5089b67d789c81685314e))
+
+* woosh ([`351ea95`](https://github.com/edayot/ItemIO/commit/351ea954af3457ed36ffc7b6e4fdfc53ed9f0b39))
+
+* fix structure ([`849ea5f`](https://github.com/edayot/ItemIO/commit/849ea5fad399014980144397980b2bbb278d06df))
+
+* wwooos ([`e2e80da`](https://github.com/edayot/ItemIO/commit/e2e80dac39563e85b42505fb385ac84163921292))
+
+* woosh ([`27f5ea9`](https://github.com/edayot/ItemIO/commit/27f5ea9b8ab4463b06fcb7712823451ba2aeffb5))
+
+* woosh run tests ([`92d645f`](https://github.com/edayot/ItemIO/commit/92d645f53dd5b0a52f8287a90e9644b2de2b9aaf))
+
+* migration to uv ([`ad04cb2`](https://github.com/edayot/ItemIO/commit/ad04cb218cbcee34e26d5434ea82b7016ab0ac38))
+
+
 ## v1.7.1 (2026-06-06)
 
-### Fix
+### Bug fixes
 
-* fix: Fixed extract top hopper shenanigan and optimized cooldown checks (#33)
+* fix: Fixed extract top hopper shenanigan and optimized cooldown checks (#33) ([`0db0c87`](https://github.com/edayot/ItemIO/commit/0db0c877cd8c0901c8c5aece46e50e79a9df5dbe))
 
-* fix: Fixed extract top checking static TransferCooldown
+* fix: Fixed extract top checking static TransferCooldown ([`0db0c87`](https://github.com/edayot/ItemIO/commit/0db0c877cd8c0901c8c5aece46e50e79a9df5dbe))
+
+### Performance improvements
 
 * perf: Optimized cooldown checks ([`0db0c87`](https://github.com/edayot/ItemIO/commit/0db0c877cd8c0901c8c5aece46e50e79a9df5dbe))
 
@@ -24,7 +77,7 @@
 
 ## v1.6.1 (2026-01-17)
 
-### Fix
+### Bug fixes
 
 * fix: only disable extraction ([`b257377`](https://github.com/edayot/ItemIO/commit/b2573772a5033f03f0ea530cbf408f3e83977e37))
 
@@ -34,31 +87,35 @@
 
 ## v1.5.4 (2026-01-17)
 
-### Chore
-
-* chore: using pushed sha ([`b26e6b6`](https://github.com/edayot/ItemIO/commit/b26e6b681e160162748d61ce5b8ece2db282dbc7))
-
-### Feature
-
-* feat: implement shelves input/output function #32 ([`2075ab0`](https://github.com/edayot/ItemIO/commit/2075ab0d6e32e2961f476a9f1527c0ead84c0912))
-
-### Fix
+### Bug fixes
 
 * fix: check transfer cooldown when the hopper function ([`448023c`](https://github.com/edayot/ItemIO/commit/448023c5ef4cef3e4890cd67dcd25367b54c4b27))
 
 * fix: TransferCooldown is increase only if the transfer was succesfull ([`1d3b064`](https://github.com/edayot/ItemIO/commit/1d3b06495df5ba495118c7416a9e946549d051fd))
 
+### Chores
+
+* chore: using pushed sha ([`b26e6b6`](https://github.com/edayot/ItemIO/commit/b26e6b681e160162748d61ce5b8ece2db282dbc7))
+
+### Features
+
+* feat: implement shelves input/output function #32 ([`2075ab0`](https://github.com/edayot/ItemIO/commit/2075ab0d6e32e2961f476a9f1527c0ead84c0912))
+
 
 ## v1.5.3 (2026-01-01)
 
-### Chore
+### Chores
 
 * chore: update version ([`bbea037`](https://github.com/edayot/ItemIO/commit/bbea037c03c7ba3024b67d233c620cdf9f5855e1))
 
 
 ## v1.5.2 (2026-01-01)
 
-### Chore
+### Bug fixes
+
+* fix: dumb issue with item display ([`c671b42`](https://github.com/edayot/ItemIO/commit/c671b42ab18f4edc13d95fbeff381738963483d4))
+
+### Chores
 
 * chore: release splitted in different jobs ([`a2a21f0`](https://github.com/edayot/ItemIO/commit/a2a21f0856e6831bdb7b4770dbf8bc85139391a9))
 
@@ -66,31 +123,33 @@
 
 * chore: run tests ? ([`fd77af3`](https://github.com/edayot/ItemIO/commit/fd77af3fed2deb0117e3980a2e598d503d008164))
 
-### Feature
+### Features
 
 * feat: copper chest support #31 ([`7d412f9`](https://github.com/edayot/ItemIO/commit/7d412f94dc6fe5c7e01a555c3111412eb4319e29))
-
-### Fix
-
-* fix: dumb issue with item display ([`c671b42`](https://github.com/edayot/ItemIO/commit/c671b42ab18f4edc13d95fbeff381738963483d4))
 
 ### Unknown
 
 * delete useless component ([`db6aba8`](https://github.com/edayot/ItemIO/commit/db6aba89f0126c21b2e79723f61c845737d650dd))
 
-* forcing itemio project_id (since it don&#39;t want to resolver properly ([`1aa2da0`](https://github.com/edayot/ItemIO/commit/1aa2da00d05ecc1a1d9cd09c486fd8d28d1e7281))
+* forcing itemio project_id (since it don't want to resolver properly ([`1aa2da0`](https://github.com/edayot/ItemIO/commit/1aa2da00d05ecc1a1d9cd09c486fd8d28d1e7281))
 
 
 ## v1.5.1 (2025-12-28)
 
-### Fix
+### Bug fixes
 
 * fix: using project_version ([`3b99d76`](https://github.com/edayot/ItemIO/commit/3b99d76d34ecebda139e717cc4b2bcdca97a9111))
 
 
 ## v1.5.0 (2025-12-14)
 
-### Chore
+### Bug fixes
+
+* fix: rollback yellow shulker box thing ([`a81a78d`](https://github.com/edayot/ItemIO/commit/a81a78d6211d882eaecc539fb77f43efe702def4))
+
+* fix: disable servo works at all steps ([`df4a940`](https://github.com/edayot/ItemIO/commit/df4a94026a1f63f8ac7c55065015b432c9e30237))
+
+### Chores
 
 * chore: update to 1.21.11 ([`88217ac`](https://github.com/edayot/ItemIO/commit/88217ac87dd1d83bc13bc12213091b985f1aeca1))
 
@@ -98,7 +157,7 @@
 
 * docs: add SimplEnergy featured datapack ([`dbb388a`](https://github.com/edayot/ItemIO/commit/dbb388add9bf1edfd54b3c354dad0bc68b671aa3))
 
-### Feature
+### Features
 
 * feat: add configuration ([`a938483`](https://github.com/edayot/ItemIO/commit/a938483aef4b333d25bc9352aa3ecbc771880c69))
 
@@ -108,19 +167,13 @@
 
 * feat: update to latest snapshot ([`c66fb2d`](https://github.com/edayot/ItemIO/commit/c66fb2d2046ba1f62c3ed9496c552ef1d65b65f2))
 
-### Fix
+### Performance improvements
 
-* fix: rollback yellow shulker box thing ([`a81a78d`](https://github.com/edayot/ItemIO/commit/a81a78d6211d882eaecc539fb77f43efe702def4))
-
-* fix: disable servo works at all steps ([`df4a940`](https://github.com/edayot/ItemIO/commit/df4a94026a1f63f8ac7c55065015b432c9e30237))
-
-### Performance
-
-* perf: armor_stand -&gt; item_display ([`d8ee525`](https://github.com/edayot/ItemIO/commit/d8ee525a6c4a624836e1fa91bbb9a03fc793a4c6))
+* perf: armor_stand -> item_display ([`d8ee525`](https://github.com/edayot/ItemIO/commit/d8ee525a6c4a624836e1fa91bbb9a03fc793a4c6))
 
 ### Unknown
 
-* 3.11 -&gt; 3.14 ([`3ce4fe1`](https://github.com/edayot/ItemIO/commit/3ce4fe195e4ccd309a87f182a48000056a577e57))
+* 3.11 -> 3.14 ([`3ce4fe1`](https://github.com/edayot/ItemIO/commit/3ce4fe195e4ccd309a87f182a48000056a577e57))
 
 * beta beet ([`ede819e`](https://github.com/edayot/ItemIO/commit/ede819e8df03d8aabd4ef405b1ae339820298309))
 
@@ -135,38 +188,38 @@
 
 ## v1.4.1 (2025-06-17)
 
-### Fix
+### Bug fixes
 
 * fix: update deps and minecraft version ([`e5e0bc7`](https://github.com/edayot/ItemIO/commit/e5e0bc7620e8d8241add2acf8e90a4fc5979b241))
 
 
 ## v1.4.0 (2025-04-12)
 
-### Chore
+### Chores
 
 * chore: update test suite ([`2bbe89d`](https://github.com/edayot/ItemIO/commit/2bbe89d0f5f461a3fb7f80849f03c6371c27ea41))
 
 * chore: update to 1.21.5 ([`a42e5a2`](https://github.com/edayot/ItemIO/commit/a42e5a287ee085d667bac5ec09869642c9e93a36))
 
-### Feature
+### Features
 
 * feat: start update to 1.21.5 ([`c7808fe`](https://github.com/edayot/ItemIO/commit/c7808feec4ec730113b5218cf44ce127d8ed3e69))
 
 
 ## v1.3.3 (2024-12-07)
 
-### Chore
+### Chores
 
 * chore: bump version ([`98db7a1`](https://github.com/edayot/ItemIO/commit/98db7a1589d3cf0a5d0cebd9961b7f141fdb3528))
 
-### Feature
+### Features
 
 * feat: #28 Add versionning to all entities ([`9a04681`](https://github.com/edayot/ItemIO/commit/9a046814d650647502a70242cfddfaeb501ffd67))
 
 
 ## v1.3.2 (2024-11-27)
 
-### Fix
+### Bug fixes
 
 * fix: multiple pack_format support + change minify function ([`60f3131`](https://github.com/edayot/ItemIO/commit/60f313156a3366bdf1877bf0080db616be41e9f4))
 
@@ -175,7 +228,11 @@
 
 ## v1.3.1 (2024-11-01)
 
-### Chore
+### Bug fixes
+
+* fix: some test issue (normally less random) ([`f532fd6`](https://github.com/edayot/ItemIO/commit/f532fd6533c14bcc69ed6f45ec06ed4fd5181bfe))
+
+### Chores
 
 * chore: update version list ([`94c79e0`](https://github.com/edayot/ItemIO/commit/94c79e0a462573ce38b2c8968f4d4a2ba71ea2a5))
 
@@ -189,28 +246,10 @@
 
 * docs: more readable ([`3f3fd59`](https://github.com/edayot/ItemIO/commit/3f3fd5998599eec77c9a5eae973d188f6281ce84))
 
-### Fix
-
-* fix: some test issue (normally less random) ([`f532fd6`](https://github.com/edayot/ItemIO/commit/f532fd6533c14bcc69ed6f45ec06ed4fd5181bfe))
-
 
 ## v1.3.0 (2024-08-11)
 
-### Chore
-
-* chore: doc update trigger ([`eb50a60`](https://github.com/edayot/ItemIO/commit/eb50a608ce53b2764404e465c6aca6b06fa3b9e9))
-
-* chore: update beet version ([`3257c20`](https://github.com/edayot/ItemIO/commit/3257c203f5d4a8d2788c6d063cd81c08480cbc9c))
-
-### Feature
-
-* feat: optional config to limit the stack ([`d31e6e1`](https://github.com/edayot/ItemIO/commit/d31e6e16dc7ee395f8d72bc58846b59cc70ab3e8))
-
-* feat: unique item outputing ([`4f4ee87`](https://github.com/edayot/ItemIO/commit/4f4ee87aa8fa8b87b504733ee0615de9eb0f3961))
-
-* feat: single item input + jukebox song ([`2c2efac`](https://github.com/edayot/ItemIO/commit/2c2efac851da6862c0022967a9204486a171aa1d))
-
-### Fix
+### Bug fixes
 
 * fix: storage path ([`c290f9f`](https://github.com/edayot/ItemIO/commit/c290f9f9988be2665ae9a05ed43305f6ca959b6b))
 
@@ -222,24 +261,42 @@
 
 * fix: restricting to music disc ([`0c185f2`](https://github.com/edayot/ItemIO/commit/0c185f2d3aa2564551f2cbb6e42c330444727523))
 
+### Chores
+
+* chore: doc update trigger ([`eb50a60`](https://github.com/edayot/ItemIO/commit/eb50a608ce53b2764404e465c6aca6b06fa3b9e9))
+
+* chore: update beet version ([`3257c20`](https://github.com/edayot/ItemIO/commit/3257c203f5d4a8d2788c6d063cd81c08480cbc9c))
+
+### Features
+
+* feat: optional config to limit the stack ([`d31e6e1`](https://github.com/edayot/ItemIO/commit/d31e6e16dc7ee395f8d72bc58846b59cc70ab3e8))
+
+* feat: unique item outputing ([`4f4ee87`](https://github.com/edayot/ItemIO/commit/4f4ee87aa8fa8b87b504733ee0615de9eb0f3961))
+
+* feat: single item input + jukebox song ([`2c2efac`](https://github.com/edayot/ItemIO/commit/2c2efac851da6862c0022967a9204486a171aa1d))
+
 
 ## v1.2.6 (2024-07-23)
 
-### Fix
+### Bug fixes
 
-* fix: shulker boxes shoudn&#39;t go in shulker boxes #27 ([`ccfbc3b`](https://github.com/edayot/ItemIO/commit/ccfbc3bf5f354963eee49affb59fe43537786cb9))
+* fix: shulker boxes shoudn't go in shulker boxes #27 ([`ccfbc3b`](https://github.com/edayot/ItemIO/commit/ccfbc3bf5f354963eee49affb59fe43537786cb9))
 
 
 ## v1.2.5 (2024-07-15)
 
-### Fix
+### Bug fixes
 
 * fix: double speed crafter ([`de87d19`](https://github.com/edayot/ItemIO/commit/de87d19235a6fedf91f5a4ab03baddfa04b209bb))
 
 
 ## v1.2.4 (2024-07-15)
 
-### Feature
+### Bug fixes
+
+* fix: wrong handeling of items for crafter input ([`33d3881`](https://github.com/edayot/ItemIO/commit/33d38810eb2077e3e0c2e0fbf650edab43647f3c))
+
+### Features
 
 * feat: add a test for crafter ([`3db02cd`](https://github.com/edayot/ItemIO/commit/3db02cda751736f4812df27b886a8207efbeb44e))
 
@@ -247,14 +304,10 @@
 
 * feat: add new test ([`f9a0e03`](https://github.com/edayot/ItemIO/commit/f9a0e03245ae4f821e438f3c74179e5e0d694b17))
 
-### Fix
-
-* fix: wrong handeling of items for crafter input ([`33d3881`](https://github.com/edayot/ItemIO/commit/33d38810eb2077e3e0c2e0fbf650edab43647f3c))
-
 
 ## v1.2.3 (2024-07-14)
 
-### Fix
+### Bug fixes
 
 * fix: chiseled_bookshelf does not stack items ([`990c94e`](https://github.com/edayot/ItemIO/commit/990c94e996449d174397952a93226a6365216d22))
 
@@ -265,7 +318,7 @@
 
 ## v1.2.2 (2024-07-14)
 
-### Fix
+### Bug fixes
 
 * fix: check the number of entities if there is to check it ([`b8b2687`](https://github.com/edayot/ItemIO/commit/b8b26874beec16e47c0e63ac602c27c93d74f445))
 
@@ -276,7 +329,7 @@
 
 ## v1.2.1 (2024-07-14)
 
-### Fix
+### Bug fixes
 
 * fix: logging message ([`ea9c06c`](https://github.com/edayot/ItemIO/commit/ea9c06c9b9fd2b9f81ddc6e968b620c452d052d3))
 
@@ -293,44 +346,44 @@
 
 ## v1.2.0 (2024-07-11)
 
-### Feature
-
-* feat: cables now connect to servos #26 ([`559fe31`](https://github.com/edayot/ItemIO/commit/559fe31552a04123ff1afcd805e8ad27a21f19bd))
-
-### Fix
+### Bug fixes
 
 * fix: more at @s ([`43f604d`](https://github.com/edayot/ItemIO/commit/43f604d7df59780ed5f6a74dee43b55f15c19623))
 
 * fix: centralized cable model calculation ([`ff6a9de`](https://github.com/edayot/ItemIO/commit/ff6a9de7dafb55e31b902ed8bc2ec6ac5649b722))
 
+### Features
+
+* feat: cables now connect to servos #26 ([`559fe31`](https://github.com/edayot/ItemIO/commit/559fe31552a04123ff1afcd805e8ad27a21f19bd))
+
 
 ## v1.1.1 (2024-07-04)
 
-### Chore
+### Bug fixes
+
+* fix: performance ([`84437a8`](https://github.com/edayot/ItemIO/commit/84437a8a42512f17230428876c32657d63f60a6a))
+
+### Chores
 
 * chore: delete find replace ([`9daf57f`](https://github.com/edayot/ItemIO/commit/9daf57f2af448670f505e6407e9d280fd7f809ac))
 
 * chore: github actions releases ([`66eb7e5`](https://github.com/edayot/ItemIO/commit/66eb7e505c9aa658b7ceff8245652fb2675546dd))
 
-### Fix
-
-* fix: performance ([`84437a8`](https://github.com/edayot/ItemIO/commit/84437a8a42512f17230428876c32657d63f60a6a))
-
 
 ## v1.1.0 (2024-06-20)
 
-### Chore
+### Chores
 
 * chore: update deps, monkey patch 1.21 ([`2574600`](https://github.com/edayot/ItemIO/commit/2574600c1a36e5d4be17fd6e4871f6bbe04c3dee))
 
-### Ci
+### Continuous integration
 
 * ci: update minecraft version ([`56f1155`](https://github.com/edayot/ItemIO/commit/56f1155040cd74ad77542052789d552794c334fe))
 
 
 ## v1.0.1 (2024-06-12)
 
-### Fix
+### Bug fixes
 
 * fix: itemio.minecart_disable goes to -infinity ([`38d7738`](https://github.com/edayot/ItemIO/commit/38d77380e01683afebc02adaef13e03c409f6e68))
 
@@ -340,15 +393,15 @@
 
 ## v0.14.2 (2024-05-08)
 
-### Chore
+### Bug fixes
+
+* fix: delete useless raw ([`75ac7da`](https://github.com/edayot/ItemIO/commit/75ac7daa4fed2227ba929e194401181cb89b525f))
+
+### Chores
 
 * chore: update deps ([`476c8a2`](https://github.com/edayot/ItemIO/commit/476c8a2c2bf3f17de3d08824e2656c5bf5500a03))
 
 * chore: update deps ([`5ef3631`](https://github.com/edayot/ItemIO/commit/5ef3631f6d27605ef1e02239814e552a4639db36))
-
-### Fix
-
-* fix: delete useless raw ([`75ac7da`](https://github.com/edayot/ItemIO/commit/75ac7daa4fed2227ba929e194401181cb89b525f))
 
 
 ## v0.14.1 (2024-04-24)
@@ -356,9 +409,25 @@
 
 ## v0.14.0 (2024-04-24)
 
-### Chore
+### Bug fixes
 
-* chore: update 1.20.5 &amp; v1.0.0 incomming ([`89afcaf`](https://github.com/edayot/ItemIO/commit/89afcafff5817dc3c9d9d3841c16819db8d9cf76))
+* fix: 1.20.5 item tags have / in them ([`321acb9`](https://github.com/edayot/ItemIO/commit/321acb90ecb6a58d5cdfae23644eea31858f5178))
+
+* fix: compute the stck_size before ([`2094a96`](https://github.com/edayot/ItemIO/commit/2094a96fa0c35a94e2143eab902f34c38f459cab))
+
+* fix: last Count in repo ([`40f13dd`](https://github.com/edayot/ItemIO/commit/40f13dd77012dc5c0c7015bdb227159de81c3635))
+
+* fix: getting the last item_tags list ([`9dfbf5f`](https://github.com/edayot/ItemIO/commit/9dfbf5f068aedc0e700cf9340cead9adc5830b8c))
+
+* fix: default value & "true" -> true ([`a337bb7`](https://github.com/edayot/ItemIO/commit/a337bb7bdca61f10cd199a9acea7f9889b0d1186))
+
+* fix: using components ([`9071980`](https://github.com/edayot/ItemIO/commit/9071980e043ccf237b935479a53e2da00146a18d))
+
+* fix: getting the stack size by hardcoded one ([`bae46d3`](https://github.com/edayot/ItemIO/commit/bae46d3f1d315610fea6ce52062affe6ad151db6))
+
+### Chores
+
+* chore: update 1.20.5 & v1.0.0 incomming ([`89afcaf`](https://github.com/edayot/ItemIO/commit/89afcafff5817dc3c9d9d3841c16819db8d9cf76))
 
 * chore: deployement create a tag ([`e731f4a`](https://github.com/edayot/ItemIO/commit/e731f4abd8a3183cd6e711545641391c8f74819b))
 
@@ -380,17 +449,21 @@
 
 * chore: fix test ([`0ab7c77`](https://github.com/edayot/ItemIO/commit/0ab7c7716fc94f58c2973cb9d86f1c7c74107a58))
 
+### Code style
+
+* style: minecraft tags generation are now in a separated function ([`3d94d14`](https://github.com/edayot/ItemIO/commit/3d94d14a51025aacca6737974eba76955f59a6f4))
+
 ### Documentation
-
-* docs: change to inline item modifier ([`1d1124c`](https://github.com/edayot/ItemIO/commit/1d1124ca7cc2ba8b48a9cad74406455559a0e9ac))
-
-* docs: updating ioconfig_from_storage &amp; rewriting / formatting ([`2bbf84b`](https://github.com/edayot/ItemIO/commit/2bbf84bf10e37a5ccc702bdcd526413347bb4562))
 
 * docs: top/bottom instead of up/down ([`99fb776`](https://github.com/edayot/ItemIO/commit/99fb77660362707370f88970f67438f2c6908f43))
 
-### Feature
+* docs: change to inline item modifier ([`1d1124c`](https://github.com/edayot/ItemIO/commit/1d1124ca7cc2ba8b48a9cad74406455559a0e9ac))
 
-* feat: breaking change ioconfig_from_storage is now in it&#39;s own custom_data tag ([`ca77a0d`](https://github.com/edayot/ItemIO/commit/ca77a0d316fb07048963a299dcc7287ba6b4885b))
+* docs: updating ioconfig_from_storage & rewriting / formatting ([`2bbf84b`](https://github.com/edayot/ItemIO/commit/2bbf84bf10e37a5ccc702bdcd526413347bb4562))
+
+### Features
+
+* feat: breaking change ioconfig_from_storage is now in it's own custom_data tag ([`ca77a0d`](https://github.com/edayot/ItemIO/commit/ca77a0d316fb07048963a299dcc7287ba6b4885b))
 
 * feat: Full crafter support #20 ([`c1f9cee`](https://github.com/edayot/ItemIO/commit/c1f9cee7716a59940101974052bb99fe188873d3))
 
@@ -402,46 +475,28 @@
 
 * feat: I/O protection on the number of entities #17 ([`188dd6c`](https://github.com/edayot/ItemIO/commit/188dd6c63dcea9696ed5119fbb3138ad593ffb1c))
 
-### Fix
-
-* fix: 1.20.5 item tags have / in them ([`321acb9`](https://github.com/edayot/ItemIO/commit/321acb90ecb6a58d5cdfae23644eea31858f5178))
-
-* fix: compute the stck_size before ([`2094a96`](https://github.com/edayot/ItemIO/commit/2094a96fa0c35a94e2143eab902f34c38f459cab))
-
-* fix: last Count in repo ([`40f13dd`](https://github.com/edayot/ItemIO/commit/40f13dd77012dc5c0c7015bdb227159de81c3635))
-
-* fix: getting the last item_tags list ([`9dfbf5f`](https://github.com/edayot/ItemIO/commit/9dfbf5f068aedc0e700cf9340cead9adc5830b8c))
-
-* fix: default value &amp; &#34;true&#34; -&gt; true ([`a337bb7`](https://github.com/edayot/ItemIO/commit/a337bb7bdca61f10cd199a9acea7f9889b0d1186))
-
-* fix: using components ([`9071980`](https://github.com/edayot/ItemIO/commit/9071980e043ccf237b935479a53e2da00146a18d))
-
-* fix: getting the stack size by hardcoded one ([`bae46d3`](https://github.com/edayot/ItemIO/commit/bae46d3f1d315610fea6ce52062affe6ad151db6))
-
-### Style
-
-* style: minecraft tags generation are now in a separated function ([`3d94d14`](https://github.com/edayot/ItemIO/commit/3d94d14a51025aacca6737974eba76955f59a6f4))
-
 ### Unknown
 
-* Merge pull request #25 from edayot:1.20.5
-
-1.20.5 ([`d7be6fe`](https://github.com/edayot/ItemIO/commit/d7be6fe5dba40f5fb750e95824769131add7893a))
-
-* Merge remote-tracking branch &#39;origin/master&#39; into 1.20.5 ([`903e46c`](https://github.com/edayot/ItemIO/commit/903e46ccb25102b5ed4d9ac1c05083fe9304b129))
+* run artifact on 1.20.5 ([`4e1f837`](https://github.com/edayot/ItemIO/commit/4e1f8379f410c0b42c5188de10a01743e50285da))
 
 * chore update deps ([`af5ac44`](https://github.com/edayot/ItemIO/commit/af5ac446a8d16f4c8ecf405cce82204ea3a55524))
 
 * cfdojsfgi ([`91129ac`](https://github.com/edayot/ItemIO/commit/91129ac5c94f3bc952e02d4f039b8e5ca2fb5dd1))
 
-* run artifact on 1.20.5 ([`4e1f837`](https://github.com/edayot/ItemIO/commit/4e1f8379f410c0b42c5188de10a01743e50285da))
-
-* Merge branch &#39;master&#39; into 1.20.5 ([`87a8cd6`](https://github.com/edayot/ItemIO/commit/87a8cd63d6fc21086386031ca79015fea916d52c))
-
 
 ## v0.13.2 (2024-03-22)
 
-### Chore
+### Bug fixes
+
+* fix: Dup glitch when inputing more than 64 items in a container ([`97505d9`](https://github.com/edayot/ItemIO/commit/97505d9b431ca91ad4fb0d04822d5618d4d472c3))
+
+* fix: some duplication glitch, moving to the new yellow_shulker_box ([`899a012`](https://github.com/edayot/ItemIO/commit/899a01246055364f83b4ef5a704fa042ccaa1de2))
+
+* fix: changing count ([`7445048`](https://github.com/edayot/ItemIO/commit/744504870d472bf8d297f938106983b7553b7430))
+
+* fix: change custom_data path #22 ([`e7914e3`](https://github.com/edayot/ItemIO/commit/e7914e3199b7a1f0fe60fa57720ed73be828b816))
+
+### Chores
 
 * chore(deps): bump cryptography from 41.0.7 to 42.0.4
 
@@ -455,7 +510,7 @@ updated-dependencies:
   dependency-type: direct:production
 ...
 
-Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`19ff00b`](https://github.com/edayot/ItemIO/commit/19ff00b5e902aa7996f61151eb5167b4f9c6aa2a))
+Signed-off-by: dependabot[bot] <support@github.com> ([`19ff00b`](https://github.com/edayot/ItemIO/commit/19ff00b5e902aa7996f61151eb5167b4f9c6aa2a))
 
 * chore: fix b is required ([`916b5fe`](https://github.com/edayot/ItemIO/commit/916b5fed1d2f6811382ae7dc652ba51c3b4781a4))
 
@@ -475,7 +530,7 @@ Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`19ff00b`](https://g
 
 * docs: Update README.md ([`8ff9414`](https://github.com/edayot/ItemIO/commit/8ff9414f2c90a64ac79236df40edbcb3c574d31d))
 
-### Feature
+### Features
 
 * feat: update merge filter ([`2e0f592`](https://github.com/edayot/ItemIO/commit/2e0f592ef33144420b04931e39267b4bfa2e342f))
 
@@ -483,37 +538,33 @@ Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`19ff00b`](https://g
 
 * feat: adding vids to the doc ([`7717036`](https://github.com/edayot/ItemIO/commit/77170362bf3d2c177ffc8d7d7436fbc8800d5597))
 
-### Fix
-
-* fix: Dup glitch when inputing more than 64 items in a container ([`97505d9`](https://github.com/edayot/ItemIO/commit/97505d9b431ca91ad4fb0d04822d5618d4d472c3))
-
-* fix: some duplication glitch, moving to the new yellow_shulker_box ([`899a012`](https://github.com/edayot/ItemIO/commit/899a01246055364f83b4ef5a704fa042ccaa1de2))
-
-* fix: changing count ([`7445048`](https://github.com/edayot/ItemIO/commit/744504870d472bf8d297f938106983b7553b7430))
-
-* fix: change custom_data path #22 ([`e7914e3`](https://github.com/edayot/ItemIO/commit/e7914e3199b7a1f0fe60fa57720ed73be828b816))
-
 ### Unknown
 
 * delete ([`5bfa493`](https://github.com/edayot/ItemIO/commit/5bfa49320369979f341a4e0d8674f32ef6711a52))
 
 * Update readme ([`6260972`](https://github.com/edayot/ItemIO/commit/62609726b219b3017b016de305f34464a71dfd7e))
 
-* Merge pull request #21 from edayot/dependabot/pip/cryptography-42.0.4
-
-chore(deps): bump cryptography from 41.0.7 to 42.0.4 ([`6f61131`](https://github.com/edayot/ItemIO/commit/6f61131c688a0d6931bf8dae1d3a46fee1249d76))
-
 
 ## v0.13.1 (2024-02-13)
 
-### Fix
+### Bug fixes
 
-* fix: offset wasn&#39;t working fine ([`e5d8f47`](https://github.com/edayot/ItemIO/commit/e5d8f4763f9a8005218b8dbfe414cd90393b2efb))
+* fix: offset wasn't working fine ([`e5d8f47`](https://github.com/edayot/ItemIO/commit/e5d8f4763f9a8005218b8dbfe414cd90393b2efb))
 
 
 ## v0.13.0 (2024-02-13)
 
-### Chore
+### Bug fixes
+
+* fix: default value for nbt_items ([`e157d60`](https://github.com/edayot/ItemIO/commit/e157d606e75343c80fb0db089bf003aba83b268f))
+
+* fix: set #nbt_items to 0 before vanilla input ([`34c5e4f`](https://github.com/edayot/ItemIO/commit/34c5e4ff4167e1c88f3aba4c040363de66d097c1))
+
+* fix: add nbt_items_path to all config ([`77829e2`](https://github.com/edayot/ItemIO/commit/77829e276c5a79997d82465596bd13e8ba09ff55))
+
+* fix: it's 2024 ([`7c34325`](https://github.com/edayot/ItemIO/commit/7c34325acbce392f27039f0051758c6579ef75ad))
+
+### Chores
 
 * chore: make a pack.mcmeta ([`3550a2a`](https://github.com/edayot/ItemIO/commit/3550a2a9769bce3648329fe6124cb9484ca9b272))
 
@@ -525,23 +576,13 @@ chore(deps): bump cryptography from 41.0.7 to 42.0.4 ([`6f61131`](https://github
 
 * docs: chest_minecart example ([`bd302ee`](https://github.com/edayot/ItemIO/commit/bd302ee55c831ab84a44b3fb8b91969c1e22c9a7))
 
-### Feature
+### Features
 
 * feat: adding a tag to control the hopper protection ([`e940807`](https://github.com/edayot/ItemIO/commit/e94080767e082e49d870ba9ba894c7556ff2b4b8))
 
-* feat: passengerS &amp; input working ([`bc49b8d`](https://github.com/edayot/ItemIO/commit/bc49b8d9db6d533c4d48abbafdd843b5456a4c7e))
+* feat: passengerS & input working ([`bc49b8d`](https://github.com/edayot/ItemIO/commit/bc49b8d9db6d533c4d48abbafdd843b5456a4c7e))
 
 * feat: output working for containers entities #16 ([`a498e1c`](https://github.com/edayot/ItemIO/commit/a498e1c30afbc7d71d39df14d292eaf1b2934ae8))
-
-### Fix
-
-* fix: default value for nbt_items ([`e157d60`](https://github.com/edayot/ItemIO/commit/e157d606e75343c80fb0db089bf003aba83b268f))
-
-* fix: set #nbt_items to 0 before vanilla input ([`34c5e4f`](https://github.com/edayot/ItemIO/commit/34c5e4ff4167e1c88f3aba4c040363de66d097c1))
-
-* fix: add nbt_items_path to all config ([`77829e2`](https://github.com/edayot/ItemIO/commit/77829e276c5a79997d82465596bd13e8ba09ff55))
-
-* fix: it&#39;s 2024 ([`7c34325`](https://github.com/edayot/ItemIO/commit/7c34325acbce392f27039f0051758c6579ef75ad))
 
 ### Unknown
 
@@ -576,14 +617,18 @@ chore(deps): bump cryptography from 41.0.7 to 42.0.4 ([`6f61131`](https://github
 
 ## v0.12.1 (2024-01-14)
 
-### Fix
+### Bug fixes
 
 * fix: more protection against hopper minecart #15 ([`a683dec`](https://github.com/edayot/ItemIO/commit/a683decbab11221c3d4b1fde375af8e47b13340e))
 
 
 ## v0.12.0 (2024-01-14)
 
-### Chore
+### Bug fixes
+
+* fix: visual chiseled bookshelf ([`a6122db`](https://github.com/edayot/ItemIO/commit/a6122db4b973969b447b6225309aa2e91d330f48))
+
+### Chores
 
 * chore: all on master ([`70d67ec`](https://github.com/edayot/ItemIO/commit/70d67ec67e4931d5d96bdf24d9468397d474c207))
 
@@ -603,18 +648,14 @@ chore(deps): bump cryptography from 41.0.7 to 42.0.4 ([`6f61131`](https://github
 
 * docs: update integrated filters list ([`3e97824`](https://github.com/edayot/ItemIO/commit/3e978248eafc910bba37a1f70bf2371828300183))
 
-### Feature
+### Features
 
 * feat: implementing all vanilla tags filter ([`37c97dc`](https://github.com/edayot/ItemIO/commit/37c97dc595e702ad9000b4de1830845b513493f2))
-
-### Fix
-
-* fix: visual chiseled bookshelf ([`a6122db`](https://github.com/edayot/ItemIO/commit/a6122db4b973969b447b6225309aa2e91d330f48))
 
 
 ## v0.11.0 (2024-01-13)
 
-### Chore
+### Chores
 
 * chore: update common ([`c4b525b`](https://github.com/edayot/ItemIO/commit/c4b525b57ce5b7d4e165863f8fc42b10e7c76dfe))
 
@@ -622,22 +663,34 @@ chore(deps): bump cryptography from 41.0.7 to 42.0.4 ([`6f61131`](https://github
 
 * chore: poetry lock ([`f5faa9e`](https://github.com/edayot/ItemIO/commit/f5faa9ec1a7737089a615d3e7758063a8e364d83))
 
-### Feature
+### Features
 
 * feat: protecting over hopper minecart #13 ([`a73dcc3`](https://github.com/edayot/ItemIO/commit/a73dcc3acfdb439736b50127c74b47058ac3135a))
-
-### Fix
-
-* fix: useless tag remove ([`be7dac8`](https://github.com/edayot/ItemIO/commit/be7dac8adc774b99058f0edb74d59cb86d373993))
-
-### Unknown
-
-* Merge branch &#39;master&#39; into dev ([`dd43da8`](https://github.com/edayot/ItemIO/commit/dd43da8cd79a28d528b06f050cce3955866880a0))
 
 
 ## v0.10.0 (2024-01-09)
 
-### Chore
+### Bug fixes
+
+* fix: useless tag remove ([`be7dac8`](https://github.com/edayot/ItemIO/commit/be7dac8adc774b99058f0edb74d59cb86d373993))
+
+* fix: renameing chiseled_bookshelf ([`d3c55d8`](https://github.com/edayot/ItemIO/commit/d3c55d87d64bd9f62c5cbe7680388bf5022ef97b))
+
+* fix: bad renaming ([`c0712b7`](https://github.com/edayot/ItemIO/commit/c0712b7f45d143e6910ead5e8da797d9dda25d60))
+
+* fix: debug glowing minecarts ([`d4e8a06`](https://github.com/edayot/ItemIO/commit/d4e8a061295df5dda1ebd9a9bc75b4744a7e4961))
+
+* fix: tring to overwrite the vanilla datapack ([`82f1d27`](https://github.com/edayot/ItemIO/commit/82f1d2760e9bda7519841118009da66499ef77b0))
+
+* fix: unit tests ([`9444fd5`](https://github.com/edayot/ItemIO/commit/9444fd5467f6bbe1795a1e495c22451886df77b7))
+
+* fix: add structure & test fail ([`6617d76`](https://github.com/edayot/ItemIO/commit/6617d7673ecb594ca3935a8e687ac74926b44669))
+
+* fix: more unit tests ([`ae47f9a`](https://github.com/edayot/ItemIO/commit/ae47f9a776bdbdb95faf840292224cdb7cd42c32))
+
+* fix: position is now center even for vanilla containers ([`52227d9`](https://github.com/edayot/ItemIO/commit/52227d9f12518112c62b2507adace5f9e1861d77))
+
+### Chores
 
 * chore: fix building action ([`c8383b5`](https://github.com/edayot/ItemIO/commit/c8383b573b4ecf6383fd89a7d9c4c3fe2ac030d7))
 
@@ -663,7 +716,7 @@ updated-dependencies:
   dependency-type: direct:production
 ...
 
-Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`12f3d87`](https://github.com/edayot/ItemIO/commit/12f3d87a8774564c7d2684254405923e9fcc5aa2))
+Signed-off-by: dependabot[bot] <support@github.com> ([`12f3d87`](https://github.com/edayot/ItemIO/commit/12f3d87a8774564c7d2684254405923e9fcc5aa2))
 
 * chore(deps): bump pyarrow from 13.0.0 to 14.0.1
 
@@ -676,9 +729,9 @@ updated-dependencies:
   dependency-type: indirect
 ...
 
-Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`1d2c6f7`](https://github.com/edayot/ItemIO/commit/1d2c6f7a21175f89df508d63c2624767c7bda8c2))
+Signed-off-by: dependabot[bot] <support@github.com> ([`1d2c6f7`](https://github.com/edayot/ItemIO/commit/1d2c6f7a21175f89df508d63c2624767c7bda8c2))
 
-### Feature
+### Features
 
 * feat: implementation of crafter ([`2f6bba9`](https://github.com/edayot/ItemIO/commit/2f6bba9023734f294d074697d7ddc9f5942a07ce))
 
@@ -686,31 +739,7 @@ Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`1d2c6f7`](https://g
 
 * feat: add unit tests ([`e59ebc8`](https://github.com/edayot/ItemIO/commit/e59ebc8881209b82592a703cc883ffc5d374bcd4))
 
-### Fix
-
-* fix: renameing chiseled_bookshelf ([`d3c55d8`](https://github.com/edayot/ItemIO/commit/d3c55d87d64bd9f62c5cbe7680388bf5022ef97b))
-
-* fix: bad renaming ([`c0712b7`](https://github.com/edayot/ItemIO/commit/c0712b7f45d143e6910ead5e8da797d9dda25d60))
-
-* fix: debug glowing minecarts ([`d4e8a06`](https://github.com/edayot/ItemIO/commit/d4e8a061295df5dda1ebd9a9bc75b4744a7e4961))
-
-* fix: tring to overwrite the vanilla datapack ([`82f1d27`](https://github.com/edayot/ItemIO/commit/82f1d2760e9bda7519841118009da66499ef77b0))
-
-* fix: unit tests ([`9444fd5`](https://github.com/edayot/ItemIO/commit/9444fd5467f6bbe1795a1e495c22451886df77b7))
-
-* fix: add structure &amp; test fail ([`6617d76`](https://github.com/edayot/ItemIO/commit/6617d7673ecb594ca3935a8e687ac74926b44669))
-
-* fix: more unit tests ([`ae47f9a`](https://github.com/edayot/ItemIO/commit/ae47f9a776bdbdb95faf840292224cdb7cd42c32))
-
-* fix: position is now center even for vanilla containers ([`52227d9`](https://github.com/edayot/ItemIO/commit/52227d9f12518112c62b2507adace5f9e1861d77))
-
 ### Unknown
-
-* Merge branch &#39;dev&#39; ([`b0c2523`](https://github.com/edayot/ItemIO/commit/b0c2523177bad624f05b55a6f0e8a2ab6bbf4279))
-
-* Merge pull request #14 from edayot/dev
-
-Future release ([`5a3d06e`](https://github.com/edayot/ItemIO/commit/5a3d06ef2f54d977f833220164a383d6adb939cd))
 
 * crapy code ([`99e7909`](https://github.com/edayot/ItemIO/commit/99e79093931c5cde26b2aa24a8d4e441cf3a3a6b))
 
@@ -732,15 +761,7 @@ Future release ([`5a3d06e`](https://github.com/edayot/ItemIO/commit/5a3d06ef2f54
 
 * rollback fail test ([`3b61e74`](https://github.com/edayot/ItemIO/commit/3b61e740f776e8df8c208e361cd92d1c5558f43a))
 
-* Merge pull request #10 from edayot/dependabot/pip/cryptography-41.0.6
-
-chore(deps): bump cryptography from 41.0.5 to 41.0.6 ([`0ac336c`](https://github.com/edayot/ItemIO/commit/0ac336c17263b51084e21493f886200ce5ef17f0))
-
 * new minecraft path ([`d2b8d0e`](https://github.com/edayot/ItemIO/commit/d2b8d0e0437f4fe31e8803a6890f5cb88a25ccb1))
-
-* Merge pull request #9 from edayot/dependabot/pip/pyarrow-14.0.1
-
-chore(deps): bump pyarrow from 13.0.0 to 14.0.1 ([`0c257f5`](https://github.com/edayot/ItemIO/commit/0c257f5a2d4b2a8e4b9995d1646a6692e690afba))
 
 * artefact only occur on dev ([`8f4c3a1`](https://github.com/edayot/ItemIO/commit/8f4c3a1171b5323d103c807cf0aa22c7c95cdcaf))
 
@@ -749,13 +770,13 @@ chore(deps): bump pyarrow from 13.0.0 to 14.0.1 ([`0c257f5`](https://github.com/
 
 ## v0.9.1 (2023-11-02)
 
+### Bug fixes
+
+* fix: armor_stand wasn't loaded properly ([`ad3cd23`](https://github.com/edayot/ItemIO/commit/ad3cd2366c6e542a76031fefef9ec801b6b65f33))
+
 ### Documentation
 
 * docs: add warning ([`13099c2`](https://github.com/edayot/ItemIO/commit/13099c26efe7ed98bb7aeb87eb2835d1b893289c))
-
-### Fix
-
-* fix: armor_stand wasn&#39;t loaded properly ([`ad3cd23`](https://github.com/edayot/ItemIO/commit/ad3cd2366c6e542a76031fefef9ec801b6b65f33))
 
 ### Unknown
 
@@ -764,7 +785,7 @@ chore(deps): bump pyarrow from 13.0.0 to 14.0.1 ([`0c257f5`](https://github.com/
 
 ## v0.9.0 (2023-10-30)
 
-### Chore
+### Chores
 
 * chore: reverse order of workflow ([`2b79b77`](https://github.com/edayot/ItemIO/commit/2b79b77162837501e90c8e9f2fed481db0eaa723))
 
@@ -772,7 +793,7 @@ chore(deps): bump pyarrow from 13.0.0 to 14.0.1 ([`0c257f5`](https://github.com/
 
 * docs: contributing page update ([`ab21058`](https://github.com/edayot/ItemIO/commit/ab210586a41331c06dde5740a34f1538c3b557fd))
 
-### Feature
+### Features
 
 * feat: storage based ioconfig ([`790c74e`](https://github.com/edayot/ItemIO/commit/790c74e381bd595c89bb4a899f48f6a91962edfc))
 
@@ -784,7 +805,7 @@ chore(deps): bump pyarrow from 13.0.0 to 14.0.1 ([`0c257f5`](https://github.com/
 
 * chiseled ([`df5bbf3`](https://github.com/edayot/ItemIO/commit/df5bbf3f67b95b838913b55d06bad429cf7cc018))
 
-* using 3.11 &amp; update common ([`ad30640`](https://github.com/edayot/ItemIO/commit/ad3064081df1e636892681e1e0923c2f3b14cd45))
+* using 3.11 & update common ([`ad30640`](https://github.com/edayot/ItemIO/commit/ad3064081df1e636892681e1e0923c2f3b14cd45))
 
 * watch ([`8016505`](https://github.com/edayot/ItemIO/commit/8016505678cb937d193d176d6030e8947d5f800e))
 
@@ -835,22 +856,19 @@ chore(deps): bump pyarrow from 13.0.0 to 14.0.1 ([`0c257f5`](https://github.com/
 
 ## v0.8.0 (2023-10-21)
 
-### Chore
+### Bug fixes
 
-* chore(deps): bump urllib3 from 2.0.5 to 2.0.6
+* fix: opti regen in cables ([`bc2379b`](https://github.com/edayot/ItemIO/commit/bc2379b67f0fc88defce109f25e9cf415f25fac8))
 
-Bumps [urllib3](https://github.com/urllib3/urllib3) from 2.0.5 to 2.0.6.
-- [Release notes](https://github.com/urllib3/urllib3/releases)
-- [Changelog](https://github.com/urllib3/urllib3/blob/main/CHANGES.rst)
-- [Commits](https://github.com/urllib3/urllib3/compare/v2.0.5...2.0.6)
+* fix: opti gen network ([`a46a3e5`](https://github.com/edayot/ItemIO/commit/a46a3e5ddbb356db5b79b462ca92cbe6bf29f3a9))
 
----
-updated-dependencies:
-- dependency-name: urllib3
-  dependency-type: indirect
-...
+* fix: very high network bug (useless but it's here) ([`ecaf54d`](https://github.com/edayot/ItemIO/commit/ecaf54dc073a4c4c2098fbd53efb6312f55af364))
 
-Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`617c248`](https://github.com/edayot/ItemIO/commit/617c248a6ce6c9ac914fba9d80c2d6410cb8607f))
+* fix: global.ignore ([`523f282`](https://github.com/edayot/ItemIO/commit/523f2822bc91bf7fbb86800d70fdaa77969bdb06))
+
+* fix: loop in loop not in subfolders ([`4cd36e8`](https://github.com/edayot/ItemIO/commit/4cd36e87ba095c139639930c42fd98aec3abb246))
+
+### Chores
 
 * chore(deps): bump pillow from 9.5.0 to 10.0.1
 
@@ -865,7 +883,22 @@ updated-dependencies:
   dependency-type: indirect
 ...
 
-Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`6bf81c7`](https://github.com/edayot/ItemIO/commit/6bf81c76bb5b531f15bff8900c540b4dade49ebf))
+Signed-off-by: dependabot[bot] <support@github.com> ([`6bf81c7`](https://github.com/edayot/ItemIO/commit/6bf81c76bb5b531f15bff8900c540b4dade49ebf))
+
+* chore(deps): bump urllib3 from 2.0.5 to 2.0.6
+
+Bumps [urllib3](https://github.com/urllib3/urllib3) from 2.0.5 to 2.0.6.
+- [Release notes](https://github.com/urllib3/urllib3/releases)
+- [Changelog](https://github.com/urllib3/urllib3/blob/main/CHANGES.rst)
+- [Commits](https://github.com/urllib3/urllib3/compare/v2.0.5...2.0.6)
+
+---
+updated-dependencies:
+- dependency-name: urllib3
+  dependency-type: indirect
+...
+
+Signed-off-by: dependabot[bot] <support@github.com> ([`617c248`](https://github.com/edayot/ItemIO/commit/617c248a6ce6c9ac914fba9d80c2d6410cb8607f))
 
 * chore: update workflows ([`1aabe94`](https://github.com/edayot/ItemIO/commit/1aabe94530b6b6079a0e1e75e97b83f4bb7dd5f7))
 
@@ -879,27 +912,25 @@ Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`6bf81c7`](https://g
 
 * docs: adding featured datapacks list ([`1b661a7`](https://github.com/edayot/ItemIO/commit/1b661a79bc3a94efb214c05f7a75b58210a4eb4b))
 
-### Feature
+* docs: retrive version from beet.yaml ([`a14b745`](https://github.com/edayot/ItemIO/commit/a14b7450a5072eddba3ac29dea1da0f038093041))
+
+* docs: correct syntax ([`933faf4`](https://github.com/edayot/ItemIO/commit/933faf49161bc3bd84b0d0331cd12a32604a9ca8))
+
+* docs: spelling ([`86ca583`](https://github.com/edayot/ItemIO/commit/86ca58319674107cc8cf1012016f9729805a9487))
+
+### Features
 
 * feat: upgrade to 1.20.2 ([`cdb26e1`](https://github.com/edayot/ItemIO/commit/cdb26e1ef0ae0632dfe14f264e1f6a7555aa28d4))
+
+* feat: brewing_stand implementation ([`09c277a`](https://github.com/edayot/ItemIO/commit/09c277ade868f61f1ed6cad49b0fc80006db38de))
+
+* feat: chiseled bookshelf support ([`d96548d`](https://github.com/edayot/ItemIO/commit/d96548da3ec284dc9bc6aacfa34ba595bb0b6876))
 
 ### Unknown
 
 * anoying message in chat ([`fa4584f`](https://github.com/edayot/ItemIO/commit/fa4584fc3faa213b90b18ddd419386efecf9f90f))
 
-* Merge pull request #7 from edayot/dependabot/pip/pillow-10.0.1
-
-chore(deps): bump pillow from 9.5.0 to 10.0.1 ([`458e82c`](https://github.com/edayot/ItemIO/commit/458e82c7bc43bced3907120c34f119dcaf7c1c92))
-
-* Merge pull request #8 from edayot/dependabot/pip/urllib3-2.0.6
-
-chore(deps): bump urllib3 from 2.0.5 to 2.0.6 ([`2c3eb1f`](https://github.com/edayot/ItemIO/commit/2c3eb1f32c4de3909ee689dc551d126279cc5e44))
-
 * chore:moving away from to action release ([`3f8a50b`](https://github.com/edayot/ItemIO/commit/3f8a50be44d108c37f016be7192d2ea1e1276b9a))
-
-* Merge pull request #6 from misode/minecraft-wiki
-
-Update Minecraft Wiki links to new domain after fork ([`96abf1d`](https://github.com/edayot/ItemIO/commit/96abf1d0ed0c209bc57390c364591ece99894071))
 
 * Update Minecraft Wiki links to new domain after fork ([`a22a3ce`](https://github.com/edayot/ItemIO/commit/a22a3ce33c2bc04f69f6fb38e9da3085cde945c9))
 
@@ -907,66 +938,13 @@ Update Minecraft Wiki links to new domain after fork ([`96abf1d`](https://github
 
 * update poetry.lock ([`bd3877f`](https://github.com/edayot/ItemIO/commit/bd3877f5366cf4279f9ce141dfe81ef8ee86e3dd))
 
-* Merge branch &#39;1.20.2&#39; ([`da20638`](https://github.com/edayot/ItemIO/commit/da20638953fa119de2ab5882b670688beaf3b97e))
-
-* update common &amp; adding id to pack.mcmeta ([`26c782d`](https://github.com/edayot/ItemIO/commit/26c782dd8ef970af6eb156e4e435101b4837df6c))
+* update common & adding id to pack.mcmeta ([`26c782d`](https://github.com/edayot/ItemIO/commit/26c782dd8ef970af6eb156e4e435101b4837df6c))
 
 * using success variable ([`bb92894`](https://github.com/edayot/ItemIO/commit/bb92894bb81ff8d624f546b14cc35ebb3a39a802))
 
 * fix:remove execute if function ([`179dba5`](https://github.com/edayot/ItemIO/commit/179dba5fba35a4639ef246308f9ca1923e07000a))
 
-* update common ([`5504f1b`](https://github.com/edayot/ItemIO/commit/5504f1b0759c6a37c6f76446881261f495c1c449))
-
-
-## v0.7.2 (2023-08-19)
-
-### Chore
-
-* chore(deps): bump cryptography from 41.0.2 to 41.0.3
-
-Bumps [cryptography](https://github.com/pyca/cryptography) from 41.0.2 to 41.0.3.
-- [Changelog](https://github.com/pyca/cryptography/blob/main/CHANGELOG.rst)
-- [Commits](https://github.com/pyca/cryptography/compare/41.0.2...41.0.3)
-
----
-updated-dependencies:
-- dependency-name: cryptography
-  dependency-type: direct:production
-...
-
-Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`2b7185b`](https://github.com/edayot/ItemIO/commit/2b7185b66d54e00d88f1b36b77326012e1ca843b))
-
-* chore: don&#39;t remove build/ on release ([`8156473`](https://github.com/edayot/ItemIO/commit/8156473db6721f7489021fd16b6de6ea06cf591e))
-
-### Documentation
-
-* docs: retrive version from beet.yaml ([`a14b745`](https://github.com/edayot/ItemIO/commit/a14b7450a5072eddba3ac29dea1da0f038093041))
-
-* docs: correct syntax ([`933faf4`](https://github.com/edayot/ItemIO/commit/933faf49161bc3bd84b0d0331cd12a32604a9ca8))
-
-* docs: spelling ([`86ca583`](https://github.com/edayot/ItemIO/commit/86ca58319674107cc8cf1012016f9729805a9487))
-
-### Fix
-
-* fix: deleting a say command ([`e1ccaa5`](https://github.com/edayot/ItemIO/commit/e1ccaa54b0eb34e05785854a3e803ce99e88d0ac))
-
-* fix: opti regen in cables ([`bc2379b`](https://github.com/edayot/ItemIO/commit/bc2379b67f0fc88defce109f25e9cf415f25fac8))
-
-* fix: opti gen network ([`a46a3e5`](https://github.com/edayot/ItemIO/commit/a46a3e5ddbb356db5b79b462ca92cbe6bf29f3a9))
-
-* fix: very high network bug (useless but it&#39;s here) ([`ecaf54d`](https://github.com/edayot/ItemIO/commit/ecaf54dc073a4c4c2098fbd53efb6312f55af364))
-
-* fix: global.ignore ([`523f282`](https://github.com/edayot/ItemIO/commit/523f2822bc91bf7fbb86800d70fdaa77969bdb06))
-
-* fix: loop in loop not in subfolders ([`4cd36e8`](https://github.com/edayot/ItemIO/commit/4cd36e87ba095c139639930c42fd98aec3abb246))
-
-### Unknown
-
 * security ([`28e702b`](https://github.com/edayot/ItemIO/commit/28e702b652315fccb688be1d3611a35f75aa8f28))
-
-* Merge pull request #4 from edayot/dependabot/pip/cryptography-41.0.3
-
-chore(deps): bump cryptography from 41.0.2 to 41.0.3 ([`c158fb3`](https://github.com/edayot/ItemIO/commit/c158fb3fde964d8d1246574d89965c9af29e1ce3))
 
 * s ([`f24c8ac`](https://github.com/edayot/ItemIO/commit/f24c8ac7065b72162d6a11bd2f4359ca63961990))
 
@@ -984,10 +962,95 @@ chore(deps): bump cryptography from 41.0.2 to 41.0.3 ([`c158fb3`](https://github
 
 * redo mecha ([`28bbbd9`](https://github.com/edayot/ItemIO/commit/28bbbd987b2e2c0701fd66458790204d7c5692aa))
 
-* Merge branch &#39;master&#39; into 1.20.2 ([`f2e5776`](https://github.com/edayot/ItemIO/commit/f2e5776b218715e0c11645a76aa2cfd80cd2a58c))
+* spell check ([`b428f77`](https://github.com/edayot/ItemIO/commit/b428f7763849ce342b209700c1e63f8e1e3996ec))
+
+* some spell fixes ([`19e2ebe`](https://github.com/edayot/ItemIO/commit/19e2ebee36a94dbf1c64b70d9a322ebf211f1ed7))
+
+* fix brewing stand ([`254c7a7`](https://github.com/edayot/ItemIO/commit/254c7a7007b04690ba896bf475914edd12a1186c))
+
+* vanilla output in the new norm ([`97f0e63`](https://github.com/edayot/ItemIO/commit/97f0e63ddadfae2f745834bc2b2a07ab9443491b))
+
+* loop if no items remove ([`67ef29e`](https://github.com/edayot/ItemIO/commit/67ef29ed2a2dd9fb4d75a65cfe4f0f89f0faa8ee))
+
+* refactor & furnace are using custom inputs ([`935ddeb`](https://github.com/edayot/ItemIO/commit/935ddebc4247265bbb2b2159892f7b2538f6c25d))
+
+* big generator for combustible ([`0b09ce9`](https://github.com/edayot/ItemIO/commit/0b09ce94bf38012da59c0e3fc65b6ae00a836d15))
+
+* auto generated item stack using new macros ([`13fbd6d`](https://github.com/edayot/ItemIO/commit/13fbd6d7eec212d21962103fd72927058989ac81))
+
+* furnace in custom input ([`91ff6f8`](https://github.com/edayot/ItemIO/commit/91ff6f82c8c21d03f986c4c27ca5f112612e3751))
+
+* input for 3 container ([`0133e35`](https://github.com/edayot/ItemIO/commit/0133e3559707496bc4c49d45286e69500c04d992))
+
+* $ ([`cf11bca`](https://github.com/edayot/ItemIO/commit/cf11bca855c472b652a381777db6532a89268441))
+
+* check input & item_input ([`6e19272`](https://github.com/edayot/ItemIO/commit/6e1927266915e7f260bf2a27375d2b2d66baf892))
+
+* $ ([`942b9dc`](https://github.com/edayot/ItemIO/commit/942b9dca0c7993b3e0df696aa2fbcf1e65b0ec3a))
+
+* new custom output ([`db6d43f`](https://github.com/edayot/ItemIO/commit/db6d43fa7fefb8bd15326933943976f462ab984b))
+
+* fix ioconfig persitence ([`767b246`](https://github.com/edayot/ItemIO/commit/767b24663158a4aa1b269d8916d9090aadbe5492))
+
+* delete old ouput method ([`930d17f`](https://github.com/edayot/ItemIO/commit/930d17f23adba594866b30dd3025afd86758ca44))
+
+* opti ([`1a517b0`](https://github.com/edayot/ItemIO/commit/1a517b0a5506e48d27ed839784ee85a30e3f8377))
+
+* tellraw ([`3790363`](https://github.com/edayot/ItemIO/commit/3790363ecf38989394d55000a65095ab3f51eaaf))
+
+* big input continue if there is items ([`b7e13c3`](https://github.com/edayot/ItemIO/commit/b7e13c33441af19b1744771604fa10181c256274))
+
+* wooosh double chest & big fill ([`a608de7`](https://github.com/edayot/ItemIO/commit/a608de7b5605067170f33e5ecb635e31637c7489))
+
+* disable servos ([`b99bb78`](https://github.com/edayot/ItemIO/commit/b99bb78b9246022ea2c7cb6e53b417d3295944d9))
+
+* sup insert ([`1b9681a`](https://github.com/edayot/ItemIO/commit/1b9681ab8f0c91d0e1a9eadb5b3dfc39b16bde0a))
+
+* vanilla inf insert ([`f87fbcd`](https://github.com/edayot/ItemIO/commit/f87fbcde928183852e462a9009c99ec9b7888a1b))
+
+* disable servos use random command ([`8f1098e`](https://github.com/edayot/ItemIO/commit/8f1098ecf4321fcd009c0167cd494457450811f9))
+
+* no full stack & dup glitch patch ([`8bc77a3`](https://github.com/edayot/ItemIO/commit/8bc77a3b96ae602d65b4f3842775df36bc5988c7))
+
+* macros on slots ([`cad5f00`](https://github.com/edayot/ItemIO/commit/cad5f007cb646e247c7a482d45e77af69534c5ba))
+
+* custom input macros ([`f50cc27`](https://github.com/edayot/ItemIO/commit/f50cc27c338d5e6fa746cc9053657fdb694f4bfb))
+
+* update common ([`5504f1b`](https://github.com/edayot/ItemIO/commit/5504f1b0759c6a37c6f76446881261f495c1c449))
+
+
+## v0.7.2 (2023-08-19)
+
+### Bug fixes
+
+* fix: deleting a say command ([`e1ccaa5`](https://github.com/edayot/ItemIO/commit/e1ccaa54b0eb34e05785854a3e803ce99e88d0ac))
+
+### Chores
+
+* chore(deps): bump cryptography from 41.0.2 to 41.0.3
+
+Bumps [cryptography](https://github.com/pyca/cryptography) from 41.0.2 to 41.0.3.
+- [Changelog](https://github.com/pyca/cryptography/blob/main/CHANGELOG.rst)
+- [Commits](https://github.com/pyca/cryptography/compare/41.0.2...41.0.3)
+
+---
+updated-dependencies:
+- dependency-name: cryptography
+  dependency-type: direct:production
+...
+
+Signed-off-by: dependabot[bot] <support@github.com> ([`2b7185b`](https://github.com/edayot/ItemIO/commit/2b7185b66d54e00d88f1b36b77326012e1ca843b))
+
+* chore: don't remove build/ on release ([`8156473`](https://github.com/edayot/ItemIO/commit/8156473db6721f7489021fd16b6de6ea06cf591e))
 
 
 ## v0.7.1 (2023-08-05)
+
+### Bug fixes
+
+* fix: item invert dup glitch & example container ([`a7bf05c`](https://github.com/edayot/ItemIO/commit/a7bf05ca6987e36706c062e715a280d763b747b7))
+
+* fix: dupe glitch in big transfer at the 1st item ([`b07d8fc`](https://github.com/edayot/ItemIO/commit/b07d8fc73d04ca6bd74659d765f2e554657b329b))
 
 ### Documentation
 
@@ -1005,83 +1068,15 @@ chore(deps): bump cryptography from 41.0.2 to 41.0.3 ([`c158fb3`](https://github
 
 * docs: contrbuting page ([`c6c8f53`](https://github.com/edayot/ItemIO/commit/c6c8f533b2d1dbb3bf67e769dc46a84f174ed980))
 
-### Feature
-
-* feat: brewing_stand implementation ([`09c277a`](https://github.com/edayot/ItemIO/commit/09c277ade868f61f1ed6cad49b0fc80006db38de))
-
-* feat: chiseled bookshelf support ([`d96548d`](https://github.com/edayot/ItemIO/commit/d96548da3ec284dc9bc6aacfa34ba595bb0b6876))
-
-### Fix
-
-* fix: item invert dup glitch &amp; example container ([`a7bf05c`](https://github.com/edayot/ItemIO/commit/a7bf05ca6987e36706c062e715a280d763b747b7))
-
-* fix: dupe glitch in big transfer at the 1st item ([`b07d8fc`](https://github.com/edayot/ItemIO/commit/b07d8fc73d04ca6bd74659d765f2e554657b329b))
-
 ### Unknown
 
 * modrinth fix ([`f1d1b9b`](https://github.com/edayot/ItemIO/commit/f1d1b9bbf572887ff78b927feaedd3ba1e9813d0))
-
-* Merge branch &#39;master&#39; into 1.20.2 ([`dcf4161`](https://github.com/edayot/ItemIO/commit/dcf4161cfe66561f0bf11c6a2a7f68743103bbf7))
-
-* spell check ([`b428f77`](https://github.com/edayot/ItemIO/commit/b428f7763849ce342b209700c1e63f8e1e3996ec))
-
-* some spell fixes ([`19e2ebe`](https://github.com/edayot/ItemIO/commit/19e2ebee36a94dbf1c64b70d9a322ebf211f1ed7))
-
-* fix brewing stand ([`254c7a7`](https://github.com/edayot/ItemIO/commit/254c7a7007b04690ba896bf475914edd12a1186c))
-
-* vanilla output in the new norm ([`97f0e63`](https://github.com/edayot/ItemIO/commit/97f0e63ddadfae2f745834bc2b2a07ab9443491b))
-
-* loop if no items remove ([`67ef29e`](https://github.com/edayot/ItemIO/commit/67ef29ed2a2dd9fb4d75a65cfe4f0f89f0faa8ee))
-
-* refactor &amp; furnace are using custom inputs ([`935ddeb`](https://github.com/edayot/ItemIO/commit/935ddebc4247265bbb2b2159892f7b2538f6c25d))
-
-* big generator for combustible ([`0b09ce9`](https://github.com/edayot/ItemIO/commit/0b09ce94bf38012da59c0e3fc65b6ae00a836d15))
-
-* auto generated item stack using new macros ([`13fbd6d`](https://github.com/edayot/ItemIO/commit/13fbd6d7eec212d21962103fd72927058989ac81))
-
-* furnace in custom input ([`91ff6f8`](https://github.com/edayot/ItemIO/commit/91ff6f82c8c21d03f986c4c27ca5f112612e3751))
-
-* input for 3 container ([`0133e35`](https://github.com/edayot/ItemIO/commit/0133e3559707496bc4c49d45286e69500c04d992))
-
-* $ ([`cf11bca`](https://github.com/edayot/ItemIO/commit/cf11bca855c472b652a381777db6532a89268441))
-
-* check input &amp; item_input ([`6e19272`](https://github.com/edayot/ItemIO/commit/6e1927266915e7f260bf2a27375d2b2d66baf892))
-
-* $ ([`942b9dc`](https://github.com/edayot/ItemIO/commit/942b9dca0c7993b3e0df696aa2fbcf1e65b0ec3a))
-
-* new custom output ([`db6d43f`](https://github.com/edayot/ItemIO/commit/db6d43fa7fefb8bd15326933943976f462ab984b))
-
-* fix ioconfig persitence ([`767b246`](https://github.com/edayot/ItemIO/commit/767b24663158a4aa1b269d8916d9090aadbe5492))
-
-* delete old ouput method ([`930d17f`](https://github.com/edayot/ItemIO/commit/930d17f23adba594866b30dd3025afd86758ca44))
-
-* opti ([`1a517b0`](https://github.com/edayot/ItemIO/commit/1a517b0a5506e48d27ed839784ee85a30e3f8377))
-
-* tellraw ([`3790363`](https://github.com/edayot/ItemIO/commit/3790363ecf38989394d55000a65095ab3f51eaaf))
-
-* big input continue if there is items ([`b7e13c3`](https://github.com/edayot/ItemIO/commit/b7e13c33441af19b1744771604fa10181c256274))
-
-* wooosh double chest &amp; big fill ([`a608de7`](https://github.com/edayot/ItemIO/commit/a608de7b5605067170f33e5ecb635e31637c7489))
-
-* disable servos ([`b99bb78`](https://github.com/edayot/ItemIO/commit/b99bb78b9246022ea2c7cb6e53b417d3295944d9))
-
-* sup insert ([`1b9681a`](https://github.com/edayot/ItemIO/commit/1b9681ab8f0c91d0e1a9eadb5b3dfc39b16bde0a))
-
-* vanilla inf insert ([`f87fbcd`](https://github.com/edayot/ItemIO/commit/f87fbcde928183852e462a9009c99ec9b7888a1b))
-
-* disable servos use random command ([`8f1098e`](https://github.com/edayot/ItemIO/commit/8f1098ecf4321fcd009c0167cd494457450811f9))
-
-* no full stack &amp; dup glitch patch ([`8bc77a3`](https://github.com/edayot/ItemIO/commit/8bc77a3b96ae602d65b4f3842775df36bc5988c7))
-
-* macros on slots ([`cad5f00`](https://github.com/edayot/ItemIO/commit/cad5f007cb646e247c7a482d45e77af69534c5ba))
-
-* custom input macros ([`f50cc27`](https://github.com/edayot/ItemIO/commit/f50cc27c338d5e6fa746cc9053657fdb694f4bfb))
 
 * dndfjn ([`c4c7ea5`](https://github.com/edayot/ItemIO/commit/c4c7ea5689d251ff56391d042bf95c89a7ea3169))
 
 * ,kds, ([`761b9eb`](https://github.com/edayot/ItemIO/commit/761b9eb758638120c1b976f5b784d6e590827ae5))
 
-* edit button &amp; size ([`d8c2acf`](https://github.com/edayot/ItemIO/commit/d8c2acf34c1d5e9a42f3288ed92ea002a87f3826))
+* edit button & size ([`d8c2acf`](https://github.com/edayot/ItemIO/commit/d8c2acf34c1d5e9a42f3288ed92ea002a87f3826))
 
 * front image center ([`5bb09f9`](https://github.com/edayot/ItemIO/commit/5bb09f945111b697e124e2c361769b02c73f3bc8))
 
@@ -1090,7 +1085,7 @@ chore(deps): bump cryptography from 41.0.2 to 41.0.3 ([`c158fb3`](https://github
 
 ## v0.7.0 (2023-07-30)
 
-### Chore
+### Chores
 
 * chore: update modrinth id ([`5161cdc`](https://github.com/edayot/ItemIO/commit/5161cdcd30a8a2128f050434e6072c7298bc2b5a))
 
@@ -1100,7 +1095,7 @@ chore(deps): bump cryptography from 41.0.2 to 41.0.3 ([`c158fb3`](https://github
 
 * docs: html_title ([`1496730`](https://github.com/edayot/ItemIO/commit/1496730bc3383416d9cbcfad8aa4e77b6a1f0c8c))
 
-### Feature
+### Features
 
 * feat: merge check filter ([`ee65603`](https://github.com/edayot/ItemIO/commit/ee6560318c9133b3eb333ceba92882b4726351de))
 
@@ -1113,7 +1108,7 @@ chore(deps): bump cryptography from 41.0.2 to 41.0.3 ([`c158fb3`](https://github
 
 ## v0.6.0 (2023-07-29)
 
-### Chore
+### Chores
 
 * chore(docs): no if ([`78e77f6`](https://github.com/edayot/ItemIO/commit/78e77f6cdfd4f8404f0a80281e048b0f1004f96a))
 
@@ -1143,7 +1138,7 @@ chore(deps): bump cryptography from 41.0.2 to 41.0.3 ([`c158fb3`](https://github
 
 * docs: network spec ([`f2daeb7`](https://github.com/edayot/ItemIO/commit/f2daeb737695a3f05626126d281cb33da34d4e26))
 
-* docs: delete the readme documentation &amp; link the github pages ([`2da007a`](https://github.com/edayot/ItemIO/commit/2da007a9976790fb3aa11f65a78706d4dbe71522))
+* docs: delete the readme documentation & link the github pages ([`2da007a`](https://github.com/edayot/ItemIO/commit/2da007a9976790fb3aa11f65a78706d4dbe71522))
 
 * docs: transfer function ([`3a637c1`](https://github.com/edayot/ItemIO/commit/3a637c1acfced5dbeaf8e1b093d2f8907a462743))
 
@@ -1159,11 +1154,11 @@ chore(deps): bump cryptography from 41.0.2 to 41.0.3 ([`c158fb3`](https://github
 
 * docs: correct index ([`0a412e8`](https://github.com/edayot/ItemIO/commit/0a412e81fb55723075080b15acfc25b3e5b51bb0))
 
-* docs: servos &amp; cables refactor ([`db907dc`](https://github.com/edayot/ItemIO/commit/db907dc448ed73a324f696507a6329324783ac71))
+* docs: servos & cables refactor ([`db907dc`](https://github.com/edayot/ItemIO/commit/db907dc448ed73a324f696507a6329324783ac71))
 
 * docs: ggds ([`a09c262`](https://github.com/edayot/ItemIO/commit/a09c26257a75935a38fd1ada45de6afe0a5bf7af))
 
-* docs: spelling &amp; no more custom_theme ([`81eaaf3`](https://github.com/edayot/ItemIO/commit/81eaaf37970c981922dda17d477515959cc4d7ea))
+* docs: spelling & no more custom_theme ([`81eaaf3`](https://github.com/edayot/ItemIO/commit/81eaaf37970c981922dda17d477515959cc4d7ea))
 
 * docs: new formatting ([`8a43278`](https://github.com/edayot/ItemIO/commit/8a432784c2d7b2d2524269210fdcd0fb61bab5f9))
 
@@ -1181,9 +1176,9 @@ chore(deps): bump cryptography from 41.0.2 to 41.0.3 ([`c158fb3`](https://github
 
 * docs: front page ([`88f2a6c`](https://github.com/edayot/ItemIO/commit/88f2a6c17d1512fc4f95b06432203c81771b4525))
 
-* docs: mudkip &amp; add filters ([`da39042`](https://github.com/edayot/ItemIO/commit/da39042f35fd731205db451a388b168be47cf54c))
+* docs: mudkip & add filters ([`da39042`](https://github.com/edayot/ItemIO/commit/da39042f35fd731205db451a388b168be47cf54c))
 
-### Feature
+### Features
 
 * feat: implementing smithed id filter ([`5811ec2`](https://github.com/edayot/ItemIO/commit/5811ec2e655321194139599f0c3ea4a744b5fee0))
 
@@ -1201,7 +1196,7 @@ chore(deps): bump cryptography from 41.0.2 to 41.0.3 ([`c158fb3`](https://github
 
 * @ ([`00c2200`](https://github.com/edayot/ItemIO/commit/00c22003b7df2bf6662415c792437975ce3407f5))
 
-* doc: containers &amp; simpledrawer pub ([`df05782`](https://github.com/edayot/ItemIO/commit/df05782fe8d28b79ba62b2382bd9168b114bf575))
+* doc: containers & simpledrawer pub ([`df05782`](https://github.com/edayot/ItemIO/commit/df05782fe8d28b79ba62b2382bd9168b114bf575))
 
 * Integrated filters support ([`c361653`](https://github.com/edayot/ItemIO/commit/c361653218924c4562e33995a3d3c952af641a61))
 
@@ -1212,15 +1207,15 @@ chore(deps): bump cryptography from 41.0.2 to 41.0.3 ([`c158fb3`](https://github
 
 ## v0.5.4 (2023-07-19)
 
-### Chore
+### Bug fixes
+
+* fix: the first container as no process queue ([`c999fa5`](https://github.com/edayot/ItemIO/commit/c999fa5299e9ce8d5bcef14bf81bcbe4d9ddcd8c))
+
+### Chores
 
 * chore: bugfix while merging datapacks ([`db4def3`](https://github.com/edayot/ItemIO/commit/db4def3f1415b8c508291d4b494e708b6738218b))
 
 * chore: update common ([`859b464`](https://github.com/edayot/ItemIO/commit/859b464db85f5d7332d9ef0e780e90929b6db76e))
-
-### Fix
-
-* fix: the first container as no process queue ([`c999fa5`](https://github.com/edayot/ItemIO/commit/c999fa5299e9ce8d5bcef14bf81bcbe4d9ddcd8c))
 
 ### Unknown
 
@@ -1239,14 +1234,14 @@ chore(deps): bump cryptography from 41.0.2 to 41.0.3 ([`c158fb3`](https://github
 
 ## v0.5.3 (2023-07-16)
 
-### Fix
+### Bug fixes
 
 * fix: real fix ([`13dca5c`](https://github.com/edayot/ItemIO/commit/13dca5c3d745f2b46b1db42c447df03a02982bc7))
 
 
 ## v0.5.2 (2023-07-16)
 
-### Fix
+### Bug fixes
 
 * fix: ctc filter now works properly ([`db74138`](https://github.com/edayot/ItemIO/commit/db74138b07a7d3420ad263fa408d115d671cd032))
 
@@ -1257,7 +1252,7 @@ chore(deps): bump cryptography from 41.0.2 to 41.0.3 ([`c158fb3`](https://github
 
 ## v0.5.1 (2023-07-06)
 
-### Fix
+### Bug fixes
 
 * fix: new stack16 items ([`0fc4083`](https://github.com/edayot/ItemIO/commit/0fc40838e447b7d1ed9bf66c081ffb0fb83e9bab))
 
@@ -1270,7 +1265,23 @@ chore(deps): bump cryptography from 41.0.2 to 41.0.3 ([`c158fb3`](https://github
 
 ## v0.5.0 (2023-07-04)
 
-### Chore
+### Bug fixes
+
+* fix: decorated pots in #itemio:stack1 ([`62958db`](https://github.com/edayot/ItemIO/commit/62958db0f2bf7cf1bb94b184c842138bea39c76d))
+
+* fix: success_transfer now work ([`3235c74`](https://github.com/edayot/ItemIO/commit/3235c74d115bb5f2d5e697218d2fa52e60ad2c4a))
+
+* fix: switch success and inputs to itemio.io, ([`25f2630`](https://github.com/edayot/ItemIO/commit/25f2630833ef9cc5add2c08574b1850a56ab0fd5))
+
+* fix: impl on predicates ([`b05dd95`](https://github.com/edayot/ItemIO/commit/b05dd950b2c12060c06331edf4d40d644c85703b))
+
+* fix: item_modifiers anow use versioning ([`2788efb`](https://github.com/edayot/ItemIO/commit/2788efb04bbe55b117e8d94e2aa13741c6b183b1))
+
+* fix: security init on servos ([`edc5710`](https://github.com/edayot/ItemIO/commit/edc571089351896eb3e13ef0b1a9f5041bdf70ff))
+
+* fix: consistant use of item_modifiers / itemio.io ([`111ea71`](https://github.com/edayot/ItemIO/commit/111ea71b5cf05069deccd10430aa64a0928efcde))
+
+### Chores
 
 * chore: version pattern ([`012bde8`](https://github.com/edayot/ItemIO/commit/012bde82e4d4d604cb7af000fdbe46dc8ed9057e))
 
@@ -1292,29 +1303,11 @@ chore(deps): bump cryptography from 41.0.2 to 41.0.3 ([`c158fb3`](https://github
 
 * chore: change pack.png ([`8ae46ee`](https://github.com/edayot/ItemIO/commit/8ae46eee0162e5d30581038609390956f05b9752))
 
-### Feature
+### Features
 
 * feat: output custom now support filters ([`297d3fb`](https://github.com/edayot/ItemIO/commit/297d3fbb5324f8714ec0698b59a0e14229000685))
 
 * feat: new filters implementation ([`ba48331`](https://github.com/edayot/ItemIO/commit/ba48331dda28aff34186046d9937e4a9e5ef54fd))
-
-### Fix
-
-* fix: decorated pots in #itemio:stack1 ([`62958db`](https://github.com/edayot/ItemIO/commit/62958db0f2bf7cf1bb94b184c842138bea39c76d))
-
-* fix: success_transfer now work ([`3235c74`](https://github.com/edayot/ItemIO/commit/3235c74d115bb5f2d5e697218d2fa52e60ad2c4a))
-
-* fix: switch success and inputs to itemio.io, ([`25f2630`](https://github.com/edayot/ItemIO/commit/25f2630833ef9cc5add2c08574b1850a56ab0fd5))
-
-* fix: impl on predicates ([`b05dd95`](https://github.com/edayot/ItemIO/commit/b05dd950b2c12060c06331edf4d40d644c85703b))
-
-* fix: item_modifiers anow use versioning ([`2788efb`](https://github.com/edayot/ItemIO/commit/2788efb04bbe55b117e8d94e2aa13741c6b183b1))
-
-* fix: security init on servos ([`edc5710`](https://github.com/edayot/ItemIO/commit/edc571089351896eb3e13ef0b1a9f5041bdf70ff))
-
-* fix: consistant use of item_modifiers / itemio.io ([`111ea71`](https://github.com/edayot/ItemIO/commit/111ea71b5cf05069deccd10430aa64a0928efcde))
-
-* fix: more checks on init ([`31f554d`](https://github.com/edayot/ItemIO/commit/31f554d786d825173da790d7d83cf32515a3dbbb))
 
 ### Unknown
 
@@ -1358,12 +1351,16 @@ chore(deps): bump cryptography from 41.0.2 to 41.0.3 ([`c158fb3`](https://github
 
 * filters implementation on output ([`3b85379`](https://github.com/edayot/ItemIO/commit/3b8537910ef32939de1607112826786c80fbe902))
 
-* Merge remote-tracking branch &#39;refs/remotes/origin/master&#39; ([`605b16c`](https://github.com/edayot/ItemIO/commit/605b16c7ddbe35e4b40d91b273c477f62f51067d))
-
 
 ## v0.4.1 (2023-06-27)
 
-### Chore
+### Bug fixes
+
+* fix: more checks on init ([`31f554d`](https://github.com/edayot/ItemIO/commit/31f554d786d825173da790d7d83cf32515a3dbbb))
+
+* fix: variables are now set before auto_handled_output ([`080c6b1`](https://github.com/edayot/ItemIO/commit/080c6b1b713549e9583b5af237c7b23863451182))
+
+### Chores
 
 * chore(deps): bump cryptography from 39.0.0 to 41.0.0
 
@@ -1377,32 +1374,16 @@ updated-dependencies:
   dependency-type: direct:production
 ...
 
-Signed-off-by: dependabot[bot] &lt;support@github.com&gt; ([`2c1887b`](https://github.com/edayot/ItemIO/commit/2c1887b8951f1977423e3ba6ba4c4b5c4a0b8bac))
+Signed-off-by: dependabot[bot] <support@github.com> ([`2c1887b`](https://github.com/edayot/ItemIO/commit/2c1887b8951f1977423e3ba6ba4c4b5c4a0b8bac))
 
 * chore: update cryptography ([`a2bbbee`](https://github.com/edayot/ItemIO/commit/a2bbbee1b0a7af90e13153faa75d984885e72e0b))
 
 * chore: update common ([`2dd9311`](https://github.com/edayot/ItemIO/commit/2dd93115879146ee6581bf770883f3c0dcca3f74))
 
-### Fix
-
-* fix: variables are now set before auto_handled_output ([`080c6b1`](https://github.com/edayot/ItemIO/commit/080c6b1b713549e9583b5af237c7b23863451182))
-
-### Unknown
-
-* Merge pull request #2 from edayot/dependabot/pip/cryptography-41.0.0
-
-chore(deps): bump cryptography from 39.0.0 to 41.0.0 ([`5df66b9`](https://github.com/edayot/ItemIO/commit/5df66b9caec9dae5725a5db413f6c5460904efd0))
-
 
 ## v0.4.0 (2023-06-20)
 
-### Chore
-
-* chore: update stuffs ([`58cada3`](https://github.com/edayot/ItemIO/commit/58cada3642c453920510daa4e0f1b4acdff1cf26))
-
-* chore: update script ([`e5a5a5a`](https://github.com/edayot/ItemIO/commit/e5a5a5a4afa5dd62631158502498496106e27aff))
-
-### Fix
+### Bug fixes
 
 * fix: update smithed lib ([`b96395e`](https://github.com/edayot/ItemIO/commit/b96395eebe9e25ad05afd8a938b0612b965f9b6e))
 
@@ -1412,10 +1393,16 @@ chore(deps): bump cryptography from 39.0.0 to 41.0.0 ([`5df66b9`](https://github
 
 * fix: use of 1.20 `execute if loaded` ([`0d64a52`](https://github.com/edayot/ItemIO/commit/0d64a524c1ac636c323c5884879d680dd2275749))
 
+### Chores
+
+* chore: update stuffs ([`58cada3`](https://github.com/edayot/ItemIO/commit/58cada3642c453920510daa4e0f1b4acdff1cf26))
+
+* chore: update script ([`e5a5a5a`](https://github.com/edayot/ItemIO/commit/e5a5a5a4afa5dd62631158502498496106e27aff))
+
 
 ## v0.3.0 (2023-02-23)
 
-### Feature
+### Features
 
 * feat: display and interaction add to #itemio:cables ([`3aa891e`](https://github.com/edayot/ItemIO/commit/3aa891e553f84dff1949fbae1c0aaf8f21f33ea9))
 
@@ -1424,11 +1411,7 @@ chore(deps): bump cryptography from 39.0.0 to 41.0.0 ([`5df66b9`](https://github
 
 ## v0.2.0 (2023-01-28)
 
-### Chore
-
-* chore: now on server ([`1703735`](https://github.com/edayot/ItemIO/commit/1703735a25506c238bc2dccc38aff1ce2dd9ca60))
-
-### Fix
+### Bug fixes
 
 * fix: Add queue checker ([`31b5a83`](https://github.com/edayot/ItemIO/commit/31b5a83984e9e3ed80b7cdee0c64522eef0c0d9c))
 
@@ -1444,10 +1427,18 @@ chore(deps): bump cryptography from 39.0.0 to 41.0.0 ([`5df66b9`](https://github
 
 * fix: disable minecart only work on marker container ([`b09cf4e`](https://github.com/edayot/ItemIO/commit/b09cf4ed0092014bb1f3b14757594fe8d1e11744))
 
+### Chores
+
+* chore: now on server ([`1703735`](https://github.com/edayot/ItemIO/commit/1703735a25506c238bc2dccc38aff1ce2dd9ca60))
+
 
 ## v0.1.1 (2023-01-18)
 
-### Chore
+### Bug fixes
+
+* fix: hangings signs added to #itemio:stack16 ([`9364e87`](https://github.com/edayot/ItemIO/commit/9364e876138314abbd5adcb3b2af01c8f76e1549))
+
+### Chores
 
 * chore: update common ([`6c55fd1`](https://github.com/edayot/ItemIO/commit/6c55fd1f7e4ec8132ebba9aae3e3c4b3b458658f))
 
@@ -1459,14 +1450,16 @@ chore(deps): bump cryptography from 39.0.0 to 41.0.0 ([`5df66b9`](https://github
 
 * chore: commit_version_number = true ([`5bd1d18`](https://github.com/edayot/ItemIO/commit/5bd1d1817b6e43514083107994fd030ee2efaf49))
 
-### Fix
-
-* fix: hangings signs added to #itemio:stack16 ([`9364e87`](https://github.com/edayot/ItemIO/commit/9364e876138314abbd5adcb3b2af01c8f76e1549))
-
 
 ## v0.1.0 (2023-01-09)
 
-### Chore
+### Bug fixes
+
+* fix: branch master ([`87ac0d9`](https://github.com/edayot/ItemIO/commit/87ac0d9bdd513878f088e6de0370ffefd48f7b9c))
+
+* fix: Added yellow_shulker_box.json + git push in action ([`43c10c7`](https://github.com/edayot/ItemIO/commit/43c10c7f4c40a905fb0769ac652adfa8130151f5))
+
+### Chores
 
 * chore: lock file ([`1aade0e`](https://github.com/edayot/ItemIO/commit/1aade0e400b3ac15f42f8089801007cdc1fe4a86))
 
@@ -1474,23 +1467,13 @@ chore(deps): bump cryptography from 39.0.0 to 41.0.0 ([`5df66b9`](https://github
 
 * chore: add files to push ([`15a76e6`](https://github.com/edayot/ItemIO/commit/15a76e62d17e7a0808b54f86815234e46732d713))
 
-### Feature
+### Features
 
-* feat:  Added auto-release ([`9f2934d`](https://github.com/edayot/ItemIO/commit/9f2934dbe2c5a4a6f4503c1d9c9568dd619b82f8))
-
-### Fix
-
-* fix: branch master ([`87ac0d9`](https://github.com/edayot/ItemIO/commit/87ac0d9bdd513878f088e6de0370ffefd48f7b9c))
-
-* fix: Added yellow_shulker_box.json + git push in action ([`43c10c7`](https://github.com/edayot/ItemIO/commit/43c10c7f4c40a905fb0769ac652adfa8130151f5))
+* feat: Added auto-release ([`9f2934d`](https://github.com/edayot/ItemIO/commit/9f2934dbe2c5a4a6f4503c1d9c9568dd619b82f8))
 
 ### Unknown
 
 * 0.1.0 ([`524de5b`](https://github.com/edayot/ItemIO/commit/524de5be9f60589acc9fbd039cf2cfa855cde9e4))
-
-* Merge pull request #1 from edayot/dev
-
-Merging ([`a69f564`](https://github.com/edayot/ItemIO/commit/a69f5646c94683847b9f7a991c47308a961f7e3a))
 
 * [wwooooosh] ([`d797801`](https://github.com/edayot/ItemIO/commit/d797801f71b112fb7e2b50b9d066acc69a8e971e))
 
@@ -1577,9 +1560,9 @@ Merging ([`a69f564`](https://github.com/edayot/ItemIO/commit/a69f5646c94683847b9
 
 * t ([`4000035`](https://github.com/edayot/ItemIO/commit/40000355f77fba535ae67d2c1c9bea5669cf0d49))
 
-* gauche et droite on rempli d&#39;abord droite puis gauche ([`8240c21`](https://github.com/edayot/ItemIO/commit/8240c2141a9016c39f346321e01e173bb85051ae))
+* gauche et droite on rempli d'abord droite puis gauche ([`8240c21`](https://github.com/edayot/ItemIO/commit/8240c2141a9016c39f346321e01e173bb85051ae))
 
-* pas sur que ca fonctionne mais c&#39;est l&#39;input vanilla double chest ([`b863308`](https://github.com/edayot/ItemIO/commit/b86330870304aa4c94be831c732f0b5943532338))
+* pas sur que ca fonctionne mais c'est l'input vanilla double chest ([`b863308`](https://github.com/edayot/ItemIO/commit/b86330870304aa4c94be831c732f0b5943532338))
 
 * update des hoppers (plus de duppli ni de strange behaviour sauf double coffre mais flemme) ([`c5137c8`](https://github.com/edayot/ItemIO/commit/c5137c82f3646f3de7f912c2f01c3b81483e6bb8))
 
@@ -1595,7 +1578,7 @@ Merging ([`a69f564`](https://github.com/edayot/ItemIO/commit/a69f5646c94683847b9
 
 * Changements sur le versioning et enumerate auto ([`ba5195b`](https://github.com/edayot/ItemIO/commit/ba5195b0a21dedcd56c9273e16e281dd341d03ac))
 
-* le message s&#39;affiche quand c&#39;est vraiment load lol ([`4110ee0`](https://github.com/edayot/ItemIO/commit/4110ee0cc10b043c3e5c7d4614179e88a2e4436d))
+* le message s'affiche quand c'est vraiment load lol ([`4110ee0`](https://github.com/edayot/ItemIO/commit/4110ee0cc10b043c3e5c7d4614179e88a2e4436d))
 
 * je suis débile ([`bf49e18`](https://github.com/edayot/ItemIO/commit/bf49e18641a25c0460257f548bf7029a95edf96e))
 
@@ -1607,7 +1590,7 @@ Merging ([`a69f564`](https://github.com/edayot/ItemIO/commit/a69f5646c94683847b9
 
 * enumerate and resolve ([`ba33b68`](https://github.com/edayot/ItemIO/commit/ba33b68f0c60e929ed926a972a570a095a3e98ae))
 
-* système de cooldown lorsque l&#39;on fait un full input vanilla ou custom, aussi l&#39;ajout d&#39;un funtion tag ([`98a8ac6`](https://github.com/edayot/ItemIO/commit/98a8ac65ba3b73af52047f1bf15b92cf207313b0))
+* système de cooldown lorsque l'on fait un full input vanilla ou custom, aussi l'ajout d'un funtion tag ([`98a8ac6`](https://github.com/edayot/ItemIO/commit/98a8ac65ba3b73af52047f1bf15b92cf207313b0))
 
 * bugfix des calls ([`f241086`](https://github.com/edayot/ItemIO/commit/f241086a7e09ab911f5f748db31ba393a0338914))
 
@@ -1659,11 +1642,11 @@ Merging ([`a69f564`](https://github.com/edayot/ItemIO/commit/a69f5646c94683847b9
 
 * bugfix sur le custommodeldata + sur la fonction transfer ([`b805065`](https://github.com/edayot/ItemIO/commit/b805065dd7589241e6f94b095b947d0a7d3aff65))
 
-* fin du namespace example et ajout d&#39;un etat pour les network qui ne sont pas des cabes(servo) ([`4c8efdd`](https://github.com/edayot/ItemIO/commit/4c8efddfb420c4d2abcf193e6e4ca4ca745d4064))
+* fin du namespace example et ajout d'un etat pour les network qui ne sont pas des cabes(servo) ([`4c8efdd`](https://github.com/edayot/ItemIO/commit/4c8efddfb420c4d2abcf193e6e4ca4ca745d4064))
 
 * root advancement ([`84a4d29`](https://github.com/edayot/ItemIO/commit/84a4d29de598d8903b537a8fd5e5a9b6b0e62d95))
 
-* ajout du fonction tag #itemio:event/cable_update, fonctionne à l&#39;identique à celui d&#39;energy ([`10e86e7`](https://github.com/edayot/ItemIO/commit/10e86e70be8f359f3f74ca63611c9f6537226795))
+* ajout du fonction tag #itemio:event/cable_update, fonctionne à l'identique à celui d'energy ([`10e86e7`](https://github.com/edayot/ItemIO/commit/10e86e70be8f359f3f74ca63611c9f6537226795))
 
 * fin du auto eject intégré :( ([`76412cc`](https://github.com/edayot/ItemIO/commit/76412ccd651852beb9323a6f24437ce99f9e39b0))
 
@@ -1675,7 +1658,7 @@ Merging ([`a69f564`](https://github.com/edayot/ItemIO/commit/a69f5646c94683847b9
 
 * des cables et des réseaux ([`9c611a3`](https://github.com/edayot/ItemIO/commit/9c611a3655bf66d656276f9ae1b6060a2b19cf20))
 
-* ajout du filtre à l&#39;input ([`06670ad`](https://github.com/edayot/ItemIO/commit/06670ad87fbea4f6677d5e4f2358dfb7a29f54f5))
+* ajout du filtre à l'input ([`06670ad`](https://github.com/edayot/ItemIO/commit/06670ad87fbea4f6677d5e4f2358dfb7a29f54f5))
 
 * changement fonctionnement transfert ([`d8724c1`](https://github.com/edayot/ItemIO/commit/d8724c15e035996ddd19ed6e7e3cf10ea3ab7795))
 
@@ -1689,7 +1672,7 @@ Merging ([`a69f564`](https://github.com/edayot/ItemIO/commit/a69f5646c94683847b9
 
 * auto eject et auto input / les hoppers sont compatibles ([`10f6f47`](https://github.com/edayot/ItemIO/commit/10f6f47593bdd66cbec010482c32eb364dbe0b69))
 
-* filtre d&#39;id intégré ([`5752f6b`](https://github.com/edayot/ItemIO/commit/5752f6b39a8a7a5fdf6130469c82f9019f22e6d7))
+* filtre d'id intégré ([`5752f6b`](https://github.com/edayot/ItemIO/commit/5752f6b39a8a7a5fdf6130469c82f9019f22e6d7))
 
 * tag de function ([`39a040b`](https://github.com/edayot/ItemIO/commit/39a040b60f5569346967ee87fb5bb4cc954bed12))
 
@@ -1701,7 +1684,7 @@ Merging ([`a69f564`](https://github.com/edayot/ItemIO/commit/a69f5646c94683847b9
 
 * rename of storage ([`810a1ef`](https://github.com/edayot/ItemIO/commit/810a1ef34098761f8b5347961053f34b094a590d))
 
-* filtre pour l&#39;output vanilla ([`b885e5f`](https://github.com/edayot/ItemIO/commit/b885e5f8a3b3d77611c23361fc85fd7fde71aebf))
+* filtre pour l'output vanilla ([`b885e5f`](https://github.com/edayot/ItemIO/commit/b885e5f8a3b3d77611c23361fc85fd7fde71aebf))
 
 * added all side config ([`ae49c43`](https://github.com/edayot/ItemIO/commit/ae49c432d6650ed442e334f42b554acc539d69c9))
 
@@ -1712,7 +1695,7 @@ petites descriptions pour les input et ouput calls ([`2f38568`](https://github.c
 
 * test_nbt bugfix ([`2e28d03`](https://github.com/edayot/ItemIO/commit/2e28d037ff9f9ff9c57cef404f3bd28370f0a948))
 
-* le système d&#39;output fonctionne ([`b7f359b`](https://github.com/edayot/ItemIO/commit/b7f359b2e7009e0aff1b4b800a7deb60b3fabf14))
+* le système d'output fonctionne ([`b7f359b`](https://github.com/edayot/ItemIO/commit/b7f359b2e7009e0aff1b4b800a7deb60b3fabf14))
 
 * added autoeject ([`d43bc91`](https://github.com/edayot/ItemIO/commit/d43bc91ce900ba1c22a5dceaaee45f1e4940f3de))
 
@@ -1720,7 +1703,7 @@ petites descriptions pour les input et ouput calls ([`2f38568`](https://github.c
 
 * output fonctionne avec tout les slots ([`a5eba5a`](https://github.com/edayot/ItemIO/commit/a5eba5ac5c823f2021a9a7a866fd96a24eb6742c))
 
-* esquisse du syteme d&#39;output ([`d6e2064`](https://github.com/edayot/ItemIO/commit/d6e20649532fcfee3c1111d058207d5bc0a265d6))
+* esquisse du syteme d'output ([`d6e2064`](https://github.com/edayot/ItemIO/commit/d6e20649532fcfee3c1111d058207d5bc0a265d6))
 
 * hopper et file reorganisation ([`4cd7b12`](https://github.com/edayot/ItemIO/commit/4cd7b1294255c37c312f6fde2df95e4ec0bde2fc))
 
@@ -1730,15 +1713,15 @@ petites descriptions pour les input et ouput calls ([`2f38568`](https://github.c
 
 * réarrangement des fichiers ([`ab00be7`](https://github.com/edayot/ItemIO/commit/ab00be7d59c61c5f3b7c85c5fbd464a58883d257))
 
-* ajout des filtres à l&#39;input ([`562b6c3`](https://github.com/edayot/ItemIO/commit/562b6c30d3c3c738a729c548dab7d4c77b82c1ee))
+* ajout des filtres à l'input ([`562b6c3`](https://github.com/edayot/ItemIO/commit/562b6c30d3c3c738a729c548dab7d4c77b82c1ee))
 
 * vanilla IO pour les fours les barrel, les dropper ([`e6b4433`](https://github.com/edayot/ItemIO/commit/e6b4433f452e3a2370a318750557754785901782))
 
-* l&#39;input fonctionne parfaitement ([`0a5080b`](https://github.com/edayot/ItemIO/commit/0a5080be5e2230dffcac873fe3c6ec7c44a424d1))
+* l'input fonctionne parfaitement ([`0a5080b`](https://github.com/edayot/ItemIO/commit/0a5080be5e2230dffcac873fe3c6ec7c44a424d1))
 
 * side vérification ([`4469a8e`](https://github.com/edayot/ItemIO/commit/4469a8e6176ebefa9f188a2fdc56694b9f5f5d03))
 
-* le système d&#39;input est opérationnel ([`ca45b04`](https://github.com/edayot/ItemIO/commit/ca45b04f8b12864d894fb8b2dca1c04ffb3c7cc8))
+* le système d'input est opérationnel ([`ca45b04`](https://github.com/edayot/ItemIO/commit/ca45b04f8b12864d894fb8b2dca1c04ffb3c7cc8))
 
 * slot0 ([`3a8c0b2`](https://github.com/edayot/ItemIO/commit/3a8c0b2cd0453ebf83158d49678b5e8eedb239e0))
 
