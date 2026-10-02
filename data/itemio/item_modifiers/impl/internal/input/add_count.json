@@ -1,14 +1,12 @@
-[
-    {
-        "function": "minecraft:set_count",
-        "count": {
-            "type": "minecraft:score",
-            "target": {
-                "type": "minecraft:fixed",
-                "name": "#count_input"
-            },
-            "score": "itemio.math.input"
+{
+    "type": "minecraft:set_count",
+    "count": {
+        "type": "minecraft:score",
+        "target": {
+            "type": "minecraft:fixed",
+            "name": "#count_input"
         },
-        "add": true
-    }
-]
+        "score": "itemio.math.input"
+    },
+    "add": true
+}
