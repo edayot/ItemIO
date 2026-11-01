@@ -63,7 +63,6 @@ require:
   - bolt
   - mcward.beet
   - mcward.mecha
-  - airdox_.allow_function_without_name
   - mecha.contrib.messages
   - beet.contrib.render
   - beet.contrib.livereload
