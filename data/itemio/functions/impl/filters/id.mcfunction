@@ -1,8 +1,7 @@
 scoreboard players set #filter.valid_item itemio.io 0
 
-data remove storage itemio:main temp.id
-data modify storage itemio:main temp.id set from storage itemio:io filter.id
+# filter.id is a list : a partial list match tests if the item id is in it
+execute if data storage itemio:io item.id run function itemio:impl/filters/id/match with storage itemio:io item
 
-execute if score #filter.valid_item itemio.io matches 0 if data storage itemio:main temp.id[0] run function itemio:impl/filters/id/loop
-
-
+function itemio:impl/filters/id/match:
+    $execute if data storage itemio:io filter{id:["$(id)"]} run scoreboard players set #filter.valid_item itemio.io 1

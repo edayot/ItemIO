@@ -11,6 +11,8 @@
 | The item to input in the container<br> `A normal item NBT`          | storage      | input                    | itemio:io                        |
 | The input side : <br>```"north", "south", "east", "west", "top", "bottom", "wireless"``` (wireless bypass the side check)                | storage      | input_side               | itemio:io                        |
 
+The count of the item must be between 1 and 99 (like any item stack).
+
 ---
 
 ### Outputs

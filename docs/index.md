@@ -66,6 +66,17 @@ The documentation of the function calls
 
 ```
 
+```{grid-item-card}
+:link: migration/v2
+:link-type: doc
+
+⬆️ Migrating to 2.0.0
+^^^
+
+The breaking changes of ItemIO 2.0.0.
+
+```
+
 
 
 ::::
@@ -106,6 +117,7 @@ filters/index
 networking/index
 function_calls/index
 configuration
+migration/v2
 contributing
 featured
 changelog

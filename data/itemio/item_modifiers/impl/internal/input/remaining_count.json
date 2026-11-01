@@ -1,0 +1,11 @@
+{
+    "type": "minecraft:set_count",
+    "count": {
+        "type": "minecraft:score",
+        "target": {
+            "type": "minecraft:fixed",
+            "name": "#remaining"
+        },
+        "score": "itemio.math.input"
+    }
+}

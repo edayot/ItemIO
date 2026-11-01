@@ -17,6 +17,8 @@ meta:
   airdox_:
     license_path: "LICENSE"
     readme_path: "README.md"
+    # removed from the release builds (-s meta.airdox_.release=true)
+    test_namespace: itemio_test
   mecha:
     formatting: preserve
     multiline: true
@@ -78,4 +80,5 @@ pipeline:
   - beet.contrib.render
   - airdox_.minify_functions
   - airdox_.add_id
+  - airdox_.remove_test_namespace
  

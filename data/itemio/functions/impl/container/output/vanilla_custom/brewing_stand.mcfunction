@@ -1,7 +1,8 @@
 # brewing_stand
 # There are using a custom ioconfig
 
-data modify storage itemio:main.output ioconfig set value [ \
+data modify storage itemio:main.output config set value {}
+data modify storage itemio:main.output config.ioconfig set value [ \
     {Slot:0b,allowed_side:{bottom:1b}}, \ 
     {Slot:1b,allowed_side:{bottom:1b}}, \ 
     {Slot:2b,allowed_side:{bottom:1b}}, \ 

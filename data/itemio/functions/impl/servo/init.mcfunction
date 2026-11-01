@@ -13,6 +13,9 @@ scoreboard players add @s itemio.servo.retry_limit 0
 execute unless score @s itemio.servo.stack_limit matches 0.. run scoreboard players set @s itemio.servo.stack_limit 1
 execute unless score @s itemio.servo.retry_limit matches 0.. run scoreboard players set @s itemio.servo.retry_limit 1
 
+# the block and the side of the servo
+function itemio:impl/servo/compute_target
+
 # copy network id to process queue
 execute align xyz positioned ~.5 ~.5 ~.5 run tag @e[type=#itemio:cables,tag=itemio.cable.initialised,distance=..0.5001,limit=1,sort=nearest] add itemio.cable.me
 

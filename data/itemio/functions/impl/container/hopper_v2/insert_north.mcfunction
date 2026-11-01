@@ -1,14 +1,9 @@
 function itemio:impl/container/hopper_v2/extract_top
 
-execute positioned ~ ~ ~-1 run summon marker ~ ~ ~ {data:{itemio:{ioconfig:{input_side:"south"}}},Tags:["itemio.transfer.destination","itemio.transfer.destination.temp","itemio.summoned"]}
-
-
+# The hopper (~ ~ ~) pushes an item in the block it is facing
+data modify storage itemio:io destinations set value [{dx:0,dy:0,dz:-1,input_side:"south"}]
 scoreboard players set #max_output_count itemio.io 1
 data remove storage itemio:io filters
 data remove storage itemio:io input
 data modify storage itemio:io output_side set value "north"
-function #itemio:calls/transfer
-
-kill @e[tag=itemio.transfer.destination.temp]
-
-
+function itemio:impl/container/transfer

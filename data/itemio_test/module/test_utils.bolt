@@ -1,0 +1,54 @@
+# Helpers shared by the tests in data/itemio_test/test
+#
+# They return the commands as text, emitted by each test with a local helper:
+#   def emit(commands):
+#       for command in commands:
+#           raw command
+# With the `preserve` layout, mecha copies the source text found between two commands
+# using their location: a command emitted from this module carries a location in this
+# file, and would mangle the comments of the test file.
+
+
+def call_input(item, side="wireless", pos="~ ~ ~"):
+    return [
+        f"data modify storage itemio:io input set value {item}",
+        f'data modify storage itemio:io input_side set value "{side}"',
+        f"execute positioned {pos} run function #itemio:calls/input",
+    ]
+
+
+def _output_setup(side, max_count, filter_list, exact_item):
+    commands = [
+        f"scoreboard players set #max_output_count itemio.io {max_count}",
+        f'data modify storage itemio:io output_side set value "{side}"',
+        "data remove storage itemio:io input",
+        "data remove storage itemio:io filters",
+    ]
+    if filter_list:
+        commands.append(f"data modify storage itemio:io filters set value {filter_list}")
+    if exact_item:
+        commands.append(f"data modify storage itemio:io input set value {exact_item}")
+    return commands
+
+
+def call_output(side="wireless", max_count=64, pos="~ ~ ~", filter_list=None, exact_item=None):
+    commands = _output_setup(side, max_count, filter_list, exact_item)
+    commands.append(f"execute positioned {pos} run function #itemio:calls/output")
+    return commands
+
+
+def call_transfer(side="wireless", max_count=1, pos="~ ~ ~", filter_list=None, exact_item=None):
+    commands = _output_setup(side, max_count, filter_list, exact_item)
+    commands.append(f"execute positioned {pos} run function #itemio:calls/transfer")
+    return commands
+
+
+def stacks(ids, count=64, start=0):
+    """SNBT list of stacks, one per id, in consecutive slots"""
+    items = []
+    for slot, id in enumerate(ids):
+        items.append(f'{{Slot:{start + slot}b,id:"minecraft:{id}",count:{count}}}')
+    return "[" + ",".join(items) + "]"
+
+
+ALL_SIDES = "{north:1b,south:1b,east:1b,west:1b,top:1b,bottom:1b}"

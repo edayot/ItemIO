@@ -1,10 +1,9 @@
 
 
 
-data remove entity a97c9c67-fde0-4b89-926d-54fa4a866004 container.0
-data modify entity a97c9c67-fde0-4b89-926d-54fa4a866004 container.0 set from storage itemio:io input
+data modify entity a97c9c67-fde0-4b89-926d-54fa4a866004 item set from storage itemio:io input
 
-execute unless items entity a97c9c67-fde0-4b89-926d-54fa4a866004 container.0 *[minecraft:jukebox_playable] run return fail
+execute unless items entity a97c9c67-fde0-4b89-926d-54fa4a866004 contents *[minecraft:jukebox_playable] run return fail
 
 
 data remove storage itemio:main.input ItemUnique

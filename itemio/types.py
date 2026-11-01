@@ -99,25 +99,30 @@ class SlotConfig(CompoundSchema):
         "Slot": Byte,
         "mode": LiteralTag[String]["input", "output", "both"],
         "allowed_side": AllowedSide,
-        "filters": List[Filter]
+        "filters": List[Filter],
+        "max_stack_size": Int,
     }
     typeddict = TypedDict("typeddict", {
         "Slot": int,
         "mode": Literal["input", "output", "both"],
         "allowed_side": AllowedSide.typeddict,
-        "filters": Optional[list[Filter.typeddict]]
+        "filters": Optional[list[Filter.typeddict]],
+        "max_stack_size": Optional[int],
     })
     strict = True
     def __init__(self, value : typeddict): super().__init__(value)
 
 class ItemIO(CompoundSchema):
+    """
+    The config of a container, in data.itemio of its entity
+    """
     schema = {
         "ioconfig": List[SlotConfig],
-        "ioconfig_from_storage": String,
         "nbt_items_path": String
     }
     typeddict = TypedDict("typeddict", {
-        "ioconfig": list[SlotConfig.typeddict]
+        "ioconfig": list[SlotConfig.typeddict],
+        "nbt_items_path": Optional[str],
     })
     strict = False
     def __init__(self, value : typeddict): super().__init__(value)

@@ -1,0 +1,67 @@
+# Stopwatch benchmark helpers, see bench/run.py
+#
+# bench() emits `warmup + rounds` measured rounds in the calling test.
+# Each round runs `body` n times (unrolled in its own function), timed with
+# /stopwatch, and reports one line in the server log:
+#   ITEMIO_BENCH <name> <round> <elapsed_us> <n>
+# /stopwatch has a millisecond resolution, so n must be big enough for a round
+# to last tens of milliseconds.
+
+
+def bench(name, n, body, reset=None, rounds=5, warmup=1):
+    stopwatch_id = f"itemio_test:bench/{name}"
+    run_function = f"itemio_test:bench/{name}/run"
+
+    function run_function:
+        for _ in range(n):
+            body()
+
+    raw f"stopwatch remove {stopwatch_id}"
+    raw f"stopwatch create {stopwatch_id}"
+    for round in range(-warmup, rounds):
+        if reset:
+            reset()
+        raw f"stopwatch restart {stopwatch_id}"
+        function run_function
+        raw f"execute store result storage itemio_test:bench result.us int 1 run stopwatch query {stopwatch_id} 1000000"
+        if round >= 0:
+            raw f'data modify storage itemio_test:bench result merge value {{name:"{name}",round:{round},n:{n}}}'
+            function itemio_test:bench/report with storage itemio_test:bench result
+    raw f"stopwatch remove {stopwatch_id}"
+
+
+def impl(path):
+    """An internal ItemIO function : the versioning plugin only renames itemio:impl/ in the itemio namespace"""
+    return f"itemio:v{ctx.project_version}/{path}"
+
+
+def items_snbt(ids, count=64, start=0):
+    """SNBT list of stacks, one per id, in consecutive slots"""
+    stacks = []
+    for slot, id in enumerate(ids):
+        stacks.append(f'{{Slot:{start + slot}b,id:"minecraft:{id}",count:{count}}}')
+    return "[" + ",".join(stacks) + "]"
+
+
+def full_container(id, size=27, count=64):
+    return items_snbt([id] * size, count)
+
+
+ALL_SIDES = "{north:1b,south:1b,east:1b,west:1b,top:1b,bottom:1b}"
+
+
+def ioconfig_snbt(slots, mode, filters):
+    entries = []
+    for slot in slots:
+        entries.append(f'{{Slot:{slot}b,mode:"{mode}",allowed_side:{ALL_SIDES},filters:{filters}}}')
+    return "[" + ",".join(entries) + "]"
+
+
+# 26 distinct full stacks used to fill a container before a scan
+DISTINCT_IDS = [
+    "dirt", "cobblestone", "stone_bricks", "oak_log", "spruce_log", "birch_log",
+    "jungle_log", "acacia_log", "dark_oak_log", "mangrove_log", "cherry_log",
+    "sand", "red_sand", "gravel", "clay", "granite", "diorite", "andesite",
+    "deepslate", "tuff", "calcite", "netherrack", "basalt", "blackstone",
+    "end_stone", "obsidian",
+]

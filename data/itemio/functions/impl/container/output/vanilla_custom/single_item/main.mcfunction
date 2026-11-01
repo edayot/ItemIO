@@ -22,7 +22,7 @@ execute
         data modify storage itemio:io filters set from storage itemio:main.output filters
         data modify storage itemio:io item set from storage itemio:main.output ItemUnique
 
-        function #itemio:calls/filters_v2
+        function itemio:impl/filters/calls/main
 
         execute if score #filters.valid_item itemio.io matches 1 run function ~/../output
 
@@ -60,7 +60,7 @@ execute
 
         scoreboard players operation #remove_count itemio.math.output = #max_output_count itemio.io
 
-        execute if score #try_input_after itemio.math.output matches 1 run function #itemio:calls/try_input_after
+        execute if score #try_input_after itemio.math.output matches 1 run function itemio:impl/container/output/try_input_after
         execute if score #remove_count itemio.math.output matches 1.. run item modify block ~ ~ ~ contents itemio:impl/internal/output/remove_count
 
 

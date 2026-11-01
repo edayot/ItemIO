@@ -1,0 +1,229 @@
+{
+  "name": "v2",
+  "date": "2026-11-01T14:08:37+00:00",
+  "commit": "eaa3520",
+  "minecraft": "26.3",
+  "results": {
+    "filters_id": {
+      "n": 2000,
+      "rounds": 5,
+      "round_ms": [
+        21.0,
+        23.0,
+        24.0,
+        21.0,
+        21.0
+      ],
+      "median_us_per_op": 10.5,
+      "min_us_per_op": 10.5
+    },
+    "filters_minecraft_tag": {
+      "n": 1000,
+      "rounds": 5,
+      "round_ms": [
+        89.0,
+        92.0,
+        86.0,
+        97.0,
+        96.0
+      ],
+      "median_us_per_op": 92.0,
+      "min_us_per_op": 86.0
+    },
+    "hopper_emulation": {
+      "n": 300,
+      "rounds": 5,
+      "round_ms": [
+        65.0,
+        56.0,
+        55.0,
+        55.0,
+        54.0
+      ],
+      "median_us_per_op": 183.33333333333334,
+      "min_us_per_op": 180.0
+    },
+    "input_custom": {
+      "n": 300,
+      "rounds": 5,
+      "round_ms": [
+        33.0,
+        30.0,
+        31.0,
+        31.0,
+        30.0
+      ],
+      "median_us_per_op": 103.33333333333333,
+      "min_us_per_op": 100.0
+    },
+    "input_vanilla": {
+      "n": 1000,
+      "rounds": 5,
+      "round_ms": [
+        27.0,
+        23.0,
+        23.0,
+        23.0,
+        22.0
+      ],
+      "median_us_per_op": 23.0,
+      "min_us_per_op": 22.0
+    },
+    "input_vanilla_scan": {
+      "n": 60,
+      "rounds": 5,
+      "round_ms": [
+        2.0,
+        1.0,
+        2.0,
+        1.0,
+        2.0
+      ],
+      "median_us_per_op": 33.333333333333336,
+      "min_us_per_op": 16.666666666666668
+    },
+    "network_idle_process": {
+      "n": 100,
+      "rounds": 5,
+      "round_ms": [
+        6.0,
+        7.0,
+        6.0,
+        5.0,
+        5.0
+      ],
+      "median_us_per_op": 60.0,
+      "min_us_per_op": 50.0
+    },
+    "network_process": {
+      "n": 100,
+      "rounds": 5,
+      "round_ms": [
+        74.0,
+        75.0,
+        76.0,
+        75.0,
+        73.0
+      ],
+      "median_us_per_op": 750.0,
+      "min_us_per_op": 730.0
+    },
+    "output_custom": {
+      "n": 1000,
+      "rounds": 5,
+      "round_ms": [
+        64.0,
+        65.0,
+        63.0,
+        63.0,
+        67.0
+      ],
+      "median_us_per_op": 64.0,
+      "min_us_per_op": 63.0
+    },
+    "output_vanilla": {
+      "n": 1000,
+      "rounds": 5,
+      "round_ms": [
+        29.0,
+        31.0,
+        31.0,
+        31.0,
+        32.0
+      ],
+      "median_us_per_op": 31.0,
+      "min_us_per_op": 29.0
+    },
+    "output_vanilla_filtered": {
+      "n": 200,
+      "rounds": 5,
+      "round_ms": [
+        59.0,
+        66.0,
+        78.0,
+        57.0,
+        55.0
+      ],
+      "median_us_per_op": 295.0,
+      "min_us_per_op": 275.0
+    },
+    "tick_100_custom_containers": {
+      "n": 100,
+      "rounds": 5,
+      "round_ms": [
+        11.0,
+        12.0,
+        12.0,
+        11.0,
+        12.0
+      ],
+      "median_us_per_op": 120.0,
+      "min_us_per_op": 110.0
+    },
+    "tick_100_vanilla_containers": {
+      "n": 100,
+      "rounds": 5,
+      "round_ms": [
+        20.0,
+        19.0,
+        20.0,
+        23.0,
+        22.0
+      ],
+      "median_us_per_op": 200.0,
+      "min_us_per_op": 190.0
+    },
+    "tick_200_containers": {
+      "n": 100,
+      "rounds": 5,
+      "round_ms": [
+        31.0,
+        31.0,
+        31.0,
+        31.0,
+        32.0
+      ],
+      "median_us_per_op": 310.0,
+      "min_us_per_op": 310.0
+    },
+    "tick_idle_3k_entities": {
+      "n": 200,
+      "rounds": 5,
+      "round_ms": [
+        21.0,
+        21.0,
+        21.0,
+        22.0,
+        21.0
+      ],
+      "median_us_per_op": 105.0,
+      "min_us_per_op": 105.0
+    },
+    "transfer_vanilla": {
+      "n": 1000,
+      "rounds": 5,
+      "round_ms": [
+        78.0,
+        78.0,
+        76.0,
+        96.0,
+        92.0
+      ],
+      "median_us_per_op": 78.0,
+      "min_us_per_op": 76.0
+    },
+    "transfer_vanilla_3k_entities": {
+      "n": 500,
+      "rounds": 5,
+      "round_ms": [
+        65.0,
+        67.0,
+        68.0,
+        67.0,
+        71.0
+      ],
+      "median_us_per_op": 134.0,
+      "min_us_per_op": 130.0
+    }
+  }
+}

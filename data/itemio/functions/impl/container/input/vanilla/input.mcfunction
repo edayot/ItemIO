@@ -1,37 +1,23 @@
-#init
+# Inserts storage itemio:io input in the vanilla container at ~ ~ ~
+# Same algorithm as /loot insert : the stacks already in the container are filled first,
+# then the first empty slots. The right half of a double chest is filled first.
+# Used entity : a97c9c67-fde0-4b89-926d-54fa4a866004 (holds the inserted item)
 
-
-
-
-
-
-scoreboard players set #block_size itemio.math.input 0
-execute if block ~ ~ ~ #itemio:container/27_chest run scoreboard players set #block_size itemio.math.input 27
-execute if block ~ ~ ~ #itemio:container/chests[type=single] run scoreboard players set #block_size itemio.math.input 27
-
-execute if block ~ ~ ~ #itemio:container/9 run scoreboard players set #block_size itemio.math.input 9
-execute if block ~ ~ ~ #wooden_shelves run scoreboard players set #block_size itemio.math.input 3
-execute if block ~ ~ ~ hopper[enabled=true] run scoreboard players set #block_size itemio.math.input 5
-
-
-execute unless score #block_size itemio.math.input matches 0 run function itemio:impl/container/input/vanilla/try_input
-
-
-execute if block ~ ~ ~ #itemio:container/chests[type=left] run function itemio:impl/container/input/vanilla/double_chest_left
-
-execute if block ~ ~ ~ #itemio:container/chests[type=right] run function itemio:impl/container/input/vanilla/double_chest_right
-
-
-data remove storage itemio:io output
-data modify storage itemio:io output set from storage itemio:io input
-data modify storage itemio:io output.count set from storage itemio:main.input input.count
+execute unless data storage itemio:io input run return fail
 
 execute store result score #count_input itemio.math.input run data get storage itemio:io input.count
-execute store result score #count_output itemio.math.input run data get storage itemio:io output.count
+scoreboard players operation #remaining itemio.math.input = #count_input itemio.math.input
 
-scoreboard players set #count_to_remove itemio.math.input 0
-scoreboard players operation #count_to_remove itemio.math.input = #count_input itemio.math.input
-scoreboard players operation #count_to_remove itemio.math.input -= #count_output itemio.math.input
+# a disabled hopper doesn't accept items
+execute if block ~ ~ ~ hopper[enabled=false] run return run function itemio:impl/container/input/vanilla/result
 
-scoreboard players operation #count_to_remove itemio.io = #count_to_remove itemio.math.input
+data modify entity a97c9c67-fde0-4b89-926d-54fa4a866004 item set from storage itemio:io input
 
+# a shulker box doesn't accept shulker boxes
+execute if block ~ ~ ~ #shulker_boxes if items entity a97c9c67-fde0-4b89-926d-54fa4a866004 contents #itemio:shulker_boxes run return run function itemio:impl/container/input/vanilla/result
+
+execute if block ~ ~ ~ #itemio:container/chests[type=left] run return run function itemio:impl/container/input/vanilla/double_chest_left
+execute if block ~ ~ ~ #itemio:container/chests[type=right] run return run function itemio:impl/container/input/vanilla/double_chest_right
+
+function itemio:impl/container/input/vanilla/insert
+function itemio:impl/container/input/vanilla/result

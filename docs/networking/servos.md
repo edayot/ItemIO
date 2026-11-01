@@ -30,7 +30,13 @@ Servos' itemio.math value is a boolean indicating if the servo is connected to a
 ```
 
 ## NBT handling
-Servos has their own filters config ``@s Item.components."minecraft:custom_data".itemio.ioconfig.filters``.
+Servos has their own config ``@s data.itemio.ioconfig`` :
+- ``filters`` : the filters of the moved items
+- ``items`` : a list of exact items (ORed), ignored when filters are set
+
+When ``data.itemio.ioconfig`` doesn't exist, the config is read from ``@s Item.components."minecraft:custom_data".itemio.ioconfig`` (where it was stored before 2.0.0).
+
+ItemIO stores in ``data.itemio.target`` the block of the servo and its side, computed by ``#itemio:calls/servos/init``.
 
 :::{admonition} Full specification 
 :class: seealso
@@ -41,7 +47,7 @@ Servos has their own filters config ``@s Item.components."minecraft:custom_data"
 ## Scores
 
 - `itemio.servo.stack_limit` : Define the number of items that can be process (range 0..64)
-- `itemio.servo.retry_limit` : Define how many times tranfer are call when process
+- `itemio.servo.retry_limit` : Define how many times tranfer are call when process (the servo stops at the first transfer that fails)
 
 ---
 ## Visual example

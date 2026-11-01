@@ -41,8 +41,12 @@ def tag_offset(offset):
             run function itemio:impl/container/hopper
 
 
-for offset in range(1, 20):
-    tag_offset(offset)
+# the itemio.container.hopper_protection_{offset} tags, summarized by itemio.container.hopper_protection (container/upgrade)
+execute
+    if entity @s[tag=itemio.container.hopper_protection]
+    run function itemio:impl/container/disabling_hopper/shifted:
+        for offset in range(1, 20):
+            tag_offset(offset)
 
 
 

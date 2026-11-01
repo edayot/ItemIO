@@ -1,45 +1,12 @@
 
+# Outputs an item from the slots of storage itemio:main.output config.ioconfig
+# #good_context_entity is 1 when executed as a custom container (nbt_items is allowed)
+
+sides = ["north", "south", "east", "west", "top", "bottom"]
 
 
 scoreboard players set #nbt_items itemio.math.output 0
 execute if score #good_context_entity itemio.math.output matches 1 if entity @s[tag=itemio.container.nbt_items] run scoreboard players set #nbt_items itemio.math.output 1
-
-
-#loading block data
-data remove storage itemio:main.output Items
-data remove storage itemio:main.output nbt_items_path
-data modify storage itemio:main.output nbt_items_path set value "storage do_not_use:realy blabla"
-
-execute if score #nbt_items itemio.math.output matches 0 run data modify storage itemio:main.output Items set from block ~ ~ ~ Items
-execute 
-    if score #nbt_items itemio.math.output matches 1
-    run function ./nbt_items_repart:
-        execute
-            if entity @s[type=marker] 
-            run data modify storage itemio:main.output nbt_items_path set from entity @s data.itemio.nbt_items_path
-        execute
-            if entity @s[type=#itemio:item_frames] 
-            run data modify storage itemio:main.output nbt_items_path set from entity @s Item.components."minecraft:custom_data".itemio.nbt_items_path
-        execute
-            if entity @s[type=armor_stand] 
-            run data modify storage itemio:main.output nbt_items_path set from entity @s equipment.head.components."minecraft:custom_data".itemio.nbt_items_path
-        execute
-            if entity @s[type=#itemio:item_display] 
-            run data modify storage itemio:main.output nbt_items_path set from entity @s item.components."minecraft:custom_data".itemio.nbt_items_path
-        
-        scoreboard players set #nb_entities itemio.math.output 0
-        execute if entity @s[tag=itemio.container.nbt_items.on_passengers] on passengers run function ./nbt_items with storage itemio:main.output {}
-        execute if entity @s[tag=itemio.container.nbt_items.on_vehicle] on vehicle run function ./nbt_items with storage itemio:main.output {}
-        execute if entity @s[tag=!itemio.container.nbt_items.on_passengers,tag=!itemio.container.nbt_items.on_vehicle] run function ./nbt_items with storage itemio:main.output {}
-
-
-function ./nbt_items:
-    $execute unless data $(nbt_items_path) run data modify $(nbt_items_path) set value []
-    $data modify storage itemio:main.output Items set from $(nbt_items_path)
-    scoreboard players add #nb_entities itemio.math.output 1
-    
-
-data remove storage itemio:main.output Items[{components:{"minecraft:custom_data":{itemio:{gui:1b}}}}]
 
 data remove storage itemio:main.output input
 data modify storage itemio:main.output input set from storage itemio:io input
@@ -54,17 +21,33 @@ execute store result score #if_filters_define itemio.math.output if data storage
 execute store result score #if_item_input itemio.math.output if data storage itemio:main.output input
 
 
-data remove storage itemio:main.output temp.args_loop_ioconfig
-data modify storage itemio:main.output temp.args_loop_ioconfig.output_side set from storage itemio:io output_side
-# tellraw @p [{"text":"Items : "},{"nbt":"Items","storage":"itemio:main.output"}]
-# tellraw @p [{"text":"ioconfig : "},{"nbt":"ioconfig","storage":"itemio:main.output"}]
+# Slots usable from this side, in the ioconfig order
+data modify storage itemio:main.output slots set value []
+for side in sides:
+    raw f"execute if data storage itemio:io {{output_side:\"{side}\"}} run data modify storage itemio:main.output slots append from storage itemio:main.output config.ioconfig[{{allowed_side:{{{side}:1b}}}}]"
+execute if data storage itemio:io {output_side:"wireless"} run data modify storage itemio:main.output slots set from storage itemio:main.output config.ioconfig
+execute unless data storage itemio:main.output slots[0] run return 0
 
+
+#loading items
+data remove storage itemio:main.output Items
+execute if score #nbt_items itemio.math.output matches 0 run data modify storage itemio:main.output Items set from block ~ ~ ~ Items
 execute
     if score #nbt_items itemio.math.output matches 1
-    if score #nb_entities itemio.math.output matches 1 
-    if data storage itemio:main.output ioconfig[0] 
-    run function itemio:impl/container/output/custom/output_noconfig/loop_ioconfig with storage itemio:main.output temp.args_loop_ioconfig
-execute
-    if score #nbt_items itemio.math.output matches 0
-    if data storage itemio:main.output ioconfig[0] 
-    run function itemio:impl/container/output/custom/output_noconfig/loop_ioconfig with storage itemio:main.output temp.args_loop_ioconfig
+    run function itemio:impl/container/output/custom/output_noconfig/load_nbt_items:
+        scoreboard players set #nb_entities itemio.math.output 0
+        execute if entity @s[tag=itemio.container.nbt_items.on_passengers] on passengers run function ./read with storage itemio:main.output config
+        execute if entity @s[tag=itemio.container.nbt_items.on_vehicle] on vehicle run function ./read with storage itemio:main.output config
+        execute if entity @s[tag=!itemio.container.nbt_items.on_passengers,tag=!itemio.container.nbt_items.on_vehicle] run function ./read with storage itemio:main.output config
+
+        function ./read:
+            $execute unless data $(nbt_items_path) run data modify $(nbt_items_path) set value []
+            $data modify storage itemio:main.output Items set from $(nbt_items_path)
+            scoreboard players add #nb_entities itemio.math.output 1
+execute if score #nbt_items itemio.math.output matches 1 unless score #nb_entities itemio.math.output matches 1 run return 0
+data remove storage itemio:main.output Items[{components:{"minecraft:custom_data":{itemio:{gui:1b}}}}]
+
+# tellraw @p [{"text":"Items : "},{"nbt":"Items","storage":"itemio:main.output"}]
+# tellraw @p [{"text":"slots : "},{"nbt":"slots","storage":"itemio:main.output"}]
+
+function itemio:impl/container/output/custom/output_noconfig/loop

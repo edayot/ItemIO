@@ -1,0 +1,6 @@
+# Benchmark build: the normal pack plus the stopwatch benchmarks in bench/.
+# Run with `uv run python bench/run.py` (or `uv run beet -p beet-bench.yaml test 'itemio_test:bench/*'`).
+extend: beet.yaml
+
+data_pack:
+  load: [., bench/datapack]

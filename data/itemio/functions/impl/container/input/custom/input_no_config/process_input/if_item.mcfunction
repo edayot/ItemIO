@@ -1,16 +1,7 @@
 $execute store result score #count_container itemio.math.input run data get storage itemio:main.input Items[{Slot:$(Slot)b}].count
 execute store result score #count_input itemio.math.input run data get storage itemio:main.input input.count
 
-
-scoreboard players set #full_stack itemio.math.input 64
-
-data remove storage itemio:main get_stack_size
-data modify storage itemio:main get_stack_size set from storage itemio:main.input input
-execute store result score #full_stack itemio.math.input run function itemio:impl/utils/get_stack_size
-scoreboard players set #config_max_stack_size itemio.math.input 2147483647
-execute if data storage itemio:main.input ioconfig[0].max_stack_size store result score #config_max_stack_size itemio.math.input run data get storage itemio:main.input ioconfig[0].max_stack_size
-execute if score #full_stack itemio.math.input > #config_max_stack_size itemio.math.input run scoreboard players operation #full_stack itemio.math.input = #config_max_stack_size itemio.math.input
-
+# #full_stack : the stack limit of this slot (process_slot)
 
 scoreboard players set #new_count_container itemio.math.input 0
 scoreboard players operation #new_count_container itemio.math.input = #count_container itemio.math.input

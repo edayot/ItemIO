@@ -6,7 +6,8 @@ data modify storage itemio:io input set from storage itemio:main servo_items_loo
 
 scoreboard players operation #max_output_count itemio.io = @s itemio.servo.stack_limit
 
-execute positioned ^ ^ ^-1 align xyz positioned ~.5 ~.5 ~.5 run function #itemio:calls/transfer
+data modify storage itemio:io destinations set from storage itemio:main servo.destinations
+execute positioned ^ ^ ^-1 align xyz positioned ~.5 ~.5 ~.5 run function itemio:impl/container/transfer
 
 data remove storage itemio:main servo_items_loop[0]
 execute if score #success_transfer itemio.io matches 0 if data storage itemio:main servo_items_loop[0] run function itemio:impl/servo/make_transfer_items

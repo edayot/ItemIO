@@ -6,6 +6,7 @@ scoreboard players operation @s itemio.network.process_queue = #my_queue itemio.
 
 tag @s add itemio.container.initialised
 scoreboard players set @s itemio.minecart_check 0
+function itemio:impl/container/upgrade
 
 scoreboard players operation @s itemio.version.major = #itemio.major load.status
 scoreboard players operation @s itemio.version.minor = #itemio.minor load.status

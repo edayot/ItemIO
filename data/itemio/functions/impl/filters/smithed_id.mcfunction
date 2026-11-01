@@ -1,8 +1,7 @@
 scoreboard players set #filter.valid_item itemio.io 0
 
-data remove storage itemio:main temp.id
-data modify storage itemio:main temp.id set from storage itemio:io filter.smithed.id
+# filter.smithed.id is a list : a partial list match tests if the smithed id of the item is in it
+execute if data storage itemio:io item.components."minecraft:custom_data".smithed.id run function itemio:impl/filters/smithed_id/match with storage itemio:io item.components."minecraft:custom_data".smithed
 
-execute if score #filter.valid_item itemio.io matches 0 if data storage itemio:main temp.id[0] run function itemio:impl/filters/smithed_id/loop
-
-
+function itemio:impl/filters/smithed_id/match:
+    $execute if data storage itemio:io filter.smithed{id:["$(id)"]} run scoreboard players set #filter.valid_item itemio.io 1

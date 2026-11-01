@@ -94,6 +94,17 @@ execute unless score #{project_id}.{dep_id} load.status matches 1 run tellraw @a
             
 
 
+def remove_test_namespace(ctx: Context):
+    """Removes the namespace of the tests (meta.airdox_.test_namespace) from the release builds (meta.airdox_.release)"""
+    opts = ctx.meta["airdox_"]
+    if not opts.get("release"):
+        return
+    namespace = opts["test_namespace"]
+    if namespace in ctx.data:
+        del ctx.data[namespace]
+
+
+
 def add_id(ctx: Context):
     """Function to add the id to the pack.mcmeta"""
     ctx.assets.extra["pack.mcmeta"].data["id"]=str(ctx.project_id)

@@ -1,0 +1,18 @@
+{
+    "__comment": "The item held by the helper item_display (a97c9c67-fde0-4b89-926d-54fa4a866004), when it runs the loot command",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:slots",
+                    "slot_source": {
+                        "type": "minecraft:slot_range",
+                        "source": "this",
+                        "slots": "contents"
+                    }
+                }
+            ]
+        }
+    ]
+}

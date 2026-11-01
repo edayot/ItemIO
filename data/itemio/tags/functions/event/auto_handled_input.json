@@ -1,3 +1,5 @@
 {
-    "values": []
+    "values": [
+        {"id": "itemio_test:auto_handled_input", "required": false}
+    ]
 }

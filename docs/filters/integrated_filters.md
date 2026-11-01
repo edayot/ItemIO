@@ -38,6 +38,16 @@ A filter that check if the item as a CTC.
 ```
 Here it will check if the item is a drawer from [SimpleDrawer](https://githuc.com/edayot/SimpleDrawer) (the legacy and 1.20 one).
 
+An entry without ``id`` matches every item of its source :
+```SNBT
+{
+    ctc: [
+        {from:"airdox_:simpledrawer"},
+    ]
+}
+```
+Here it will check if the item is any item from SimpleDrawer.
+
 ## Smithed ID (Smithed Convention)
 
 A filter that check if the item as smithed id.
@@ -67,11 +77,11 @@ A filter that make a copy of the item, merge it with the filter and compare it w
 ```SNBT
 {
     merge: {
-        display: {}
+        components: {"minecraft:custom_data": {energy: {}}}
     }
 }
 ```
-This filter will check if the item as a display tag. 
+This filter will check if the item as an energy custom data. 
 
 ```{admonition} Note 
 :class: note
@@ -79,6 +89,13 @@ This filter will not work with list, in the merge process there are replaced.
 ```
 
 ## Minecraft Tags
+
+:::{admonition} Deprecated
+:class: warning
+This filter is slow (every tag of the game is tested), use an [item predicate](#items-predicate) instead :
+``{item_predicate: "#minecraft:bookshelf_books"}``
+:::
+
 All the minecraft tags are available as filters.
 
 The full list is available [here](https://github.com/misode/mcmeta/tree/registries/tag/item)
@@ -101,8 +118,6 @@ This filter will check if the item is a book that can be placed in a chiseled bo
 
 A filter that check if the item match a predicate.
 
-It's only a 24w12a+ feature.
-
 ### Format :
 ```ts
 {
@@ -112,5 +127,12 @@ It's only a 24w12a+ feature.
 
 In implementation, this use this command :
 ```mcfunction
-execute if items entity @s weapon <item_predicate> run ...
+execute if items entity @s contents <item_predicate> run ...
+```
+
+### Example :
+```SNBT
+{
+    item_predicate: "#minecraft:bookshelf_books"
+}
 ```

@@ -1,0 +1,229 @@
+{
+  "name": "baseline-1.8.1",
+  "date": "2026-11-01T13:25:03+00:00",
+  "commit": "eaa3520",
+  "minecraft": "26.3",
+  "results": {
+    "filters_id": {
+      "n": 2000,
+      "rounds": 5,
+      "round_ms": [
+        48.0,
+        49.0,
+        47.0,
+        51.0,
+        50.0
+      ],
+      "median_us_per_op": 24.5,
+      "min_us_per_op": 23.5
+    },
+    "filters_minecraft_tag": {
+      "n": 1000,
+      "rounds": 5,
+      "round_ms": [
+        87.0,
+        87.0,
+        97.0,
+        100.0,
+        87.0
+      ],
+      "median_us_per_op": 87.0,
+      "min_us_per_op": 87.0
+    },
+    "hopper_emulation": {
+      "n": 300,
+      "rounds": 5,
+      "round_ms": [
+        134.0,
+        157.0,
+        135.0,
+        131.0,
+        132.0
+      ],
+      "median_us_per_op": 446.6666666666667,
+      "min_us_per_op": 436.6666666666667
+    },
+    "input_custom": {
+      "n": 300,
+      "rounds": 5,
+      "round_ms": [
+        48.0,
+        44.0,
+        40.0,
+        41.0,
+        40.0
+      ],
+      "median_us_per_op": 136.66666666666666,
+      "min_us_per_op": 133.33333333333334
+    },
+    "input_vanilla": {
+      "n": 1000,
+      "rounds": 5,
+      "round_ms": [
+        82.0,
+        91.0,
+        106.0,
+        86.0,
+        89.0
+      ],
+      "median_us_per_op": 89.0,
+      "min_us_per_op": 82.0
+    },
+    "input_vanilla_scan": {
+      "n": 60,
+      "rounds": 5,
+      "round_ms": [
+        60.0,
+        44.0,
+        50.0,
+        58.0,
+        53.0
+      ],
+      "median_us_per_op": 883.3333333333334,
+      "min_us_per_op": 733.3333333333334
+    },
+    "network_idle_process": {
+      "n": 100,
+      "rounds": 5,
+      "round_ms": [
+        23.0,
+        23.0,
+        22.0,
+        21.0,
+        23.0
+      ],
+      "median_us_per_op": 230.0,
+      "min_us_per_op": 210.0
+    },
+    "network_process": {
+      "n": 100,
+      "rounds": 5,
+      "round_ms": [
+        155.0,
+        147.0,
+        165.0,
+        172.0,
+        153.0
+      ],
+      "median_us_per_op": 1550.0,
+      "min_us_per_op": 1470.0
+    },
+    "output_custom": {
+      "n": 1000,
+      "rounds": 5,
+      "round_ms": [
+        68.0,
+        67.0,
+        70.0,
+        64.0,
+        66.0
+      ],
+      "median_us_per_op": 67.0,
+      "min_us_per_op": 64.0
+    },
+    "output_vanilla": {
+      "n": 1000,
+      "rounds": 5,
+      "round_ms": [
+        35.0,
+        34.0,
+        33.0,
+        33.0,
+        35.0
+      ],
+      "median_us_per_op": 34.0,
+      "min_us_per_op": 33.0
+    },
+    "output_vanilla_filtered": {
+      "n": 200,
+      "rounds": 5,
+      "round_ms": [
+        82.0,
+        80.0,
+        85.0,
+        90.0,
+        95.0
+      ],
+      "median_us_per_op": 425.0,
+      "min_us_per_op": 400.0
+    },
+    "tick_100_custom_containers": {
+      "n": 100,
+      "rounds": 5,
+      "round_ms": [
+        20.0,
+        23.0,
+        20.0,
+        21.0,
+        21.0
+      ],
+      "median_us_per_op": 210.0,
+      "min_us_per_op": 200.0
+    },
+    "tick_100_vanilla_containers": {
+      "n": 100,
+      "rounds": 5,
+      "round_ms": [
+        45.0,
+        47.0,
+        44.0,
+        44.0,
+        44.0
+      ],
+      "median_us_per_op": 440.0,
+      "min_us_per_op": 440.0
+    },
+    "tick_200_containers": {
+      "n": 100,
+      "rounds": 5,
+      "round_ms": [
+        62.0,
+        63.0,
+        67.0,
+        62.0,
+        66.0
+      ],
+      "median_us_per_op": 630.0,
+      "min_us_per_op": 620.0
+    },
+    "tick_idle_3k_entities": {
+      "n": 200,
+      "rounds": 5,
+      "round_ms": [
+        40.0,
+        41.0,
+        40.0,
+        45.0,
+        41.0
+      ],
+      "median_us_per_op": 205.0,
+      "min_us_per_op": 200.0
+    },
+    "transfer_vanilla": {
+      "n": 1000,
+      "rounds": 5,
+      "round_ms": [
+        175.0,
+        171.0,
+        161.0,
+        164.0,
+        192.0
+      ],
+      "median_us_per_op": 171.0,
+      "min_us_per_op": 161.0
+    },
+    "transfer_vanilla_3k_entities": {
+      "n": 500,
+      "rounds": 5,
+      "round_ms": [
+        397.0,
+        394.0,
+        390.0,
+        388.0,
+        364.0
+      ],
+      "median_us_per_op": 780.0,
+      "min_us_per_op": 728.0
+    }
+  }
+}

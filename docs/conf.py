@@ -102,6 +102,9 @@ myst_enable_extensions = [
     "tasklist",
 ]
 
+# anchors for the headings, used by the links like containers/index.md#auto-handled-io
+myst_heading_anchors = 4
+
 suppress_warnings = ["myst.header"]
 
 pygments_style = 'github-dark'
