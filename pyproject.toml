@@ -3,7 +3,7 @@ name = "itemio"
 version = "1.8.1"
 description = "Item input/output lib - Easy interaction between vanilla and custom containers"
 readme = "README.md"
-requires-python = ">=3.14"
+requires-python = "~=3.14.0"
 authors = [
     {name = "edayot", email = "pro.e.dayot@gmail.com"},
 ]
