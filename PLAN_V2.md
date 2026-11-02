@@ -67,8 +67,8 @@ qu'une fois par tick en V2 (score `itemio.servo.processed_tick` au lieu du tag `
 Ils ne sont plus nécessaires. `execute as <helper> run loot insert ~ ~ ~ loot itemio:impl/internal/helper_item`
 insère directement dans le vrai conteneur l'item porté par l'item_display helper, avec le même algorithme
 (`distributeToContainer`). Le nombre inséré se déduit de deux `execute if items block ~ ~ ~ container.* *`.
-L'override de `minecraft:blocks/yellow_shulker_box` est supprimé et les deux blocs sont remplacés par de l'air au load
-(`setblock` ne fait rien tomber, flag `UPDATE_SKIP_BLOCK_ENTITY_SIDEEFFECTS`).
+L'override de `minecraft:blocks/yellow_shulker_box` est supprimé et les deux blocs ne sont plus posés
+(ils restent dans les mondes créés avant 2.0.0).
 L'item_display `a97c9c67-…` et le forceload restent (helper des filtres, du max stack et de l'insertion).
 
 ## 4. Phases
@@ -130,7 +130,7 @@ Détail complet dans `docs/migration/v2.md`.
 | B2 | `itemio.container.ioconfig_from_storage` / `itemio.ioconfig_from_storage` supprimés |
 | B3 | Nouvelle API auto_handled (`offer`, `#itemio:calls/offer`, `#count_to_remove itemio.io`), `#itemio:calls/auto_handled_output` supprimé |
 | B4 | `nope` et `auto_handled_io` n'utilisent plus le bloc vanilla sous l'entité |
-| B5 | Override de `minecraft:blocks/yellow_shulker_box` supprimé, blocs du forceload retirés |
+| B5 | Override de `minecraft:blocks/yellow_shulker_box` supprimé, blocs du forceload plus posés |
 | B6 | Tags `hopper_protection_{offset}` lus à l'init (ou au premier tick pour les conteneurs existants) |
 | B7 | Transferts : destinations triées par distance à l'origine ; `input_side` lu dans `data.itemio.input_side` ou `data.itemio.ioconfig.input_side` (sinon aucun) ; `items` comparés à l'item ; count d'input ≤ 99 |
 | B8 | Servos : insert servos triés par leur propre position ; arrêt des retries au premier échec ; `#max_network_per_tick 0` = sans limite, `#max_servos_per_tick` appliqué |
@@ -151,7 +151,7 @@ Détail complet dans `docs/migration/v2.md`.
 - Output `nbt_items` : retirait `#max_output_count` items même quand moins étaient déplacés.
 - Items GUI supprimés des conteneurs vanilla par un input.
 - `#max_network_per_tick 0` bloquait tout ; `#max_servos_per_tick` n'était jamais appliqué.
-- `#itemio:calls/container/destroy` documenté mais inexistant : ajouté (retire ce que l'init a posé).
+- `#itemio:calls/container/destroy` documenté mais inexistant : ajouté (vide pour l'instant, réservé pour la suite).
 
 ## 7. Points ouverts
 

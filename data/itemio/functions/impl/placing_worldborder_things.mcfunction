@@ -6,7 +6,3 @@ summon item_display -29999990 21 1610 {
 }
 
 
-# Before 2.0.0, a yellow shulker box and a barrel were used for the vanilla insertion
-setblock -30000000 22 1610 air
-setblock -30000000 23 1610 air
-
